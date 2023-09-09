@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PurposeStatement.md",
+                "file": "Journal.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PurposeStatement.md",
+                "file": "Journal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PurposeStatement.md",
+                "file": "Journal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PurposeStatement.md"
+                "file": "Journal.md"
               }
             }
           }
@@ -148,8 +148,8 @@
   },
   "active": "fe9624af5cd004dd",
   "lastOpenFiles": [
-    "Precedents.md",
     "PurposeStatement.md",
+    "Precedents.md",
     "Journal.md",
     "Notepad.md",
     "todo.md"
