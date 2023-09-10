@@ -26,4 +26,4 @@ For literature review, I recommend starting with Dolphin (2014) ([https://doi.or
   
 Upsammy's album Zoom (2020) is worth checking out ([https://open.spotify.com/album/6Fgw2NUHzJFbOQ5u4o0Clq?si=8A0vophFTKOoOeFxZ4uUtQ](https://open.spotify.com/album/6Fgw2NUHzJFbOQ5u4o0Clq?si=8A0vophFTKOoOeFxZ4uUtQ)). I think its vibe is suitable for all ages.  MB: really very nice. they're playing with Tim Hecker in November!
   
-Submit the project to A MAZE Festival Berlin (May 8-11, 2024). When is the submission deadline? MB: if last year is any indication (May 10-12, 2023) submissions start on 12/12ish and close 1/31.
+Submit the project to A MAZE Festival Berlin (May 8-11, 2024). When is the submission deadline? MB: if [last year](https://2023.award.amaze-berlin.de/) is any indication (May 10-12, 2023) submissions start on 12/12ish and close 1/31.
