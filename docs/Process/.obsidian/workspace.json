@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "35615dce922ab85c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MeetingNotes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Precedents.md",
+                "file": "MeetingNotes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Precedents.md",
+                "file": "MeetingNotes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Precedents.md"
+                "file": "MeetingNotes.md"
               }
             }
           }
@@ -146,10 +159,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fe9624af5cd004dd",
+  "active": "35615dce922ab85c",
   "lastOpenFiles": [
-    "Journal.md",
     "Precedents.md",
+    "MeetingNotes.md",
+    "Journal.md",
     "Media/TIKATMOS-TunerScene.gif",
     "Media/loveHulten.png",
     "Media/shadowmatic.png",
