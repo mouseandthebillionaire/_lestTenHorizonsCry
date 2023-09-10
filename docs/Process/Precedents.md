@@ -4,11 +4,11 @@
 A place to keep any mention of precedents, perhaps with some sort of linking between the process journal and here!? One can always hope!
 
 ## [Electroplankton](https://www.nintendo.com/consumer/gameslist/manuals/DS_Electroplankton.pdf) 
-![[Media/elektroplankton.png]]
+![electroplankton screen shot](Media/elektroplankton.png)
 Electroplankton is a great place to start. The 2005/2006 DS game is one of the first widely-available "musical toys." Andre Dolphin's paper [Defining Sound Toys: Play as Composition](https://academic.oup.com/edited-volume/37182/chapter-abstract/324106285?redirectedFrom=fulltext) discusses Electroplankton in great detail (along with Brian Eno's [*Bloom*](https://www.youtube.com/watch?v=kOTPjh6oA84)) and the main takeaway for me in his definition is that "competition as a motivation for interaction, are often avoided, encouraging the participant to solely focus on audiovisual experience and sonic-centric interaction." Think is a good stance to push up against, with the goal for this specific project being something in-between. Not quite a puzzle like Shadowmatic (see below) and not quite a "musical toy" like Electroplankton with no explicit "goals."
 
 ## [Shadowmatic](https://www.shadowmatic.com/)
-![[shadowmatic.png]]
+![shadowmatic screenshot](shadowmatic.png)
 Triada Studio's Shadowmatic is doing a lot of the things I can imagine working well in this project. Where they have the user manipulating objects in digital spaces with a mouse, I could see users manipulating knobs which in turn affect the separate elements of a visual space. Some parts of this feel too "ta-da" and puzzly, but I like the idea of knob adjustments needing to work in tandem for a given end. One way to address this might be to set states that are not explicitly "right" or "ideal," but rather "specific." Keeping the visuals abstract can help with this (so "it's some sort of combination of shapes/colors/etc" and not "it's a horse!")
 
 ## [Love Hultén](https://www.lovehulten.com/)
