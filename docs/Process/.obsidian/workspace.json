@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Journal.md",
+                "file": "Precedents.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Journal.md",
+                "file": "Precedents.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Journal.md",
+                "file": "Precedents.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Journal.md"
+                "file": "Precedents.md"
               }
             }
           }
@@ -148,11 +148,11 @@
   },
   "active": "fe9624af5cd004dd",
   "lastOpenFiles": [
+    "Journal.md",
     "Precedents.md",
     "Media/TIKATMOS-TunerScene.gif",
     "Media/loveHulten.png",
     "Media/shadowmatic.png",
-    "Journal.md",
     "Media/muCartographer.png",
     "Media/emojiSim.png",
     "Media/emoji.png",
