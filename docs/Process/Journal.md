@@ -15,7 +15,7 @@ That's where we stand now!
 
 Next Steps:
 	Ideation
-	Precedents
+	[Precedent Study!](Precedents.md)
 
 Let's go!
 
