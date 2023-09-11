@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MeetingNotes.md",
+                "file": "Journal.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MeetingNotes.md",
+                "file": "Journal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MeetingNotes.md",
+                "file": "Journal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MeetingNotes.md"
+                "file": "Journal.md"
               }
             }
           }
@@ -161,9 +161,11 @@
   },
   "active": "35615dce922ab85c",
   "lastOpenFiles": [
-    "Precedents.md",
-    "MeetingNotes.md",
+    "Media.md",
     "Journal.md",
+    "Media/PATCH CABLES 1.jpg",
+    "MeetingNotes.md",
+    "Precedents.md",
     "Media/TIKATMOS-TunerScene.gif",
     "Media/loveHulten.png",
     "Media/shadowmatic.png",
@@ -173,7 +175,6 @@
     "Media/Screen Shot 2023-09-10 at 2.12.06 PM.png",
     "Media/Screen Shot 2023-09-10 at 2.04.24 PM.png",
     "Media/Screen Shot 2023-09-10 at 2.03.47 PM.png",
-    "Media/Screen Shot 2023-09-10 at 2.02.13 PM.png",
     "PurposeStatement.md",
     "Notepad.md",
     "todo.md"

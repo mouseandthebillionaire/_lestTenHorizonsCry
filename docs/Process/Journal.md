@@ -1,6 +1,7 @@
 # Lest Ten Horizons Cry | Process Documentation!
 
 ## Context Statement | 09.01.23
+
 The initial idea here is alt-control audio-based game-like interaction. Specifically, *what would a game controlled with a synthesizer look like?* 
 
 The audio-component of this could be either
@@ -17,7 +18,15 @@ Next Steps:
 	Ideation
 	[Precedent Study!](Precedents.md)
 
+PS - *Lest Ten Horizons Cry* - is just anagram of "Synthesizer Controller"
+
+Too many secrets!
+
 Let's go!
+
+## Ideation | 09.08.23
+
+![ideation sketches](Media/ideation.jpg)
 
 
 
