@@ -3,14 +3,14 @@
 ## 09.11.23
 
 Existing interface products to draw inspiration from:
-	- [midi fighter](https://www.midifighter.com/#Twister) specifically the twister. Rotate, push
-	- [3D connexion space mouse](https://3dconnexion.com/ca/product/spacemouse-wireless/) Rotate, push, 6 degrees of freedom. I've used this for Max/MSP performances before. Barrier of entry for new users might be too high, but the idea of expressive motion is worth exploring
-	- [arcade-style joystick](https://www.sparkfun.com/products/9182) reads "game" while also giving expressive control
-	- [touch potentiometer](https://learn.sparkfun.com/tutorials/touch-potentiometer-hookup-guide/all) buchla-inspired touch control
-	- [touché](https://www.expressivee.com/1-touche) this thing! Similar to the 3D connexion space mouse, but with a more "musical performance" vibe
+	[midi fighter](https://www.midifighter.com/#Twister) specifically the twister. Rotate, push
+	[3D connexion space mouse](https://3dconnexion.com/ca/product/spacemouse-wireless/) Rotate, push, 6 degrees of freedom. I've used this for Max/MSP performances before. Barrier of entry for new users might be too high, but the idea of expressive motion is worth exploring
+	[arcade-style joystick](https://www.sparkfun.com/products/9182) reads "game" while also giving expressive control
+	[touch potentiometer](https://learn.sparkfun.com/tutorials/touch-potentiometer-hookup-guide/all) buchla-inspired touch control
+	[touché](https://www.expressivee.com/1-touche) this thing! Similar to the 3D connexion space mouse, but with a more "musical performance" vibe
 
 For next time:
-	- Mockups for the screen-based visuals
+	Mockups for the screen-based visuals
 	
 
 ## 08.28.23
