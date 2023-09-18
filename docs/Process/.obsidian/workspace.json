@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Precedents.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "35615dce922ab85c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Journal.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,22 +146,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "35615dce922ab85c",
+  "active": "fe9624af5cd004dd",
   "lastOpenFiles": [
-    "Precedents.md",
     "Journal.md",
+    "Precedents.md",
     "Media.md",
-    "Media/PATCH CABLES 1.jpg",
+    "Media/interfaceMock_1.gif",
+    "Media/interfaceMock_0.gif",
+    "Media/Screen Recording 2023-09-17 at 4.26.55 PM.gif",
+    "Media/Screen Recording 2023-09-17 at 4.03.33 PM.gif",
     "MeetingNotes.md",
+    "Media/interfaceMock_0.png",
+    "Media/Screen Shot 2023-09-18 at 6.59.12 AM.png",
+    "Media/PATCH CABLES 1.jpg",
     "Media/TIKATMOS-TunerScene.gif",
     "Media/loveHulten.png",
     "Media/shadowmatic.png",
-    "Media/muCartographer.png",
-    "Media/emojiSim.png",
-    "Media/emoji.png",
-    "Media/Screen Shot 2023-09-10 at 2.12.06 PM.png",
-    "Media/Screen Shot 2023-09-10 at 2.04.24 PM.png",
-    "Media/Screen Shot 2023-09-10 at 2.03.47 PM.png",
     "PurposeStatement.md",
     "Notepad.md",
     "todo.md"
