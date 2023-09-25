@@ -1,5 +1,12 @@
 ## Weekly Meeting Notes
 
+## 09.25.23
+
+- flying faders - fighting against the user
+- fidelity/resolution of the continuous controller
+- [Granulator](https://www.ableton.com/en/packs/granulator-ii/) 
+- Unreal - Metasounds
+- Rafael Lozano-Hemmer: [Sphere Packing: Bach](https://lozano-hemmer.com/sphere_packing_bach.php) 
 ## 09.18.23
 
 Things discussed/referenced in this week's meeting:

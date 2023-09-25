@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Journal.md",
+                "file": "MeetingNotes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Journal.md",
+                "file": "MeetingNotes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Journal.md",
+                "file": "MeetingNotes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Journal.md"
+                "file": "MeetingNotes.md"
               }
             }
           },
@@ -158,8 +158,8 @@
   },
   "active": "fe9624af5cd004dd",
   "lastOpenFiles": [
-    "MeetingNotes.md",
     "Journal.md",
+    "MeetingNotes.md",
     "Precedents.md",
     "Media.md",
     "Media/interfaceMock_1.gif",
