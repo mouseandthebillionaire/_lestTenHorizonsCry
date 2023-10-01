@@ -1,5 +1,19 @@
 ## Weekly Meeting Notes
 
+## 09.25.23
+
+- flying faders - fighting against the user
+- fidelity/resolution of the continuous controller
+- [Granulator](https://www.ableton.com/en/packs/granulator-ii/) 
+- Unreal - Metasounds
+- Rafael Lozano-Hemmer: [Sphere Packing: Bach](https://lozano-hemmer.com/sphere_packing_bach.php) 
+## 09.18.23
+
+Things discussed/referenced in this week's meeting:
+- [Examen psicométrico](https://www.youtube.com/watch?v=Ry_Bu0a17JY&t=25s) also [here](https://aac-testpsycho.fr/images/how-to-test-1.jpg) 
+- [G80](https://aac-testpsycho.fr/images/how-to-test-1.jpg) large scale fader artwork (which reminds me or Tristan Perich's [Mictrotonal Wall](http://tristanperich.com/#Artwork/Microtonal_Wall))
+- Adding vibration motors to each knob for tactile feedback. Need to check to see if I have any in my kit (which I think I might), but [these new tiny ones from Sparkfun](https://www.sparkfun.com/products/8449) seem pretty great
+
 ## 09.11.23
 
 Existing interface products to draw inspiration from:
