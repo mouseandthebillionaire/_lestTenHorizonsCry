@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "com.cycling74.rnbotest": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/build/rnbotest",
+    "com.cycling74.rnbotypes": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/RNBOTypes",
     "com.unity.2d.animation": "5.0.6",
     "com.unity.2d.pixel-perfect": "4.0.1",
     "com.unity.2d.psdimporter": "4.1.0",

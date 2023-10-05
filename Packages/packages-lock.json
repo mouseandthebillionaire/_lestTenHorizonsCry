@@ -1,5 +1,19 @@
 {
   "dependencies": {
+    "com.cycling74.rnbotest": {
+      "version": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/build/rnbotest",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.cycling74.rnbotypes": "0.0.2"
+      }
+    },
+    "com.cycling74.rnbotypes": {
+      "version": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/RNBOTypes",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.2d.animation": {
       "version": "5.0.6",
       "depth": 0,
