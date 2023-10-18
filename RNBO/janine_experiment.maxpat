@@ -77,7 +77,7 @@
 						}
 ,
 						"classnamespace" : "rnbo",
-						"rect" : [ 539.0, 482.0, 640.0, 480.0 ],
+						"rect" : [ 654.0, 433.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1970,7 +1970,8 @@
 								"cpp-code-export" : 								{
 									"copy_dependencies" : 1,
 									"write_binary_file" : 0,
-									"exposevoiceparams" : 0
+									"exposevoiceparams" : 0,
+									"openexportdirectory" : 1
 								}
 
 							}
