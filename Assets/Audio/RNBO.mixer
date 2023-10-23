@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-7595721930543072309
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 3b005efacb97c48f09f995957889d743
+  m_EffectName: Echo
+  m_MixLevel: 3df25a36d0c2446e3b4296598657187a
+  m_Parameters:
+  - m_ParameterName: Delay
+    m_GUID: 0058a89f7f33e41db9c63dd5aa71d037
+  - m_ParameterName: Decay
+    m_GUID: c18ddb0bcf2984cebbcf7e78b9b5fcb0
+  - m_ParameterName: Max channels
+    m_GUID: 31a6698ed980246b29d69eafa844842b
+  - m_ParameterName: Drymix
+    m_GUID: 783a2c75fdf9b48df862b5777f713694
+  - m_ParameterName: Wetmix
+    m_GUID: 6c0de2d809187464e80652709fbb227d
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -15,7 +39,9 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 6c0de2d809187464e80652709fbb227d
+    name: echoWet
   m_AudioMixerGroupViews:
   - guids:
     - 7d63e5ebd69244470be5204529b9e4ef
@@ -38,6 +64,7 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: 24400004}
   - {fileID: 6339617722606696708}
+  - {fileID: -7595721930543072309}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -71,11 +98,12 @@ AudioMixerSnapshotController:
     258a093146620485baaa22ee3843641e: 0
     bf89f9e1f04c244be883551535e500d5: 0
     60e50f722628c4e70914c22d16063f0c: 0
-    5f1e6b33626c24d80910e6d0f63e0f9a: 0
+    5f1e6b33626c24d80910e6d0f63e0f9a: 0.92
     59e710b316e644df9b08cbe56ba1e846: 0
     5e5f5a1425686441bbb4794f14eff6c8: 1
     4ed192b44b83a4e20b11fba04d59e7a5: 1
     b960aaf412f634abf9c43edd9c665e1e: 62
+    783a2c75fdf9b48df862b5777f713694: 1
     08f193a50f9594bf193b7a627167c9d2: 1.08
     e4af5bc6a0e3e47b1a5a3e995db0b14a: 0
     c4c1c6f65c8e641528d0eb8e14cd9ce0: 1
@@ -83,6 +111,7 @@ AudioMixerSnapshotController:
     55d130c7e900e4528bd6ebca09a2c1b3: 1
     f8b425487dd4e40038dc705fd90b4336: 0
     d63a82d8f6ab84f8c93973ea8e96355e: 0
+    6c0de2d809187464e80652709fbb227d: 0
     e5f526f8812924e57b0ff9926f24c30c: 0
     d7ed15e9293164d45bd5f2336e5dbab4: 0
     d411de2a9042e4059a7bdfdf0f2c2e23: 0
