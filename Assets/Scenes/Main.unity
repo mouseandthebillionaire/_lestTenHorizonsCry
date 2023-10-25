@@ -230,17 +230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 156a7eb28fc904b3f894a70a21c4a968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knobValues:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  slider_0: {fileID: 2116598251}
-  slider_1: {fileID: 504616157}
-  mainMixer: {fileID: 24100000, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
-  echo: {fileID: 0}
 --- !u!114 &208675587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,7 +510,6 @@ GameObject:
   - component: {fileID: 680236233}
   - component: {fileID: 680236232}
   - component: {fileID: 680236231}
-  - component: {fileID: 680236236}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -701,19 +689,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &680236236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 680236230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f190e58f597ca4d67ad349c7ca9e14bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buffer: {fileID: 8300000, guid: 7ef313ac4316d4742b1760a97c07e95e, type: 3}
 --- !u!1 &706776067
 GameObject:
   m_ObjectHideFlags: 0

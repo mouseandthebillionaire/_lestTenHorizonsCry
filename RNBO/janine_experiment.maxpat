@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 137.0, 346.0, 623.0, 656.0 ],
+		"rect" : [ 442.0, 281.0, 623.0, 656.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -77,7 +77,7 @@
 						}
 ,
 						"classnamespace" : "rnbo",
-						"rect" : [ 654.0, 433.0, 640.0, 480.0 ],
+						"rect" : [ 789.0, 419.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -136,11 +136,11 @@
 									"patching_rect" : [ 415.0, 188.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"order" : "",
+										"minimum" : "<none>",
 										"preset" : 0,
-										"initialFormat" : "float"
+										"initialFormat" : "float",
+										"order" : ""
 									}
 ,
 									"rnbo_serial" : 1,
@@ -159,18 +159,18 @@
 									"rnbo_classname" : "param",
 									"rnbo_extra_attributes" : 									{
 										"exponent" : 1.0,
-										"order" : "0",
 										"preset" : 1,
-										"enum" : "",
-										"displayname" : "",
 										"value" : 0.0,
-										"sendinit" : 1,
-										"meta" : "",
-										"ctlin" : 0.0,
-										"steps" : 0.0,
 										"fromnormalized" : "",
+										"ctlin" : 0.0,
+										"enum" : "",
+										"steps" : 0.0,
 										"tonormalized" : "",
 										"unit" : "",
+										"sendinit" : 1,
+										"order" : "0",
+										"displayname" : "",
+										"meta" : "",
 										"displayorder" : "-"
 									}
 ,
@@ -638,11 +638,11 @@
 									"patching_rect" : [ 186.0, 188.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
-										"minimum" : "<none>",
 										"maximum" : "<none>",
-										"order" : "",
+										"minimum" : "<none>",
 										"preset" : 0,
-										"initialFormat" : "float"
+										"initialFormat" : "float",
+										"order" : ""
 									}
 ,
 									"rnbo_serial" : 2,
@@ -661,8 +661,8 @@
 									"rnbo_classname" : "buffer~",
 									"rnbo_extra_attributes" : 									{
 										"type" : "",
-										"fill" : "",
-										"samplerate" : 0.0
+										"samplerate" : 0.0,
+										"fill" : ""
 									}
 ,
 									"rnbo_serial" : 1,
@@ -960,12 +960,12 @@
 									"patching_rect" : [ 55.0, 101.0, 159.0, 23.0 ],
 									"rnbo_classname" : "groove~",
 									"rnbo_extra_attributes" : 									{
+										"synctype" : "relative",
 										"channels" : 1.0,
-										"syncmode" : "phase",
-										"synctype" : "relative"
+										"syncmode" : "phase"
 									}
 ,
-									"rnbo_serial" : 2,
+									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "groove~_obj-7",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -1201,18 +1201,18 @@
 									"rnbo_classname" : "param",
 									"rnbo_extra_attributes" : 									{
 										"exponent" : 1.0,
-										"order" : "0",
 										"preset" : 1,
-										"enum" : "",
-										"displayname" : "",
 										"value" : 0.0,
-										"sendinit" : 1,
-										"meta" : "",
-										"ctlin" : 0.0,
-										"steps" : 0.0,
 										"fromnormalized" : "",
+										"ctlin" : 0.0,
+										"enum" : "",
+										"steps" : 0.0,
 										"tonormalized" : "",
 										"unit" : "",
+										"sendinit" : 1,
+										"order" : "0",
+										"displayname" : "",
+										"meta" : "",
 										"displayorder" : "-"
 									}
 ,
@@ -1989,14 +1989,14 @@
 ,
 					"patching_rect" : [ 379.0, 94.0, 40.0, 22.0 ],
 					"rnboattrcache" : 					{
-						"gitVolume" : 						{
-							"label" : "gitVolume",
+						"phaseVolume" : 						{
+							"label" : "phaseVolume",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"phaseVolume" : 						{
-							"label" : "phaseVolume",
+						"gitVolume" : 						{
+							"label" : "gitVolume",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -2030,15 +2030,7 @@
 						"subtype" : "Undefined",
 						"embed" : 1,
 						"snapshot" : 						{
-							"phaseVolume" : 							{
-								"value" : 0.0
-							}
-,
-							"gitVolume" : 							{
-								"value" : 0.0
-							}
-,
-							"__presetid" : "7f4b9c81-622a-11ee-9c81-66ac61638b79"
+
 						}
 ,
 						"snapshotlist" : 						{
@@ -2053,15 +2045,7 @@
 									"subtype" : "",
 									"embed" : 1,
 									"snapshot" : 									{
-										"phaseVolume" : 										{
-											"value" : 0.0
-										}
-,
-										"gitVolume" : 										{
-											"value" : 0.0
-										}
-,
-										"__presetid" : "7f4b9c81-622a-11ee-9c81-66ac61638b79"
+
 									}
 ,
 									"fileref" : 									{
@@ -2142,13 +2126,6 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "janineGuitars.wav",
-				"bootpath" : "~/_Projects/_lestTenHorizonsCry/RNBO",
-				"patcherrelativepath" : ".",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "untitled_20231003_1.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
 				"patcherrelativepath" : "../../../Documents/Max 8/Snapshots",
