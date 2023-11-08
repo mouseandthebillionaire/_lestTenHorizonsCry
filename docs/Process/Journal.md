@@ -160,3 +160,14 @@ This iteration uses The Red West's [Day's Die](https://www.youtube.com/watch?v=4
 
 At this point I should probably stop making tracks (or at least not prioritizing that) and move on to the actual implementation. Next is to get them into Unity with RNBO and start seeing how an effects chain in there might work/sound.
 
+## RNBO Synth Integration | 10.25.23
+
+Started out this iteration by implementing the simple synth from the Max [RNBO Synth Building Blocks](https://rnbo.cycling74.com/explore/synth-building-blocks-intro). There's a lot of great stuff in here, and I have started bringing these other effects (filtering, delay) into the main RNBO patch.
+
+Listening to various albums while working has made me want to make this foundational part of the experience a little deeper. The simple rhythmic drone is good, but perhaps is a bit too boring for that initial engagement. Probably something to add in during a later stage, but below are some musical reference points for when that happens. 
+
+- [Light Will Never Leave - Orchid Mantis](https://orchid-mantis.bandcamp.com/track/light-will-never-leave)
+- [Ornamental Plants - Ki Oni](https://kioni.bandcamp.com/track/ornamental-plants)
+- [Speak Again - Jason Calhoun](https://napsounds.bandcamp.com/track/speak-again)
+
+Also listening to [Fuck Buttons' Ribs Out](https://www.youtube.com/watch?v=qgJk4qx_Ofk) again this week brings to mind a possible track for this experience that is all jangly syncopated percussion. Always new fun things to try!
