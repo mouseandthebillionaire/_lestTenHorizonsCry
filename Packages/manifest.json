@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.cycling74.insteffectchain": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/instEffectChain/instEffectChain",
     "com.cycling74.rnbotypes": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/RNBOTypes",
     "com.cycling74.samplesynth": "file:../RNBO/SampleSynth",
     "com.cycling74.track0": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/build/track0",
