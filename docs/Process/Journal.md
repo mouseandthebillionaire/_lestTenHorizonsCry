@@ -172,3 +172,15 @@ Listening to various albums while working has made me want to make this foundati
 
 Also listening to [Fuck Buttons' Ribs Out](https://www.youtube.com/watch?v=qgJk4qx_Ofk) again this week brings to mind a possible track for this experience that is all jangly syncopated percussion. Always new fun things to try!
 
+## RNBO Instrument Effect Chain + Unity Mixer Stack
+
+Yes! This is the way to go (or at least arises as something that I can wrap my mind around a bit better)
+
+![a mixerStack Solution](Media/mixerStack.jpg)
+
+This iteration uses RNBO <em>only</em> to handle the effects chain of each individual track. Then the Unity mixer is responsible for the volume control for each track. This makes a whole lot more sense, and paves the way  to easily swap in/out the songs via code later, which will make the project more extendable. 
+
+Next:
+- Build a visual interface in the screen that shows where the dials are currently set
+- Program a 'dial/knob' script/object
+- Add more effects to the RNBO plugin (notably distortion/bit-crushing which is awful in Unity)
