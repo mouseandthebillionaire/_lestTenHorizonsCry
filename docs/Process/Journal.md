@@ -176,7 +176,7 @@ Also listening to [Fuck Buttons' Ribs Out](https://www.youtube.com/watch?v=qgJk4
 
 Yes! This is the way to go (or at least arises as something that I can wrap my mind around a bit better)
 
-![a mixerStack Solution](Media/mixerStack.jpg)
+![a mixerStack Solution](Media/mixerStack.png)
 
 This iteration uses RNBO <em>only</em> to handle the effects chain of each individual track. Then the Unity mixer is responsible for the volume control for each track. This makes a whole lot more sense, and paves the way  to easily swap in/out the songs via code later, which will make the project more extendable. 
 
