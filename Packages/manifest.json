@@ -1,7 +1,8 @@
 {
   "dependencies": {
-    "com.cycling74.rnbotypes": "file:/Users/m/GameProjects/rnbo.unity.audioplugin-main/RNBOTypes",
+    "com.cycling74.rnbotypes": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/RNBOTypes",
     "com.cycling74.samplesynth": "file:../RNBO/SampleSynth",
+    "com.cycling74.track0": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/build/track0",
     "com.unity.2d.animation": "7.0.3",
     "com.unity.2d.pixel-perfect": "5.0.1",
     "com.unity.2d.psdimporter": "6.0.2",
