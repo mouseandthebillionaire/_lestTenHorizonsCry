@@ -172,7 +172,7 @@ Listening to various albums while working has made me want to make this foundati
 
 Also listening to [Fuck Buttons' Ribs Out](https://www.youtube.com/watch?v=qgJk4qx_Ofk) again this week brings to mind a possible track for this experience that is all jangly syncopated percussion. Always new fun things to try!
 
-## RNBO Instrument Effect Chain + Unity Mixer Stack
+## RNBO Instrument Effect Chain + Unity Mixer Stack | 11.08.23
 
 Yes! This is the way to go (or at least arises as something that I can wrap my mind around a bit better)
 
