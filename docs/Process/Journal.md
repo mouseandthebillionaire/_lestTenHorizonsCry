@@ -1,4 +1,4 @@
-0# Lest Ten Horizons Cry | Process Documentation!
+# Lest Ten Horizons Cry | Process Documentation!
 
 ## Context Statement | 09.01.23
 
