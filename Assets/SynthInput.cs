@@ -34,11 +34,12 @@ public class SynthInput : MonoBehaviour
 
     public void UpdateParams(int param, float value)
     {
-        paramValues[param] = value;
+        paramValues[param] += value;
+        paramValues[param] = Mathf.Repeat(paramValues[param], 100);
         paramImages[param].transform.eulerAngles = new Vector3(
             0,
             0,
-            (paramValues[param] * 2.8125f)
+            (paramValues[param] * 3.65f)
         );
     }
 

@@ -1181,6 +1181,18 @@ PrefabInstance:
       value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: maxValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: adjustAmt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: dialValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
       propertyPath: audioParams.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1269,6 +1281,18 @@ PrefabInstance:
     - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
       propertyPath: dialDown
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: maxValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: adjustAmt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: dialValue
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
       propertyPath: audioParams.Array.size
@@ -1525,20 +1549,32 @@ PrefabInstance:
       value: 97
       objectReference: {fileID: 0}
     - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
-      propertyPath: audioParams.Array.size
-      value: 2
+      propertyPath: maxValue
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
-      propertyPath: audioParams.Array.data[0]
+      propertyPath: adjustAmt
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: dialValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: audioParams.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: audioParams.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
       propertyPath: audioParams.Array.data[1]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
       propertyPath: audioParams.Array.data[2]
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1528705781239315335, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
       propertyPath: m_RootOrder
@@ -1782,15 +1818,31 @@ PrefabInstance:
       value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: maxValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: adjustAmt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: dialValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
       propertyPath: audioParams.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
       propertyPath: audioParams.Array.data[0]
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
       propertyPath: audioParams.Array.data[1]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: audioParams.Array.data[2]
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1528705781239315335, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
@@ -1913,7 +1965,31 @@ PrefabInstance:
       value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: maxValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: adjustAmt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: dialValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: audioParams.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
       propertyPath: audioParams.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: audioParams.Array.data[1]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: audioParams.Array.data[2]
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1528705781239315335, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
@@ -3407,6 +3483,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1528705781239315332, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
       propertyPath: m_Name
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: maxValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: adjustAmt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
+      propertyPath: dialValue
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1528705781239315334, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}

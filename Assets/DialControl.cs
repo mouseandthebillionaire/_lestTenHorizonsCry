@@ -10,8 +10,8 @@ public class DialControl : MonoBehaviour
     public float dialValue;
     public float adjustAmt;
     public float minValue = 0;
-    public float maxValue = 127;
-    
+    public float maxValue = 100;
+
     // choose the parameters to control
     public int[] audioParams;
     
@@ -28,23 +28,25 @@ public class DialControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(dialDown))
-        {
-            if (dialValue > minValue) dialValue -= adjustAmt;
+        if (Input.GetKeyDown(dialDown)) {
+            adjustAmt = Mathf.Abs(adjustAmt) * -1;
             UpdateDial();
         }
+
         if (Input.GetKeyDown(dialUp))
         {
-            if (dialValue < maxValue) dialValue += adjustAmt;
+            adjustAmt = Mathf.Abs(adjustAmt);
             UpdateDial();
         }
+        
+
     }
 
     private void UpdateDial()
     {
         for (int i = 0; i < audioParams.Length; i++)
         {
-            SynthInput.S.UpdateParams(audioParams[i], dialValue);
+            SynthInput.S.UpdateParams(audioParams[i], adjustAmt);
         }
     }
 }
