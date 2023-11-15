@@ -41,13 +41,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1528705781239315332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f673dae1e9de41bc95cf6bc8ed7421f, type: 3}
+  m_Script: {fileID: 11500000, guid: 49b714a5a65e941e3b3a66f3f0390d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialDown: 113
-  dialUp: 119
-  dialValue: 30
-  adjustAmt: 1
+  dialDown: 0
+  dialUp: 0
+  dialValue: 0
+  adjustAmt: 0
   minValue: 0
-  maxValue: 127
-  audioParams: 00000000
+  maxValue: 100
+  audioParams: 
