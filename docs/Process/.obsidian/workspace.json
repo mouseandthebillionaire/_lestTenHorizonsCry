@@ -50,9 +50,21 @@
                 "currentVersion": "1.4.16"
               }
             }
+          },
+          {
+            "id": "2964e00ec9a67322",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Journal.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -189,8 +201,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a985a91f4bf31c86",
+  "active": "2964e00ec9a67322",
   "lastOpenFiles": [
+    "Media/dnsd.gif",
     "PurposeStatement.md",
     "Journal.md",
     "Media/interfaceSketches_0.jpg",

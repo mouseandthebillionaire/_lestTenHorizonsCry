@@ -28,7 +28,7 @@ public class BG_Image : MonoBehaviour
         xDepth = Random.Range(.01f, 1f);
         yDepth = Random.Range(.01f, 1f);
         zDepth = Random.Range(.01f, 1f);
-        aDepth = Random.Range(.01f, .75f);
+        aDepth = Random.Range(.01f, .85f);
 
         animationSpeed = Random.Range(0.01f, 0.1f);
     }

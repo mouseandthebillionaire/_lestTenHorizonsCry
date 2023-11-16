@@ -184,3 +184,30 @@ Next:
 - Build a visual interface in the screen that shows where the dials are currently set
 - Program a 'dial/knob' script/object
 - Add more effects to the RNBO plugin (notably distortion/bit-crushing which is awful in Unity)
+
+## Days Never Say Die Implementation | 11.16.23
+
+![Days Never Say Die Implementation](Media/dnsd.gif)
+
+So we finally have a legitimate implementation of a song. The current use of the RNBO effect works really well. There's only one effect in the chain at present, but it is really easy to target both the parameters within this RNBO effect as well as any standard unity mixer parameters. Excellent.
+
+Building all of this shows how fiddly and hands-on the tweaking of these parameter variables is going to be, and so it is good that we have set up a way to easily do this in the inspector. From here, to really fine-tune the experience is going to be a fairly laborious process, but this is probably fine. There could maybe be a way to randomize this, but the human/artist touch will serve the work more.
+
+Additionally, this build brings up the issue of parameter control in general. Right now we have six knobs controlling eighteen parameters, which..
+- gives us a lot parameters and
+- some parameters are chained to each other, which is interesting, 
+but...
+- the hard-coding of the parameters feels to constricting
+- might there be a more exploratory way for this?
+
+It's something to explore further, but it worth noting that every level of abstraction/exploration/novelty adds the possibility of making it harder for the user to understand what is going on (as it is, L is already confused to what is going on just by looking at the video version of the gif above).
+
+Side note that isn't mentioned elsewhere: this week's experimentation proved that it is possible to extend the computer screen to an iPad through universal control. This is going to make the installation so much easier!
+
+Also, knobs/dials and other misc hardware has been ordered from Adafruit (which, for the record, doesn't have outrageous fees to ship to Canada!) so hardware build can commence after next week's inspirational sojourn to the Liberty Bell.
+
+Next:
+- build a role version of the experience that moves from synth tuning/exploration to "finding" this particular track
+- Spend the hours tweaking this song's parameters for a more compelling sonic experience
+- add the additional effects to the RNBO effect object (distortion, specifically)
+
