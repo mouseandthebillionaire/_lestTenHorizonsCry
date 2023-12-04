@@ -37,25 +37,24 @@ public class MainSynth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (Input.GetKey(xDial_down) && xLoc > 0)
-		{
-			xLoc -= xStep;
-			UpdateSynthFrequency();
-			SongEntrance();
-		}
-
-		if (Input.GetKey(xDial_up) && xLoc < 100)
-		{
-			xLoc += xStep;
-			UpdateSynthFrequency();
-			SongEntrance();
-		}
-        if (Input.GetKey(yDial_down)) yLoc -= yStep;
+		if (Input.GetKey(xDial_down) && xLoc > 0) xLoc -= xStep;
+		if (Input.GetKey(xDial_up) && xLoc < 100) xLoc += xStep;
+		if (Input.GetKey(yDial_down)) yLoc -= yStep;
         if (Input.GetKey(yDial_up)) yLoc += yStep;
+
+		if (Input.anyKey)
+		{
+			UpdateBPM();
+			UpdateNoteChance();
+			UpdateSynthFrequency();
+			UpdateBlend();
+			SongEntrance();
+		}
 
 		
 		// eventually cycle through an array of possible locations
 		distance = CalculateDistance(xTarget, yTarget, xLoc, yLoc);
+		Debug.Log(distance);
 
 		//Debug.Log(xLoc + ":" + yLoc + " || Distance: " + distance + "|| Variable: " + thirdVariable);
     }
@@ -72,6 +71,25 @@ public class MainSynth : MonoBehaviour
 		
 		am.SetFloat("mainSynth_freq", cutoffFreq);
 	}
+
+	private void UpdateBPM()
+	{
+		float bpm = scale(0, 100, 60, 194.6f, xLoc);
+		am.SetFloat("bpm", bpm);
+	}
+
+	private void UpdateNoteChance()
+	{
+		float noteChance = scale(0, 100, 80, 10, yLoc);
+		am.SetFloat("noteChance", noteChance);
+	}
+
+	private void UpdateBlend()
+	{
+		float blend = scale(0, 100, 1.0f, 0f, yLoc);
+		am.SetFloat("blend", blend);
+	}
+	
 
 	private void SongEntrance()
 	{
@@ -109,6 +127,16 @@ public class MainSynth : MonoBehaviour
 	{
 		return Mathf.Sqrt(Mathf.Pow(x2 - x1, 2) + Mathf.Pow(y2 - y1, 2));
 	}
+	
+	public float scale(float OldMin, float OldMax, float NewMin, float NewMax, float OldValue){
+     
+		float OldRange = (OldMax - OldMin);
+		float NewRange = (NewMax - NewMin);
+		float NewValue = (((OldValue - OldMin) * NewRange) / OldRange) + NewMin;
+     
+		return(NewValue);
+	}
+
 
 
 	

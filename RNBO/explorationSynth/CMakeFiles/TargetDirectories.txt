@@ -1,0 +1,7 @@
+/Users/m/_Projects/rnbo.unity.audioplugin-main/explorationSynth/CMakeFiles/RNBOUnityPlugin.dir
+/Users/m/_Projects/rnbo.unity.audioplugin-main/explorationSynth/CMakeFiles/edit_cache.dir
+/Users/m/_Projects/rnbo.unity.audioplugin-main/explorationSynth/CMakeFiles/rebuild_cache.dir
+/Users/m/_Projects/rnbo.unity.audioplugin-main/explorationSynth/CMakeFiles/list_install_components.dir
+/Users/m/_Projects/rnbo.unity.audioplugin-main/explorationSynth/CMakeFiles/install.dir
+/Users/m/_Projects/rnbo.unity.audioplugin-main/explorationSynth/CMakeFiles/install/local.dir
+/Users/m/_Projects/rnbo.unity.audioplugin-main/explorationSynth/CMakeFiles/install/strip.dir

@@ -467,10 +467,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xTarget: 75
-  yTarget: 0
+  yTarget: 25
   song: {fileID: 1720971127}
   xStep: 0.1
-  yStep: 0
+  yStep: 0.1
   xDial_up: 112
   xDial_down: 111
   yDial_up: 108
