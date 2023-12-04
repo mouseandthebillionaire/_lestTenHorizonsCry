@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.cycling74.explorationsynth": {
+      "version": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/explorationSynth/explorationSynth",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.cycling74.rnbotypes": "0.0.2"
+      }
+    },
     "com.cycling74.insteffectchain": {
       "version": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/instEffectChain/instEffectChain",
       "depth": 0,
@@ -16,14 +24,6 @@
     },
     "com.cycling74.samplesynth": {
       "version": "file:../RNBO/SampleSynth",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {
-        "com.cycling74.rnbotypes": "0.0.2"
-      }
-    },
-    "com.cycling74.track0": {
-      "version": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/build/track0",
       "depth": 0,
       "source": "local",
       "dependencies": {

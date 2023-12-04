@@ -67,7 +67,7 @@ public class MainSynth : MonoBehaviour
 		float logMin = Mathf.Log10(minFrequency);
 		float logMax = Mathf.Log10(maxFrequency);
 		
-		float logValue = logMin + (xLoc/100) * (logMax - logMin);
+		float logValue = logMin + (xLoc/10) * (logMax - logMin);
 		float cutoffFreq = Mathf.Pow(10, logValue);
 		
 		am.SetFloat("mainSynth_freq", cutoffFreq);
