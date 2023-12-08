@@ -211,3 +211,42 @@ Next:
 - Spend the hours tweaking this song's parameters for a more compelling sonic experience
 - add the additional effects to the RNBO effect object (distortion, specifically)
 
+## Hardware Hustle | 12.08.23
+
+The past two weeks has been filled with the tedious, frustrating, and boring activity of building out and testing the hardware aspects of the project. I always seem to forget how un-friendly all of these electronic components are with each other, and how annoying it can be to get everyone playing nicely. For instance:
+
+![Rotay Encoders](https://cdn-learn.adafruit.com/guides/cropped_images/000/003/325/medium640/REI2C_top_angle_with_RC.jpg?1620412935)
+
+These [I2C QT Rotary Encoder Breakout Boards from Adafruit](https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder/overview) seem great right? That's going to make everything waaay easier. 
+
+Ordered. Wait. Shipped. Wait. They're here! Yay! Let's go.
+
+All we have to do is go to campus and solder these babies up! Hold up. There are multiple children stuck at my house because of teacher strikes. This is going to make commuting more difficult...
+
+Okay. Soldering iron ordered. Wait. Shipped. Wait. Okay. Let's do this!
+
+Wait, you need to connect the rotary endoers to a microcontroller via the SDA SCL? Did you know that the original Arduino Diecimilia (which there are 5 of sitting around here) doesn't have that? I didn't either, but now I do! 
+
+That's cool. There's also an UNO in this bin that we can use, but it doesn't work for some reason. Should be fine? Wait, it's made by [Vilros](https://vilros.com/collections/arduino)? But I always drink plenty of [malk?](https://www.youtube.com/watch?v=ovfM7dvFto0)
+
+![Vilros Uno](https://www.geeky-gadgets.com/wp-content/uploads/2019/02/vilros-Uno.jpg)
+
+Okay, new <em>official</em> Arduino UNO R3 ordered. Wait. Shipped. Wait. It's here. Let's go!
+
+Okay, everything seems to be working on the Arduino side. All we need to do is use the Arduino keyboard library to easily communicate with Unity (like we've *always* done for projects like these). 
+
+Wait. The UNO R3 *doesn't* support the keyboard library, but the R4 DOES!?!?
+
+!(Bangs Head on Table)[https://media1.giphy.com/media/3ohzdUuqOMFwxPyUvu/giphy.gif?cid=ecf05e47n9tv7so4r3fbob1ljvlsbhj8641qh3zujsbbos0g&ep=v1_gifs_search&rid=giphy.gif&ct=g]
+
+Anyway, we can still use the serial communication so it will be fine, just a little bit more work; what a boring story! But the realization that this part of the process is so prone to being destroyed by these small issues is really interesting. When teaching students, we always recommend at least a month buffer for these kinds of issues, and this just goes to show that it's not for no reason! Even with the large number of technically similar projects that I've made, these issues still arise. There are unexpected failures. The pieces don't always fit. And it seems like this is more the rule than the exception. Something to be aware of: both for future work and when advising other people. 
+
+Moving on!
+
+Next (and thoughts):
+
+- Also spent a TON of time working on the RNBO patch, and there is a bunch of fun functionality in there right now. The synth sound as implemented feels a little too rambly/funky and so refining that is a priority. 
+- Once the dials are all working appropriately in the Unity project it will be interesting to see how the 'tuning' aspect feels, but as of now it feels pretty bad? There's no visual feedback (by design) and the audio feedback is too ambiguous? And some part of the project design goals is ambiguity, but maybe this is too much? Something to test with others, as well. One thought (to also address the rambly synth mentioned above) is to add a third voice with fairly one-to-one mapping pitch/bpm/volume/etc
+- Mock up some layout designs for the final form factor (acknowledging that this will probably be a temporary solution)
+- Write a process post on using AudioMixer Snapshots in the synth settings, cause that business is 🔥
+
