@@ -239,6 +239,7 @@ Wait. The UNO R3 *doesn't* support the keyboard library, but the R4 DOES!?!?
 
 ![Bangs Head on Table](https://media1.giphy.com/media/3ohzdUuqOMFwxPyUvu/giphy.gif)
 
+
 Anyway, we can still use the serial communication so it will be fine, just a little bit more work; what a boring story! But the realization that this part of the process is so prone to being destroyed by these small issues is really interesting. When teaching students, we always recommend at least a month buffer for these kinds of issues, and this just goes to show that it's not for no reason! Even with the large number of technically similar projects that I've made, these issues still arise. There are unexpected failures. The pieces don't always fit. And it seems like this is more the rule than the exception. Something to be aware of: both for future work and when advising other people. 
 
 Moving on!
