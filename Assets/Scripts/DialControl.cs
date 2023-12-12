@@ -28,12 +28,12 @@ public class DialControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(dialDown)) {
+        if (Input.GetKeyDown(dialDown) || Controller.S.dials[dialNum] == 1) {
             adjustAmt = Mathf.Abs(adjustAmt) * -1;
             UpdateDial();
         }
 
-        if (Input.GetKeyDown(dialUp))
+        if (Input.GetKeyDown(dialUp) || Controller.S.dials[dialNum] == 2)
         {
             adjustAmt = Mathf.Abs(adjustAmt);
             UpdateDial();

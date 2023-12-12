@@ -9,9 +9,11 @@ public class MainSynth : MonoBehaviour
     
     // Make these arrays later for the multi-song experience
     public float      xTarget, yTarget;
-	public GameObject song;
-    
-    private float xLoc,  yLoc;
+	
+	public GameObject location; // array eventually
+
+	private float xLoc = 1;
+	private float yLoc = 1;
     public  float xStep, yStep;
 
 	public KeyCode xDial_up, xDial_down, yDial_up, yDial_down;
@@ -25,39 +27,77 @@ public class MainSynth : MonoBehaviour
     // Calculate distance using Euclidean distance formula
 	private float distance;
 
-    public AudioMixer am;
-	public AudioMixer sm;
+    public  AudioMixer         am;
+	public  AudioMixerSnapshot farSynth, closeSynth;
+	private float              smoothingValue = 0.5f;
+
+	public GameObject finder;
+
+	public static MainSynth S;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    void Awake()
+	{
+		S = this;
+	}
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-		if (Input.GetKey(xDial_down) && xLoc > 0) xLoc -= xStep;
-		if (Input.GetKey(xDial_up) && xLoc < 100) xLoc += xStep;
-		if (Input.GetKey(yDial_down)) yLoc -= yStep;
-        if (Input.GetKey(yDial_up)) yLoc += yStep;
-
-		if (Input.anyKey)
-		{
-			UpdateBPM();
-			UpdateNoteChance();
-			UpdateSynthFrequency();
-			UpdateBlend();
-			SongEntrance();
-		}
-
+		if (Input.GetKey(xDial_down)) UpdateLoc("X", -1);
+		if (Input.GetKey(xDial_up)) UpdateLoc("X", 1);
+		if (Input.GetKey(yDial_down)) UpdateLoc("Y", -1);
+        if (Input.GetKey(yDial_up)) UpdateLoc("Y", 1);
 		
 		// eventually cycle through an array of possible locations
 		distance = CalculateDistance(xTarget, yTarget, xLoc, yLoc);
+		
+		// Little Icon for position. Maybe get rid of later
+		finder.transform.localPosition = new Vector3(xLoc/10f, yLoc/10f, 0);
+		finder.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, distance / 100f);
+		
 		Debug.Log(distance);
 
-		//Debug.Log(xLoc + ":" + yLoc + " || Distance: " + distance + "|| Variable: " + thirdVariable);
-    }
+		float mix = distance * .01f;
+		SetAudioMix(mix);
+		
+		// Song?
+		SongEntrance();
+		
+		
+	}
+
+	public void UpdateLoc(string axis, int direction)
+	{
+		if (axis == "X") {
+			if (xLoc >= 0-xStep && xLoc <= 100+xStep) xLoc += (xStep * direction);
+			if (xLoc < 0) xLoc = 0;
+			if (xLoc > 100) xLoc = 100;
+		}
+
+		if (axis == "Y")
+		{
+			if (yLoc >= 0-yStep && yLoc <= 100+yStep) yLoc += (yStep * direction);
+			if (yLoc < 0) yLoc = 0;
+			if (yLoc > 100) yLoc = 100;
+		}
+	}
+	
+	
+	
+	private void SetAudioMix(float value)
+	{
+		AudioMixerSnapshot[] tmpSnapshots = new AudioMixerSnapshot[2];
+		tmpSnapshots[0] = farSynth;
+		tmpSnapshots[1] = closeSynth;
+
+		float[] tmpTransition = new float[2];
+		tmpTransition[0] = value;
+		tmpTransition[1] = 1.0f - value;
+        
+		// Smooth this out over time
+		am.TransitionToSnapshots(tmpSnapshots, tmpTransition, smoothingValue);
+	}
 
 	private void UpdateSynthFrequency()
 	{
@@ -72,49 +112,21 @@ public class MainSynth : MonoBehaviour
 		am.SetFloat("mainSynth_freq", cutoffFreq);
 	}
 
-	private void UpdateBPM()
-	{
-		float bpm = scale(0, 100, 60, 194.6f, xLoc);
-		am.SetFloat("bpm", bpm);
-	}
-
-	private void UpdateNoteChance()
-	{
-		float noteChance = scale(0, 100, 80, 10, yLoc);
-		am.SetFloat("noteChance", noteChance);
-	}
-
-	private void UpdateBlend()
-	{
-		float blend = scale(0, 100, 1.0f, 0f, yLoc);
-		am.SetFloat("blend", blend);
-	}
-	
-
 	private void SongEntrance()
 	{
 		// Check if the distance is within the threshold
 		if (distance < threshold)
 		{ 
-			Debug.Log("Close!");
+			location.GetComponent<LocationControl>().FadeIn(distance);
+			
 			// Make the knob turning more granular
 			xStep = .01f;
 			yStep = .01f;
 			
 			// Increase the third variable
 			thirdVariable = (threshold - distance) * 10f;
-			
-			// adapt for volume
-			float t = Mathf.InverseLerp(0, 100, thirdVariable);
-			float output = Mathf.Lerp(-60.0f, 9.0f, t);
-			sm.SetFloat("songVolume", output);
-			
-			// adapt for the fade
-			// Should probably do this within the target gameObject
-			Transform fade = song.GetComponent<Transform>().GetChild(0);
-			float fadeAlpha = 1.0f - (thirdVariable * .01f);
-			Debug.Log(fadeAlpha);
-			fade.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, fadeAlpha);
+
+
 		}
 		else
 		{
