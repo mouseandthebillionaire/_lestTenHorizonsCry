@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a96823583bc4b119c85a38ebda8fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerActive: 1
   dials: 0000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &102961637
 Transform:
@@ -402,7 +403,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613031697}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.125, y: 0.125, z: 1}
   m_ConstrainProportionsScale: 0
@@ -467,10 +468,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e024d12a29db4568938f58b2c1adc0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothingValue: 0.5
-  synthMix: {fileID: 24500006, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
-  songMix: {fileID: 8734377405300482969, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
-  mainMixer: {fileID: 24100000, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
+  smoothingValue: 0
+  synthMix: {fileID: 24500006, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
+  songMix: {fileID: -7148284483981315068, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
+  mainMixer: {fileID: 0}
 --- !u!1 &1558299451
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,13 +619,13 @@ MonoBehaviour:
   xTarget: 75
   yTarget: 25
   location: {fileID: 1720971127}
-  xStep: 0.1
-  yStep: 0.1
+  initStep: 0.25
+  closeStep: 0.1
   xDial_up: 112
   xDial_down: 111
   yDial_up: 108
   yDial_down: 107
-  threshold: 10
+  threshold: 20
   am: {fileID: 24100000, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
   farSynth: {fileID: 24500006, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
   closeSynth: {fileID: 8015787957249283574, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
@@ -901,6 +902,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: fadingMix
+      value: 
+      objectReference: {fileID: -1032083540189463034, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
+    - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: innactive
+      value: 
+      objectReference: {fileID: -7148284483981315068, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
+    - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: songMixer
       value: 
       objectReference: {fileID: 24100000, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
@@ -910,23 +919,23 @@ PrefabInstance:
       objectReference: {fileID: 4487237441341331734, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
     - target: {fileID: 194556182909096356, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: adjustAmt
-      value: 0.1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 194556182925561514, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: adjustAmt
-      value: 0.1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 194556182965305897, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: adjustAmt
-      value: 0.1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 194556183022315918, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: adjustAmt
-      value: 0.1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 194556183192074634, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: adjustAmt
-      value: 0.1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1694547659126071212, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: m_IsActive
@@ -964,9 +973,41 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1694547659621815670, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: paramName
+      value: _EQfreq
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659621815670, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: targetTrack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659621815670, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: effectValueLow
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659621815670, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: effectValueHigh
+      value: 22000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659626774425, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: paramName
+      value: _EQfreq
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659626774425, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: targetTrack
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659626774425, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: effectValueLow
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659626774425, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: effectValueHigh
+      value: 22000
+      objectReference: {fileID: 0}
     - target: {fileID: 1694547659748062114, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: adjustAmt
-      value: 0.1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1694547659839693324, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -983,6 +1024,54 @@ PrefabInstance:
     - target: {fileID: 1694547659839693325, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659853993681, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: paramName
+      value: _EQfreq
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659853993681, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: targetTrack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659853993681, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: effectValueLow
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659853993681, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: effectValueHigh
+      value: 22000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659920206458, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: paramName
+      value: _EQfreq
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659920206458, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: targetTrack
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659920206458, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: effectValueLow
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659920206458, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: effectValueHigh
+      value: 22000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659939753237, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: paramName
+      value: _EQfreq
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659939753237, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: targetTrack
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659939753237, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: effectValueLow
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547659939753237, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: effectValueHigh
+      value: 22000
       objectReference: {fileID: 0}
     - target: {fileID: 1694547660291063544, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: m_IsActive

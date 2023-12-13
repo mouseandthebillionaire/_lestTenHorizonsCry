@@ -5,10 +5,12 @@ using System.IO.Ports;
 using System.ServiceModel.Configuration;
 using System.Threading;
 
-public class Controller : MonoBehaviour
-{
+public class Controller : MonoBehaviour {
+    // turn this on if we are using the controller
+    public bool controllerActive = false;
+    
     // Serial data
-    SerialPort stream = new SerialPort("/dev/cu.usbmodem11201", 115200);
+    SerialPort stream = new SerialPort("/dev/cu.usbmodem144301", 115200);
     Thread serialThread;
     string serialData;
     private bool serialReceived = false;
@@ -33,7 +35,7 @@ public class Controller : MonoBehaviour
     void Update()
     {
         // Initialize serial
-        if (!stream.IsOpen) {
+        if (!stream.IsOpen && controllerActive) {
             if (SerialPort.GetPortNames().Length > 0) {
                 stream.Open();
 

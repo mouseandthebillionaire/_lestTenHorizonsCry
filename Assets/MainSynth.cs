@@ -12,9 +12,10 @@ public class MainSynth : MonoBehaviour
 	
 	public GameObject location; // array eventually
 
-	private float xLoc = 1;
-	private float yLoc = 1;
-    public  float xStep, yStep;
+	private float xLoc = 50;
+	private float yLoc = 50;
+    private  float xStep, yStep;
+	public float initStep, closeStep;
 
 	public KeyCode xDial_up, xDial_down, yDial_up, yDial_down;
 
@@ -44,16 +45,19 @@ public class MainSynth : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-		if (Input.GetKey(xDial_down)) UpdateLoc("X", -1);
-		if (Input.GetKey(xDial_up)) UpdateLoc("X", 1);
-		if (Input.GetKey(yDial_down)) UpdateLoc("Y", -1);
-        if (Input.GetKey(yDial_up)) UpdateLoc("Y", 1);
+		// these are all 10 instead of 1 because they are slower than the knobs
+		if (Input.GetKey(xDial_down)) UpdateLoc("X", -10);
+		if (Input.GetKey(xDial_up)) UpdateLoc("X", 10);
+		if (Input.GetKey(yDial_down)) UpdateLoc("Y", -10);
+        if (Input.GetKey(yDial_up)) UpdateLoc("Y", 10);
 		
 		// eventually cycle through an array of possible locations
 		distance = CalculateDistance(xTarget, yTarget, xLoc, yLoc);
 		
 		// Little Icon for position. Maybe get rid of later
-		finder.transform.localPosition = new Vector3(xLoc/10f, yLoc/10f, 0);
+		float finder_xPos = scale(0, 100, -8f, 8f, xLoc);
+		float finder_yPos = scale(0, 100, -4f, 4f, yLoc);
+		finder.transform.position = new Vector3(finder_xPos, finder_yPos, 0);
 		finder.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, distance / 100f);
 		
 		Debug.Log(distance);
@@ -120,18 +124,17 @@ public class MainSynth : MonoBehaviour
 			location.GetComponent<LocationControl>().FadeIn(distance);
 			
 			// Make the knob turning more granular
-			xStep = .01f;
-			yStep = .01f;
+			xStep = closeStep;
+			yStep = closeStep;
 			
 			// Increase the third variable
 			thirdVariable = (threshold - distance) * 10f;
 
 
 		}
-		else
-		{
-			xStep = .1f;
-			yStep = .1f;
+		else {
+			xStep = initStep;
+			yStep = initStep;
 		}
 	}
 	

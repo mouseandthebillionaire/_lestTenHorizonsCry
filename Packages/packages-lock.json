@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.cycling74.explorationsynth": {
-      "version": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/explorationSynth/explorationSynth",
+      "version": "file:../RNBO/explorationSynth/explorationSynth",
       "depth": 0,
       "source": "local",
       "dependencies": {
