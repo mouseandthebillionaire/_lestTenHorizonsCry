@@ -8,19 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fe9624af5cd004dd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MeetingNotes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b66d1ddbd8399fec",
+            "id": "68d770508ebf24de",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,39 +20,19 @@
             }
           },
           {
-            "id": "043c423d484cd3c1",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.4.16"
-              }
-            }
-          },
-          {
-            "id": "a985a91f4bf31c86",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.4.16"
-              }
-            }
-          },
-          {
-            "id": "2964e00ec9a67322",
+            "id": "b7051d41e5535cab",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Journal.md",
+                "file": "Reflections on Design Reflection.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -114,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "d5a4edfa05d1c267",
@@ -130,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Journal.md",
+                "file": "Reflections on Design Reflection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Journal.md",
+                "file": "Reflections on Design Reflection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Journal.md"
+                "file": "Reflections on Design Reflection.md"
               }
             }
           },
@@ -180,7 +148,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -201,16 +171,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2964e00ec9a67322",
+  "active": "b7051d41e5535cab",
   "lastOpenFiles": [
+    "Journal.md",
+    "Reflections on Design Reflection.md",
+    "MeetingNotes.md",
     "Media/dnsd.gif",
     "PurposeStatement.md",
-    "Journal.md",
     "Media/interfaceSketches_0.jpg",
     "Media/sketchTest.png",
     "Media/exploration_03.wav",
-    "MeetingNotes.md",
-    "MeetingNotes.md",
     "Precedents.md",
     "Media.md",
     "Media/interfaceMock_1.gif",
@@ -220,7 +190,6 @@
     "Media/interfaceMock_0.png",
     "Media/Screen Shot 2023-09-18 at 6.59.12 AM.png",
     "Media/PATCH CABLES 1.jpg",
-    "Media/TIKATMOS-TunerScene.gif",
     "Notepad.md",
     "todo.md"
   ]

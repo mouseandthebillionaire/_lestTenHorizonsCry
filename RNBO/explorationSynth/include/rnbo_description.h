@@ -238,9 +238,9 @@ R"RNBOLIT(ypeNumber",
     {
       "type": "ParameterTypeNumber",
       "index": 11,
-      "name": "reverb/decay)RNBOLIT"
-R"RNBOLIT(",
-      "paramId": "reverb/decay",
+      "name": "reverb/drywe)RNBOLIT"
+R"RNBOLIT(t",
+      "paramId": "reverb/drywet",
       "minimum": 0,
       "maximum": 1,
       "exponent": 1,
@@ -259,14 +259,14 @@ R"RNBOLIT(",
     {
       "type": "ParameterTypeNumber",
       "index": 12,
-      "name": "reverb/decaydiffusion1",
-      "paramId": "reverb/decaydiffu)RNBOLIT"
-R"RNBOLIT(sion1",
-      "minimum": 0,
+      "name": "reverb/decay2",
+      "paramId": "reverb/decay2",
+      "m)RNBOLIT"
+R"RNBOLIT(inimum": 0,
       "maximum": 1,
       "exponent": 1,
       "steps": 0,
-      "initialValue": 0.7,
+      "initialValue": 0.5,
       "isEnum": false,
       "enumValues": [],
       "displayName": "",
@@ -280,14 +280,14 @@ R"RNBOLIT(sion1",
     {
       "type": "ParameterTypeNumber",
       "index": 13,
-      "name": "reverb/decaydiffusion2",
-      "paramId": "reverb/decaydiffusion2",
+      "name": "reverb/decay1",
+      "paramId": "reverb/decay1",
       "minimum": 0,
-)RNBOLIT"
-R"RNBOLIT(      "maximum": 1,
-      "exponent": 1,
+      "maximum": 1,
+      "exponen)RNBOLIT"
+R"RNBOLIT(t": 1,
       "steps": 0,
-      "initialValue": 0.5,
+      "initialValue": 0.7,
       "isEnum": false,
       "enumValues": [],
       "displayName": "",
@@ -305,10 +305,10 @@ R"RNBOLIT(      "maximum": 1,
       "paramId": "reverb/predelay",
       "minimum": 0,
       "maximum": 100,
-      "exponent": 1,)RNBOLIT"
-R"RNBOLIT(
+      "exponent": 1,
       "steps": 0,
-      "initialValue": 10,
+      "initialV)RNBOLIT"
+R"RNBOLIT(alue": 10,
       "isEnum": false,
       "enumValues": [],
       "displayName": "",
@@ -322,15 +322,15 @@ R"RNBOLIT(
     {
       "type": "ParameterTypeNumber",
       "index": 15,
-      "name": "reverb/damping",
-      "paramId": "reverb/damping",
+      "name": "reverb/indiffusion2",
+      "paramId": "reverb/indiffusion2",
       "minimum": 0,
       "maximum": 1,
       "exponent": 1,
       "steps": 0,
-      "initialValue": 0.5,)RNBOLIT"
-R"RNBOLIT(
-      "isEnum": false,
+      "initialValue": 0.625,
+      "isEnum": false)RNBOLIT"
+R"RNBOLIT(,
       "enumValues": [],
       "displayName": "",
       "unit": "",
@@ -343,17 +343,17 @@ R"RNBOLIT(
     {
       "type": "ParameterTypeNumber",
       "index": 16,
-      "name": "reverb/inbandwidth",
-      "paramId": "reverb/inbandwidth",
+      "name": "reverb/decay",
+      "paramId": "reverb/decay",
       "minimum": 0,
       "maximum": 1,
       "exponent": 1,
       "steps": 0,
       "initialValue": 0.5,
       "isEnum": false,
-      "enumV)RNBOLIT"
-R"RNBOLIT(alues": [],
-      "displayName": "",
+      "enumValues": [],
+      "displayName": ")RNBOLIT"
+R"RNBOLIT(",
       "unit": "",
       "order": 0,
       "debug": false,
@@ -364,6 +364,27 @@ R"RNBOLIT(alues": [],
     {
       "type": "ParameterTypeNumber",
       "index": 17,
+      "name": "reverb/inbandwidth",
+      "paramId": "reverb/inbandwidth",
+      "minimum": 0,
+      "maximum": 1,
+      "exponent": 1,
+      "steps": 0,
+      "initialValue": 0.5,
+      "isEnum": false,
+      "enumValues": [],
+      "displayName": "",
+      "unit": "",
+      "order": )RNBOLIT"
+R"RNBOLIT(0,
+      "debug": false,
+      "visible": true,
+      "signalIndex": null,
+      "ioType": "IOTypeUndefined"
+    },
+    {
+      "type": "ParameterTypeNumber",
+      "index": 18,
       "name": "reverb/indiffusion1",
       "paramId": "reverb/indiffusion1",
       "minimum": 0,
@@ -373,20 +394,20 @@ R"RNBOLIT(alues": [],
       "initialValue": 0.75,
       "isEnum": false,
       "enumValues": [],
-      "displayName": )RNBOLIT"
-R"RNBOLIT("",
+      "displayName": "",
       "unit": "",
       "order": 0,
       "debug": false,
-      "visible": true,
+      "v)RNBOLIT"
+R"RNBOLIT(isible": true,
       "signalIndex": null,
       "ioType": "IOTypeUndefined"
     },
     {
       "type": "ParameterTypeNumber",
-      "index": 18,
-      "name": "reverb/drywet",
-      "paramId": "reverb/drywet",
+      "index": 19,
+      "name": "reverb/damping",
+      "paramId": "reverb/damping",
       "minimum": 0,
       "maximum": 1,
       "exponent": 1,
@@ -397,32 +418,11 @@ R"RNBOLIT("",
       "displayName": "",
       "unit": "",
       "order": 0,
-      )RNBOLIT"
-R"RNBOLIT("debug": false,
+      "debug": false,
       "visible": true,
       "signalIndex": null,
-      "ioType": "IOTypeUndefined"
-    },
-    {
-      "type": "ParameterTypeNumber",
-      "index": 19,
-      "name": "reverb/indiffusion2",
-      "paramId": "reverb/indiffusion2",
-      "minimum": 0,
-      "maximum": 1,
-      "exponent": 1,
-      "steps": 0,
-      "initialValue": 0.625,
-      "isEnum": false,
-      "enumValues": [],
-      "displayName": "",
-      "unit": "",
-      "order": 0,
-      "debug": false,
-      "visible":)RNBOLIT"
-R"RNBOLIT( true,
-      "signalIndex": null,
-      "ioType": "IOTypeUndefined"
+  )RNBOLIT"
+R"RNBOLIT(    "ioType": "IOTypeUndefined"
     },
     {
       "type": "ParameterTypeNumber",
@@ -442,11 +442,11 @@ R"RNBOLIT( true,
       "debug": false,
       "visible": true,
       "signalIndex": null,
-      "ioTyp)RNBOLIT"
-R"RNBOLIT(e": "IOTypeUndefined"
+      "ioType": "IOTypeUndefined"
     },
     {
-      "type": "ParameterTypeNumber",
+ )RNBOLIT"
+R"RNBOLIT(     "type": "ParameterTypeNumber",
       "index": 21,
       "name": "decay",
       "paramId": "env.adsr[1]/decay",
@@ -466,9 +466,9 @@ R"RNBOLIT(e": "IOTypeUndefined"
       "ioType": "IOTypeUndefined"
     },
     {
-      "type")RNBOLIT"
-R"RNBOLIT(: "ParameterTypeNumber",
-      "index": 22,
+      "type": "ParameterTypeNumber",
+      "inde)RNBOLIT"
+R"RNBOLIT(x": 22,
       "name": "sustain",
       "paramId": "env.adsr[1]/sustain",
       "minimum": 0,
@@ -489,9 +489,9 @@ R"RNBOLIT(: "ParameterTypeNumber",
     {
       "type": "ParameterTypeNumber",
       "index": 23,
-)RNBOLIT"
-R"RNBOLIT(      "name": "release",
-      "paramId": "env.adsr[1]/release",
+      "name": "release",
+      "para)RNBOLIT"
+R"RNBOLIT(mId": "env.adsr[1]/release",
       "minimum": 1,
       "maximum": 90000,
       "exponent": 5,
@@ -511,10 +511,10 @@ R"RNBOLIT(      "name": "release",
       "type": "ParameterTypeNumber",
       "index": 24,
       "name": "left",
-      "paramId": "de)RNBOLIT"
-R"RNBOLIT(l_0/left",
+      "paramId": "del_0/left",
       "minimum": 10,
-      "maximum": 10000,
+    )RNBOLIT"
+R"RNBOLIT(  "maximum": 10000,
       "exponent": 1,
       "steps": 0,
       "initialValue": 300,
@@ -535,10 +535,10 @@ R"RNBOLIT(l_0/left",
       "paramId": "del_0/fb",
       "minimum": 0,
       "maximum": 1,
-      )RNBOLIT"
-R"RNBOLIT("exponent": 1,
+      "exponent": 1,
       "steps": 0,
-      "initialValue": 0.25,
+   )RNBOLIT"
+R"RNBOLIT(   "initialValue": 0.25,
       "isEnum": false,
       "enumValues": [],
       "displayName": "",
@@ -558,10 +558,10 @@ R"RNBOLIT("exponent": 1,
       "maximum": 10000,
       "exponent": 1,
       "steps": 0,
-      "initialVal)RNBOLIT"
-R"RNBOLIT(ue": 400,
+      "initialValue": 400,
       "isEnum": false,
-      "enumValues": [],
+   )RNBOLIT"
+R"RNBOLIT(   "enumValues": [],
       "displayName": "",
       "unit": "",
       "order": 0,
@@ -581,10 +581,10 @@ R"RNBOLIT(ue": 400,
       "steps": 0,
       "initialValue": 0,
       "isEnum": false,
-      "enumValues")RNBOLIT"
-R"RNBOLIT(: [],
+      "enumValues": [],
       "displayName": "",
-      "unit": "",
+     )RNBOLIT"
+R"RNBOLIT( "unit": "",
       "order": 0,
       "debug": false,
       "visible": true,
@@ -605,9 +605,9 @@ R"RNBOLIT(: [],
       "enumValues": [],
       "displayName": "",
       "unit": "",
- )RNBOLIT"
-R"RNBOLIT(     "order": 0,
-      "debug": false,
+      "order": 0,
+      "debug": fals)RNBOLIT"
+R"RNBOLIT(e,
       "visible": true,
       "signalIndex": null,
       "ioType": "IOTypeUndefined"
@@ -628,10 +628,10 @@ R"RNBOLIT(     "order": 0,
       "unit": "",
       "order": 0,
       "debug": false,
-      "visible")RNBOLIT"
-R"RNBOLIT(: true,
+      "visible": true,
       "signalIndex": null,
-      "ioType": "IOTypeUndefined"
+ )RNBOLIT"
+R"RNBOLIT(     "ioType": "IOTypeUndefined"
     },
     {
       "type": "ParameterTypeNumber",
@@ -651,11 +651,11 @@ R"RNBOLIT(: true,
       "debug": false,
       "visible": true,
       "signalIndex": null,
-      "ioType": "I)RNBOLIT"
-R"RNBOLIT(OTypeUndefined"
+      "ioType": "IOTypeUndefined"
     },
     {
-      "type": "ParameterTypeNumber",
+      ")RNBOLIT"
+R"RNBOLIT(type": "ParameterTypeNumber",
       "index": 31,
       "name": "left",
       "paramId": "del_1/left",
@@ -675,10 +675,10 @@ R"RNBOLIT(OTypeUndefined"
       "ioType": "IOTypeUndefined"
     },
     {
-      "type": "Parameter)RNBOLIT"
-R"RNBOLIT(TypeNumber",
+      "type": "ParameterTypeNumber",
       "index": 32,
-      "name": "fb",
+    )RNBOLIT"
+R"RNBOLIT(  "name": "fb",
       "paramId": "del_1/fb",
       "minimum": 0,
       "maximum": 1,
@@ -699,9 +699,9 @@ R"RNBOLIT(TypeNumber",
       "type": "ParameterTypeNumber",
       "index": 33,
       "name": "right",
-      )RNBOLIT"
-R"RNBOLIT("paramId": "del_1/right",
-      "minimum": 10,
+      "paramId": "del_1/right",
+      "min)RNBOLIT"
+R"RNBOLIT(imum": 10,
       "maximum": 10000,
       "exponent": 1,
       "steps": 0,
@@ -720,11 +720,11 @@ R"RNBOLIT("paramId": "del_1/right",
       "type": "ParameterTypeNumber",
       "index": 34,
       "name": "rate",
-      "paramId": "amplitudeLFO_1/rate",
-      "minimum": 0)RNBOLIT"
-R"RNBOLIT(,
+      "paramId": "ampLFO_1/rate",
+      "minimum": 0,
       "maximum": 10,
-      "exponent": 1,
+      "exponent": 1)RNBOLIT"
+R"RNBOLIT(,
       "steps": 0,
       "initialValue": 0.5,
       "isEnum": false,
@@ -741,13 +741,13 @@ R"RNBOLIT(,
       "type": "ParameterTypeNumber",
       "index": 35,
       "name": "pitchShift",
-      "paramId": "amplitudeLFO_1/pitchShift",
+      "paramId": "ampLFO_1/pitchShift",
       "minimum": 0.5,
       "maximum": 2,
-      "expon)RNBOLIT"
-R"RNBOLIT(ent": 1,
+      "exponent": 1,
       "steps": 0,
-      "initialValue": 1,
+      "initialValue":)RNBOLIT"
+R"RNBOLIT( 1,
       "isEnum": false,
       "enumValues": [],
       "displayName": "",
@@ -762,16 +762,16 @@ R"RNBOLIT(ent": 1,
       "type": "ParameterTypeNumber",
       "index": 36,
       "name": "depth",
-      "paramId": "amplitudeLFO_1/depth",
+      "paramId": "ampLFO_1/depth",
       "minimum": 0,
       "maximum": 5,
       "exponent": 1,
       "steps": 0,
-      "initialValue": )RNBOLIT"
-R"RNBOLIT(0,
+      "initialValue": 0,
       "isEnum": false,
       "enumValues": [],
-      "displayName": "",
+    )RNBOLIT"
+R"RNBOLIT(  "displayName": "",
       "unit": "",
       "order": 0,
       "debug": false,
@@ -790,11 +790,11 @@ R"RNBOLIT(0,
       "steps": 100,
       "initialValue": 10,
       "isEnum": false,
-      "enumValu)RNBOLIT"
-R"RNBOLIT(es": [],
+      "enumValues": [],
       "displayName": "",
       "unit": "",
-      "order": 0,
+  )RNBOLIT"
+R"RNBOLIT(    "order": 0,
       "debug": false,
       "visible": true,
       "signalIndex": null,
@@ -813,11 +813,11 @@ R"RNBOLIT(es": [],
       "isEnum": false,
       "enumValues": [],
       "displayName": "",
-      "unit":)RNBOLIT"
-R"RNBOLIT( "",
+      "unit": "",
       "order": 0,
       "debug": false,
-      "visible": true,
+      "vi)RNBOLIT"
+R"RNBOLIT(sible": true,
       "signalIndex": null,
       "ioType": "IOTypeUndefined"
     },
@@ -837,10 +837,10 @@ R"RNBOLIT( "",
       "unit": "",
       "order": 0,
       "debug": false,
- )RNBOLIT"
-R"RNBOLIT(     "visible": true,
+      "visible": true,
       "signalIndex": null,
-      "ioType": "IOTypeUndefined"
+     )RNBOLIT"
+R"RNBOLIT( "ioType": "IOTypeUndefined"
     },
     {
       "type": "ParameterTypeNumber",
@@ -860,11 +860,11 @@ R"RNBOLIT(     "visible": true,
       "debug": false,
       "visible": true,
       "signalIndex": null,
-  )RNBOLIT"
-R"RNBOLIT(    "ioType": "IOTypeUndefined"
+      "ioType": "IOTypeUndefined"
     },
     {
-      "type": "ParameterTypeNumber",
+      "ty)RNBOLIT"
+R"RNBOLIT(pe": "ParameterTypeNumber",
       "index": 41,
       "name": "attack",
       "paramId": "env.adsr/attack",
@@ -884,10 +884,10 @@ R"RNBOLIT(    "ioType": "IOTypeUndefined"
       "ioType": "IOTypeUndefined"
     },
     {
-    )RNBOLIT"
-R"RNBOLIT(  "type": "ParameterTypeNumber",
+      "type": "ParameterTypeNumber",
       "index": 42,
-      "name": "decay",
+  )RNBOLIT"
+R"RNBOLIT(    "name": "decay",
       "paramId": "env.adsr/decay",
       "minimum": 1,
       "maximum": 5000,
@@ -906,10 +906,10 @@ R"RNBOLIT(  "type": "ParameterTypeNumber",
     },
     {
       "type": "ParameterTypeNumber",
-      "index": 43)RNBOLIT"
-R"RNBOLIT(,
+      "index": 43,
       "name": "sustain",
-      "paramId": "env.adsr/sustain",
+      "paramId": "env.adsr/)RNBOLIT"
+R"RNBOLIT(sustain",
       "minimum": 0,
       "maximum": 1,
       "exponent": 0.8,
@@ -929,10 +929,10 @@ R"RNBOLIT(,
       "type": "ParameterTypeNumber",
       "index": 44,
       "name": "release",
-      "paramId": "en)RNBOLIT"
-R"RNBOLIT(v.adsr/release",
+      "paramId": "env.adsr/release",
       "minimum": 1,
-      "maximum": 90000,
+      "maximum": )RNBOLIT"
+R"RNBOLIT(90000,
       "exponent": 5,
       "steps": 0,
       "initialValue": 300,
@@ -952,10 +952,10 @@ R"RNBOLIT(v.adsr/release",
   "numSignalOutParameters": 0,
   "numInputChannels": 0,
   "numOutputChannels": 2,
-  "numMidiInp)RNBOLIT"
-R"RNBOLIT(utPorts": 1,
+  "numMidiInputPorts": 1,
   "numMidiOutputPorts": 0,
-  "externalDataRefs": [],
+  "externalDat)RNBOLIT"
+R"RNBOLIT(aRefs": [],
   "patcherSerial": 0,
   "inports": [],
   "outports": [],
@@ -982,10 +982,10 @@ R"RNBOLIT(utPorts": 1,
   "meta": {
     "architecture": "x64",
     "filename": "main.maxpat",
-    "rnboobjname": "explorat)RNBOLIT"
-R"RNBOLIT(ionSynth",
+    "rnboobjname": "explorationSynth",
     "maxversion": "8.5.6",
-    "rnboversion": "1.2.1",
+    "rnboversion)RNBOLIT"
+R"RNBOLIT(": "1.2.1",
     "name": "explorationSynth"
   }
 })RNBOLIT"
@@ -1073,15 +1073,15 @@ R"RNBOLIT(   "release": {
         "harmonicity_0": {
           "depth")RNBOLIT"
 R"RNBOLIT(: {
-            "value": 3.9100000000000006
+            "value": 3.910000000000001
           },
           "rate": {
-            "value": 0.05000000000000001
+            "value": 0.05
           }
         },
         "modIndex_0": {
           "depth": {
-            "value": 1.0830000000000002
+            "value": 1.083
           },
           "rate": {
             "value": 0.001
@@ -1096,9 +1096,9 @@ R"RNBOLIT(: {
           },
           "gain": {
             "value": 0.5
-  )RNBOLIT"
-R"RNBOLIT(        },
-          "partials": {
+          },
+          "partial)RNBOLIT"
+R"RNBOLIT(s": {
             "value": 10
           }
         },
@@ -1128,9 +1128,9 @@ R"RNBOLIT(        },
       "mid": {
         "value": 0
       },
-      "m)RNBOLIT"
-R"RNBOLIT(idfreq": {
-        "value": 0
+      "midfreq": {
+        "value": 0)RNBOLIT"
+R"RNBOLIT(
       },
       "noteChance": {
         "value": 40
@@ -1155,9 +1155,9 @@ R"RNBOLIT(idfreq": {
       },
       "reverb/indiffusion1": {
         "value": 0.75
-      },)RNBOLIT"
-R"RNBOLIT(
-      "reverb/indiffusion2": {
+      },
+      "reverb/indiffusion2":)RNBOLIT"
+R"RNBOLIT( {
         "value": 0.625
       },
       "reverb/predelay": {
@@ -1413,9 +1413,9 @@ R"RNBOLIT(ypeNumber",
     {
       "type": "ParameterTypeNumber",
       "index": 11,
-      "name": "reverb/decay)RNBOLIT"
-R"RNBOLIT(",
-      "paramId": "reverb/decay",
+      "name": "reverb/drywe)RNBOLIT"
+R"RNBOLIT(t",
+      "paramId": "reverb/drywet",
       "minimum": 0,
       "maximum": 1,
       "exponent": 1,
@@ -1434,14 +1434,14 @@ R"RNBOLIT(",
     {
       "type": "ParameterTypeNumber",
       "index": 12,
-      "name": "reverb/decaydiffusion1",
-      "paramId": "reverb/decaydiffu)RNBOLIT"
-R"RNBOLIT(sion1",
-      "minimum": 0,
+      "name": "reverb/decay2",
+      "paramId": "reverb/decay2",
+      "m)RNBOLIT"
+R"RNBOLIT(inimum": 0,
       "maximum": 1,
       "exponent": 1,
       "steps": 0,
-      "initialValue": 0.7,
+      "initialValue": 0.5,
       "isEnum": false,
       "enumValues": [],
       "displayName": "",
@@ -1455,14 +1455,14 @@ R"RNBOLIT(sion1",
     {
       "type": "ParameterTypeNumber",
       "index": 13,
-      "name": "reverb/decaydiffusion2",
-      "paramId": "reverb/decaydiffusion2",
+      "name": "reverb/decay1",
+      "paramId": "reverb/decay1",
       "minimum": 0,
-)RNBOLIT"
-R"RNBOLIT(      "maximum": 1,
-      "exponent": 1,
+      "maximum": 1,
+      "exponen)RNBOLIT"
+R"RNBOLIT(t": 1,
       "steps": 0,
-      "initialValue": 0.5,
+      "initialValue": 0.7,
       "isEnum": false,
       "enumValues": [],
       "displayName": "",
@@ -1480,10 +1480,10 @@ R"RNBOLIT(      "maximum": 1,
       "paramId": "reverb/predelay",
       "minimum": 0,
       "maximum": 100,
-      "exponent": 1,)RNBOLIT"
-R"RNBOLIT(
+      "exponent": 1,
       "steps": 0,
-      "initialValue": 10,
+      "initialV)RNBOLIT"
+R"RNBOLIT(alue": 10,
       "isEnum": false,
       "enumValues": [],
       "displayName": "",
@@ -1497,15 +1497,15 @@ R"RNBOLIT(
     {
       "type": "ParameterTypeNumber",
       "index": 15,
-      "name": "reverb/damping",
-      "paramId": "reverb/damping",
+      "name": "reverb/indiffusion2",
+      "paramId": "reverb/indiffusion2",
       "minimum": 0,
       "maximum": 1,
       "exponent": 1,
       "steps": 0,
-      "initialValue": 0.5,)RNBOLIT"
-R"RNBOLIT(
-      "isEnum": false,
+      "initialValue": 0.625,
+      "isEnum": false)RNBOLIT"
+R"RNBOLIT(,
       "enumValues": [],
       "displayName": "",
       "unit": "",
@@ -1518,17 +1518,17 @@ R"RNBOLIT(
     {
       "type": "ParameterTypeNumber",
       "index": 16,
-      "name": "reverb/inbandwidth",
-      "paramId": "reverb/inbandwidth",
+      "name": "reverb/decay",
+      "paramId": "reverb/decay",
       "minimum": 0,
       "maximum": 1,
       "exponent": 1,
       "steps": 0,
       "initialValue": 0.5,
       "isEnum": false,
-      "enumV)RNBOLIT"
-R"RNBOLIT(alues": [],
-      "displayName": "",
+      "enumValues": [],
+      "displayName": ")RNBOLIT"
+R"RNBOLIT(",
       "unit": "",
       "order": 0,
       "debug": false,
@@ -1539,6 +1539,27 @@ R"RNBOLIT(alues": [],
     {
       "type": "ParameterTypeNumber",
       "index": 17,
+      "name": "reverb/inbandwidth",
+      "paramId": "reverb/inbandwidth",
+      "minimum": 0,
+      "maximum": 1,
+      "exponent": 1,
+      "steps": 0,
+      "initialValue": 0.5,
+      "isEnum": false,
+      "enumValues": [],
+      "displayName": "",
+      "unit": "",
+      "order": )RNBOLIT"
+R"RNBOLIT(0,
+      "debug": false,
+      "visible": true,
+      "signalIndex": null,
+      "ioType": "IOTypeUndefined"
+    },
+    {
+      "type": "ParameterTypeNumber",
+      "index": 18,
       "name": "reverb/indiffusion1",
       "paramId": "reverb/indiffusion1",
       "minimum": 0,
@@ -1548,20 +1569,20 @@ R"RNBOLIT(alues": [],
       "initialValue": 0.75,
       "isEnum": false,
       "enumValues": [],
-      "displayName": )RNBOLIT"
-R"RNBOLIT("",
+      "displayName": "",
       "unit": "",
       "order": 0,
       "debug": false,
-      "visible": true,
+      "v)RNBOLIT"
+R"RNBOLIT(isible": true,
       "signalIndex": null,
       "ioType": "IOTypeUndefined"
     },
     {
       "type": "ParameterTypeNumber",
-      "index": 18,
-      "name": "reverb/drywet",
-      "paramId": "reverb/drywet",
+      "index": 19,
+      "name": "reverb/damping",
+      "paramId": "reverb/damping",
       "minimum": 0,
       "maximum": 1,
       "exponent": 1,
@@ -1572,32 +1593,11 @@ R"RNBOLIT("",
       "displayName": "",
       "unit": "",
       "order": 0,
-      )RNBOLIT"
-R"RNBOLIT("debug": false,
+      "debug": false,
       "visible": true,
       "signalIndex": null,
-      "ioType": "IOTypeUndefined"
-    },
-    {
-      "type": "ParameterTypeNumber",
-      "index": 19,
-      "name": "reverb/indiffusion2",
-      "paramId": "reverb/indiffusion2",
-      "minimum": 0,
-      "maximum": 1,
-      "exponent": 1,
-      "steps": 0,
-      "initialValue": 0.625,
-      "isEnum": false,
-      "enumValues": [],
-      "displayName": "",
-      "unit": "",
-      "order": 0,
-      "debug": false,
-      "visible":)RNBOLIT"
-R"RNBOLIT( true,
-      "signalIndex": null,
-      "ioType": "IOTypeUndefined"
+  )RNBOLIT"
+R"RNBOLIT(    "ioType": "IOTypeUndefined"
     },
     {
       "type": "ParameterTypeNumber",
@@ -1617,11 +1617,11 @@ R"RNBOLIT( true,
       "debug": false,
       "visible": true,
       "signalIndex": null,
-      "ioTyp)RNBOLIT"
-R"RNBOLIT(e": "IOTypeUndefined"
+      "ioType": "IOTypeUndefined"
     },
     {
-      "type": "ParameterTypeNumber",
+ )RNBOLIT"
+R"RNBOLIT(     "type": "ParameterTypeNumber",
       "index": 21,
       "name": "decay",
       "paramId": "env.adsr[1]/decay",
@@ -1641,9 +1641,9 @@ R"RNBOLIT(e": "IOTypeUndefined"
       "ioType": "IOTypeUndefined"
     },
     {
-      "type")RNBOLIT"
-R"RNBOLIT(: "ParameterTypeNumber",
-      "index": 22,
+      "type": "ParameterTypeNumber",
+      "inde)RNBOLIT"
+R"RNBOLIT(x": 22,
       "name": "sustain",
       "paramId": "env.adsr[1]/sustain",
       "minimum": 0,
@@ -1664,9 +1664,9 @@ R"RNBOLIT(: "ParameterTypeNumber",
     {
       "type": "ParameterTypeNumber",
       "index": 23,
-)RNBOLIT"
-R"RNBOLIT(      "name": "release",
-      "paramId": "env.adsr[1]/release",
+      "name": "release",
+      "para)RNBOLIT"
+R"RNBOLIT(mId": "env.adsr[1]/release",
       "minimum": 1,
       "maximum": 90000,
       "exponent": 5,
@@ -1686,10 +1686,10 @@ R"RNBOLIT(      "name": "release",
       "type": "ParameterTypeNumber",
       "index": 24,
       "name": "left",
-      "paramId": "de)RNBOLIT"
-R"RNBOLIT(l_0/left",
+      "paramId": "del_0/left",
       "minimum": 10,
-      "maximum": 10000,
+    )RNBOLIT"
+R"RNBOLIT(  "maximum": 10000,
       "exponent": 1,
       "steps": 0,
       "initialValue": 300,
@@ -1710,10 +1710,10 @@ R"RNBOLIT(l_0/left",
       "paramId": "del_0/fb",
       "minimum": 0,
       "maximum": 1,
-      )RNBOLIT"
-R"RNBOLIT("exponent": 1,
+      "exponent": 1,
       "steps": 0,
-      "initialValue": 0.25,
+   )RNBOLIT"
+R"RNBOLIT(   "initialValue": 0.25,
       "isEnum": false,
       "enumValues": [],
       "displayName": "",
@@ -1733,10 +1733,10 @@ R"RNBOLIT("exponent": 1,
       "maximum": 10000,
       "exponent": 1,
       "steps": 0,
-      "initialVal)RNBOLIT"
-R"RNBOLIT(ue": 400,
+      "initialValue": 400,
       "isEnum": false,
-      "enumValues": [],
+   )RNBOLIT"
+R"RNBOLIT(   "enumValues": [],
       "displayName": "",
       "unit": "",
       "order": 0,
@@ -1756,10 +1756,10 @@ R"RNBOLIT(ue": 400,
       "steps": 0,
       "initialValue": 0,
       "isEnum": false,
-      "enumValues")RNBOLIT"
-R"RNBOLIT(: [],
+      "enumValues": [],
       "displayName": "",
-      "unit": "",
+     )RNBOLIT"
+R"RNBOLIT( "unit": "",
       "order": 0,
       "debug": false,
       "visible": true,
@@ -1780,9 +1780,9 @@ R"RNBOLIT(: [],
       "enumValues": [],
       "displayName": "",
       "unit": "",
- )RNBOLIT"
-R"RNBOLIT(     "order": 0,
-      "debug": false,
+      "order": 0,
+      "debug": fals)RNBOLIT"
+R"RNBOLIT(e,
       "visible": true,
       "signalIndex": null,
       "ioType": "IOTypeUndefined"
@@ -1803,10 +1803,10 @@ R"RNBOLIT(     "order": 0,
       "unit": "",
       "order": 0,
       "debug": false,
-      "visible")RNBOLIT"
-R"RNBOLIT(: true,
+      "visible": true,
       "signalIndex": null,
-      "ioType": "IOTypeUndefined"
+ )RNBOLIT"
+R"RNBOLIT(     "ioType": "IOTypeUndefined"
     },
     {
       "type": "ParameterTypeNumber",
@@ -1826,11 +1826,11 @@ R"RNBOLIT(: true,
       "debug": false,
       "visible": true,
       "signalIndex": null,
-      "ioType": "I)RNBOLIT"
-R"RNBOLIT(OTypeUndefined"
+      "ioType": "IOTypeUndefined"
     },
     {
-      "type": "ParameterTypeNumber",
+      ")RNBOLIT"
+R"RNBOLIT(type": "ParameterTypeNumber",
       "index": 31,
       "name": "left",
       "paramId": "del_1/left",
@@ -1850,10 +1850,10 @@ R"RNBOLIT(OTypeUndefined"
       "ioType": "IOTypeUndefined"
     },
     {
-      "type": "Parameter)RNBOLIT"
-R"RNBOLIT(TypeNumber",
+      "type": "ParameterTypeNumber",
       "index": 32,
-      "name": "fb",
+    )RNBOLIT"
+R"RNBOLIT(  "name": "fb",
       "paramId": "del_1/fb",
       "minimum": 0,
       "maximum": 1,
@@ -1874,9 +1874,9 @@ R"RNBOLIT(TypeNumber",
       "type": "ParameterTypeNumber",
       "index": 33,
       "name": "right",
-      )RNBOLIT"
-R"RNBOLIT("paramId": "del_1/right",
-      "minimum": 10,
+      "paramId": "del_1/right",
+      "min)RNBOLIT"
+R"RNBOLIT(imum": 10,
       "maximum": 10000,
       "exponent": 1,
       "steps": 0,
@@ -1895,11 +1895,11 @@ R"RNBOLIT("paramId": "del_1/right",
       "type": "ParameterTypeNumber",
       "index": 34,
       "name": "rate",
-      "paramId": "amplitudeLFO_1/rate",
-      "minimum": 0)RNBOLIT"
-R"RNBOLIT(,
+      "paramId": "ampLFO_1/rate",
+      "minimum": 0,
       "maximum": 10,
-      "exponent": 1,
+      "exponent": 1)RNBOLIT"
+R"RNBOLIT(,
       "steps": 0,
       "initialValue": 0.5,
       "isEnum": false,
@@ -1916,13 +1916,13 @@ R"RNBOLIT(,
       "type": "ParameterTypeNumber",
       "index": 35,
       "name": "pitchShift",
-      "paramId": "amplitudeLFO_1/pitchShift",
+      "paramId": "ampLFO_1/pitchShift",
       "minimum": 0.5,
       "maximum": 2,
-      "expon)RNBOLIT"
-R"RNBOLIT(ent": 1,
+      "exponent": 1,
       "steps": 0,
-      "initialValue": 1,
+      "initialValue":)RNBOLIT"
+R"RNBOLIT( 1,
       "isEnum": false,
       "enumValues": [],
       "displayName": "",
@@ -1937,16 +1937,16 @@ R"RNBOLIT(ent": 1,
       "type": "ParameterTypeNumber",
       "index": 36,
       "name": "depth",
-      "paramId": "amplitudeLFO_1/depth",
+      "paramId": "ampLFO_1/depth",
       "minimum": 0,
       "maximum": 5,
       "exponent": 1,
       "steps": 0,
-      "initialValue": )RNBOLIT"
-R"RNBOLIT(0,
+      "initialValue": 0,
       "isEnum": false,
       "enumValues": [],
-      "displayName": "",
+    )RNBOLIT"
+R"RNBOLIT(  "displayName": "",
       "unit": "",
       "order": 0,
       "debug": false,
@@ -1965,11 +1965,11 @@ R"RNBOLIT(0,
       "steps": 100,
       "initialValue": 10,
       "isEnum": false,
-      "enumValu)RNBOLIT"
-R"RNBOLIT(es": [],
+      "enumValues": [],
       "displayName": "",
       "unit": "",
-      "order": 0,
+  )RNBOLIT"
+R"RNBOLIT(    "order": 0,
       "debug": false,
       "visible": true,
       "signalIndex": null,
@@ -1988,11 +1988,11 @@ R"RNBOLIT(es": [],
       "isEnum": false,
       "enumValues": [],
       "displayName": "",
-      "unit":)RNBOLIT"
-R"RNBOLIT( "",
+      "unit": "",
       "order": 0,
       "debug": false,
-      "visible": true,
+      "vi)RNBOLIT"
+R"RNBOLIT(sible": true,
       "signalIndex": null,
       "ioType": "IOTypeUndefined"
     },
@@ -2012,10 +2012,10 @@ R"RNBOLIT( "",
       "unit": "",
       "order": 0,
       "debug": false,
- )RNBOLIT"
-R"RNBOLIT(     "visible": true,
+      "visible": true,
       "signalIndex": null,
-      "ioType": "IOTypeUndefined"
+     )RNBOLIT"
+R"RNBOLIT( "ioType": "IOTypeUndefined"
     },
     {
       "type": "ParameterTypeNumber",
@@ -2035,11 +2035,11 @@ R"RNBOLIT(     "visible": true,
       "debug": false,
       "visible": true,
       "signalIndex": null,
-  )RNBOLIT"
-R"RNBOLIT(    "ioType": "IOTypeUndefined"
+      "ioType": "IOTypeUndefined"
     },
     {
-      "type": "ParameterTypeNumber",
+      "ty)RNBOLIT"
+R"RNBOLIT(pe": "ParameterTypeNumber",
       "index": 41,
       "name": "attack",
       "paramId": "env.adsr/attack",
@@ -2059,10 +2059,10 @@ R"RNBOLIT(    "ioType": "IOTypeUndefined"
       "ioType": "IOTypeUndefined"
     },
     {
-    )RNBOLIT"
-R"RNBOLIT(  "type": "ParameterTypeNumber",
+      "type": "ParameterTypeNumber",
       "index": 42,
-      "name": "decay",
+  )RNBOLIT"
+R"RNBOLIT(    "name": "decay",
       "paramId": "env.adsr/decay",
       "minimum": 1,
       "maximum": 5000,
@@ -2081,10 +2081,10 @@ R"RNBOLIT(  "type": "ParameterTypeNumber",
     },
     {
       "type": "ParameterTypeNumber",
-      "index": 43)RNBOLIT"
-R"RNBOLIT(,
+      "index": 43,
       "name": "sustain",
-      "paramId": "env.adsr/sustain",
+      "paramId": "env.adsr/)RNBOLIT"
+R"RNBOLIT(sustain",
       "minimum": 0,
       "maximum": 1,
       "exponent": 0.8,
@@ -2104,10 +2104,10 @@ R"RNBOLIT(,
       "type": "ParameterTypeNumber",
       "index": 44,
       "name": "release",
-      "paramId": "en)RNBOLIT"
-R"RNBOLIT(v.adsr/release",
+      "paramId": "env.adsr/release",
       "minimum": 1,
-      "maximum": 90000,
+      "maximum": )RNBOLIT"
+R"RNBOLIT(90000,
       "exponent": 5,
       "steps": 0,
       "initialValue": 300,
@@ -2127,10 +2127,10 @@ R"RNBOLIT(v.adsr/release",
   "numSignalOutParameters": 0,
   "numInputChannels": 0,
   "numOutputChannels": 2,
-  "numMidiInp)RNBOLIT"
-R"RNBOLIT(utPorts": 1,
+  "numMidiInputPorts": 1,
   "numMidiOutputPorts": 0,
-  "externalDataRefs": [],
+  "externalDat)RNBOLIT"
+R"RNBOLIT(aRefs": [],
   "patcherSerial": 0,
   "inports": [],
   "outports": [],
@@ -2157,10 +2157,10 @@ R"RNBOLIT(utPorts": 1,
   "meta": {
     "architecture": "x64",
     "filename": "main.maxpat",
-    "rnboobjname": "explorat)RNBOLIT"
-R"RNBOLIT(ionSynth",
+    "rnboobjname": "explorationSynth",
     "maxversion": "8.5.6",
-    "rnboversion": "1.2.1",
+    "rnboversion)RNBOLIT"
+R"RNBOLIT(": "1.2.1",
     "name": "explorationSynth"
   }
 })RNBOLIT"
@@ -2250,15 +2250,15 @@ R"RNBOLIT(   "release": {
         "harmonicity_0": {
           "depth")RNBOLIT"
 R"RNBOLIT(: {
-            "value": 3.9100000000000006
+            "value": 3.910000000000001
           },
           "rate": {
-            "value": 0.05000000000000001
+            "value": 0.05
           }
         },
         "modIndex_0": {
           "depth": {
-            "value": 1.0830000000000002
+            "value": 1.083
           },
           "rate": {
             "value": 0.001
@@ -2273,9 +2273,9 @@ R"RNBOLIT(: {
           },
           "gain": {
             "value": 0.5
-  )RNBOLIT"
-R"RNBOLIT(        },
-          "partials": {
+          },
+          "partial)RNBOLIT"
+R"RNBOLIT(s": {
             "value": 10
           }
         },
@@ -2305,9 +2305,9 @@ R"RNBOLIT(        },
       "mid": {
         "value": 0
       },
-      "m)RNBOLIT"
-R"RNBOLIT(idfreq": {
-        "value": 0
+      "midfreq": {
+        "value": 0)RNBOLIT"
+R"RNBOLIT(
       },
       "noteChance": {
         "value": 40
@@ -2332,9 +2332,9 @@ R"RNBOLIT(idfreq": {
       },
       "reverb/indiffusion1": {
         "value": 0.75
-      },)RNBOLIT"
-R"RNBOLIT(
-      "reverb/indiffusion2": {
+      },
+      "reverb/indiffusion2":)RNBOLIT"
+R"RNBOLIT( {
         "value": 0.625
       },
       "reverb/predelay": {

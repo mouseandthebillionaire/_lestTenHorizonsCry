@@ -6,8 +6,16 @@ using UnityEngine.Audio;
 
 public class LocationControl : MonoBehaviour
 {
+	// try in 4D Space
+	public Vector4 loc;
+	
 	public AudioMixer         songMixer;
 	public AudioMixerSnapshot innactive, fadingMix, startingMix;
+
+	public AudioMixerSnapshot synthSetting;
+
+	public int    locationHue;
+	public string imagesFolder;
 	
 	// Start is called before the first frame update
     void Start()
@@ -18,11 +26,12 @@ public class LocationControl : MonoBehaviour
 	public void FadeIn(float distance)
     {
 		Debug.Log("Approaching a Song Location");
+		Debug.Log(distance);
 		
-		Transform fade = GetComponent<Transform>().GetChild(0); 
-		float transitionValue = distance * .1f;
+		Transform fade = GetComponent<Transform>().GetChild(0);
+		float transitionValue = distance / MainSynth.S.threshold;
 		fade.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, transitionValue);
-		
+
 		// And Transition to the "Starting Snapshot
 		SetAudioMix(transitionValue, fadingMix, startingMix);
 		

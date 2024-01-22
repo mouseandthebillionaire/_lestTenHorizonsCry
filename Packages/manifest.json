@@ -2,6 +2,7 @@
   "dependencies": {
     "com.cycling74.explorationsynth": "file:../RNBO/explorationSynth/explorationSynth",
     "com.cycling74.insteffectchain": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/instEffectChain/instEffectChain",
+    "com.cycling74.lthcsynth": "file:../RNBO/LTHC_synth/LTHCsynth",
     "com.cycling74.rnbotypes": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/RNBOTypes",
     "com.cycling74.samplesynth": "file:../RNBO/SampleSynth",
     "com.unity.2d.animation": "7.0.3",

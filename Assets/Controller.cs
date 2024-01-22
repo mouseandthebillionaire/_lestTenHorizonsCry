@@ -10,13 +10,13 @@ public class Controller : MonoBehaviour {
     public bool controllerActive = false;
     
     // Serial data
-    SerialPort stream = new SerialPort("/dev/cu.usbmodem144301", 115200);
+    SerialPort stream = new SerialPort("/dev/cu.usbmodem11201", 115200);
     Thread serialThread;
     string serialData;
     private bool serialReceived = false;
 
     // Global variables
-    public int[] dials = new int[8];
+    public int[] dials = new int[4];
 
     // Singleton
     public static Controller S;
@@ -46,10 +46,14 @@ public class Controller : MonoBehaviour {
             }
         }
         
-        if(dials[6] == 1) MainSynth.S.UpdateLoc("X", -1);
-        if(dials[6] == 2) MainSynth.S.UpdateLoc("X", 1);
-        if(dials[7] == 1) MainSynth.S.UpdateLoc("Y", -1);
-        if(dials[7] == 2) MainSynth.S.UpdateLoc("Y", 1);
+        if(dials[2] == 1) MainSynth.S.UpdateLoc("X", -1);
+        if(dials[2] == 2) MainSynth.S.UpdateLoc("X", 1);
+        if(dials[1] == 1) MainSynth.S.UpdateLoc("Y", -1);
+        if(dials[1] == 2) MainSynth.S.UpdateLoc("Y", 1);
+        if(dials[0] == 1) MainSynth.S.UpdateLoc("Z", -1);
+        if(dials[0] == 2) MainSynth.S.UpdateLoc("Z", 1);
+        if(dials[3] == 1) MainSynth.S.UpdateLoc("W", -1);
+        if(dials[3] == 2) MainSynth.S.UpdateLoc("W", 1);
     }
 
     void ResetVariables() {

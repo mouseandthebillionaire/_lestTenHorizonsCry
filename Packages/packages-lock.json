@@ -16,6 +16,14 @@
         "com.cycling74.rnbotypes": "0.0.2"
       }
     },
+    "com.cycling74.lthcsynth": {
+      "version": "file:../RNBO/LTHC_synth/LTHCsynth",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.cycling74.rnbotypes": "0.0.2"
+      }
+    },
     "com.cycling74.rnbotypes": {
       "version": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/RNBOTypes",
       "depth": 0,

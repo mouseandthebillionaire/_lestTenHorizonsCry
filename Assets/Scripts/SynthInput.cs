@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Windows.Forms;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.PlayerLoop;
@@ -57,14 +58,21 @@ public class SynthInput : MonoBehaviour
         {
             // Get the Parameter
             
-            
             // Style the Image
             float a = 1.0f * ((1.0f / audioParams.Length) * (audioParams.Length - i));
-            float c = Random.Range(0f, 1f);
-            paramImages[i].GetComponent<SpriteRenderer>().color = new Color(1, c, c, a);
-            float startingValue = c * 100;
-            UpdateParams(i, startingValue);
-
+            float hue = GetComponentInParent<LocationControl>().locationHue / 360f;
+            float sat = (int) Random.Range(4f, 10f) * .1f;
+            float val = 1.0f - sat;
+            paramImages[i].GetComponent<SpriteRenderer>().color = Color.HSVToRGB(hue, sat, val);
+            paramImages[i].GetComponent<SpriteRenderer>().color = new Color(
+                paramImages[i].GetComponent<SpriteRenderer>().color.r,
+                paramImages[i].GetComponent<SpriteRenderer>().color.g,
+                paramImages[i].GetComponent<SpriteRenderer>().color.b,
+                Random.Range(0.1f, 1f)
+            );
+            
+            // Randomize Starting Location for now
+            UpdateParams(i, Random.Range(0, 100));
         }
     }
 }
