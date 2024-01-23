@@ -25,22 +25,13 @@ public class LocationControl : MonoBehaviour
 
 	public void FadeIn(float distance)
     {
-		Debug.Log("Approaching a Song Location");
-		Debug.Log(distance);
-		
 		Transform fade = GetComponent<Transform>().GetChild(0);
 		float transitionValue = distance / MainSynth.S.threshold;
 		fade.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, transitionValue);
 
 		// And Transition to the "Starting Snapshot
 		SetAudioMix(transitionValue, fadingMix, startingMix);
-		
-		// Old Way
-		// float t = Mathf.InverseLerp(20, 0, distance);
-		// float output = Mathf.Lerp(-40.0f, 9.0f, t);
-		// Debug.Log(output);
-		// songMixer.SetFloat("songVolume", output);
-    }
+	}
 
 	private void SetAudioMix(float value, AudioMixerSnapshot ams_0, AudioMixerSnapshot ams_1)
 	{

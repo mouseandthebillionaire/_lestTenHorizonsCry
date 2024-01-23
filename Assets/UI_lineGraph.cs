@@ -28,7 +28,8 @@ public class UI_lineGraph : MonoBehaviour
 
     }
 
-    private IEnumerator SetPoint(int _point) {
+    private IEnumerator SetPoint(int _point)
+    {
         float timeElapsed = 0;
         float duration    = Random.Range(5f, 20f);
         float start       = yVals[_point];
@@ -38,11 +39,12 @@ public class UI_lineGraph : MonoBehaviour
             yVals[_point] = Mathf.Lerp(start, end, timeElapsed / duration);
             points[_point] = new Vector3(_point * 5, yVals[_point]);
             line_0.SetPositions(points);
-            timeElapsed += (Time.deltaTime + UI_waveformControl.S.waveSpeed);
+            //timeElapsed += (Time.deltaTime + UI_waveformControl.S.waveSpeed);
+            timeElapsed += Time.deltaTime;
             yield return null;
         }
         yVals[_point] = end;
-        yield return new WaitForSeconds(.05f);
+        yield return new WaitForSeconds(.5f);
         StartCoroutine(SetPoint(_point));
     }
 }

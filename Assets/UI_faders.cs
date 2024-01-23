@@ -17,6 +17,8 @@ public class UI_faders : MonoBehaviour
         for (int i = 0; i < faders.Length; i++)
         {
             incValues[i] = Random.Range(0, 1f);
+            float ran = Random.Range(10, 100)/100f;
+            faders[i].color = new Color(faders[i].color.r, faders[i].color.g, faders[i].color.b, ran);
         }
         UpdateFaders();
     }

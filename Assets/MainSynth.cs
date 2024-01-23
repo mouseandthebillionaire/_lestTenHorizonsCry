@@ -10,7 +10,7 @@ public class MainSynth : MonoBehaviour
 {
 	public  GameObject[] locations;
 	private List<float>  distances = new List<float>();
-
+	
 	private float xLoc = 50;
 	private float yLoc = 50;
 
@@ -60,14 +60,15 @@ public class MainSynth : MonoBehaviour
 		if (Input.GetKey(wDial_up)) UpdateLoc("W", 1);
 		
 		// Make the knob turning more granular if we are close to any location
+		/* Disable for know. We just need this to work
 		float minDistance = distances.Min();
-		Debug.Log(distances.Min());
 		if (minDistance < 10)
 		{
 			xStep = closeStep;
 			yStep = closeStep;
 			Debug.Log("Close to a Location");
 		}
+		*/
 
 		// Little Icon for position. Maybe get rid of later
 		float finder_xPos = scale(0, 100, -8f, 8f, loc.x);
