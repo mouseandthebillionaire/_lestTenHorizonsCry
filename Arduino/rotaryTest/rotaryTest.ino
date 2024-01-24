@@ -13,9 +13,9 @@
 String outputString;
 
 // create 4 encoders!
-Adafruit_seesaw encoders[8];
+Adafruit_seesaw encoders[4];
 // create 4 encoder pixels
-seesaw_NeoPixel encoder_pixels[8] = {
+seesaw_NeoPixel encoder_pixels[4] = {
   seesaw_NeoPixel(1, SS_NEOPIX, NEO_GRB + NEO_KHZ800),
   seesaw_NeoPixel(1, SS_NEOPIX, NEO_GRB + NEO_KHZ800),
   seesaw_NeoPixel(1, SS_NEOPIX, NEO_GRB + NEO_KHZ800),

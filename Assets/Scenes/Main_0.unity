@@ -2224,7 +2224,6 @@ GameObject:
   m_Component:
   - component: {fileID: 514494597}
   - component: {fileID: 514494596}
-  - component: {fileID: 514494595}
   - component: {fileID: 514494598}
   m_Layer: 0
   m_Name: UICamera
@@ -2233,14 +2232,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &514494595
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514494594}
-  m_Enabled: 1
 --- !u!20 &514494596
 Camera:
   m_ObjectHideFlags: 0
@@ -2250,8 +2241,8 @@ Camera:
   m_GameObject: {fileID: 514494594}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 4
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4725,6 +4716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e00433bc67dfd498681380db37e91de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 514494596}
 --- !u!1 &1040957494
 GameObject:
   m_ObjectHideFlags: 0
@@ -7477,11 +7469,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: loc.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: loc.y
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: loc.z

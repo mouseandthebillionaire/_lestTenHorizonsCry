@@ -60,7 +60,6 @@ public class MainSynth : MonoBehaviour
 		if (Input.GetKey(wDial_up)) UpdateLoc("W", 1);
 		
 		// Make the knob turning more granular if we are close to any location
-		/* Disable for know. We just need this to work
 		float minDistance = distances.Min();
 		if (minDistance < 10)
 		{
@@ -68,7 +67,6 @@ public class MainSynth : MonoBehaviour
 			yStep = closeStep;
 			Debug.Log("Close to a Location");
 		}
-		*/
 
 		// Little Icon for position. Maybe get rid of later
 		float finder_xPos = scale(0, 100, -8f, 8f, loc.x);
@@ -108,6 +106,13 @@ public class MainSynth : MonoBehaviour
 			if (loc.z >= 0-xStep && loc.z <= 100+xStep) loc.z += (xStep * direction);
 			if (loc.z < 0) loc.z = 0;
 			if (loc.z > 100) loc.z = 100;
+		}
+		
+		if (axis == "W")
+		{
+			if (loc.w >= 0-xStep && loc.w <= 100+xStep) loc.w += (xStep * direction);
+			if (loc.w < 0) loc.w = 0;
+			if (loc.w > 100) loc.w = 100;
 		}
 		
 	}
@@ -153,6 +158,20 @@ public class MainSynth : MonoBehaviour
 		LocationControl thisLocation = locations[i].GetComponent<LocationControl>();
 		
 		distances[i] = Vector4.Distance(thisLocation.loc, loc);
+		
+		// quadrupled threshold (4x - 2x) that adds the visual effects
+		if ((distances[i] < threshold * 4) && (distances[i] > threshold * 2)) {
+			float tempEffect = distances[i] / threshold;
+			float effectAmt    = scale(2f, 4f, 1f, 0f, tempEffect);
+			UI_Manager.S.AddEffects(effectAmt);
+		}
+		
+		// doubled threshold (2x - 1x) that fades out the UI
+		if ((distances[i] < threshold * 2) && (distances[i] > threshold)) {
+			float tempCamSize = distances[i] / threshold;
+			float camSize     = scale(1f, 2f, 1f, 5f, tempCamSize);
+			UI_Manager.S.cam.orthographicSize = camSize;
+		}
 		
 		// Check if the distance is within the threshold
 		if (distances[i] < threshold)
