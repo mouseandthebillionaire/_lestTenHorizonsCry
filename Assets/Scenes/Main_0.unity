@@ -4519,7 +4519,7 @@ MonoBehaviour:
   smoothingValue: 0
   synthMix: {fileID: 24500006, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
   songMix: {fileID: -7148284483981315068, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
-  mainMixer: {fileID: 0}
+  mainMixer: {fileID: 24100000, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
 --- !u!1 &934136378
 GameObject:
   m_ObjectHideFlags: 0
@@ -6176,8 +6176,8 @@ MonoBehaviour:
   wDial_up: 107
   wDial_down: 108
   threshold: 20
-  am: {fileID: 24100000, guid: 64a4242ba5ee24422ac524d8839e4473, type: 2}
-  defaultSynth: {fileID: 779757436503898363, guid: 64a4242ba5ee24422ac524d8839e4473, type: 2}
+  am: {fileID: 24100000, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
+  defaultSynth: {fileID: 24500006, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
   finder: {fileID: 613031697}
 --- !u!1 &1679042053
 GameObject:
