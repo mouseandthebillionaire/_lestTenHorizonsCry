@@ -1,42 +1,26 @@
 {
   "dependencies": {
     "com.cycling74.explorationsynth": {
-      "version": "file:../RNBO/explorationSynth/explorationSynth",
+      "version": "file:explorationSynth",
       "depth": 0,
-      "source": "local",
+      "source": "embedded",
       "dependencies": {
         "com.cycling74.rnbotypes": "0.0.2"
       }
     },
     "com.cycling74.insteffectchain": {
-      "version": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/instEffectChain/instEffectChain",
+      "version": "file:instEffectChain",
       "depth": 0,
-      "source": "local",
-      "dependencies": {
-        "com.cycling74.rnbotypes": "0.0.2"
-      }
-    },
-    "com.cycling74.lthcsynth": {
-      "version": "file:../RNBO/LTHC_synth/LTHCsynth",
-      "depth": 0,
-      "source": "local",
+      "source": "embedded",
       "dependencies": {
         "com.cycling74.rnbotypes": "0.0.2"
       }
     },
     "com.cycling74.rnbotypes": {
-      "version": "file:/Users/m/_Projects/rnbo.unity.audioplugin-main/RNBOTypes",
+      "version": "file:RNBOTypes",
       "depth": 0,
-      "source": "local",
+      "source": "embedded",
       "dependencies": {}
-    },
-    "com.cycling74.samplesynth": {
-      "version": "file:../RNBO/SampleSynth",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {
-        "com.cycling74.rnbotypes": "0.0.2"
-      }
     },
     "com.unity.2d.animation": {
       "version": "7.0.3",
