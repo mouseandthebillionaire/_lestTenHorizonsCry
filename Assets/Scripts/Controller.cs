@@ -14,6 +14,20 @@ public class Controller : MonoBehaviour {
     Thread serialThread;
     string serialData;
     private bool serialReceived = false;
+    
+    // Keyboard input
+    public KeyCode xDial_up,
+        xDial_down,
+        xDial_press,
+        yDial_up,
+        yDial_down,
+        yDial_press,
+        zDial_up,
+        zDial_down,
+        zDial_press,
+        wDial_up,
+        wDial_down,
+        wDial_press;
 
     // Global variables
     public int[] dials = new int[4];
@@ -54,6 +68,29 @@ public class Controller : MonoBehaviour {
         if(dials[0] == 2) MainSynth.S.UpdateLoc("Z", 1);
         if(dials[3] == 1) MainSynth.S.UpdateLoc("W", -1);
         if(dials[3] == 2) MainSynth.S.UpdateLoc("W", 1);
+        
+        // These are only for debugging. They get overriden by the Controller.cs script and serial input
+        // They could be included up in the above if statements, but this way we can get rid of or turn off more easily
+        if (!controllerActive)
+        {
+            if (Input.GetKey(xDial_down)) MainSynth.S.UpdateLoc("X", -1);
+            if (Input.GetKey(xDial_up)) MainSynth.S.UpdateLoc("X", 1);
+            if (Input.GetKeyDown(xDial_press)) Debug.Log("knob 1 pressed");
+
+            if (Input.GetKey(yDial_down)) MainSynth.S.UpdateLoc("Y", -1);
+            if (Input.GetKey(yDial_up)) MainSynth.S.UpdateLoc("Y", 1);
+            if (Input.GetKeyDown(yDial_press)) Debug.Log("knob 2 pressed");
+
+            if (Input.GetKey(zDial_down)) MainSynth.S.UpdateLoc("Z", -1);
+            if (Input.GetKey(zDial_up)) MainSynth.S.UpdateLoc("Z", 1);
+            if (Input.GetKeyDown(zDial_press)) Debug.Log("knob 3 pressed");
+
+            if (Input.GetKey(wDial_down)) MainSynth.S.UpdateLoc("W", -1);
+            if (Input.GetKey(wDial_up)) MainSynth.S.UpdateLoc("W", 1);
+            if (Input.GetKeyDown(wDial_press)) Debug.Log("knob 4 pressed");
+        }
+
+
     }
 
     void ResetVariables() {

@@ -317,7 +317,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a96823583bc4b119c85a38ebda8fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controllerActive: 1
+  controllerActive: 0
+  xDial_up: 119
+  xDial_down: 113
+  xDial_press: 101
+  yDial_up: 115
+  yDial_down: 97
+  yDial_press: 100
+  zDial_up: 112
+  zDial_down: 111
+  zDial_press: 105
+  wDial_up: 108
+  wDial_down: 107
+  wDial_press: 106
   dials: 0000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &102961637
 Transform:
@@ -6167,14 +6179,6 @@ MonoBehaviour:
   loc: {x: 50, y: 50, z: 0, w: 0}
   initStep: 0.1
   closeStep: 0.01
-  xDial_up: 119
-  xDial_down: 113
-  yDial_up: 115
-  yDial_down: 97
-  zDial_up: 112
-  zDial_down: 111
-  wDial_up: 107
-  wDial_down: 108
   threshold: 20
   am: {fileID: 24100000, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
   defaultSynth: {fileID: 24500006, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}

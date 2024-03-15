@@ -93,6 +93,10 @@ void loop() {
        encoder_pixels[enc].setPixelColor(0, Wheel((new_position*4) & 0xFF));
        encoder_pixels[enc].show();
      } 
+     // did the button get pressed?
+     else if(! encoders[enc].digitalread(SS_SWITCH)){
+      outputString += "#";
+     }
      else outputString += "0";
      if (enc < sizeof(found_encoders)-1) outputString += ":";
      }

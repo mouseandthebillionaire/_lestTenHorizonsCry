@@ -19,9 +19,7 @@ public class MainSynth : MonoBehaviour
     private  float xStep, yStep;
 	public float initStep, closeStep;
 
-	public KeyCode xDial_up, xDial_down, yDial_up, yDial_down, zDial_up, zDial_down, wDial_up, wDial_down;
-
-    // Threshold distance
+	// Threshold distance
 	public float threshold;
 
 	public  AudioMixer         am;
@@ -50,15 +48,6 @@ public class MainSynth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (Input.GetKey(xDial_down)) UpdateLoc("X", -1);
-		if (Input.GetKey(xDial_up)) UpdateLoc("X", 1);
-		if (Input.GetKey(yDial_down)) UpdateLoc("Y", -1);
-        if (Input.GetKey(yDial_up)) UpdateLoc("Y", 1);
-		if (Input.GetKey(zDial_down)) UpdateLoc("Z", -1);
-		if (Input.GetKey(zDial_up)) UpdateLoc("Z", 1);
-		if (Input.GetKey(wDial_down)) UpdateLoc("W", -1);
-		if (Input.GetKey(wDial_up)) UpdateLoc("W", 1);
-		
 		// Make the knob turning more granular if we are close to any location
 		float minDistance = distances.Min();
 		if (minDistance < 10)
