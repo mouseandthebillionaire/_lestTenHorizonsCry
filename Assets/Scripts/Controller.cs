@@ -15,6 +15,9 @@ public class Controller : MonoBehaviour {
     string serialData;
     private bool serialReceived = false;
     
+    // Parameter Viz
+    public GameObject[] parameterViz;
+    
     // Keyboard input
     public KeyCode xDial_up,
         xDial_down,
@@ -75,19 +78,19 @@ public class Controller : MonoBehaviour {
         {
             if (Input.GetKey(xDial_down)) MainSynth.S.UpdateLoc("X", -1);
             if (Input.GetKey(xDial_up)) MainSynth.S.UpdateLoc("X", 1);
-            if (Input.GetKeyDown(xDial_press)) Debug.Log("knob 1 pressed");
+            if (Input.GetKeyDown(xDial_press)) parameterViz[0].GetComponent<DialDisplay>().SwitchParameter();
 
             if (Input.GetKey(yDial_down)) MainSynth.S.UpdateLoc("Y", -1);
             if (Input.GetKey(yDial_up)) MainSynth.S.UpdateLoc("Y", 1);
-            if (Input.GetKeyDown(yDial_press)) Debug.Log("knob 2 pressed");
+            if (Input.GetKeyDown(yDial_press)) parameterViz[1].GetComponent<DialDisplay>().SwitchParameter();
 
             if (Input.GetKey(zDial_down)) MainSynth.S.UpdateLoc("Z", -1);
             if (Input.GetKey(zDial_up)) MainSynth.S.UpdateLoc("Z", 1);
-            if (Input.GetKeyDown(zDial_press)) Debug.Log("knob 3 pressed");
+            if (Input.GetKeyDown(zDial_press)) parameterViz[2].GetComponent<DialDisplay>().SwitchParameter();
 
             if (Input.GetKey(wDial_down)) MainSynth.S.UpdateLoc("W", -1);
             if (Input.GetKey(wDial_up)) MainSynth.S.UpdateLoc("W", 1);
-            if (Input.GetKeyDown(wDial_press)) Debug.Log("knob 4 pressed");
+            if (Input.GetKeyDown(wDial_press)) parameterViz[3].GetComponent<DialDisplay>().SwitchParameter();
         }
 
 
