@@ -178,24 +178,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllerActive: 0
-  parameterViz:
+  instruments:
+  - {fileID: 1950277427}
+  - {fileID: 797996270}
+  - {fileID: 1579395826}
+  - {fileID: 1674258409}
+  instrumentViz:
   - {fileID: 358825405}
   - {fileID: 815556120}
   - {fileID: 26572849}
   - {fileID: 714349533}
-  xDial_up: 119
-  xDial_down: 113
-  xDial_press: 101
-  yDial_up: 115
-  yDial_down: 97
-  yDial_press: 100
-  zDial_up: 112
-  zDial_down: 111
-  zDial_press: 105
-  wDial_up: 108
-  wDial_down: 107
-  wDial_press: 106
-  dials: 0000000000000000000000000000000000000000000000000000000000000000
+  upDials: 7700000073000000700000006c000000
+  downDials: 71000000610000006f0000006b000000
+  pushDials: 6500000064000000690000006a000000
+  dials: 00000000000000000000000000000000
+  dialVal:
+  - 0
+  - 0
+  - 0
+  - 0
+  dialParam: 00000000000000000000000000000000
+  dialLim: 100
+  dialSpeed: 0.1
 --- !u!4 &102961637
 Transform:
   m_ObjectHideFlags: 0
@@ -1153,7 +1157,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &514494598
 MonoBehaviour:
@@ -2104,6 +2108,55 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1694547659121323934, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
   m_PrefabInstance: {fileID: 1694547660052778985}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &797996270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 797996271}
+  - component: {fileID: 797996272}
+  m_Layer: 0
+  m_Name: Instrument_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &797996271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797996270}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 929564109}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &797996272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797996270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b9d403b450548f7b3e927b8864f979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameterValues:
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!1 &815556120 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 504358957556471955, guid: 17bfff5c58a0b4972a7aeacb6e307b82, type: 3}
@@ -2797,6 +2850,41 @@ MonoBehaviour:
   synthMix: {fileID: 24500006, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
   songMix: {fileID: -7148284483981315068, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
   mainMixer: {fileID: 24100000, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
+--- !u!1 &929564108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 929564109}
+  m_Layer: 0
+  m_Name: Instruments
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &929564109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929564108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1950277428}
+  - {fileID: 797996271}
+  - {fileID: 1579395827}
+  - {fileID: 1674258410}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954421461 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1694547658903600388, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
@@ -2882,7 +2970,7 @@ RectTransform:
   - {fileID: 26572850}
   - {fileID: 714349534}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3174,6 +3262,55 @@ MonoBehaviour:
   am: {fileID: 24100000, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
   defaultSynth: {fileID: 24500006, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
   finder: {fileID: 613031697}
+--- !u!1 &1579395826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1579395827}
+  - component: {fileID: 1579395828}
+  m_Layer: 0
+  m_Name: Instrument_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1579395827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579395826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 929564109}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1579395828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579395826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b9d403b450548f7b3e927b8864f979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameterValues:
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!1001 &1627540197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3181,6 +3318,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1033581048}
     m_Modifications:
+    - target: {fileID: 26572851, guid: 17bfff5c58a0b4972a7aeacb6e307b82, type: 3}
+      propertyPath: dialNum
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 504358957556471955, guid: 17bfff5c58a0b4972a7aeacb6e307b82, type: 3}
       propertyPath: m_Name
       value: DialDisplay (UR)
@@ -3238,6 +3379,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1033581048}
     m_Modifications:
+    - target: {fileID: 26572851, guid: 17bfff5c58a0b4972a7aeacb6e307b82, type: 3}
+      propertyPath: dialNum
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 504358957556471955, guid: 17bfff5c58a0b4972a7aeacb6e307b82, type: 3}
       propertyPath: m_Name
       value: DialDisplay (LR)
@@ -3288,6 +3433,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17bfff5c58a0b4972a7aeacb6e307b82, type: 3}
+--- !u!1 &1674258409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1674258410}
+  - component: {fileID: 1674258411}
+  m_Layer: 0
+  m_Name: Instrument_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1674258410
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674258409}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 929564109}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1674258411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674258409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b9d403b450548f7b3e927b8864f979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameterValues:
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!1 &1720971127 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5275955017617850703, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
@@ -3669,6 +3863,55 @@ Transform:
   m_Father: {fileID: 929511390}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1950277427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1950277428}
+  - component: {fileID: 1950277429}
+  m_Layer: 0
+  m_Name: Instrument_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1950277428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950277427}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 929564109}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1950277429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950277427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b9d403b450548f7b3e927b8864f979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameterValues:
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!1 &1953352071 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1694547660299683298, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
@@ -3686,6 +3929,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1033581048}
     m_Modifications:
+    - target: {fileID: 26572851, guid: 17bfff5c58a0b4972a7aeacb6e307b82, type: 3}
+      propertyPath: dialNum
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 504358957556471955, guid: 17bfff5c58a0b4972a7aeacb6e307b82, type: 3}
       propertyPath: m_Name
       value: DialDisplay (LL)

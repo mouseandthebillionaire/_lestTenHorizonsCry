@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 8815883613845240464}
   - component: {fileID: 8815883613845240465}
   m_Layer: 5
-  m_Name: Dials
+  m_Name: Circles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

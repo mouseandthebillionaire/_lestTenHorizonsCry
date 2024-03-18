@@ -75,29 +75,31 @@ public class MainSynth : MonoBehaviour
 		
 	}
 
-	public void UpdateLoc(string axis, int direction)
+	public void UpdateLoc(int axis, int direction)
 	{
-		if (axis == "X") {
+		// 0=X, 1=y, 2=z, 3=w
+		
+		if (axis == 0) {
 			if (loc.x >= 0-xStep && loc.x <= 100+xStep) loc.x += (xStep * direction);
 			if (loc.x < 0) loc.x = 0;
 			if (loc.x > 100) loc.x = 100;
 		}
 
-		if (axis == "Y")
+		if (axis == 1)
 		{
 			if (loc.y >= 0-yStep && loc.y <= 100+yStep) loc.y += (yStep * direction);
 			if (loc.y < 0) loc.y = 0;
 			if (loc.y > 100) loc.y = 100;
 		}
 		
-		if (axis == "Z")
+		if (axis == 2)
 		{
 			if (loc.z >= 0-xStep && loc.z <= 100+xStep) loc.z += (xStep * direction);
 			if (loc.z < 0) loc.z = 0;
 			if (loc.z > 100) loc.z = 100;
 		}
 		
-		if (axis == "W")
+		if (axis == 3)
 		{
 			if (loc.w >= 0-xStep && loc.w <= 100+xStep) loc.w += (xStep * direction);
 			if (loc.w < 0) loc.w = 0;

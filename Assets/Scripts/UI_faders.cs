@@ -26,8 +26,7 @@ public class UI_faders : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P)) UpdateFaders();
-        if (Input.GetKeyDown(KeyCode.O)) FaderMixup();
+        UpdateFaders();
     }
 
     private void UpdateFaders()

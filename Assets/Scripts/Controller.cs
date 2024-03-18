@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO.Ports;
 using System.ServiceModel.Configuration;
 using System.Threading;
+using System.Windows.Forms.DataVisualization.Charting;
 
 public class Controller : MonoBehaviour {
     // turn this on if we are using the controller
@@ -15,25 +16,26 @@ public class Controller : MonoBehaviour {
     string serialData;
     private bool serialReceived = false;
     
+        
+    // Instruments
+    public GameObject[] instruments = new GameObject[4];
+    
     // Parameter Viz
-    public GameObject[] parameterViz;
+    public GameObject[] instrumentViz;
     
     // Keyboard input
-    public KeyCode xDial_up,
-        xDial_down,
-        xDial_press,
-        yDial_up,
-        yDial_down,
-        yDial_press,
-        zDial_up,
-        zDial_down,
-        zDial_press,
-        wDial_up,
-        wDial_down,
-        wDial_press;
+    public KeyCode[] upDials   = new KeyCode[4];
+    public KeyCode[] downDials = new KeyCode[4];
+    public KeyCode[] pushDials = new KeyCode[4];
 
     // Global variables
-    public int[] dials = new int[4];
+    public int[] dials     = new int[4];
+    public float[,] dialVal   = new float[4,4];
+    public int[] dialParam = new int[4];
+    
+    // Dial Control
+    public float dialLim   = 100;
+    public float dialSpeed = .0001f;
 
     // Singleton
     public static Controller S;
@@ -44,10 +46,13 @@ public class Controller : MonoBehaviour {
         // Create Singleton
         if (S == null) S = this;
         else Destroy(this);
-        
-        ResetVariables();
     }
 
+    void Start()
+    {
+        ResetVariables();
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -62,38 +67,60 @@ public class Controller : MonoBehaviour {
                 print("Connected to serial");
             }
         }
+
+        // Dials
+        for (int i = 0; i < dials.Length; i++)
+        {
+            StartCoroutine(UpdateDial(i));
+        }
+    }
+
+    private IEnumerator UpdateDial(int dialNum)
+    {
+        int dir = 0;
         
-        if(dials[2] == 1) MainSynth.S.UpdateLoc("X", -1);
-        if(dials[2] == 2) MainSynth.S.UpdateLoc("X", 1);
-        if(dials[1] == 1) MainSynth.S.UpdateLoc("Y", -1);
-        if(dials[1] == 2) MainSynth.S.UpdateLoc("Y", 1);
-        if(dials[0] == 1) MainSynth.S.UpdateLoc("Z", -1);
-        if(dials[0] == 2) MainSynth.S.UpdateLoc("Z", 1);
-        if(dials[3] == 1) MainSynth.S.UpdateLoc("W", -1);
-        if(dials[3] == 2) MainSynth.S.UpdateLoc("W", 1);
+        // if we pressed, don't do the rest of this stuff 
+        // pressed
+        if (dials[dialNum] == 3 || Input.GetKeyDown(pushDials[dialNum]))
+        {
+            instrumentViz[dialNum].GetComponent<DialDisplay>().SwitchParameter();
+            yield break;
+        }
         
+        // turned right
+        if (dials[dialNum] == 1) dir = -1;
+        // turned left
+        if (dials[dialNum] == 2) dir = 1;
+        
+
         // These are only for debugging. They get overriden by the Controller.cs script and serial input
         // They could be included up in the above if statements, but this way we can get rid of or turn off more easily
-        if (!controllerActive)
+        if (!controllerActive && Input.anyKey)
         {
-            if (Input.GetKey(xDial_down)) MainSynth.S.UpdateLoc("X", -1);
-            if (Input.GetKey(xDial_up)) MainSynth.S.UpdateLoc("X", 1);
-            if (Input.GetKeyDown(xDial_press)) parameterViz[0].GetComponent<DialDisplay>().SwitchParameter();
-
-            if (Input.GetKey(yDial_down)) MainSynth.S.UpdateLoc("Y", -1);
-            if (Input.GetKey(yDial_up)) MainSynth.S.UpdateLoc("Y", 1);
-            if (Input.GetKeyDown(yDial_press)) parameterViz[1].GetComponent<DialDisplay>().SwitchParameter();
-
-            if (Input.GetKey(zDial_down)) MainSynth.S.UpdateLoc("Z", -1);
-            if (Input.GetKey(zDial_up)) MainSynth.S.UpdateLoc("Z", 1);
-            if (Input.GetKeyDown(zDial_press)) parameterViz[2].GetComponent<DialDisplay>().SwitchParameter();
-
-            if (Input.GetKey(wDial_down)) MainSynth.S.UpdateLoc("W", -1);
-            if (Input.GetKey(wDial_up)) MainSynth.S.UpdateLoc("W", 1);
-            if (Input.GetKeyDown(wDial_press)) parameterViz[3].GetComponent<DialDisplay>().SwitchParameter();
+            if (Input.GetKey(downDials[dialNum])) dir  = -1;
+            if (Input.GetKey(upDials[dialNum])) dir = 1;
         }
 
+        MainSynth.S.UpdateLoc(dialNum, dir);
+        
+        // Get the current Param
+        int currParameter = instrumentViz[dialNum].GetComponent<DialDisplay>().currParameter;
+        // Set the Values
+        float currValue = dialVal[dialNum, currParameter];
+        float newVal = 0;
+        if (currValue >= 0 && currValue <= dialLim)
+        {
+            newVal = currValue + (dir * dialSpeed);
+        }
+        
+        // UpdateInstrument
+        instruments[dialNum].GetComponent<InstrumentControl>().parameterValues[currParameter] = newVal;
+        instrumentViz[dialNum].GetComponent<DialDisplay>().UpdateParameter(currParameter, newVal);
+        
+        // Update Here
+        dialVal[dialNum, currParameter] = newVal;
 
+        yield return null;
     }
 
     void ResetVariables() {
@@ -102,6 +129,10 @@ public class Controller : MonoBehaviour {
             for (int i = 0; i < dials.Length; i++)
             {
                 dials[i] = 0;
+                for (int j = 0; j < dialParam.Length; j++)
+                {
+                    dialVal[i,j] = 0;
+                }
             }
         }
         else serialReceived = false;

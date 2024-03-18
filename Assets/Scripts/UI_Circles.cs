@@ -3,37 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_Dials : MonoBehaviour
+public class UI_Circles : MonoBehaviour
 {
+    public int parameterNumber = 0;
+    
     public Image[] dials;
 
-    private  float[] dialValues = new float[4];
+    private float dialValue = 0;
     private float[] incValues = new float[4];
+
+    private int dialNum;
     
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < dials.Length; i++)
-        {
-            incValues[i] = Random.Range(0, 1f);
-        }
+        dialNum = GetComponentInParent<DialDisplay>().dialNum;
         UpdateDials();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W)) UpdateDials();
-        if (Input.GetKeyDown(KeyCode.Q)) DialMixup();
+        UpdateDials();
     }
 
     private void UpdateDials()
     {
+        dialValue = Controller.S.dialVal[dialNum, parameterNumber];
         for (int i = 0; i < dials.Length; i++)
         {
-            incValues[i] += .05f;
-            dialValues[i] = Mathf.PingPong(incValues[i], 1f);
-            dials[i].fillAmount = dialValues[i];
+            float fillAmt = dialValue / 100f;
+            dials[i].fillAmount = fillAmt;
         }
     }
 
@@ -43,8 +43,8 @@ public class UI_Dials : MonoBehaviour
         {
             incValues[i] = Random.Range(0, 1f);
             incValues[i] -= .05f;
-            dialValues[i] = Mathf.PingPong(incValues[i], 1f);
-            dials[i].fillAmount = dialValues[i];
+            dialValue = Mathf.PingPong(incValues[i], 1f);
+            dials[i].fillAmount = dialValue;
         }
     }
 }
