@@ -250,3 +250,10 @@ Next (and thoughts):
 - Mock up some layout designs for the final form factor (acknowledging that this will probably be a temporary solution)
 - Write a process post on using AudioMixer Snapshots in the synth settings, cause that business is 🔥
 
+
+## New Adventures in UI | 01.10.24
+![[Media/interface.png]]
+![[Media/lthc_6.jpg]]
+## Enclosure | 01.20.24
+
+![[Media/lthc_3.jpg]]
