@@ -16,6 +16,14 @@
         "com.cycling74.rnbotypes": "0.0.2"
       }
     },
+    "com.cycling74.lthcsynth": {
+      "version": "file:LTHCsynth",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.cycling74.rnbotypes": "0.0.2"
+      }
+    },
     "com.cycling74.rnbotypes": {
       "version": "file:RNBOTypes",
       "depth": 0,

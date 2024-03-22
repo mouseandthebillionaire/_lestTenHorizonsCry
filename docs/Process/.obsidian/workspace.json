@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Reflections on Design Reflection.md",
+                "file": "Journal.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Reflections on Design Reflection.md",
+                "file": "Journal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Reflections on Design Reflection.md",
+                "file": "Journal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Reflections on Design Reflection.md"
+                "file": "Journal.md"
               }
             }
           },
@@ -173,6 +172,7 @@
   },
   "active": "b7051d41e5535cab",
   "lastOpenFiles": [
+    "Media.md",
     "Journal.md",
     "Reflections on Design Reflection.md",
     "MeetingNotes.md",
@@ -182,7 +182,6 @@
     "Media/sketchTest.png",
     "Media/exploration_03.wav",
     "Precedents.md",
-    "Media.md",
     "Media/interfaceMock_1.gif",
     "Media/interfaceMock_0.gif",
     "Media/Screen Recording 2023-09-17 at 4.26.55 PM.gif",
