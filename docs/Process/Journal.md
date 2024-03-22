@@ -252,8 +252,8 @@ Next (and thoughts):
 
 
 ## New Adventures in UI | 01.10.24
-![[Media/interface.png]]
-![[Media/lthc_6.jpg]]
+![Updated interface](Media/interface.png)
+![Interface Breaking](Media/lthc_6.jpg)
 ## Enclosure | 01.20.24
 
-![[Media/lthc_3.jpg]]
+![Enclosure Proto](Media/lthc_3.jpg)
