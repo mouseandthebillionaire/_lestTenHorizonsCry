@@ -23,6 +23,7 @@ seesaw_NeoPixel encoder_pixels[4] = {
 int32_t encoder_positions[] = {0, 0, 0, 0};
 int32_t encoderAddresses[] = {54, 61, 59, 60};
 bool found_encoders[] = {false, false, false, false};
+bool encoder_pressed[] = {false, false, false, false};
 
 void setup() {
   Serial.begin(115200);
@@ -72,6 +73,9 @@ void setup() {
       found_encoders[enc] = true;
     }
   }
+  
+  // Light
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
@@ -94,13 +98,30 @@ void loop() {
        encoder_pixels[enc].show();
      } 
      // did the button get pressed?
-     else if(! encoders[enc].digitalread(SS_SWITCH)){
-      outputString += "#";
+     else if(! encoders[enc].digitalRead(SS_SWITCH) && !encoder_pressed[enc]){
+      outputString += "3";
+      encoder_pressed[enc] = true;
      }
      else outputString += "0";
      if (enc < sizeof(found_encoders)-1) outputString += ":";
+
+    // clear the press
+    if(encoders[enc].digitalRead(SS_SWITCH)) encoder_pressed[enc] = false;
+
      }
   Serial.println(outputString); 
+
+  // Input
+  if(Serial.available()){
+    String serialData = Serial.readString();
+    if(serialData == "LIGHT_ON"){
+      digitalWrite(LED_BUILTIN, HIGH);
+    } 
+    if(serialData == "LIGHT_OFF"){
+      digitalWrite(LED_BUILTIN, LOW);
+    }
+  }
+
   delay(100);
   }
 

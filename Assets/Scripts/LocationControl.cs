@@ -23,14 +23,26 @@ public class LocationControl : MonoBehaviour
 		innactive.TransitionTo(0);
 	}
 
-	public void FadeIn(float distance)
-    {
-		Transform fade = GetComponent<Transform>().GetChild(0);
-		float transitionValue = distance / MainSynth.S.threshold;
-		fade.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, transitionValue);
+	public void FadeIn()
+	{
+		StartCoroutine(Fade());
+	}
 
-		// And Transition to the "Starting Snapshot
-		SetAudioMix(transitionValue, fadingMix, startingMix);
+	private IEnumerator Fade()
+	{
+		Transform fade = GetComponent<Transform>().GetChild(0);
+		float transitionValue = 0;
+		float endingValue = 1;
+		while (transitionValue < endingValue)
+		{
+			transitionValue += .05f;
+			fade.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, transitionValue);
+			// And Transition to the "Starting Snapshot
+			SetAudioMix(transitionValue, fadingMix, startingMix);
+			yield return new WaitForSeconds(.05f);
+		}
+
+		
 	}
 
 	private void SetAudioMix(float value, AudioMixerSnapshot ams_0, AudioMixerSnapshot ams_1)

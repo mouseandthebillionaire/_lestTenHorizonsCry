@@ -20,6 +20,16 @@
             }
           },
           {
+            "id": "254baad20450fea7",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.11"
+              }
+            }
+          },
+          {
             "id": "68d770508ebf24de",
             "type": "leaf",
             "state": {
@@ -31,7 +41,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -170,7 +181,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b7051d41e5535cab",
+  "active": "254baad20450fea7",
   "lastOpenFiles": [
     "Media.md",
     "Journal.md",

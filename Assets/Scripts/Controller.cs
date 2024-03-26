@@ -11,7 +11,7 @@ public class Controller : MonoBehaviour {
     public bool controllerActive = false;
     
     // Serial data
-    SerialPort stream = new SerialPort("/dev/cu.usbmodem11201", 115200);
+    SerialPort stream = new SerialPort("/dev/cu.usbmodem11301", 115200);
     Thread serialThread;
     string serialData;
     private bool serialReceived = false;
@@ -67,11 +67,29 @@ public class Controller : MonoBehaviour {
                 print("Connected to serial");
             }
         }
+        
+        // Send Out Light Data
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            Debug.Log("Light?");
+            stream.Write("LIGHT_ON");
+        }        
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            Debug.Log("Light?");
+            stream.Write("LIGHT_OFF");
+        }
 
         // Dials
         for (int i = 0; i < dials.Length; i++)
         {
             StartCoroutine(UpdateDial(i));
+        }
+        
+        // Get Launch Button
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            UI_Manager.S.CamControl();
         }
     }
 
@@ -101,7 +119,7 @@ public class Controller : MonoBehaviour {
             if (Input.GetKey(upDials[dialNum])) dir = 1;
         }
 
-        MainSynth.S.UpdateLoc(dialNum, dir);
+        LocationFinder.S.UpdateLoc(dialNum, dir);
         
         // Get the current Param
         int currParameter = instrumentViz[dialNum].GetComponent<DialDisplay>().currParameter;

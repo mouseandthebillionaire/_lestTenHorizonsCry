@@ -22,22 +22,22 @@ public class LockingDial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dialValues[0] = MainSynth.S.loc.x;
+        dialValues[0] = LocationFinder.S.loc.x;
         dialRotations[0] = (dialValues[0] * 3.65f) % 365f;
         Vector3 newRotation = new Vector3(0, 0, dialRotations[0]);
         dials[0].transform.eulerAngles = newRotation;
         
-        dialValues[1] = MainSynth.S.loc.y;
+        dialValues[1] = LocationFinder.S.loc.y;
         dialRotations[1] = (dialValues[1] * 3.65f) % 365f;
         newRotation = new Vector3(0, 0, dialRotations[1]);
         dials[1].transform.eulerAngles = newRotation;
         
-        dialValues[2] = MainSynth.S.loc.z;
+        dialValues[2] = LocationFinder.S.loc.z;
         dialRotations[2] = (dialValues[2] * 3.65f) % 365f;
         newRotation = new Vector3(0, 0, dialRotations[2]);
         dials[2].transform.eulerAngles = newRotation;
         
-        dialValues[3] = MainSynth.S.loc.w;
+        dialValues[3] = LocationFinder.S.loc.w;
         dialRotations[3] = (dialValues[3] * 3.65f) % 365f;
         newRotation = new Vector3(0, 0, dialRotations[3]);
         dials[3].transform.eulerAngles = newRotation;
