@@ -5,6 +5,9 @@ using UnityEngine;
 public class ParamterAnimation : MonoBehaviour
 {
     [Header("script for animating parameter wheels")]
+    
+    // This script is not working. I don't know why
+    
     public bool animating;
 
     public  GameObject[] paramImages;

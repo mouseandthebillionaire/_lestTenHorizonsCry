@@ -46,9 +46,8 @@ public class UI_Manager : MonoBehaviour {
             ag.verticalJump = 5f - camSize;
             yield return new WaitForSeconds(.005f);
         }
-        // Probably should do this in the locationManager instead, but for now...
-        GlobalVariables.S.locationEntered = true;
-        // You're an idiot. Don't do it this way
+  
+        // You're an idiot. Don't do it here. 
         LocationFinder.S.LoadLocation(GlobalVariables.S.lockedLocation);
 
         yield return null;
@@ -56,8 +55,8 @@ public class UI_Manager : MonoBehaviour {
     
     private IEnumerator CamReset()
     {
-        // Probably should do this in the locationManager instead, but for now...
-        GlobalVariables.S.locationEntered = false;
+        // Don't do this here either. Idiot.
+        LocationFinder.S.UnloadLocation(GlobalVariables.S.lockedLocation);
         
         float camSize = cam.orthographicSize; // 0.5f
         float endCamSize = 5;

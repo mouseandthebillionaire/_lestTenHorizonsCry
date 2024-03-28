@@ -140,9 +140,6 @@ public class LocationFinder : MonoBehaviour
 		else {
 			xStep = initStep;
 			yStep = initStep;
-			// Don't do this here anymore...
-			// But where?
-			//locations[i].SetActive(false);
 		}
 	}
 
@@ -150,7 +147,14 @@ public class LocationFinder : MonoBehaviour
 	{
 		locations[locationNum].SetActive(true);
 		LocationControl thisLocation = locations[locationNum].GetComponent<LocationControl>();
-		thisLocation.FadeIn();
+		thisLocation.Load("in");
+	}
+	
+	public void UnloadLocation(int locationNum)
+	{
+		LocationControl thisLocation = locations[locationNum].GetComponent<LocationControl>();
+		thisLocation.Load("out");
+		locations[locationNum].SetActive(false);
 	}
 
 	public float scale(float OldMin, float OldMax, float NewMin, float NewMax, float OldValue){

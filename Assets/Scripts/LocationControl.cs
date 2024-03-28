@@ -6,6 +6,9 @@ using UnityEngine.Audio;
 
 public class LocationControl : MonoBehaviour
 {
+	[Header("Boolean autoloads Location for design testing")]
+	public bool designing;
+	
 	// try in 4D Space
 	public Vector4 loc;
 	
@@ -21,18 +24,41 @@ public class LocationControl : MonoBehaviour
     void Start()
     {
 		innactive.TransitionTo(0);
+		if (designing) Load("in");
 	}
 
-	public void FadeIn()
+	public void Load(string type)
 	{
-		StartCoroutine(Fade());
+		if(type =="in") StartCoroutine(LoadIn());
+		if(type =="out") StartCoroutine(LoadOut());
 	}
 
-	private IEnumerator Fade()
+	private IEnumerator LoadIn()
 	{
+		GlobalVariables.S.locationEntered = true;
+
+		float transitionValue = 1;
+		float endingValue = 0;
+
 		Transform fade = GetComponent<Transform>().GetChild(0);
+
+		while (transitionValue > endingValue)
+		{
+			transitionValue -= .05f;
+			fade.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, transitionValue);
+			// And Transition to the "Starting Snapshot
+			SetAudioMix(transitionValue, fadingMix, startingMix);
+			yield return new WaitForSeconds(.05f);
+		}
+	}
+	
+	private IEnumerator LoadOut()
+	{
 		float transitionValue = 0;
 		float endingValue = 1;
+
+		Transform fade = GetComponent<Transform>().GetChild(0);
+
 		while (transitionValue < endingValue)
 		{
 			transitionValue += .05f;
@@ -41,8 +67,8 @@ public class LocationControl : MonoBehaviour
 			SetAudioMix(transitionValue, fadingMix, startingMix);
 			yield return new WaitForSeconds(.05f);
 		}
-
 		
+		GlobalVariables.S.locationEntered = false;
 	}
 
 	private void SetAudioMix(float value, AudioMixerSnapshot ams_0, AudioMixerSnapshot ams_1)

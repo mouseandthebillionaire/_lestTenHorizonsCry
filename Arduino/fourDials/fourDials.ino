@@ -120,6 +120,7 @@ void loop() {
     if(serialData == "LIGHT_OFF"){
       digitalWrite(LED_BUILTIN, LOW);
     }
+  
   }
 
   delay(100);
