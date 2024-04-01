@@ -3079,6 +3079,7 @@ MonoBehaviour:
   locationEntered: 0
   lockedLocation: 0
   enteredLocation: 0
+  interactionCounter: 0
 --- !u!1 &929564108
 GameObject:
   m_ObjectHideFlags: 0
@@ -3573,6 +3574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb91a47989b64d299a875eafdaedfe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  designing: 1
+  locationToTest: 0
   locations:
   - {fileID: 1720971127}
   - {fileID: 1728240836}
@@ -4700,7 +4703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: designing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: fadingMix
@@ -4734,6 +4737,30 @@ PrefabInstance:
       propertyPath: synthSetting
       value: 
       objectReference: {fileID: -1590098478123387764, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
+    - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: songStageThreshold
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: songStages.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: songStages.Array.data[0]
+      value: 
+      objectReference: {fileID: 4487237441341331734, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
+    - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: songStages.Array.data[1]
+      value: 
+      objectReference: {fileID: 4487237441341331734, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
+    - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: songStages.Array.data[2]
+      value: 
+      objectReference: {fileID: 4487237441341331734, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
+    - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: songStages.Array.data[3]
+      value: 
+      objectReference: {fileID: 4487237441341331734, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
     - target: {fileID: 194556182909096356, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: adjustAmt
       value: 0.25

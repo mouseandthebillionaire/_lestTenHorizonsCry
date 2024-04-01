@@ -8,6 +8,10 @@ using UnityEngine.Audio;
 
 public class LocationFinder : MonoBehaviour
 {
+	[Header("Boolean autoloads Location for design testing")]
+	public bool designing;
+
+	public int locationToTest;
 	
 	public  GameObject[] locations;
 	public List<float>  distances = new List<float>();
@@ -37,11 +41,14 @@ public class LocationFinder : MonoBehaviour
 
 	void Start()
 	{
+		if (designing) LoadLocation(locationToTest);
+
 		for (int i = 0; i < locations.Length; i++)
 		{
 			// Initialize as far away?
 			distances.Add(100);
 		}
+		
 	}
 
     // Update is called once per frame

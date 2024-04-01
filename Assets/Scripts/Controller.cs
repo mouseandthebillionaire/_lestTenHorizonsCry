@@ -117,6 +117,9 @@ public class Controller : MonoBehaviour {
         {
             if (Input.GetKey(downDials[dialNum])) dir  = -1;
             if (Input.GetKey(upDials[dialNum])) dir = 1;
+            
+            // fires when any key is pressed, which isn't ideal, but is fine for testing
+            GlobalVariables.S.IncreaseInteractionCounter();
         }
 
         LocationFinder.S.UpdateLoc(dialNum, dir);
@@ -137,6 +140,9 @@ public class Controller : MonoBehaviour {
         
         // Update Here
         dialVal[dialNum, currParameter] = newVal;
+        
+        // Update the interactionCounter GlobalVariable if we've done anything
+        if(dials[dialNum] != 0) GlobalVariables.S.IncreaseInteractionCounter();
 
         yield return null;
     }

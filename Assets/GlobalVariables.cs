@@ -10,6 +10,9 @@ public class GlobalVariables : MonoBehaviour
     public bool locationEntered;
 
     public int lockedLocation, enteredLocation;
+    
+    // how many times has the user done anything with the device
+    public int interactionCounter;
 
     public static GlobalVariables S;
     
@@ -33,6 +36,22 @@ public class GlobalVariables : MonoBehaviour
 
         lockedLocation = 99;
         enteredLocation = 99;
+        ResetInteractionCounter();
+    }
+
+    public void IncreaseInteractionCounter()
+    {
+        
+        if (locationEntered)
+        {
+            interactionCounter++;
+        }
+        
+    }
+
+    public void ResetInteractionCounter()
+    {
+        interactionCounter = 0;
     }
     
 }
