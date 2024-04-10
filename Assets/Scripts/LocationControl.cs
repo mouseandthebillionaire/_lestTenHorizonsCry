@@ -9,6 +9,11 @@ public class LocationControl : MonoBehaviour
 {
 	// try in 4D Space
 	public Vector4 loc;
+
+	public string[] dialEffect;
+	public float[]  dialEffectVal;
+	public float[]  dialEffectLow;
+	public float[]  dialEffectHigh;
 	
 	public  AudioMixer           songMixer;
 	public  AudioMixerSnapshot   innactive;
@@ -43,6 +48,19 @@ public class LocationControl : MonoBehaviour
 		{
 			StartCoroutine(LoadNextStage());
 		}
+
+		for (int i = 0; i < dialEffect.Length; i++)
+		{
+			if (Controller.S.dials[i] == 2 && dialEffectVal[i] < 100) dialEffectVal[i]+=.05f;
+			else if (Controller.S.dials[i] == 1 && dialEffectVal[i] > 0) dialEffectVal[i]-=.05f;
+			ApplyEffect(i, dialEffectVal[i]);
+		}
+	}
+
+	private void ApplyEffect(int effectNum, float amount)
+	{
+		float effectAmount = scale(0, 100, dialEffectLow[effectNum], dialEffectHigh[effectNum], amount);
+		songMixer.SetFloat(dialEffect[effectNum], effectAmount);
 	}
 
 	public void Load(string type)
@@ -53,6 +71,7 @@ public class LocationControl : MonoBehaviour
 
 	private IEnumerator LoadIn()
 	{
+		Debug.Log("Loading in");
 		GlobalVariables.S.locationEntered = true;            
 
 		currStage = 0;
@@ -104,6 +123,8 @@ public class LocationControl : MonoBehaviour
 
 		int nextStage = currStage + progressionDirection; 
 		
+		Debug.Log("Loading stage " + nextStage);
+		
 		while (transitionValue < endingValue)
 		{
 			transitionValue += .05f;
@@ -135,6 +156,16 @@ public class LocationControl : MonoBehaviour
 		currThreshold = songStageThreshold;
 		progressionDirection = -1;
 
+	}
+	
+	// Should be able to map each dials default 1-100 to any parameter low-high
+	public float scale(float OldMin, float OldMax, float NewMin, float NewMax, float OldValue){
+     
+		float OldRange = (OldMax - OldMin);
+		float NewRange = (NewMax - NewMin);
+		float NewValue = (((OldValue - OldMin) * NewRange) / OldRange) + NewMin;
+     
+		return(NewValue);
 	}
 	
 

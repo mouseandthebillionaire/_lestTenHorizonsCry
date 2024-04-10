@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.cycling74.arpsynth": {
+      "version": "file:../RNBO/arpSynth_AMAZE/arpSynth",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.cycling74.rnbotypes": "0.0.2"
+      }
+    },
     "com.cycling74.explorationsynth": {
       "version": "file:explorationSynth",
       "depth": 0,
@@ -9,9 +17,9 @@
       }
     },
     "com.cycling74.insteffectchain": {
-      "version": "file:instEffectChain",
+      "version": "file:../RNBO/instEffectChain",
       "depth": 0,
-      "source": "embedded",
+      "source": "local",
       "dependencies": {
         "com.cycling74.rnbotypes": "0.0.2"
       }

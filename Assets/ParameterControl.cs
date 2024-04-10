@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.OracleClient;
+using System.IdentityModel.Tokens;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class ParameterControl : MonoBehaviour
 {
+    public AudioMixer synth;
+    
     // Hard Code these in? "There's got to be a better way!"
     public int  instrumentNum;
     public int  parameterNum;
@@ -14,8 +19,13 @@ public class ParameterControl : MonoBehaviour
     // I think this will work?
     public string parameter;
     // Need to hardcode everything in, but I think that's fine for what we're doing here
-    public float  paramLowValue;
-    public float  paramHighValue;
+    public float paramLowValue;
+    public float paramHighValue;
+    public float paramValue;
+    public float effectAmount;
+    
+    // if we're doing a spriteSwap, load these images
+    public Sprite[] sprites2swap;
     
     // Start is called before the first frame update
     void Start()
@@ -26,14 +36,41 @@ public class ParameterControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (active)
+        {
+            // Get the value from the Controller script
+            paramValue = Controller.S.dialVal[instrumentNum, parameterNum];
+            UpdateParam();
+            Animate();
+        }
+    }
+
+    private void UpdateParam()
+    {
+        effectAmount = scale(0, 100, paramLowValue, paramHighValue, paramValue);
+        synth.SetFloat(parameter, effectAmount);
     }
 
     public void Animate()
     {
-        // Get the value from the Controller script
-        // Update based on what kind of animation we're doing
-        // UpdateParam()
+        if (animationType == 0)
+        {
+            GetComponent<Image>().fillAmount = paramValue / 100f;
+        }
+        if (animationType == 1)
+        {
+            int z = Mathf.FloorToInt(paramValue * -3.6f);
+            this.transform.rotation = Quaternion.Euler(0, 0, z);
+        }
+
+        if (animationType == 2)
+        {
+            // is this going to work?
+            //int spriteNum = Mathf.FloorToInt(scale(0, 100, 0, sprites2swap.Length, paramValue));
+            int spriteNum = (int)(paramValue % sprites2swap.Length);
+            GetComponent<Image>().sprite = sprites2swap[spriteNum];
+        }
+        
     }
     
     // Should be able to map each dials default 1-100 to any parameter low-high

@@ -104,23 +104,28 @@ public class Controller : MonoBehaviour {
             instrumentViz[dialNum].GetComponent<DialDisplay>().SwitchParameter();
             yield break;
         }
-        
-        // turned right
-        if (dials[dialNum] == 1) dir = -1;
-        // turned left
-        if (dials[dialNum] == 2) dir = 1;
-        
 
         // These are only for debugging. They get overriden by the Controller.cs script and serial input
         // They could be included up in the above if statements, but this way we can get rid of or turn off more easily
         if (!controllerActive && Input.anyKey)
         {
-            if (Input.GetKey(downDials[dialNum])) dir  = -1;
-            if (Input.GetKey(upDials[dialNum])) dir = 1;
+            // Can I just force these?
+            if (Input.GetKey(downDials[dialNum])) dials[dialNum] = 1;
+            else if (Input.GetKey(upDials[dialNum])) dials[dialNum] = 2;
+
+            //if (Input.GetKey(downDials[dialNum])) dir  = -1;
+            //if (Input.GetKey(upDials[dialNum])) dir = 1;
             
             // fires when any key is pressed, which isn't ideal, but is fine for testing
             GlobalVariables.S.IncreaseInteractionCounter();
         }
+        else dials[dialNum] = 0;
+        
+                
+        // turned right
+        if (dials[dialNum] == 1) dir = -1;
+        // turned left
+        if (dials[dialNum] == 2) dir = 1;
 
         LocationFinder.S.UpdateLoc(dialNum, dir);
         
@@ -133,6 +138,9 @@ public class Controller : MonoBehaviour {
         {
             newVal = currValue + (dir * dialSpeed);
         }
+
+        if (newVal < 0) newVal = 0;
+        if (newVal > 100) newVal = 100;
         
         // UpdateInstrument
         instruments[dialNum].GetComponent<InstrumentControl>().parameterValues[currParameter] = newVal;

@@ -58,6 +58,14 @@ public class DialDisplay : MonoBehaviour
             // fade out all rings
             ringVisuals[i].GetComponent<Image>().color = new Color(
                 mainColor.r, mainColor.g, mainColor.b, 0.25f);
+            // And all child rings
+            Image[] childFade = ringVisuals[currParameter].GetComponentsInChildren<Image>();
+            foreach (Image f in childFade) f.color = new Color(mainColor.r, mainColor.g, mainColor.b, .25f);
+            
+            // And disable any ParameterControl Scripts
+            ParameterControl[] dpc = ringVisuals[currParameter].GetComponentsInChildren<ParameterControl>();
+            foreach (var v in dpc) v.active = false;
+
         }
         // Get the Current Parameter
         currParameter = (currParameter + 1) % ringVisuals.Length;
@@ -65,7 +73,17 @@ public class DialDisplay : MonoBehaviour
         ringVisuals[currParameter].GetComponent<Image>().color = new Color(
             mainColor.r, mainColor.g, mainColor.b, 1f);
         
+        // Also highlight any child elements if they exist
+        Image[] childHighlight = ringVisuals[currParameter].GetComponentsInChildren<Image>();
+        foreach (Image h in childHighlight)
+        {
+            h.color = new Color(mainColor.r, mainColor.g, mainColor.b, 1f);
+        }
         
+        // And get any ParameterControl Scripts
+        ParameterControl[] pc = ringVisuals[currParameter].GetComponentsInChildren<ParameterControl>();
+        foreach (var v in pc) v.active = true;
+
     }
     
 }
