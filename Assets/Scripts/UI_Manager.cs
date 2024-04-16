@@ -67,13 +67,18 @@ public class UI_Manager : MonoBehaviour {
             ag.verticalJump = 5f - camSize;
             yield return new WaitForSeconds(.005f);
         }
-
+        
         yield return null;
     }
 
     public void StatusLightOn()
     {
         statusLight.color = Color.white;
+    }
+    
+    public void StatusLightOff()
+    {
+        statusLight.color = Color.clear;
     }
 
     private void Reset()

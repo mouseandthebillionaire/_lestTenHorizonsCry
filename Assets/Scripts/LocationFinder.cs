@@ -14,6 +14,9 @@ public class LocationFinder : MonoBehaviour
 	public int locationToTest;
 	
 	public  GameObject[] locations;
+
+	public float approachingThreshold, atThreshold;
+	
 	public List<float>  distances = new List<float>();
 	
 	private float xLoc = 50;
@@ -86,6 +89,7 @@ public class LocationFinder : MonoBehaviour
 			if (loc.x >= 0-xStep && loc.x <= 100+xStep) loc.x += (xStep * direction);
 			if (loc.x < 0) loc.x = 0;
 			if (loc.x > 100) loc.x = 100;
+			// highlight the ring being turned?
 		}
 
 		if (axis == 1)
@@ -114,40 +118,42 @@ public class LocationFinder : MonoBehaviour
 	private void Location(int i)
 	{
 		LocationControl thisLocation = locations[i].GetComponent<LocationControl>();
-		
 		distances[i] = Vector4.Distance(thisLocation.loc, loc);
 		
-		// quadrupled threshold (4x - 2x) that adds the visual effects
-		if ((distances[i] < threshold * 4) && (distances[i] > threshold * 2)) {
+		xStep = initStep; 
+		yStep = initStep;
+		
+		// We're approaching the threshold
+		if (distances[i] < approachingThreshold) {
+			// Make sure light is off
+			UI_Manager.S.StatusLightOff();
+			// and Global Variable "LocationLocked" to false;
+			GlobalVariables.S.locationLocked = false;
+			
+			// Add the visual wavering
 			float tempEffect = distances[i] / threshold;
-			float effectAmt    = scale(2f, 4f, 1f, 0f, tempEffect);
+			float effectAmt    = scale(threshold, approachingThreshold, 1f, 0f, distances[i]);
 			UI_Manager.S.AddEffects(effectAmt);
-		}
-		
-		// doubled threshold (2x - 1x) that fades out the UI
-		if ((distances[i] < threshold * 2) && (distances[i] > threshold)) {
-			// Which Location is it?
-			GlobalVariables.S.lockedLocation = i;
 			
-			// Turn on the Light
-			UI_Manager.S.StatusLightOn();
+			// Add pitch effect?
+			float pitchAmt    = scale(threshold, approachingThreshold, 0.95f, 1f, distances[i]);
+			SynthControl.S.SetPitch(pitchAmt);
+	
+			// When we're approaching the threshold do we also want to make the dial turns more granular?
 			
-			// Set Global Variable "LocationLocked" to true;
-			GlobalVariables.S.locationLocked = true;
-		}
-		
-		// Check if the distance is within the threshold
-		if (distances[i] < threshold)
-		{ 
+			// We're at the threshold and ready to launch the location
+			if (distances[i] < threshold) {
+				// Which Location is it?
+				GlobalVariables.S.lockedLocation = i;
 			
-			// Start Changing Finder Color
-			float hue = thisLocation.locationHue / 360f;
-			float sat = hue - (distances[i] * .1f);
+				// Turn on the Light
+				UI_Manager.S.StatusLightOn();
+			
+				// Set Global Variable "LocationLocked" to true;
+				GlobalVariables.S.locationLocked = true;
+			}
 		}
-		else {
-			xStep = initStep;
-			yStep = initStep;
-		}
+
 	}
 
 	public void LoadLocation(int locationNum)
@@ -162,6 +168,7 @@ public class LocationFinder : MonoBehaviour
 		LocationControl thisLocation = locations[locationNum].GetComponent<LocationControl>();
 		thisLocation.Load("out");
 		locations[locationNum].SetActive(false);
+		GlobalVariables.S.locationEntered = false;
 	}
 
 	public float scale(float OldMin, float OldMax, float NewMin, float NewMax, float OldValue){

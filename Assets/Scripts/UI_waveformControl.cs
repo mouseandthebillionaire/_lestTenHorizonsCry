@@ -5,15 +5,17 @@ using UnityEngine;
 public class UI_waveformControl : MonoBehaviour
 {
     public float waveSpeed;
+    public float waveHeight;
     
     public static UI_waveformControl S;
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         S = this;
 
         waveSpeed = 0.25f;
+        waveHeight = 20f;
     }
 
     // Update is called once per frame
@@ -21,5 +23,8 @@ public class UI_waveformControl : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L) && waveSpeed < 1f) waveSpeed += .005f;
         if (Input.GetKeyDown(KeyCode.K) && waveSpeed > 0.01f) waveSpeed -= .005f;
+        
+        if (Input.GetKeyDown(KeyCode.L) && waveHeight < 20f) waveHeight += .5f;
+        if (Input.GetKeyDown(KeyCode.K) && waveHeight > 1f) waveHeight -= .5f;
     }
 }

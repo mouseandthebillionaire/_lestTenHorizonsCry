@@ -29,7 +29,7 @@ public class LocationControl : MonoBehaviour
 	
 	
 
-	public AudioMixerSnapshot synthSetting;
+	public AudioMixerSnapshot defaultSynth, inactiveSynth;
 
 	public int    locationHue;
 	public string imagesFolder;
@@ -53,7 +53,9 @@ public class LocationControl : MonoBehaviour
 		{
 			if (Controller.S.dials[i] == 2 && dialEffectVal[i] < 100) dialEffectVal[i]+=.05f;
 			else if (Controller.S.dials[i] == 1 && dialEffectVal[i] > 0) dialEffectVal[i]-=.05f;
-			ApplyEffect(i, dialEffectVal[i]);
+			//Comment out for now because we don't have the effects built yet
+			// How many do we need?
+			//ApplyEffect(i, dialEffectVal[i]);
 		}
 	}
 
@@ -72,7 +74,9 @@ public class LocationControl : MonoBehaviour
 	private IEnumerator LoadIn()
 	{
 		Debug.Log("Loading in");
-		GlobalVariables.S.locationEntered = true;            
+		GlobalVariables.S.locationEntered = true;           
+		
+		inactiveSynth.TransitionTo(10);
 
 		currStage = 0;
 
@@ -93,6 +97,8 @@ public class LocationControl : MonoBehaviour
 	
 	private IEnumerator LoadOut()
 	{
+		defaultSynth.TransitionTo(1);
+		
 		float transitionValue = 0;
 		float endingValue = 1;
 
@@ -106,7 +112,7 @@ public class LocationControl : MonoBehaviour
 			SetAudioMix(transitionValue, songStages[currStage], innactive);
 			yield return new WaitForSeconds(.05f);
 		}
-		
+
 		GlobalVariables.S.locationEntered = false;
 	}
 

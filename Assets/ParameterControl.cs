@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.OracleClient;
@@ -67,7 +68,9 @@ public class ParameterControl : MonoBehaviour
         {
             // is this going to work?
             //int spriteNum = Mathf.FloorToInt(scale(0, 100, 0, sprites2swap.Length, paramValue));
-            int spriteNum = (int)(paramValue % sprites2swap.Length);
+            float scaledSpriteNum = paramValue / sprites2swap.Length;
+            int spriteNum = (int) scaledSpriteNum;
+            //int spriteNum = (int)(paramValue % sprites2swap.Length);
             GetComponent<Image>().sprite = sprites2swap[spriteNum];
         }
         

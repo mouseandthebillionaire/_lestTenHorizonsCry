@@ -9,7 +9,8 @@ using UnityEngine.UI;
 
 public class MainSynth : MonoBehaviour
 {
-
+	// THIS SCRIPT IS BEING DEPRICATED IN FAVOUR OF THE SYNTHCONTROL SCRIPT	
+	
 	public  AudioMixer         am;
 	public  AudioMixerSnapshot defaultSynth;
 	private float              smoothingValue = 0.5f;
@@ -52,7 +53,7 @@ public class MainSynth : MonoBehaviour
 		{
 			GameObject go = LocationFinder.S.locations[i];
 			float distance = LocationFinder.S.distances[i];
-			tmpSnapshots[i+1] = go.GetComponent<LocationControl>().synthSetting;
+			tmpSnapshots[i+1] = go.GetComponent<LocationControl>().defaultSynth;
 			tmpTransition[i+1] = 1.0f - (distance * .01f);
 		}
 
