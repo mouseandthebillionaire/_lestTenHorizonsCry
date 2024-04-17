@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using System.Web.Mvc.Html;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.PlayerLoop;
@@ -27,12 +28,14 @@ public class LocationControl : MonoBehaviour
 	public  int songStageThreshold;
 	private int currThreshold;
 	
-	
+	// Text
+	public GameObject textManager;
 
 	public AudioMixerSnapshot defaultSynth, inactiveSynth;
 
-	public int    locationHue;
-	public string imagesFolder;
+	public int        locationHue;
+	public string     imagesFolder;
+	public GameObject images;
 	
 	
 	// Start is called before the first frame update
@@ -51,8 +54,9 @@ public class LocationControl : MonoBehaviour
 
 		for (int i = 0; i < dialEffect.Length; i++)
 		{
-			if (Controller.S.dials[i] == 2 && dialEffectVal[i] < 100) dialEffectVal[i]+=.05f;
-			else if (Controller.S.dials[i] == 1 && dialEffectVal[i] > 0) dialEffectVal[i]-=.05f;
+			// Switch to letting the Rings take care of this?
+			//if (Controller.S.dials[i] == 2 && dialEffectVal[i] < 100) dialEffectVal[i]+=.05f;
+			//else if (Controller.S.dials[i] == 1 && dialEffectVal[i] > 0) dialEffectVal[i]-=.05f;
 			//Comment out for now because we don't have the effects built yet
 			// How many do we need?
 			//ApplyEffect(i, dialEffectVal[i]);
@@ -127,9 +131,13 @@ public class LocationControl : MonoBehaviour
 			progressionDirection *= -1;
 		}
 
-		int nextStage = currStage + progressionDirection; 
-		
+		int nextStage = currStage + progressionDirection;
 		Debug.Log("Loading stage " + nextStage);
+		
+		// Stage Effects
+		if (nextStage == 1) images.SetActive(true);
+		if (nextStage == 2) textManager.GetComponent<TextManager>().DisplayText();
+		
 		
 		while (transitionValue < endingValue)
 		{
@@ -161,6 +169,9 @@ public class LocationControl : MonoBehaviour
 		currStage = 0;
 		currThreshold = songStageThreshold;
 		progressionDirection = -1;
+		
+		images = this.gameObject.transform.GetChild(4).gameObject;
+		images.SetActive(false);
 
 	}
 	

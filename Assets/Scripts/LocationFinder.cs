@@ -58,21 +58,21 @@ public class LocationFinder : MonoBehaviour
     void Update()
     {
 		// Make the knob turning more granular if we are close to any location
-		float minDistance = distances.Min();
-		if (minDistance < 10)
-		{
-			xStep = closeStep;
-			yStep = closeStep;
-			Debug.Log("Close to a Location");
-		}
+		// float minDistance = distances.Min();
+		// if (minDistance < 10)
+		// {
+		// 	xStep = closeStep;
+		// 	yStep = closeStep;
+		// 	Debug.Log("Close to a Location");
+		// }
 
 		// Little Icon for position. Maybe get rid of later
-		float finder_xPos = scale(0, 100, -8f, 8f, loc.x);
-		float finder_yPos = scale(0, 100, -4f, 4f, loc.y);
-		float finder_zPos = scale(0, 100, 0.1f, 1f, loc.z);
-		finder.transform.position = new Vector3(finder_xPos, finder_yPos, 0);
-		finder.transform.localScale = new Vector3(finder_zPos, finder_zPos, finder_zPos);
-		finder.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, distances.Min() / 100f);
+		// float finder_xPos = scale(0, 100, -8f, 8f, loc.x);
+		// float finder_yPos = scale(0, 100, -4f, 4f, loc.y);
+		// float finder_zPos = scale(0, 100, 0.1f, 1f, loc.z);
+		// finder.transform.position = new Vector3(finder_xPos, finder_yPos, 0);
+		// finder.transform.localScale = new Vector3(finder_zPos, finder_zPos, finder_zPos);
+		// finder.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, distances.Min() / 100f);
 
 		// Locations
 		for (int i = 0; i < locations.Length; i++)
@@ -85,34 +85,40 @@ public class LocationFinder : MonoBehaviour
 	{
 		// 0=X, 1=y, 2=z, 3=w
 		
-		if (axis == 0) {
-			if (loc.x >= 0-xStep && loc.x <= 100+xStep) loc.x += (xStep * direction);
-			if (loc.x < 0) loc.x = 0;
-			if (loc.x > 100) loc.x = 100;
-			// highlight the ring being turned?
+		// Freeze the location if we've already entered one
+		// But now need to update params...
+		if (!GlobalVariables.S.locationEntered)
+		{
+			if (axis == 0)
+			{
+				if (loc.x >= 0 - xStep && loc.x <= 100 + xStep) loc.x += (xStep * direction);
+				if (loc.x < 0) loc.x = 0;
+				if (loc.x > 100) loc.x = 100;
+				// highlight the ring being turned?
+			}
+
+			if (axis == 1)
+			{
+				if (loc.y >= 0 - yStep && loc.y <= 100 + yStep) loc.y += (yStep * direction);
+				if (loc.y < 0) loc.y = 0;
+				if (loc.y > 100) loc.y = 100;
+			}
+
+			if (axis == 2)
+			{
+				if (loc.z >= 0 - xStep && loc.z <= 100 + xStep) loc.z += (xStep * direction);
+				if (loc.z < 0) loc.z = 0;
+				if (loc.z > 100) loc.z = 100;
+			}
+
+			if (axis == 3)
+			{
+				if (loc.w >= 0 - xStep && loc.w <= 100 + xStep) loc.w += (xStep * direction);
+				if (loc.w < 0) loc.w = 0;
+				if (loc.w > 100) loc.w = 100;
+			}
 		}
 
-		if (axis == 1)
-		{
-			if (loc.y >= 0-yStep && loc.y <= 100+yStep) loc.y += (yStep * direction);
-			if (loc.y < 0) loc.y = 0;
-			if (loc.y > 100) loc.y = 100;
-		}
-		
-		if (axis == 2)
-		{
-			if (loc.z >= 0-xStep && loc.z <= 100+xStep) loc.z += (xStep * direction);
-			if (loc.z < 0) loc.z = 0;
-			if (loc.z > 100) loc.z = 100;
-		}
-		
-		if (axis == 3)
-		{
-			if (loc.w >= 0-xStep && loc.w <= 100+xStep) loc.w += (xStep * direction);
-			if (loc.w < 0) loc.w = 0;
-			if (loc.w > 100) loc.w = 100;
-		}
-		
 	}
 
 	private void Location(int i)
@@ -132,12 +138,17 @@ public class LocationFinder : MonoBehaviour
 			
 			// Add the visual wavering
 			float tempEffect = distances[i] / threshold;
-			float effectAmt    = scale(threshold, approachingThreshold, 1f, 0f, distances[i]);
+			float effectAmt    = scale(0, approachingThreshold, 1f, 0f, distances[i]);
 			UI_Manager.S.AddEffects(effectAmt);
 			
 			// Add pitch effect?
-			float pitchAmt    = scale(threshold, approachingThreshold, 0.95f, 1f, distances[i]);
+			float pitchAmt    = scale(0, approachingThreshold, 0.95f, 1f, distances[i]);
 			SynthControl.S.SetPitch(pitchAmt);
+			
+			// Add color effect?
+			LockingDial.S.SetHue(locations[i].GetComponent<LocationControl>().locationHue);
+			float satBasedOnDistance = scale(approachingThreshold, 0, 0, 0.6f, distances[i]);
+			LockingDial.S.SetSat(satBasedOnDistance);
 	
 			// When we're approaching the threshold do we also want to make the dial turns more granular?
 			
@@ -159,6 +170,7 @@ public class LocationFinder : MonoBehaviour
 	public void LoadLocation(int locationNum)
 	{
 		locations[locationNum].SetActive(true);
+		LockingDial.S.Fade("out");
 		LocationControl thisLocation = locations[locationNum].GetComponent<LocationControl>();
 		thisLocation.Load("in");
 	}
@@ -167,6 +179,7 @@ public class LocationFinder : MonoBehaviour
 	{
 		LocationControl thisLocation = locations[locationNum].GetComponent<LocationControl>();
 		thisLocation.Load("out");
+		LockingDial.S.Fade("in");
 		locations[locationNum].SetActive(false);
 		GlobalVariables.S.locationEntered = false;
 	}

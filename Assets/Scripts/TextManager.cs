@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,17 +16,20 @@ public class TextManager : MonoBehaviour
     private int     currChar;
     private char[]  textChars;
     public Text     textDisplay;
-    
+
+    public Font zFont, eFont;
+
     // Start is called before the first frame update
     void Start()
     {
         LoadText();
+        StartCoroutine(Glitch());
     }
+    
 
-    // Update is called once per frame
-    void Update()
+    public void DisplayText()
     {
-        if(Input.GetKeyDown(KeyCode.Z)) StartCoroutine(TextDisplay());
+        StartCoroutine(TextDisplay());
     }
 
     IEnumerator TextDisplay()
@@ -55,5 +59,16 @@ public class TextManager : MonoBehaviour
     public void LoadText()
     {
         textChars = screenText.ToCharArray();
+    }
+
+    private IEnumerator Glitch()
+    {
+        textDisplay.font = eFont;
+        float glitchTime = Random.Range(0.01f, 0.2f);
+        yield return new WaitForSeconds(glitchTime);
+        textDisplay.font = zFont;
+        float unglitchTime = Random.Range(2f, 5f);
+        yield return new WaitForSeconds(unglitchTime);
+        StartCoroutine(Glitch());
     }
 }

@@ -2,9 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading;
+using System.Windows.Forms;
 using System.Xml.Serialization;
 using Unity.Profiling;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.WSA;
 using Color = UnityEngine.Color;
 using Random = UnityEngine.Random;
@@ -14,46 +17,33 @@ public class BG_Image : MonoBehaviour
     public  Sprite         img;
     private SpriteRenderer sr;
 
-    public float animationSpeed;
-    public float xDepth, yDepth, zDepth, aDepth;
+    public  float animationSpeed;
+    private float startTime;
+    private float distance;
 
-    private float xStart, yStart;
     private float xLoc,   yLoc, z, alpha;
 
-    private float time;
-    
+    public Vector3 startPos, endPos;
+
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        PhotoSwap();
-        xStart = this.transform.position.x;
-        yStart = this.transform.position.y;
-        
-        xDepth = Random.Range(-5f, 5f);
-        yDepth = Random.Range(-3f, 3f);
-        zDepth = Random.Range(2f, 2.1f);
-        aDepth = Random.Range(.01f, .5f);
-
-        animationSpeed = Random.Range(0.01f, 0.1f);
+        StartCoroutine(PhotoSwap());
     }
 
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime * animationSpeed;
+        float distTravelled = (Time.time - startTime) * animationSpeed;
+        float traveledAmt = distTravelled / distance;
+        transform.localPosition = Vector3.Lerp(startPos, endPos, traveledAmt);
 
-        xLoc = xDepth * Mathf.Sin(2f * Mathf.PI * time);
-        yLoc = yDepth * Mathf.Sin((Time.time + yLoc) * yDepth);
-        z = zDepth * Mathf.Sin((Time.time + z) * zDepth);
-        alpha = aDepth * Mathf.Sin(2f * Mathf.PI * time);
+        alpha -= 0.001f;
+        sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, alpha);
 
         float swapChance = Random.Range(0, 100f);
         if (swapChance < .025f) StartCoroutine(PhotoSwap());
-
-        sr.transform.localPosition = new Vector3(xStart + xLoc, yStart + yLoc, 0);
-        //sr.transform.localScale = new Vector3(z, z, 0);
-        sr.color = new Color(1, 1, 1, alpha);
 
     }
 
@@ -67,9 +57,25 @@ public class BG_Image : MonoBehaviour
         string file = folder + "/" + image + ".jpg";
         
         sr.sprite = Resources.Load<Sprite>(folder + "/" + image);
-        
-        // reset the alpha?
         alpha = 1;
+
+        // Movement
+        float xStart = Random.Range(-9f, 9f);
+        float xEnd = Random.Range(-9f, 9f);
+        float yStart = Random.Range(-3.5f, 3.5f);
+        float yEnd = Random.Range(-3f, 3f);
+        float zStart = Random.Range(2f, 2.1f);
+        float zEnd = Random.Range(2f, 2.1f);
+        float aStart = Random.Range(-3f, .5f);
+        float aEnd = Random.Range(-3f, .5f);
+
+        startTime = Time.time;
+        startPos = new Vector3(xStart, yStart, zStart);
+        endPos = new Vector3(xEnd, yEnd, zEnd);
+        distance = Vector3.Distance(startPos, endPos);
+        
+        animationSpeed = Random.Range(.5f, 2f);
+        
         
         yield return null;
     }

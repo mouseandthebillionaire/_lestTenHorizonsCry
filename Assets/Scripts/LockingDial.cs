@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class LockingDial : MonoBehaviour
 {
-    public GameObject[] dials;
-    public float[]      dialValues = new float[4];
+    public  GameObject[] dials;
+    public  float[]      dialValues    = new float[4];
+    private float[]      dialRotations = new float[4];
 
-    private float[] dialRotations = new float[4];
-    
+    public float dialHue;
+    public float dialSat;
+    public float dialVal;
+
+    public static LockingDial S;
+
+    void Awake()
+    {
+        S = this;
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -22,24 +31,48 @@ public class LockingDial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dialValues[0] = LocationFinder.S.loc.x;
-        dialRotations[0] = (dialValues[0] * 3.65f) % 365f;
-        Vector3 newRotation = new Vector3(0, 0, dialRotations[0]);
-        dials[0].transform.eulerAngles = newRotation;
-        
-        dialValues[1] = LocationFinder.S.loc.y;
-        dialRotations[1] = (dialValues[1] * 3.65f) % 365f;
-        newRotation = new Vector3(0, 0, dialRotations[1]);
-        dials[1].transform.eulerAngles = newRotation;
-        
-        dialValues[2] = LocationFinder.S.loc.z;
-        dialRotations[2] = (dialValues[2] * 3.65f) % 365f;
-        newRotation = new Vector3(0, 0, dialRotations[2]);
-        dials[2].transform.eulerAngles = newRotation;
-        
-        dialValues[3] = LocationFinder.S.loc.w;
-        dialRotations[3] = (dialValues[3] * 3.65f) % 365f;
-        newRotation = new Vector3(0, 0, dialRotations[3]);
-        dials[3].transform.eulerAngles = newRotation;
+        for (int i = 0; i < dialValues.Length; i++)
+        {
+            dialValues[i] = LocationFinder.S.loc[i];
+            dialRotations[i] = (dialValues[i] * 3.65f) % 365f;
+            Vector3 newRotation = new Vector3(0, 0, dialRotations[i]);
+            dials[i].transform.eulerAngles = newRotation;
+            dials[i].GetComponent<SpriteRenderer>().color = Color.HSVToRGB(dialHue/255f, dialSat, dialVal);
+        }
+    }
+
+    public void SetHue(float hue)
+    {
+        dialHue = hue;
+    }
+    
+    public void SetSat(float sat)
+    {
+        dialSat = sat;
+    }
+
+    public void Fade(string direction)
+    {
+        StartCoroutine(FadeDial(direction));
+    }
+
+    public IEnumerator FadeDial(string direction)
+    {
+        if (direction == "out")
+        {
+            while (dialVal > 0.1f)
+            {
+                dialVal -= 0.01f;
+                yield return new WaitForSeconds(0.1f);
+            }
+        }
+        if (direction == "in")
+        {
+            while (dialVal > 0.4f)
+            {
+                dialVal -= 0.01f;
+                yield return new WaitForSeconds(0.05f);
+            }
+        }
     }
 }

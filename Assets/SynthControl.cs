@@ -21,7 +21,6 @@ public class SynthControl : MonoBehaviour
     public void SetPitch(float targetPitch)
     {
         am.SetFloat("synth_globalPitch", targetPitch);
-        Debug.Log("pitch set to " + targetPitch);
     }
 
     public void Reset()
