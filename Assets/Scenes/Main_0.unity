@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a96823583bc4b119c85a38ebda8fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controllerActive: 0
+  controllerActive: 1
   instruments:
   - {fileID: 1950277427}
   - {fileID: 797996270}
@@ -225,6 +225,7 @@ MonoBehaviour:
   dialParam: 00000000000000000000000000000000
   dialLim: 100
   dialSpeed: 0.1
+  dialSpeed_granular: 0
 --- !u!4 &102961637
 Transform:
   m_ObjectHideFlags: 0

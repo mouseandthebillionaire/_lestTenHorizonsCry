@@ -55,6 +55,7 @@ public class LocationControl : MonoBehaviour
 		for (int i = 0; i < dialEffect.Length; i++)
 		{
 			// Switch to letting the Rings take care of this?
+			
 			//if (Controller.S.dials[i] == 2 && dialEffectVal[i] < 100) dialEffectVal[i]+=.05f;
 			//else if (Controller.S.dials[i] == 1 && dialEffectVal[i] > 0) dialEffectVal[i]-=.05f;
 			//Comment out for now because we don't have the effects built yet

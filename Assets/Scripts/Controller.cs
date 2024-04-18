@@ -29,13 +29,14 @@ public class Controller : MonoBehaviour {
     public KeyCode[] pushDials = new KeyCode[4];
 
     // Global variables
-    public int[] dials     = new int[4];
-    public float[,] dialVal   = new float[4,4];
-    public int[] dialParam = new int[4];
+    public  int[]    dials      = new int[4];
+    public  float[,] dialVal    = new float[4,4];
+    public  int[]    dialParam  = new int[4];
+    private bool[]   dialPushed = new bool[4];
     
     // Dial Control
-    public float dialLim   = 100;
-    public float dialSpeed = .0001f;
+    public float dialLim = 100;
+    public float dialSpeed, dialSpeed_granular;
 
     // Singleton
     public static Controller S;
@@ -101,8 +102,16 @@ public class Controller : MonoBehaviour {
         // pressed
         if (dials[dialNum] == 3 || Input.GetKeyDown(pushDials[dialNum]))
         {
-            instrumentViz[dialNum].GetComponent<DialDisplay>().SwitchParameter();
-            yield break;
+            // This is shaking too much. Need to add a second break or so.
+            if (!dialPushed[dialNum])
+            {
+                dialPushed[dialNum] = true;
+                instrumentViz[dialNum].GetComponent<DialDisplay>().SwitchParameter();
+                // half a second seems good
+                yield return new WaitForSeconds(0.5f);
+                dialPushed[dialNum] = false;
+            }
+            yield break;   
         }
 
         // These are only for debugging. They get overriden by the Controller.cs script and serial input
@@ -119,7 +128,8 @@ public class Controller : MonoBehaviour {
             // fires when any key is pressed, which isn't ideal, but is fine for testing
             GlobalVariables.S.IncreaseInteractionCounter();
         }
-        else dials[dialNum] = 0;
+        // Problem?
+        //else dials[dialNum] = 0;
         
                 
         // turned right
@@ -161,6 +171,7 @@ public class Controller : MonoBehaviour {
             for (int i = 0; i < dials.Length; i++)
             {
                 dials[i] = 0;
+                dialPushed[i] = false;
                 for (int j = 0; j < dialParam.Length; j++)
                 {
                     dialVal[i,j] = 0;
