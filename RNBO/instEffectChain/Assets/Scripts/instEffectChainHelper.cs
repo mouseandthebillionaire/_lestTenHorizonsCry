@@ -120,6 +120,12 @@ public class instEffectChainHandle {
     private static extern bool RNBOCopyLoadDataRef(int key, IntPtr id, [MarshalAs(UnmanagedType.LPArray)] System.Single[] data, IntPtr datalen, IntPtr channels, IntPtr samplerate);
 
     [DllImport("instEffectChain")]
+    private static extern bool RNBOUnsafeLoadDataRef(int key, IntPtr id, [MarshalAs(UnmanagedType.LPArray)] System.Single[] data, IntPtr datalen, IntPtr channels, IntPtr samplerate);
+
+    [DllImport("instEffectChain")]
+    private static extern bool RNBOUnsafeLoadReadOnlyDataRef(int key, IntPtr id, [MarshalAs(UnmanagedType.LPArray)] System.Single[] data, IntPtr datalen, IntPtr channels, IntPtr samplerate);
+
+    [DllImport("instEffectChain")]
     private static extern bool RNBOReleaseDataRef(int key, IntPtr id);
 
     [DllImport("instEffectChain")]
@@ -444,6 +450,20 @@ public class instEffectChainHandle {
     public bool LoadDataRef(string id, float[] data, int channels, int samplerate) {
         IntPtr idPtr = (IntPtr)Marshal.StringToHGlobalAnsi(id);
         var r = RNBOCopyLoadDataRef(PluginKey, idPtr, data, (IntPtr)data.Length, (IntPtr)channels, (IntPtr)samplerate);
+        Marshal.FreeHGlobal(idPtr);
+        return r;
+    }
+
+    private static List<float[]> unsafeDataRefReferences;
+    public bool LoadUnsafeReadOnlyDataRef(string id, float[] data, int channels, int samplerate) {
+        //keep a reference to the data so it doesn't get cleaned up
+        if (unsafeDataRefReferences == null) {
+            unsafeDataRefReferences = new List<float[]>();
+        }
+        unsafeDataRefReferences.Add(data);
+
+        IntPtr idPtr = (IntPtr)Marshal.StringToHGlobalAnsi(id);
+        var r = RNBOUnsafeLoadReadOnlyDataRef(PluginKey, idPtr, data, (IntPtr)data.Length, (IntPtr)channels, (IntPtr)samplerate);
         Marshal.FreeHGlobal(idPtr);
         return r;
     }

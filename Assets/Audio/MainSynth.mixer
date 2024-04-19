@@ -200,6 +200,8 @@ AudioMixerEffectController:
     m_GUID: f318abeb11dc042af92b187974980fa4
   - m_ParameterName: delay/right_del
     m_GUID: c01eab0b6c15e495a8b7a0861b5f088f
+  - m_ParameterName: drive
+    m_GUID: dd68d7011b30c4d5598e5f253d6986f6
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
@@ -616,6 +618,8 @@ AudioMixerEffectController:
     m_GUID: 562e1a957c4d94ca8abfe4555b2c9309
   - m_ParameterName: delay/right_del
     m_GUID: c46acd8d17071445f9ba908a4fcd5cc2
+  - m_ParameterName: drive
+    m_GUID: f7f864e01c79d4256941bef2aed3eccc
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
@@ -730,7 +734,9 @@ AudioMixerSnapshotController:
     02fb4b90a3a9243bab5afa2e4bf86207: 2
     6e2838a0489154c008e0be3de84dc7ea: 1
     ca4041e0b822842ca9eb7c4f35516d88: 0.804
+    f7f864e01c79d4256941bef2aed3eccc: 0
     81215bf006254479b887842efc65c6b5: 4514
+    dd68d7011b30c4d5598e5f253d6986f6: 0
     f0e63e016091943de90ef1694bbacd8d: 0.541
     cc034f0153dc54a2b804fa4d3914d0ed: 120
     8a911731e83d3425e91782d08c29e7ce: 6095

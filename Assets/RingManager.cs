@@ -6,7 +6,8 @@ public class RingManager : MonoBehaviour
 {
     [Header("Use these to target a dial and it's parameter")]
     public int dialNum;
-    public int dialParam;
+    public  int        dialParam;
+    private AudioParam ap;
 
     public float value;
 
@@ -26,6 +27,9 @@ public class RingManager : MonoBehaviour
         // Assign the Dial
         dialNum = (int) Random.Range(0, 4);
         dialParam = (int) Random.Range(0, 4);
+        
+        // Get the Audio parameter Script
+        ap = this.GetComponent<AudioParam>();
 
     }
 
@@ -36,5 +40,7 @@ public class RingManager : MonoBehaviour
         float dialRotation = (value * 3.65f) % 365f;
         Vector3 newRotation = new Vector3(0, 0, dialRotation);
         this.transform.eulerAngles = newRotation;
+        
+        ap.UpdateParam(value);
     }
 }

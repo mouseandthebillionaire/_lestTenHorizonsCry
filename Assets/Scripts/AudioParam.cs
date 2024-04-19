@@ -19,14 +19,11 @@ public class AudioParam : MonoBehaviour
 
 	public virtual void UpdateParam(float value)
 	{
-		// Set the Effect Name
-		string thisParam = targetTrack + paramName;
-		
 		// Filter the numbers based on Param Specific Values
 		float t = Mathf.InverseLerp(0, 100, value);
 		float output = Mathf.Lerp(effectValueLow, effectValueHigh, t);
 		
-		am.SetFloat(thisParam, output);
+		am.SetFloat(paramName, output);
 	}
 	
 }
