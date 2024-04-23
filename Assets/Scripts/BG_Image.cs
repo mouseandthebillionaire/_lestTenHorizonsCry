@@ -1,14 +1,5 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Threading;
-using System.Windows.Forms;
-using System.Xml.Serialization;
-using Unity.Profiling;
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
-using UnityEngine.WSA;
 using Color = UnityEngine.Color;
 using Random = UnityEngine.Random;
 

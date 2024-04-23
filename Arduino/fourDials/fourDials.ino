@@ -21,9 +21,15 @@ seesaw_NeoPixel encoder_pixels[4] = {
 };
 
 int32_t encoder_positions[] = {0, 0, 0, 0};
-int32_t encoderAddresses[] = {54, 61, 59, 60};
+// Original Prototype
+// int32_t encoderAddresses[] = {54, 61, 59, 60};
+// A MAZE Build
+int32_t encoderAddresses[] = {56, 55, 57, 58};
 bool found_encoders[] = {false, false, false, false};
 bool encoder_pressed[] = {false, false, false, false};
+
+const int buttonPin = 2;
+int buttonState = 0;
 
 void setup() {
   Serial.begin(115200);
@@ -76,11 +82,13 @@ void setup() {
   
   // Light
   pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(2, INPUT_PULLUP);
 }
 
 void loop() {
 
   outputString = "";
+  buttonState = digitalRead(buttonPin);
 
   for (uint8_t enc=0; enc<sizeof(found_encoders); enc++) {
     
@@ -103,12 +111,15 @@ void loop() {
       encoder_pressed[enc] = true;
      }
      else outputString += "0";
-     if (enc < sizeof(found_encoders)-1) outputString += ":";
+     outputString += ":";
 
     // clear the press
     if(encoders[enc].digitalRead(SS_SWITCH)) encoder_pressed[enc] = false;
 
-     }
+    }
+  if(buttonState == LOW) outputString += "1";
+  else outputString += "0";
+
   Serial.println(outputString); 
 
   // Input

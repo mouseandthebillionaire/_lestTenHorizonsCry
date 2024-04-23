@@ -11,10 +11,10 @@ public class Controller : MonoBehaviour {
     public bool controllerActive = false;
     
     // Serial data
-    SerialPort stream = new SerialPort("/dev/cu.usbmodem11301", 115200);
-    Thread serialThread;
-    string serialData;
-    private bool serialReceived = false;
+    private SerialPort stream;
+    Thread             serialThread;
+    string             serialData;
+    private bool       serialReceived = false;
     
         
     // Instruments
@@ -30,6 +30,7 @@ public class Controller : MonoBehaviour {
 
     // Global variables
     public  int[]    dials      = new int[4];
+    public  int[]    dialDir    = new int[4];
     public  float[,] dialVal    = new float[4,4];
     public  int[]    dialParam  = new int[4];
     private bool[]   dialPushed = new bool[4];
@@ -45,18 +46,22 @@ public class Controller : MonoBehaviour {
     void Awake()
     {
         // Create Singleton
+        // PS - start doing it this way for all scripts because you're an adult
         if (S == null) S = this;
         else Destroy(this);
     }
 
     void Start()
     {
+        ConnectController();
         ResetVariables();
     }
-    
-    // Update is called once per frame
-    void Update()
+
+    private void ConnectController()
     {
+        string[] ports = SerialPort.GetPortNames();
+        stream = new SerialPort(ports[1], 115200);
+        
         // Initialize serial
         if (!stream.IsOpen && controllerActive) {
             if (SerialPort.GetPortNames().Length > 0) {
@@ -68,6 +73,23 @@ public class Controller : MonoBehaviour {
                 print("Connected to serial");
             }
         }
+    }
+    
+    // Update is called once per frame
+    void Update()
+    {
+        // Feels like we can do this in a separate function (above)
+        // // Initialize serial
+        // if (!stream.IsOpen && controllerActive) {
+        //     if (SerialPort.GetPortNames().Length > 0) {
+        //         stream.Open();
+        //
+        //         serialThread = new Thread(new ThreadStart(ParseData));
+        //         serialThread.Start();
+        //
+        //         print("Connected to serial");
+        //     }
+        // }
         
         // Send Out Light Data
         if (Input.GetKeyDown(KeyCode.G))
@@ -96,7 +118,7 @@ public class Controller : MonoBehaviour {
 
     private IEnumerator UpdateDial(int dialNum)
     {
-        int dir = 0;
+        dialDir[dialNum] = 0;
         
         // if we pressed, don't do the rest of this stuff 
         // pressed
@@ -133,11 +155,11 @@ public class Controller : MonoBehaviour {
         
                 
         // turned right
-        if (dials[dialNum] == 1) dir = -1;
+        if (dials[dialNum] == 1) dialDir[dialNum] = -1;
         // turned left
-        if (dials[dialNum] == 2) dir = 1;
+        if (dials[dialNum] == 2) dialDir[dialNum] = 1;
 
-        LocationFinder.S.UpdateLoc(dialNum, dir);
+        LocationFinder.S.UpdateLoc(dialNum, dialDir[dialNum]);
         
         // Get the current Param
         int currParameter = instrumentViz[dialNum].GetComponent<DialDisplay>().currParameter;
@@ -146,7 +168,7 @@ public class Controller : MonoBehaviour {
         float newVal = 0;
         if (currValue >= 0 && currValue <= dialLim)
         {
-            newVal = currValue + (dir * dialSpeed);
+            newVal = currValue + (dialDir[dialNum] * dialSpeed);
         }
 
         if (newVal < 0) newVal = 0;

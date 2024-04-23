@@ -41,6 +41,7 @@ public class LocationControl : MonoBehaviour
 	// Start is called before the first frame update
     void Start()
 	{
+		// Do we also want to do this every time the user leaves the Location? For now, maybe yes
 		SongReset();
 	}
 

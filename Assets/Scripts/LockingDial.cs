@@ -22,7 +22,7 @@ public class LockingDial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < dials.Length; i++)p
+        for (int i = 0; i < dials.Length; i++)
         {
             dialValues[i] = 0;
         }

@@ -2184,7 +2184,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592819740}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 150, y: -100, z: 0}
+  m_LocalPosition: {x: -150, y: -375, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4682,7 +4682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1005402318
 Transform:
   m_ObjectHideFlags: 0
@@ -5380,7 +5380,7 @@ MonoBehaviour:
   parameterNum: 1
   animationType: 0
   active: 0
-  parameter: arp_0_noteChance
+  parameter: arp_0_drive
   paramLowValue: 0
   paramHighValue: 100
   paramValue: 0
@@ -6478,14 +6478,18 @@ MonoBehaviour:
   synth: {fileID: 24100000, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
   instrumentNum: 2
   parameterNum: 1
-  animationType: 3
+  animationType: 2
   active: 0
   parameter: 
   paramLowValue: 0
   paramHighValue: 100
   paramValue: 0
   effectAmount: 0
-  sprites2swap: []
+  sprites2swap:
+  - {fileID: 21300000, guid: 24e43c0913c914c2ba7e72488d092e8c, type: 3}
+  - {fileID: 21300000, guid: 3b58e04fcbb064606bba8c8deab633a0, type: 3}
+  - {fileID: 21300000, guid: aa3292a7810404d13b9ad3c0ca668bfe, type: 3}
+  - {fileID: 21300000, guid: ebec60857821049da8cfcb793a1c9a7e, type: 3}
 --- !u!1 &1674258409
 GameObject:
   m_ObjectHideFlags: 0
@@ -7285,7 +7289,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019721291}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -150, y: -375, z: 0}
+  m_LocalPosition: {x: 150, y: -100, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7693,7 +7697,7 @@ PrefabInstance:
       objectReference: {fileID: -5376391966756267076, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: songStageThreshold
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: dialEffect.Array.size
