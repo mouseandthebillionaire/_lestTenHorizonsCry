@@ -257,3 +257,10 @@ Next (and thoughts):
 ## Enclosure | 01.20.24
 
 ![Enclosure Proto](Media/lthc_3.jpg)
+
+## New New Adventures in UI | 03.27.24
+
+Back at it like a crack addict
+
+## Location Design 2.0 | 04.23.24
+

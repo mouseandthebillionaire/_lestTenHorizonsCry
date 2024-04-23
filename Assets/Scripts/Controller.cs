@@ -1,10 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.IO.Ports;
-using System.ServiceModel.Configuration;
 using System.Threading;
-using System.Windows.Forms.DataVisualization.Charting;
 
 public class Controller : MonoBehaviour {
     // turn this on if we are using the controller
@@ -106,7 +103,8 @@ public class Controller : MonoBehaviour {
         // Dials
         for (int i = 0; i < dials.Length; i++)
         {
-            StartCoroutine(UpdateDial(i));
+            if (GlobalVariables.S.locationEntered != true) StartCoroutine(UpdateSynthDial(i));
+            else StartCoroutine(UpdateLocationDial(i));
         }
         
         // Get Launch Button
@@ -116,7 +114,7 @@ public class Controller : MonoBehaviour {
         }
     }
 
-    private IEnumerator UpdateDial(int dialNum)
+    private IEnumerator UpdateSynthDial(int dialNum)
     {
         dialDir[dialNum] = 0;
         
@@ -180,10 +178,15 @@ public class Controller : MonoBehaviour {
         
         // Update Here
         dialVal[dialNum, currParameter] = newVal;
-        
+
+        yield return null;
+    }
+    
+    // this might be a disaster. 
+    private IEnumerator UpdateLocationDial(int dialNum)
+    {
         // Update the interactionCounter GlobalVariable if we've done anything
         if(dials[dialNum] != 0) GlobalVariables.S.IncreaseInteractionCounter();
-
         yield return null;
     }
 

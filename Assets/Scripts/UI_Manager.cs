@@ -4,28 +4,34 @@ using System.Collections.Generic;
 using Kino;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.Rendering;
+using URPGlitch.Runtime.AnalogGlitch;
 
 public class UI_Manager : MonoBehaviour {
     
-    public  Camera          cam;
-    private AnalogGlitch    ag;
-    public  SpriteRenderer  statusLight;
+    public  Camera              cam;
+    public  SpriteRenderer      statusLight;
+    public  Volume              uiVolume;
+    private AnalogGlitchVolume   ag;
 
     public static UI_Manager S;
     
     // Start is called before the first frame update
     void Start() {
         S = this;
-
-        ag = cam.GetComponent<AnalogGlitch>();
+        AnalogGlitchVolume tmp;
+        if (uiVolume.profile.TryGet<AnalogGlitchVolume>(out tmp))
+        {
+            ag = tmp;
+        }
         Reset();
     }
 
     public void AddEffects(float effectAmount)
     {
-        ag.scanLineJitter = effectAmount / 10f;
-        ag.horizontalShake = effectAmount / 10f;
-        ag.colorDrift = effectAmount;
+        ag.scanLineJitter.Override(effectAmount / 10f);
+        ag.horizontalShake.Override(effectAmount / 10f);
+        ag.colorDrift.Override(effectAmount);
     }
 
     public void CamControl()
@@ -43,7 +49,8 @@ public class UI_Manager : MonoBehaviour {
         {
             camSize -= .05f;
             cam.orthographicSize = camSize;
-            ag.verticalJump = 5f - camSize;
+            // ag.verticalJump = 5f - camSize;
+            ag.verticalJump.Override(5f - camSize);
             yield return new WaitForSeconds(.005f);
         }
   
@@ -64,7 +71,8 @@ public class UI_Manager : MonoBehaviour {
         {
             camSize += .05f;
             cam.orthographicSize = camSize;
-            ag.verticalJump = 5f - camSize;
+            // ag.verticalJump = 5f - camSize;
+            ag.verticalJump.Override(5f - camSize);
             yield return new WaitForSeconds(.005f);
         }
         
@@ -83,10 +91,11 @@ public class UI_Manager : MonoBehaviour {
 
     private void Reset()
     {
-        ag.scanLineJitter = 0;
-        ag.horizontalShake = 0;
-        ag.colorDrift = 0;
-        ag.verticalJump = 0;
+        ag.active = true;
+        ag.scanLineJitter.Override(0f);
+        ag.horizontalShake.Override(0f);
+        ag.colorDrift.Override(0f);
+        ag.verticalJump.Override(0f);
         cam.orthographicSize = 5;
         statusLight.color = Color.clear;
 

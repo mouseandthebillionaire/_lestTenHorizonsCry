@@ -12,6 +12,8 @@ public class LockingDial : MonoBehaviour
     public float dialSat;
     public float dialVal;
 
+    private bool faded = false;
+    
     public static LockingDial S;
 
     void Awake()
@@ -33,11 +35,20 @@ public class LockingDial : MonoBehaviour
     {
         for (int i = 0; i < dialValues.Length; i++)
         {
-            dialValues[i] = LocationFinder.S.loc[i];
-            dialRotations[i] = (dialValues[i] * 3.65f) % 365f;
-            Vector3 newRotation = new Vector3(0, 0, dialRotations[i]);
-            dials[i].transform.eulerAngles = newRotation;
-            dials[i].GetComponent<SpriteRenderer>().color = Color.HSVToRGB(dialHue/255f, dialSat, dialVal);
+            if (faded)
+            {
+                dials[i].GetComponent<SpriteRenderer>().color = Color.clear;
+                // not updating when it is faded out
+            }
+            else
+            {
+                
+                dialValues[i] = LocationFinder.S.loc[i];
+                dialRotations[i] = (dialValues[i] * 3.65f) % 365f;
+                Vector3 newRotation = new Vector3(0, 0, dialRotations[i]);
+                dials[i].transform.eulerAngles = newRotation;
+                dials[i].GetComponent<SpriteRenderer>().color = Color.HSVToRGB(dialHue / 255f, dialSat, dialVal);
+            }
         }
     }
 
@@ -60,14 +71,18 @@ public class LockingDial : MonoBehaviour
     {
         if (direction == "out")
         {
-            while (dialVal > 0.1f)
+            while (dialVal > 0.0f)
             {
                 dialVal -= 0.01f;
                 yield return new WaitForSeconds(0.1f);
             }
+            // and then clear out
+            faded = true;
+
         }
         if (direction == "in")
         {
+            faded = false;
             while (dialVal > 0.4f)
             {
                 dialVal -= 0.01f;

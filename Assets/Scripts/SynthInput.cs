@@ -1,11 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Windows.Forms;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.PlayerLoop;
-using UnityEngine.UIElements;
-using Slider = UnityEngine.UI.Slider;
 
 public class SynthInput : MonoBehaviour
 {
