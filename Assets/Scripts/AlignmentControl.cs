@@ -6,10 +6,9 @@ public class AlignmentControl : MonoBehaviour
 {
     public  GameObject[] rings;
     private float[]      ringVal;
-    public  float[]      ringValLow;
-    public  float[]      ringValHigh;
-    
-    
+    public  float[]      scaleVals, xVals, yVals, zVals;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,17 +18,25 @@ public class AlignmentControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rings[0].transform.localPosition = new Vector3(0, 0, scale(0, 100, -3f, 8f, LockingDial.S.dialValues[0]));
-        rings[1].transform.localPosition = new Vector3(0, scale(0, 100, -1f, 1f, LockingDial.S.dialValues[1]), 0);
-        rings[2].transform.localPosition = new Vector3(scale(0, 100, -1.75f, 2.5f, LockingDial.S.dialValues[2]), 0, 0);
-        rings[3].transform.localScale = new Vector3(.56f, scale(0, 100, .1f, 3f, LockingDial.S.dialValues[3]), .56f);
+        // XYZ
+        rings[0].transform.localPosition = new Vector3(0, 0, scale(zVals[0], zVals[1], LockingDial.S.dialValues[0]));
+        rings[1].transform.localPosition = new Vector3(0, scale(yVals[0], yVals[1], LockingDial.S.dialValues[1]), 0);
+        rings[2].transform.localPosition = new Vector3(scale(xVals[0], xVals[1], LockingDial.S.dialValues[2]), 0, 0);
+        // SCALE
+        rings[3].transform.localScale = new Vector3(.56f, scale(scaleVals[0], scaleVals[1], LockingDial.S.dialValues[3]), .56f);
+        rings[0].transform.localScale = new Vector3(.56f, .56f, scale(scaleVals[0], scaleVals[1], LockingDial.S.dialValues[2]));
+        rings[1].transform.localScale = new Vector3(.56f, scale(scaleVals[0], scaleVals[1], LockingDial.S.dialValues[1]), .56f);
+        rings[2].transform.localScale = new Vector3(scale(scaleVals[0], scaleVals[1], LockingDial.S.dialValues[0]), .56f, .56f);
+        // ROTATION
+        //rings[0].transform.rotation
     }
     
-    public float scale(float OldMin, float OldMax, float NewMin, float NewMax, float OldValue){
-     
-        float OldRange = (OldMax - OldMin);
+    public float scale(float NewMin, float NewMax, float OldValue)
+    {
+
+        float OldRange = 100;
         float NewRange = (NewMax - NewMin);
-        float NewValue = (((OldValue - OldMin) * NewRange) / OldRange) + NewMin;
+        float NewValue = (((OldValue - 0) * NewRange) / OldRange) + NewMin;
      
         return(NewValue);
     }

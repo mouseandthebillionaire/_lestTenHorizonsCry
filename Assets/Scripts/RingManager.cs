@@ -6,7 +6,6 @@ public class RingManager : MonoBehaviour
 {
     [Header("Use these to target a dial and it's parameter")]
     public int dialNum;
-    public  int        dialParam;
     public  bool       assigned; // if a ring is assigned, it isn't random, and gets an AudioParam
     private AudioParam ap;
 
@@ -25,12 +24,9 @@ public class RingManager : MonoBehaviour
         float a = Random.Range(0.1f, 0.75f);
         this.GetComponent<SpriteRenderer>().color = new Color(c.r, c.g, c.b, a);
         
-        // Assign the Dial is it's randomly assigned
+        // Randomly assign the Dial is it's not been assigned
         if(!assigned) dialNum = (int) Random.Range(0, 4);
-        
-        // We can use this if we want 16 unique rings, but for now, I think 4 is fine
-        //dialParam = (int) Random.Range(0, 4);
-        
+
         // Get the Audio parameter Script
         else ap = this.GetComponent<AudioParam>();
 
@@ -47,7 +43,14 @@ public class RingManager : MonoBehaviour
         float dialRotation = (value * 3.65f) % 365f;
         Vector3 newRotation = new Vector3(0, 0, dialRotation);
         this.transform.eulerAngles = newRotation;
-        
-        if(assigned) ap.UpdateParam(value);
+
+        if (assigned)
+        {
+            ap.UpdateParam(value);
+                    
+            // Trigger the Visual Effect
+            LocationVisualEffects.S.DistortionIntensity(value/50f);
+        }
+
     }
 }

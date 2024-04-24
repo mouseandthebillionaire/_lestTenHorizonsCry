@@ -82,10 +82,12 @@ public class UI_Manager : MonoBehaviour {
     public void StatusLightOn()
     {
         statusLight.color = Color.white;
+        Debug.Log("also firing?");
     }
     
     public void StatusLightOff()
     {
+        Debug.Log("firing?");
         statusLight.color = Color.clear;
     }
 

@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.PlayerLoop;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.PostProcessing;
 
 public class LocationControl : MonoBehaviour
 {
@@ -33,8 +35,8 @@ public class LocationControl : MonoBehaviour
 	public int        locationHue;
 	public string     imagesFolder;
 	public GameObject images;
-	
-	
+
+
 	// Start is called before the first frame update
     void Start()
 	{
@@ -45,7 +47,7 @@ public class LocationControl : MonoBehaviour
 	void Update()
 	{
 
-		if ((GlobalVariables.S.interactionCounter / 10) > currThreshold)
+		if (GlobalVariables.S.interactionCounter > currThreshold)
 		{
 			StartCoroutine(LoadNextStage());
 		}

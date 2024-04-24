@@ -189,7 +189,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
@@ -400,6 +402,7 @@ VideoPlayer:
   m_RenderMode: 3
   m_AspectRatio: 2
   m_DataSource: 0
+  m_TimeUpdateMode: 2
   m_PlaybackSpeed: 0.75
   m_AudioOutputMode: 2
   m_TargetAudioSources:
@@ -1102,6 +1105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialNum: 0
   dialParam: 0
+  assigned: 0
   value: 0
 --- !u!114 &783683982332737869
 MonoBehaviour:
@@ -1237,6 +1241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialNum: 3
   dialParam: 0
+  assigned: 0
   value: 0
 --- !u!1 &1694547659110178250
 GameObject:
@@ -1338,6 +1343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialNum: 0
   dialParam: 3
+  assigned: 0
   value: 0
 --- !u!114 &5480838152350140528
 MonoBehaviour:
@@ -1473,6 +1479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialNum: 0
   dialParam: 2
+  assigned: 0
   value: 0
 --- !u!1 &1694547659121323934
 GameObject:
@@ -1591,6 +1598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialNum: 2
   dialParam: 0
+  assigned: 0
   value: 0
 --- !u!1 &1694547659126071212
 GameObject:
@@ -1901,6 +1909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialNum: 0
   dialParam: 0
+  assigned: 0
   value: 0
 --- !u!114 &8294267142277917094
 MonoBehaviour:
@@ -2520,6 +2529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialNum: 0
   dialParam: 0
+  assigned: 0
   value: 0
 --- !u!114 &1528451230247338517
 MonoBehaviour:
@@ -2756,6 +2766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialNum: 0
   dialParam: 0
+  assigned: 0
   value: 0
 --- !u!1 &1694547659626774407
 GameObject:
@@ -2874,6 +2885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialNum: 0
   dialParam: 0
+  assigned: 0
   value: 0
 --- !u!1 &1694547659706095847
 GameObject:
@@ -2975,6 +2987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialNum: 0
   dialParam: 0
+  assigned: 0
   value: 0
 --- !u!114 &26622812982631299
 MonoBehaviour:
@@ -3386,6 +3399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialNum: 0
   dialParam: 0
+  assigned: 0
   value: 0
 --- !u!1 &1694547659920206456
 GameObject:
@@ -3504,6 +3518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialNum: 1
   dialParam: 0
+  assigned: 0
   value: 0
 --- !u!1 &1694547659939753232
 GameObject:
@@ -3622,6 +3637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialNum: 0
   dialParam: 0
+  assigned: 0
   value: 0
 --- !u!1 &1694547660072179574
 GameObject:
@@ -3633,8 +3649,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1694547660072179529}
   - component: {fileID: 1694547660072179528}
-  - component: {fileID: 1694547660072179531}
   - component: {fileID: 5468116128445337645}
+  - component: {fileID: 1694547660072179531}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -3709,6 +3725,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5468116128445337645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694547660072179574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5da87bea565b4fed8547ac9ffbd92d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialNum: 0
+  dialParam: 0
+  assigned: 0
+  value: 0
 --- !u!114 &1694547660072179531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3726,21 +3758,6 @@ MonoBehaviour:
   am: {fileID: 24100000, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
   effectValueLow: 1
   effectValueHigh: 0
---- !u!114 &5468116128445337645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694547660072179574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5da87bea565b4fed8547ac9ffbd92d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialNum: 0
-  dialParam: 0
-  value: 0
 --- !u!1 &1694547660119680693
 GameObject:
   m_ObjectHideFlags: 0
@@ -3942,6 +3959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialNum: 0
   dialParam: 0
+  assigned: 0
   value: 0
 --- !u!114 &6385088274142150200
 MonoBehaviour:
@@ -4329,6 +4347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialNum: 0
   dialParam: 1
+  assigned: 0
   value: 0
 --- !u!114 &8123327397152880851
 MonoBehaviour:
@@ -5193,6 +5212,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1694547659126071214}
     m_Modifications:
     - target: {fileID: 1528705781239315332, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
@@ -5280,6 +5300,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
 --- !u!4 &1694547659748062115 stripped
 Transform:
@@ -5291,6 +5314,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1694547659126071214}
     m_Modifications:
     - target: {fileID: 1528705781239315332, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
@@ -5382,6 +5406,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
 --- !u!4 &194556182909096357 stripped
 Transform:
@@ -5393,6 +5420,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1694547659126071214}
     m_Modifications:
     - target: {fileID: 1528705781239315332, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
@@ -5484,6 +5512,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
 --- !u!4 &194556182925561515 stripped
 Transform:
@@ -5495,6 +5526,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1694547659126071214}
     m_Modifications:
     - target: {fileID: 1528705781239315332, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
@@ -5586,6 +5618,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
 --- !u!4 &194556182965305896 stripped
 Transform:
@@ -5597,6 +5632,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1694547659126071214}
     m_Modifications:
     - target: {fileID: 1528705781239315332, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
@@ -5688,6 +5724,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
 --- !u!4 &194556183022315919 stripped
 Transform:
@@ -5699,6 +5738,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1694547659126071214}
     m_Modifications:
     - target: {fileID: 1528705781239315332, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
@@ -5790,6 +5830,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fcd0b085b6e14eb7b343865b0767af1, type: 3}
 --- !u!4 &194556183192074635 stripped
 Transform:

@@ -224,8 +224,10 @@ MonoBehaviour:
   dials: 00000000000000000000000000000000
   dialDir: 00000000000000000000000000000000
   dialParam: 00000000000000000000000000000000
+  launchButton: 1
+  lightStatus: off
   dialLim: 100
-  dialSpeed: 0.1
+  dialSpeed: 0.05
   dialSpeed_granular: 0
 --- !u!4 &102961637
 Transform:
@@ -273,7 +275,7 @@ Transform:
   m_GameObject: {fileID: 143901656}
   m_LocalRotation: {x: 0, y: 0.0028797674, z: 0, w: 0.9999958}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.28, y: 0.28, z: 1}
+  m_LocalScale: {x: 0.56, y: 0.56, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1005402318}
@@ -320,7 +322,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 61330f13ecf17401bacdab8ea2ec4ebb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6a0c3f8d22e4f4ba6a85d5a667926e8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.14117648}
   m_FlipX: 0
   m_FlipY: 0
@@ -1237,7 +1239,7 @@ MonoBehaviour:
   - 0
   dialHue: 0
   dialSat: 0
-  dialVal: 0.01
+  dialVal: 0.05
 --- !u!1 &282806075
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,7 +2338,7 @@ Transform:
   m_GameObject: {fileID: 601840273}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.42000002, y: 0.42000002, z: 1}
+  m_LocalScale: {x: 0.56, y: 0.56, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1005402318}
@@ -2383,7 +2385,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 61330f13ecf17401bacdab8ea2ec4ebb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 617be0e15874f492db74532298f00b2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.14117648}
   m_FlipX: 0
   m_FlipY: 0
@@ -2467,7 +2469,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 61330f13ecf17401bacdab8ea2ec4ebb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c094b62ae3ee14aa2a64e8ba820debf8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.14117648}
   m_FlipX: 0
   m_FlipY: 0
@@ -2488,19 +2490,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: loc.w
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: loc.x
-      value: 50
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: loc.y
-      value: 50
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: loc.z
-      value: 50
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: fadingMix
@@ -3472,7 +3474,8 @@ GameObject:
   m_Component:
   - component: {fileID: 763548375}
   - component: {fileID: 763548376}
-  m_Layer: 10
+  - component: {fileID: 763548377}
+  m_Layer: 3
   m_Name: LocationVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3511,6 +3514,18 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 76a298a67cb114f20bcdd9fa63399af0, type: 2}
+--- !u!114 &763548377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763548374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afae6234e8a8a4e419976f3461262cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &790914326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1694547659121323934, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
@@ -4879,8 +4894,18 @@ MonoBehaviour:
   - {fileID: 143901656}
   - {fileID: 601840273}
   - {fileID: 607881333}
-  ringValLow: []
-  ringValHigh: []
+  scaleVals:
+  - 0.216
+  - 0.59
+  xVals:
+  - -1.24
+  - 2.59
+  yVals:
+  - -1.3
+  - 1.3
+  zVals:
+  - -3
+  - 3
 --- !u!1 &1033581045
 GameObject:
   m_ObjectHideFlags: 0
@@ -6959,7 +6984,7 @@ Transform:
   m_GameObject: {fileID: 1757724057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.14, y: 0.14, z: 1}
+  m_LocalScale: {x: 0.56, y: 0.56, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1005402318}
@@ -7006,7 +7031,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 61330f13ecf17401bacdab8ea2ec4ebb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa737522e364b44e19a702f8a4dabb41, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.14117648}
   m_FlipX: 0
   m_FlipY: 0
@@ -7935,7 +7960,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: loc.w
-      value: 75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: loc.x
@@ -7943,11 +7968,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: loc.y
-      value: 75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: loc.z
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: designing
@@ -8883,6 +8908,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1694547659110178255, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+    - {fileID: 1694547660072179531, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+    - {fileID: 8123327397152880851, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+    - {fileID: 5480838152350140528, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+    - {fileID: 1694547659119536448, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

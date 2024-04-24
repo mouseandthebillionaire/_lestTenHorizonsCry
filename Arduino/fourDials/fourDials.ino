@@ -28,16 +28,27 @@ int32_t encoderAddresses[] = {56, 55, 57, 58};
 bool found_encoders[] = {false, false, false, false};
 bool encoder_pressed[] = {false, false, false, false};
 
+// Button
 const int buttonPin = 2;
 int buttonState = 0;
+
+// LED
+const int ledPin = 13;
+int ledState = LOW;
+unsigned long previousMillis = 0;
+const long interval = 500;
+bool blink = false;
 
 void setup() {
   Serial.begin(115200);
 
+  // LED
+  pinMode(ledPin, OUTPUT);
+  // Button
+  pinMode(buttonPin, INPUT_PULLUP);
+
   // wait for serial port to open
   while (!Serial) delay(10);
-
-  Serial.println("Looking for seesaws!");
 
   for (uint8_t enc=0; enc<sizeof(found_encoders); enc++) {
     // See if we can find encoders on this address
@@ -59,8 +70,6 @@ void setup() {
         Serial.println(version);
         while(1) delay(10);
       }
-      Serial.println("Found Product 4991");
-
       // use a pin for the built in encoder switch
       encoders[enc].pinMode(SS_SWITCH, INPUT_PULLUP);
 
@@ -79,16 +88,34 @@ void setup() {
       found_encoders[enc] = true;
     }
   }
-  
-  // Light
-  pinMode(LED_BUILTIN, OUTPUT);
-  pinMode(2, INPUT_PULLUP);
+
 }
 
 void loop() {
 
+    // Blinking LED
+  if(blink == true){
+    unsigned long currentMillis = millis();
+
+    if (currentMillis - previousMillis >= interval) {
+      // save the last time you blinked the LED
+      previousMillis = currentMillis;
+
+      // if the LED is off turn it on and vice-versa:
+      if (ledState == LOW) {
+        ledState = HIGH;
+      } else {
+        ledState = LOW;
+      }
+
+      // set the LED with the ledState of the variable:
+      digitalWrite(ledPin, ledState);
+    }
+  } else {
+    digitalWrite(ledPin, LOW);
+  }
+
   outputString = "";
-  buttonState = digitalRead(buttonPin);
 
   for (uint8_t enc=0; enc<sizeof(found_encoders); enc++) {
     
@@ -117,24 +144,32 @@ void loop() {
     if(encoders[enc].digitalRead(SS_SWITCH)) encoder_pressed[enc] = false;
 
     }
-  if(buttonState == LOW) outputString += "1";
-  else outputString += "0";
+
+  
+  // Button
+  buttonState = digitalRead(buttonPin);
+  if(buttonState == 0){
+    blink = false;
+    digitalWrite(ledPin, LOW);
+  }
+  outputString += buttonState;
 
   Serial.println(outputString); 
 
   // Input
   if(Serial.available()){
     String serialData = Serial.readString();
-    if(serialData == "LIGHT_ON"){
-      digitalWrite(LED_BUILTIN, HIGH);
+    serialData.trim();
+    if(serialData == "LOCATION_READY"){
+      blink = true;
     } 
-    if(serialData == "LIGHT_OFF"){
-      digitalWrite(LED_BUILTIN, LOW);
-    }
-  
+    if(serialData == "LOCATION_NOT_READY"){
+      blink = false;
+      digitalWrite(ledPin, LOW);
+    } 
   }
 
-  delay(100);
+    delay(100);
   }
 
 uint32_t Wheel(byte WheelPos) {

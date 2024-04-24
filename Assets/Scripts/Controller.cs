@@ -26,11 +26,15 @@ public class Controller : MonoBehaviour {
     public KeyCode[] pushDials = new KeyCode[4];
 
     // Global variables
-    public  int[]    dials      = new int[4];
-    public  int[]    dialDir    = new int[4];
-    public  float[,] dialVal    = new float[4,4];
-    public  int[]    dialParam  = new int[4];
-    private bool[]   dialPushed = new bool[4];
+    public  int[]    dials               = new int[4];
+    public  int[]    dialDir             = new int[4];
+    public  float[,] dialVal             = new float[4,4];
+    public  int[]    dialParam           = new int[4];
+    private bool[]   dialPushed          = new bool[4];
+    public  int      launchButton        = 1;
+    private bool     launchButtonPressed = false;
+    
+    public  string   lightStatus         = "off";
     
     // Dial Control
     public float dialLim = 100;
@@ -71,35 +75,36 @@ public class Controller : MonoBehaviour {
             }
         }
     }
+
+    public void Light(string message)
+    {
+        StartCoroutine(SwitchLight(message));
+    }
+
+    private IEnumerator SwitchLight(string message)
+    {
+        if (message == "on" && lightStatus == "off")
+        {
+            lightStatus = "on";
+            stream.WriteLine("LOCATION_READY");
+            Debug.Log("turning on");
+        }
+        if (message == "off" && lightStatus == "on") 
+        {
+            stream.WriteLine("LOCATION_NOT_READY");
+            lightStatus = "off";
+            Debug.Log("turning off");
+        }
+        stream.BaseStream.Flush();
+        
+        // Buffer to help it stop freaking out?
+        yield return new WaitForSeconds(1);
+        yield return null;
+    }
     
     // Update is called once per frame
     void Update()
     {
-        // Feels like we can do this in a separate function (above)
-        // // Initialize serial
-        // if (!stream.IsOpen && controllerActive) {
-        //     if (SerialPort.GetPortNames().Length > 0) {
-        //         stream.Open();
-        //
-        //         serialThread = new Thread(new ThreadStart(ParseData));
-        //         serialThread.Start();
-        //
-        //         print("Connected to serial");
-        //     }
-        // }
-        
-        // Send Out Light Data
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Debug.Log("Light?");
-            stream.Write("LIGHT_ON");
-        }        
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            Debug.Log("Light?");
-            stream.Write("LIGHT_OFF");
-        }
-
         // Dials
         for (int i = 0; i < dials.Length; i++)
         {
@@ -108,10 +113,29 @@ public class Controller : MonoBehaviour {
         }
         
         // Get Launch Button
+        StartCoroutine(LaunchButton());
+
+        // Keyboard (if needed)
         if (Input.GetKeyDown(KeyCode.Space))
         {
             UI_Manager.S.CamControl();
         }
+    }
+
+    private IEnumerator LaunchButton()
+    {
+        if (launchButton == 0 && !launchButtonPressed)
+        {
+            launchButtonPressed = true;
+            UI_Manager.S.CamControl();
+            // Small buffer to account for jittering
+            // Fingers crossed!
+            yield return new WaitForSeconds(1.5f);
+            launchButtonPressed = false;
+            // Hell yeah
+        }
+        
+        
     }
 
     private IEnumerator UpdateSynthDial(int dialNum)
@@ -191,6 +215,7 @@ public class Controller : MonoBehaviour {
     }
 
     void ResetVariables() {
+        Light("off");
         if (!serialReceived) {
             // Reset variables
             for (int i = 0; i < dials.Length; i++)
@@ -208,6 +233,7 @@ public class Controller : MonoBehaviour {
 
     void OnApplicationQuit()
     {
+        Light("off");
         if (stream.IsOpen) {
             stream.Close();
             serialThread.Abort();
@@ -224,16 +250,16 @@ public class Controller : MonoBehaviour {
             Debug.Log(serialData);
             
             string[] parsedData = serialData.Split(':');
-            //Debug.Log("There are " + parsedData.Length + " dials being read");
             // make sure that we're not dealing with a data drop
-            if (parsedData.Length == dials.Length)
+            // we add one because one is the launch button
+            if (parsedData.Length == dials.Length + 1)
             {
                 for (int i = 0; i < dials.Length; i++)
                 {
                     if (int.TryParse(parsedData[i], out int tmpValue)) dials[i] = tmpValue;
-                    // Debug Out the result
-                    //Debug.Log("Dial_" + i + ":" + dials[i]);
                 }
+                // and get the button
+                if (int.TryParse(parsedData[4], out int tmpBtnValue)) launchButton = tmpBtnValue;
             }
         }
     }

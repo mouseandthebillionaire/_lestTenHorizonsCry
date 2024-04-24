@@ -74,10 +74,14 @@ public class LocationFinder : MonoBehaviour
 		// finder.transform.localScale = new Vector3(finder_zPos, finder_zPos, finder_zPos);
 		// finder.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, distances.Min() / 100f);
 
-		// Locations
-		for (int i = 0; i < locations.Length; i++)
+		// Let's make sure we're not already in a location before we do all this shit
+		if (!GlobalVariables.S.locationEntered)
 		{
-			Location(i);
+			// Locations
+			for (int i = 0; i < locations.Length; i++)
+			{
+				Location(i);
+			}
 		}
 	}
 
@@ -133,6 +137,7 @@ public class LocationFinder : MonoBehaviour
 		if (distances[i] < approachingThreshold) {
 			// Make sure light is off
 			UI_Manager.S.StatusLightOff();
+
 			// and Global Variable "LocationLocked" to false;
 			GlobalVariables.S.locationLocked = false;
 			
@@ -159,9 +164,15 @@ public class LocationFinder : MonoBehaviour
 			
 				// Turn on the Light
 				UI_Manager.S.StatusLightOn();
+				Debug.Log("am I always checking this?");
+				Controller.S.Light("on");
 			
 				// Set Global Variable "LocationLocked" to true;
 				GlobalVariables.S.locationLocked = true;
+			}
+			else
+			{
+				Controller.S.Light("off");
 			}
 		}
 
@@ -169,6 +180,8 @@ public class LocationFinder : MonoBehaviour
 
 	public void LoadLocation(int locationNum)
 	{
+		UI_Manager.S.StatusLightOff();
+		Controller.S.Light("off");
 		locations[locationNum].SetActive(true);
 		LockingDial.S.Fade("out");
 		LocationControl thisLocation = locations[locationNum].GetComponent<LocationControl>();
@@ -177,6 +190,7 @@ public class LocationFinder : MonoBehaviour
 	
 	public void UnloadLocation(int locationNum)
 	{
+		//Controller.S.Light("off");
 		LocationControl thisLocation = locations[locationNum].GetComponent<LocationControl>();
 		thisLocation.Load("out");
 		LockingDial.S.Fade("in");
