@@ -160,22 +160,25 @@ public class Controller : MonoBehaviour {
 
         // These are only for debugging. They get overriden by the Controller.cs script and serial input
         // They could be included up in the above if statements, but this way we can get rid of or turn off more easily
-        if (!controllerActive && Input.anyKey)
+        if (!controllerActive)
         {
-            // Can I just force these?
-            if (Input.GetKey(downDials[dialNum])) dials[dialNum] = 1;
-            else if (Input.GetKey(upDials[dialNum])) dials[dialNum] = 2;
+            if (Input.anyKey)
+            {
 
-            //if (Input.GetKey(downDials[dialNum])) dir  = -1;
-            //if (Input.GetKey(upDials[dialNum])) dir = 1;
-            
-            // fires when any key is pressed, which isn't ideal, but is fine for testing
-            GlobalVariables.S.IncreaseInteractionCounter();
+                // Can I just force these?
+                if (Input.GetKey(downDials[dialNum])) dials[dialNum] = 1;
+                else if (Input.GetKey(upDials[dialNum])) dials[dialNum] = 2;
+
+                //if (Input.GetKey(downDials[dialNum])) dir  = -1;
+                //if (Input.GetKey(upDials[dialNum])) dir = 1;
+
+                // fires when any key is pressed, which isn't ideal, but is fine for testing
+                GlobalVariables.S.IncreaseInteractionCounter();
+            }
+            else dials[dialNum] = 0;
         }
-        // Problem?
-        //else dials[dialNum] = 0;
-        
-                
+
+
         // turned right
         if (dials[dialNum] == 1) dialDir[dialNum] = -1;
         // turned left
