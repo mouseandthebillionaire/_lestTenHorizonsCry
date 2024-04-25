@@ -87,13 +87,11 @@ public class Controller : MonoBehaviour {
         {
             lightStatus = "on";
             stream.WriteLine("LOCATION_READY");
-            Debug.Log("turning on");
         }
         if (message == "off" && lightStatus == "on") 
         {
             stream.WriteLine("LOCATION_NOT_READY");
             lightStatus = "off";
-            Debug.Log("turning off");
         }
         stream.BaseStream.Flush();
         
@@ -169,9 +167,6 @@ public class Controller : MonoBehaviour {
                 if (Input.GetKey(downDials[dialNum])) dials[dialNum] = 1;
                 else if (Input.GetKey(upDials[dialNum])) dials[dialNum] = 2;
 
-                //if (Input.GetKey(downDials[dialNum])) dir  = -1;
-                //if (Input.GetKey(upDials[dialNum])) dir = 1;
-
                 // fires when any key is pressed, which isn't ideal, but is fine for testing
                 GlobalVariables.S.IncreaseInteractionCounter();
             }
@@ -217,7 +212,7 @@ public class Controller : MonoBehaviour {
         yield return null;
     }
 
-    void ResetVariables() {
+    public void ResetVariables() {
         Light("off");
         if (!serialReceived) {
             // Reset variables
@@ -227,7 +222,10 @@ public class Controller : MonoBehaviour {
                 dialPushed[i] = false;
                 for (int j = 0; j < dialParam.Length; j++)
                 {
-                    dialVal[i,j] = 0;
+                    // try setting the values to a random number?
+                    float r = Random.Range(0, 100);
+                    Debug.Log(r);
+                    dialVal[i,j] = r;
                 }
             }
         }

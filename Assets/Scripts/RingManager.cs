@@ -29,6 +29,9 @@ public class RingManager : MonoBehaviour
 
         // Get the Audio parameter Script
         else ap = this.GetComponent<AudioParam>();
+        
+        // Give us a little variety in the values
+        value = (Random.Range(-5f, 5f));
 
     }
 
@@ -42,7 +45,7 @@ public class RingManager : MonoBehaviour
         
         float dialRotation = (value * 3.65f) % 365f;
         Vector3 newRotation = new Vector3(0, 0, dialRotation);
-        this.transform.eulerAngles = newRotation;
+        this.transform.localEulerAngles = newRotation;
 
         if (assigned)
         {

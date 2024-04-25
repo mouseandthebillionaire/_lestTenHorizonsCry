@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Kino;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
@@ -9,10 +10,11 @@ using URPGlitch.Runtime.AnalogGlitch;
 
 public class UI_Manager : MonoBehaviour {
     
-    public  Camera              cam;
-    public  SpriteRenderer      statusLight;
-    public  Volume              uiVolume;
-    private AnalogGlitchVolume   ag;
+    public  Camera             cam;
+    public  SpriteRenderer     statusLight;
+    public  Volume             uiVolume;
+    private AnalogGlitchVolume ag;
+    private bool               lightBlinking;
 
     public static UI_Manager S;
     
@@ -82,16 +84,14 @@ public class UI_Manager : MonoBehaviour {
     public void StatusLightOn()
     {
         statusLight.color = Color.white;
-        Debug.Log("also firing?");
     }
-    
+
     public void StatusLightOff()
     {
-        Debug.Log("firing?");
         statusLight.color = Color.clear;
     }
 
-    private void Reset()
+    public void Reset()
     {
         ag.active = true;
         ag.scanLineJitter.Override(0f);
@@ -101,5 +101,7 @@ public class UI_Manager : MonoBehaviour {
         cam.orthographicSize = 5;
         statusLight.color = Color.clear;
 
+        // Broadcast the Message to all the Parameter Scripts
+        BroadcastMessage("ResetParams");
     }
 }

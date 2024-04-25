@@ -14,6 +14,17 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+		if (Input.GetKey(KeyCode.R))
+		{
+			ResetGame();
+		}
     }
+
+	private void ResetGame()
+	{
+		Controller.S.ResetVariables();
+		LocationFinder.S.Reset();
+		UI_Manager.S.Reset();
+		ParameterManager.S.Reset();
+	}
 }

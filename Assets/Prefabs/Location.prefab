@@ -1104,7 +1104,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 0
-  dialParam: 0
   assigned: 0
   value: 0
 --- !u!114 &783683982332737869
@@ -1152,7 +1151,7 @@ Transform:
   m_GameObject: {fileID: 1694547659080838142}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.00029971905}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1694547659839693324}
@@ -1240,7 +1239,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 3
-  dialParam: 0
   assigned: 0
   value: 0
 --- !u!1 &1694547659110178250
@@ -1342,7 +1340,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 0
-  dialParam: 3
   assigned: 0
   value: 0
 --- !u!114 &5480838152350140528
@@ -1478,7 +1475,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 0
-  dialParam: 2
   assigned: 0
   value: 0
 --- !u!1 &1694547659121323934
@@ -1509,7 +1505,7 @@ Transform:
   m_GameObject: {fileID: 1694547659121323934}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.00029971905}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1694547659839693324}
@@ -1597,7 +1593,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 2
-  dialParam: 0
   assigned: 0
   value: 0
 --- !u!1 &1694547659126071212
@@ -1908,7 +1903,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 0
-  dialParam: 0
   assigned: 0
   value: 0
 --- !u!114 &8294267142277917094
@@ -2528,7 +2522,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 0
-  dialParam: 0
   assigned: 0
   value: 0
 --- !u!114 &1528451230247338517
@@ -2765,7 +2758,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 0
-  dialParam: 0
   assigned: 0
   value: 0
 --- !u!1 &1694547659626774407
@@ -2796,7 +2788,7 @@ Transform:
   m_GameObject: {fileID: 1694547659626774407}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.00029971905}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1694547659839693324}
@@ -2884,7 +2876,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 0
-  dialParam: 0
   assigned: 0
   value: 0
 --- !u!1 &1694547659706095847
@@ -2986,7 +2977,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 0
-  dialParam: 0
   assigned: 0
   value: 0
 --- !u!114 &26622812982631299
@@ -3157,7 +3147,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1694547659839693325}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
   m_LocalPosition: {x: -1.6784801, y: 4.626229, z: 0.9641733}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3180,7 +3170,7 @@ Transform:
   - {fileID: 1694547659080838129}
   m_Father: {fileID: 3725098463289878147}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!1 &1694547659843040337
 GameObject:
   m_ObjectHideFlags: 0
@@ -3398,7 +3388,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 0
-  dialParam: 0
   assigned: 0
   value: 0
 --- !u!1 &1694547659920206456
@@ -3429,7 +3418,7 @@ Transform:
   m_GameObject: {fileID: 1694547659920206456}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.00029971905}
-  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
+  m_LocalScale: {x: 1.6, y: 1.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1694547659839693324}
@@ -3517,7 +3506,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 1
-  dialParam: 0
   assigned: 0
   value: 0
 --- !u!1 &1694547659939753232
@@ -3636,7 +3624,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 0
-  dialParam: 0
   assigned: 0
   value: 0
 --- !u!1 &1694547660072179574
@@ -3738,7 +3725,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 0
-  dialParam: 0
   assigned: 0
   value: 0
 --- !u!114 &1694547660072179531
@@ -3958,7 +3944,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 0
-  dialParam: 0
   assigned: 0
   value: 0
 --- !u!114 &6385088274142150200
@@ -4346,7 +4331,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 0
-  dialParam: 1
   assigned: 0
   value: 0
 --- !u!114 &8123327397152880851

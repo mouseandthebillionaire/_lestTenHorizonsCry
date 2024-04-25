@@ -1,9 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.PlayerLoop;
-using UnityEngine.Rendering;
-using UnityEngine.Rendering.PostProcessing;
 
 public class LocationControl : MonoBehaviour
 {

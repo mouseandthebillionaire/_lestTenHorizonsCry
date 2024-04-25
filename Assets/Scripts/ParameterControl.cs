@@ -27,6 +27,7 @@ public class ParameterControl : MonoBehaviour
     void Start()
     {
         active = false;
+        ResetParams();
     }
 
     // Update is called once per frame
@@ -37,7 +38,6 @@ public class ParameterControl : MonoBehaviour
             // Get the value from the Controller script
             paramValue = Controller.S.dialVal[instrumentNum, parameterNum];
             UpdateParam();
-            Animate();
         }
     }
 
@@ -45,6 +45,7 @@ public class ParameterControl : MonoBehaviour
     {
         effectAmount = scale(0, 100, paramLowValue, paramHighValue, paramValue);
         synth.SetFloat(parameter, effectAmount);
+        Animate();
     }
 
     public void Animate()
@@ -80,5 +81,14 @@ public class ParameterControl : MonoBehaviour
         float NewValue = (((OldValue - OldMin) * NewRange) / OldRange) + NewMin;
      
         return(NewValue);
+    }
+
+    public void ResetParams()
+    {
+        // Reset to the values in the Controller script
+        paramValue = Controller.S.dialVal[instrumentNum, parameterNum];
+        Debug.Log("yes?");
+        // And Update
+        UpdateParam();
     }
 }

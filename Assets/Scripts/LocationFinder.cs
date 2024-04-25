@@ -5,6 +5,8 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.PlayerLoop;
+using Random = UnityEngine.Random;
 
 public class LocationFinder : MonoBehaviour
 {
@@ -51,7 +53,9 @@ public class LocationFinder : MonoBehaviour
 			// Initialize as far away?
 			distances.Add(100);
 		}
-		
+
+		Reset();
+
 	}
 
     // Update is called once per frame
@@ -83,6 +87,16 @@ public class LocationFinder : MonoBehaviour
 				Location(i);
 			}
 		}
+	}
+
+	private void RandomizeLocation()
+	{
+		loc = new Vector4(
+			Random.Range(0f, 100f), 
+			Random.Range(0f, 100f), 
+			Random.Range(0f, 100f),
+			Random.Range(0f, 100f)
+			);
 	}
 
 	public void UpdateLoc(int axis, int direction)
@@ -164,7 +178,6 @@ public class LocationFinder : MonoBehaviour
 			
 				// Turn on the Light
 				UI_Manager.S.StatusLightOn();
-				Debug.Log("am I always checking this?");
 				Controller.S.Light("on");
 			
 				// Set Global Variable "LocationLocked" to true;
@@ -184,6 +197,7 @@ public class LocationFinder : MonoBehaviour
 		Controller.S.Light("off");
 		locations[locationNum].SetActive(true);
 		LockingDial.S.Fade("out");
+		AlignmentControl.S.Fade("out");
 		LocationControl thisLocation = locations[locationNum].GetComponent<LocationControl>();
 		thisLocation.Load("in");
 	}
@@ -194,7 +208,9 @@ public class LocationFinder : MonoBehaviour
 		LocationControl thisLocation = locations[locationNum].GetComponent<LocationControl>();
 		thisLocation.Load("out");
 		LockingDial.S.Fade("in");
+		AlignmentControl.S.Fade("in");
 		locations[locationNum].SetActive(false);
+		LocationVisualEffects.S.ResetEffects();
 		GlobalVariables.S.locationEntered = false;
 	}
 
@@ -205,6 +221,12 @@ public class LocationFinder : MonoBehaviour
 		float NewValue = (((OldValue - OldMin) * NewRange) / OldRange) + NewMin;
      
 		return(NewValue);
+	}
+
+	public void Reset()
+	{
+		// Set a Random Location?
+		RandomizeLocation();
 	}
 
 

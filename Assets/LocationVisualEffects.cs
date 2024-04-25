@@ -38,4 +38,9 @@ public class LocationVisualEffects : MonoBehaviour
     {
         ld.intensity.Override(amt);
     }
+
+    public void ResetEffects()
+    {
+        ld.intensity.Override(0);
+    }
 }

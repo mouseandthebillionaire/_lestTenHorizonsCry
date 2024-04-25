@@ -47,6 +47,7 @@ public class LockingDial : MonoBehaviour
                 dialRotations[i] = (dialValues[i] * 3.65f) % 365f;
                 Vector3 newRotation = new Vector3(0, 0, dialRotations[i]);
                 dials[i].transform.eulerAngles = newRotation;
+                //dialVal = 1f - (LocationFinder.S.distances[0] / 50f);
                 dials[i].GetComponent<SpriteRenderer>().color = Color.HSVToRGB(dialHue / 255f, dialSat, dialVal);
             }
         }

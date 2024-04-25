@@ -273,14 +273,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143901656}
-  m_LocalRotation: {x: 0, y: 0.0028797674, z: 0, w: 0.9999958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.56, y: 0.56, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1005402318}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0.33, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &143901659
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1239,7 +1239,7 @@ MonoBehaviour:
   - 0
   dialHue: 0
   dialSat: 0
-  dialVal: 0.05
+  dialVal: 0.01
 --- !u!1 &282806075
 GameObject:
   m_ObjectHideFlags: 0
@@ -3307,8 +3307,8 @@ MonoBehaviour:
   animationType: 1
   active: 0
   parameter: 
-  paramLowValue: 1
-  paramHighValue: 8
+  paramLowValue: 0.1
+  paramHighValue: 1
   paramValue: 1
   effectAmount: 0
   sprites2swap:
@@ -3802,6 +3802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 872397236}
   - component: {fileID: 872397237}
+  - component: {fileID: 872397238}
   m_Layer: 0
   m_Name: SynthAudio
   m_TagString: Untagged
@@ -3841,6 +3842,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   am: {fileID: 24100000, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
   defaultSynth: {fileID: 24500006, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
+--- !u!114 &872397238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872397234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7324447d46a6431899821dbe0e5664c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeParameters:
+  - {fileID: 239771305}
+  - {fileID: 282806075}
+  - {fileID: 1934121650}
+  - {fileID: 1174655567}
+  - {fileID: 458477193}
+  - {fileID: 761716441}
+  - {fileID: 1142970358}
+  - {fileID: 1668909584}
+  - {fileID: 638667597}
+  - {fileID: 998477750}
+  - {fileID: 289820997}
+  - {fileID: 1143611840}
+  - {fileID: 1143611840}
+  - {fileID: 2109862723}
 --- !u!1001 &904922171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4867,7 +4895,7 @@ Transform:
   m_GameObject: {fileID: 1005402317}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.55, y: 0.55, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1757724058}
@@ -4898,14 +4926,17 @@ MonoBehaviour:
   - 0.216
   - 0.59
   xVals:
-  - -1.24
-  - 2.59
+  - -1.2
+  - 1.2
   yVals:
   - -1.3
   - 1.3
   zVals:
-  - -3
-  - 3
+  - -1.5
+  - 1.5
+  ringHue: 0
+  ringSat: 0
+  ringVal: 0
 --- !u!1 &1033581045
 GameObject:
   m_ObjectHideFlags: 0
@@ -6174,7 +6205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558299451}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 16, z: 9.92}
+  m_LocalPosition: {x: 0, y: 16.25, z: 9.92}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6217,13 +6248,13 @@ MonoBehaviour:
   - {fileID: 1728240836}
   - {fileID: 346659358}
   - {fileID: 1490301329}
-  approachingThreshold: 30
-  atThreshold: 10
+  approachingThreshold: 10
+  atThreshold: 5
   distances: []
   loc: {x: 0, y: 0, z: 0, w: 0}
-  initStep: 0.1
+  initStep: 0.05
   closeStep: 0.01
-  threshold: 20
+  threshold: 5
   finder: {fileID: 613031697}
 --- !u!1 &1567446881
 GameObject:
@@ -7960,19 +7991,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: loc.w
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: loc.x
-      value: 25
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: loc.y
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: loc.z
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: designing
