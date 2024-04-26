@@ -15,6 +15,7 @@ public class UI_Manager : MonoBehaviour {
     public  Volume             uiVolume;
     private AnalogGlitchVolume ag;
     private bool               lightBlinking;
+    public  bool               innactive;
 
     public static UI_Manager S;
     
@@ -59,6 +60,8 @@ public class UI_Manager : MonoBehaviour {
         // You're an idiot. Don't do it here. 
         LocationFinder.S.LoadLocation(GlobalVariables.S.lockedLocation);
 
+        innactive = true;
+        
         yield return null;
     }
     
@@ -78,6 +81,8 @@ public class UI_Manager : MonoBehaviour {
             yield return new WaitForSeconds(.005f);
         }
         
+        innactive = false;
+        
         yield return null;
     }
 
@@ -93,6 +98,7 @@ public class UI_Manager : MonoBehaviour {
 
     public void Reset()
     {
+        CamReset();
         ag.active = true;
         ag.scanLineJitter.Override(0f);
         ag.horizontalShake.Override(0f);

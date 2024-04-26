@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class TextManager : MonoBehaviour
 {
     private string screenText = "have you seen zayna\n" +
-                               "she was supposed to meet me here\n " +
-                               "you haven't\n" +
-                               "okay, that's too bad.\n" +
-                               "she's super nice\n" +
-                               "I think you'd like her if you met her";
+                                "she was supposed to meet me here\n " +
+                                "you haven't\n" +
+                                "okay, that's too bad.\n" +
+                                "she's super nice\n" +
+                                "I think you'd like her if you met her";
 
     private int     currChar;
     private char[]  textChars;
@@ -29,18 +29,19 @@ public class TextManager : MonoBehaviour
         glitchAudio = GameObject.Find("audioGlitch").GetComponent<AudioSource>();
         
         LoadText();
-        StartCoroutine(Glitch());
     }
     
 
     public void DisplayText()
     {
         StartCoroutine(TextDisplay());
-        
+
     }
 
     IEnumerator TextDisplay()
     {
+        StartCoroutine(Glitch());
+        
         // Start the textAudioPlaying at Random Locations
         // Not that anyone will care, but it will sound unique each time
         float loc_0 = Random.Range(0, textAudio_0.clip.length);
@@ -65,6 +66,7 @@ public class TextManager : MonoBehaviour
         float waitTime = Random.Range(3f, 5f);
         yield return new WaitForSeconds (waitTime);
         ClearText();
+        StopCoroutine(Glitch());
         
         // And maybe show more? Or maybe just the one?
         yield return null;

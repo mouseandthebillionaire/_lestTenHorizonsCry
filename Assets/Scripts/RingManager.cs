@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class RingManager : MonoBehaviour
 {
@@ -24,8 +25,14 @@ public class RingManager : MonoBehaviour
         float a = Random.Range(0.1f, 0.75f);
         this.GetComponent<SpriteRenderer>().color = new Color(c.r, c.g, c.b, a);
         
-        // Randomly assign the Dial is it's not been assigned
-        if(!assigned) dialNum = (int) Random.Range(0, 4);
+        
+        if (!assigned)
+        {
+            // Randomly assign the Dial is it's not been assigned
+            dialNum = (int) Random.Range(0, 4);
+            // And turn off the AudioParam Script (just to make it obvious)
+            Destroy(GetComponent<AudioParam>());
+        }
 
         // Get the Audio parameter Script
         else ap = this.GetComponent<AudioParam>();
@@ -40,20 +47,61 @@ public class RingManager : MonoBehaviour
     {
         // value = Controller.S.dialVal[dialNum, dialParam];
         // And let's get the value from the Controller Direction, not the stored Controller values
-        if (Controller.S.dials[dialNum] == 2) value += .05f;
-        if (Controller.S.dials[dialNum] == 1) value -= .05f;
-        
+        if (assigned)
+        {
+            if (Controller.S.dials[dialNum] == 2)
+            {
+                value += .05f;
+                EffectVisuals();
+            }
+
+            if (Controller.S.dials[dialNum] == 1)
+            {
+                value -= .05f;
+                EffectVisuals();
+            }
+        }
+
         float dialRotation = (value * 3.65f) % 365f;
         Vector3 newRotation = new Vector3(0, 0, dialRotation);
         this.transform.localEulerAngles = newRotation;
-
-        if (assigned)
-        {
-            ap.UpdateParam(value);
-                    
-            // Trigger the Visual Effect
-            LocationVisualEffects.S.DistortionIntensity(value/50f);
-        }
+        
+        
 
     }
+
+    private void EffectVisuals()
+    {
+        ap.UpdateParam(value);
+                    
+        // Right now just assigned via the dial
+        switch (dialNum)
+        {
+            case 0: 
+                LocationVisualEffects.S.DistortionIntensity(value/50f);
+                break;
+            case 1:
+                float bloomValue = scale(2f, 200f, value);
+                LocationVisualEffects.S.BloomIntensity(bloomValue);
+                break;
+            case 2:
+                LocationVisualEffects.S.SpinTheBlackCircle(value);
+                break;
+            case 3:
+                break;
+        }
+        
+    }
+    
+    public float scale(float NewMin, float NewMax, float OldValue)
+    {
+
+        float OldRange = 100f;
+        float NewRange = (NewMax - NewMin);
+        float NewValue = (((OldValue - 0) * NewRange) / OldRange) + NewMin;
+     
+        return(NewValue);
+    }
+    
+    
 }

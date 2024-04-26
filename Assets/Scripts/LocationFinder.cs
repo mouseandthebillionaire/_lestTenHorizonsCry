@@ -193,7 +193,9 @@ public class LocationFinder : MonoBehaviour
 
 	public void LoadLocation(int locationNum)
 	{
+		// Deal with the UI Layer
 		UI_Manager.S.StatusLightOff();
+		
 		Controller.S.Light("off");
 		locations[locationNum].SetActive(true);
 		LockingDial.S.Fade("out");

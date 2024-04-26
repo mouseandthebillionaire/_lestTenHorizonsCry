@@ -3,7 +3,6 @@ using UnityEngine.Audio;
 
 public class AudioParam : MonoBehaviour
 {
-	public string targetTrack;
 	public string paramName;
 
 	public AudioMixer am;
@@ -14,7 +13,6 @@ public class AudioParam : MonoBehaviour
 	
 	public void Start()
 	{
-		
 	}
 
 	public virtual void UpdateParam(float value)

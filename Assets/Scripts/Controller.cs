@@ -224,7 +224,6 @@ public class Controller : MonoBehaviour {
                 {
                     // try setting the values to a random number?
                     float r = Random.Range(0, 100);
-                    Debug.Log(r);
                     dialVal[i,j] = r;
                 }
             }

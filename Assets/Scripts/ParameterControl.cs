@@ -87,7 +87,6 @@ public class ParameterControl : MonoBehaviour
     {
         // Reset to the values in the Controller script
         paramValue = Controller.S.dialVal[instrumentNum, parameterNum];
-        Debug.Log("yes?");
         // And Update
         UpdateParam();
     }

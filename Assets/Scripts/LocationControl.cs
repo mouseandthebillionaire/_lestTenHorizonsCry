@@ -6,11 +6,6 @@ public class LocationControl : MonoBehaviour
 {
 	// try in 4D Space
 	public Vector4 loc;
-
-	public string[] dialEffect;
-	public float[]  dialEffectVal;
-	public float[]  dialEffectLow;
-	public float[]  dialEffectHigh;
 	
 	public  AudioMixer           songMixer;
 	public  AudioMixerSnapshot   innactive;
@@ -48,23 +43,6 @@ public class LocationControl : MonoBehaviour
 		{
 			StartCoroutine(LoadNextStage());
 		}
-
-		for (int i = 0; i < dialEffect.Length; i++)
-		{
-			// Switch to letting the Rings take care of this?
-			
-			//if (Controller.S.dials[i] == 2 && dialEffectVal[i] < 100) dialEffectVal[i]+=.05f;
-			//else if (Controller.S.dials[i] == 1 && dialEffectVal[i] > 0) dialEffectVal[i]-=.05f;
-			//Comment out for now because we don't have the effects built yet
-			// How many do we need?
-			//ApplyEffect(i, dialEffectVal[i]);
-		}
-	}
-
-	private void ApplyEffect(int effectNum, float amount)
-	{
-		float effectAmount = scale(0, 100, dialEffectLow[effectNum], dialEffectHigh[effectNum], amount);
-		songMixer.SetFloat(dialEffect[effectNum], effectAmount);
 	}
 
 	public void Load(string type)
@@ -76,8 +54,8 @@ public class LocationControl : MonoBehaviour
 	private IEnumerator LoadIn()
 	{
 		Debug.Log("Loading in");
-		GlobalVariables.S.locationEntered = true;           
-		
+		GlobalVariables.S.locationEntered = true;
+
 		inactiveSynth.TransitionTo(10);
 
 		currStage = 0;

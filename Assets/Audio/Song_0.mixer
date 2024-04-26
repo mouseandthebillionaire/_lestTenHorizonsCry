@@ -880,8 +880,6 @@ AudioMixerController:
     name: 0_drive
   - guid: 888c63af5d1ca47f2a4f6340b2c8e840
     name: 0_delayFB
-  - guid: a02bbdea8568f4d289627515b24b5fe1
-    name: 0_flangeDepth
   - guid: 9631a2d4c55f94084adca9765c3af63e
     name: 0_effect0
   m_AudioMixerGroupViews:
