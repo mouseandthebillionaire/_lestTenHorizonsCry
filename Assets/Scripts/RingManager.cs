@@ -39,6 +39,7 @@ public class RingManager : MonoBehaviour
         
         // Give us a little variety in the values
         value = (Random.Range(-5f, 5f));
+        ap.UpdateParam(value);
 
     }
 
@@ -51,13 +52,13 @@ public class RingManager : MonoBehaviour
         {
             if (Controller.S.dials[dialNum] == 2)
             {
-                value += .05f;
+                value += GlobalVariables.S.locationDialFidelity;
                 EffectVisuals();
             }
 
             if (Controller.S.dials[dialNum] == 1)
             {
-                value -= .05f;
+                value -= GlobalVariables.S.locationDialFidelity;
                 EffectVisuals();
             }
         }
@@ -81,13 +82,15 @@ public class RingManager : MonoBehaviour
                 LocationVisualEffects.S.DistortionIntensity(value/50f);
                 break;
             case 1:
-                float bloomValue = scale(2f, 200f, value);
-                LocationVisualEffects.S.BloomIntensity(bloomValue);
+                float limitless16fade = scale(0f, 1f, value);
+                LocationVisualEffects.S.Limitless16(limitless16fade);
                 break;
             case 2:
-                LocationVisualEffects.S.SpinTheBlackCircle(value);
+                LocationVisualEffects.S.SpinSpeed(value);
                 break;
             case 3:
+                float limitless17strength = scale(0f, 0.1f, value);
+                LocationVisualEffects.S.Limitless17(limitless17strength);
                 break;
         }
         

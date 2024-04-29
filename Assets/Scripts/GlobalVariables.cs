@@ -10,6 +10,8 @@ public class GlobalVariables : MonoBehaviour
     public bool locationEntered;
 
     public int lockedLocation, enteredLocation;
+
+    public float synthDialFidelity, locationDialFidelity;
     
     // how many times has the user done anything with the device
     public int interactionCounter;
@@ -45,6 +47,7 @@ public class GlobalVariables : MonoBehaviour
         if (locationEntered)
         {
             interactionCounter++;
+            Debug.Log(interactionCounter);
         }
         
     }

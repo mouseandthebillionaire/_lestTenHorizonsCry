@@ -30,7 +30,7 @@ public class BG_Image : MonoBehaviour
         float traveledAmt = distTravelled / distance;
         transform.localPosition = Vector3.Lerp(startPos, endPos, traveledAmt);
 
-        alpha -= 0.001f;
+        alpha -= 0.0005f;
         sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, alpha);
 
         float swapChance = Random.Range(0, 100f);
@@ -48,7 +48,7 @@ public class BG_Image : MonoBehaviour
         string file = folder + "/" + image + ".jpg";
         
         sr.sprite = Resources.Load<Sprite>(folder + "/" + image);
-        alpha = 1;
+        alpha = 0.5f;
 
         // Movement
         float xStart = Random.Range(-9f, 9f);

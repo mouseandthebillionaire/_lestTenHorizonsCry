@@ -53,8 +53,8 @@ public class LocationControl : MonoBehaviour
 
 	private IEnumerator LoadIn()
 	{
-		Debug.Log("Loading in");
 		GlobalVariables.S.locationEntered = true;
+		LocationVisualEffects.S.BloomIntensity(20);
 
 		inactiveSynth.TransitionTo(10);
 
@@ -93,6 +93,7 @@ public class LocationControl : MonoBehaviour
 			yield return new WaitForSeconds(.05f);
 		}
 
+		LocationVisualEffects.S.ResetEffects();
 		GlobalVariables.S.locationEntered = false;
 	}
 

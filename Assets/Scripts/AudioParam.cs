@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -15,8 +16,10 @@ public class AudioParam : MonoBehaviour
 	{
 	}
 
-	public virtual void UpdateParam(float value)
+	public virtual void UpdateParam(float _value)
 	{
+		float value = Math.Abs(_value);
+		
 		// Filter the numbers based on Param Specific Values
 		float t = Mathf.InverseLerp(0, 100, value);
 		float output = Mathf.Lerp(effectValueLow, effectValueHigh, t);

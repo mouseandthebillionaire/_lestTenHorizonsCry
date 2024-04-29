@@ -61,7 +61,13 @@ public class Controller : MonoBehaviour {
     private void ConnectController()
     {
         string[] ports = SerialPort.GetPortNames();
-        stream = new SerialPort(ports[1], 115200);
+        string   portName;
+        for (int i = 0; i < ports.Length; i++) {
+            if (ports[i].Contains("usbmodem"))  {
+                portName = ports[i];
+                stream = new SerialPort(portName, 115200);
+            }
+        }
         
         // Initialize serial
         if (!stream.IsOpen && controllerActive) {
@@ -247,7 +253,6 @@ public class Controller : MonoBehaviour {
     void ParseData() {
         while(true) {
             serialData = stream.ReadLine();
-            Debug.Log(serialData);
             
             string[] parsedData = serialData.Split(':');
             // make sure that we're not dealing with a data drop

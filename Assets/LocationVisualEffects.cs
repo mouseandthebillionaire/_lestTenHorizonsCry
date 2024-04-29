@@ -6,12 +6,16 @@ using UnityEngine.Rendering.Universal;
 
 public class LocationVisualEffects : MonoBehaviour
 {
-    private LensDistortion ld;
-    private Bloom          b;
+    private LensDistortion    ld;
+    private Bloom             b;
+    private LimitlessGlitch17 l17;
+    private LimitlessGlitch12 l12;
+    private LimitlessGlitch16 l16;
     
     private Volume     v;
     public  GameObject location;
     private float      rotAmount;
+    private float      rotSpeed;
 
     public static LocationVisualEffects S;
 
@@ -33,7 +37,24 @@ public class LocationVisualEffects : MonoBehaviour
         {
             b = tmp_b;
         }
+        LimitlessGlitch17 tmp_l17;
+        if (v.profile.TryGet<LimitlessGlitch17>(out tmp_l17))
+        {
+            l17 = tmp_l17;
+        }
+        LimitlessGlitch16 tmp_l16;
+        if (v.profile.TryGet<LimitlessGlitch16>(out tmp_l16))
+        {
+            l16 = tmp_l16;
+        }
 
+        LimitlessGlitch12 tmp_l12;
+        if (v.profile.TryGet<LimitlessGlitch12>(out tmp_l12))
+        {
+            l12 = tmp_l12;
+        }
+
+        StartCoroutine(SpinTheBlackCircle());
         ld.active = true;
     }
 
@@ -56,19 +77,44 @@ public class LocationVisualEffects : MonoBehaviour
         b.intensity.Override(amt);
     }
 
-    public void SpinTheBlackCircle(float amt)
+    public void SpinSpeed(float amt)
     {
-        float rotation = (amt * 3.65f) % 365f;
-        Debug.Log(rotation);
-        Vector3 newRotation = new Vector3(0, 0, rotation);
+        // Flip it so clockwise matches clockwise
+        rotSpeed = amt * -1f;
+    }
+
+    private IEnumerator SpinTheBlackCircle()
+    {
+        rotAmount += (rotSpeed / 50f) % 365f;
+        Vector3 newRotation = new Vector3(0, 0, rotAmount);
         location.transform.localEulerAngles = newRotation;
-            
+        yield return new WaitForSeconds(0.1f);
+
+        StartCoroutine(SpinTheBlackCircle());
+    }
+
+    public void Limitless17(float amt)
+    {
+        l17.strength.Override(amt);
+    }
+    
+    public void Limitless16(float amt)
+    {
+        l16.fade.Override(amt);
+    }
+
+    public void GlobalGlitch(bool glitchState)
+    {
+        l12.enable.Override(glitchState);
     }
     
     public void ResetEffects()
     {
         ld.intensity.Override(0);
         b.intensity.Override(3);
-        SpinTheBlackCircle(0);
+        SpinSpeed(0);
+        Limitless17(0);
+        Limitless16(0);
+        GlobalGlitch(false);
     }
 }

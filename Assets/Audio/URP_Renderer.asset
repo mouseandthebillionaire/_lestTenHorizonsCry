@@ -1,5 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5900066615342662545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2e65c0520bba78448d79fc3264abcc5, type: 3}
+  m_Name: Glitch16
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  Event: 550
+--- !u!114 &-2954222174028403300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4051eb1a21289c4082846c39cf2b4ac, type: 3}
+  m_Name: Glitch12
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  Event: 550
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17,7 +45,11 @@ MonoBehaviour:
     hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
   m_RendererFeatures:
   - {fileID: 5447737372463745062}
-  m_RendererFeatureMap: 264852e346409a4b
+  - {fileID: 2998654927358544279}
+  - {fileID: -2954222174028403300}
+  - {fileID: 4997622031482524589}
+  - {fileID: -5900066615342662545}
+  m_RendererFeatureMap: 264852e346409a4b97492ed5c45c9d299c6d74b9957e00d7ad932e54c21e5b456ffc5b59acc01eae
   m_UseNativeRenderPass: 0
   m_TransparencySortMode: 0
   m_TransparencySortAxis: {x: 0, y: 1, z: 0}
@@ -62,6 +94,34 @@ MonoBehaviour:
   m_DefaultLitMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_DefaultUnlitMaterial: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_DefaultMaskMaterial: {fileID: 2100000, guid: 15d0c3709176029428a0da2f8cecf0b5, type: 2}
+--- !u!114 &2998654927358544279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72cb7e116a93d4ff0b78baa15ccecc05, type: 3}
+  m_Name: Glitch_1
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  Event: 550
+--- !u!114 &4997622031482524589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774dea15d42308e40b25c97995d35262, type: 3}
+  m_Name: Glitch17
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  Event: 550
 --- !u!114 &5447737372463745062
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class AlignmentControl : MonoBehaviour
 
     private bool faded = false;
 
-    public float ringHue, ringSat, ringVal;
+    private float ringHue, ringSat, ringVal;
     
     public static AlignmentControl S;
 
@@ -63,15 +63,18 @@ public class AlignmentControl : MonoBehaviour
             Rotate(2, LockingDial.S.dialValues[3]);
             Rotate(3, LockingDial.S.dialValues[0]);
 
-            ringSat = scale( 0.59f, 0f, LocationFinder.S.distances[0]);
-            ringVal = scale( 0.9f, 0.05f, LocationFinder.S.distances[0]);
+            ringHue = LocationFinder.S.locations[LocationFinder.S.closestLocation].GetComponent<LocationControl>()
+                .locationHue;
+            ringSat = scale( 0.59f, 0f, LocationFinder.S.distances[LocationFinder.S.closestLocation]);
+            ringVal = scale( 0.9f, 0.05f, LocationFinder.S.distances[LocationFinder.S.closestLocation]);
             if (ringVal < 0.05f) ringVal = 0.05f;
 
             for (int i = 0; i < rings.Length; i++)
             {
                 rings[i].GetComponent<SpriteRenderer>().color = Color.HSVToRGB(ringHue / 255f, ringSat, ringVal);
-
             }
+            
+            Debug.Log(ringHue);
         }
     }
 

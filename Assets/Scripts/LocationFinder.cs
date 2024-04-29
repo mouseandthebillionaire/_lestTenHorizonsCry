@@ -18,6 +18,7 @@ public class LocationFinder : MonoBehaviour
 	public  GameObject[] locations;
 
 	public float approachingThreshold, atThreshold;
+	public int   closestLocation;
 	
 	public List<float>  distances = new List<float>();
 	
@@ -77,6 +78,9 @@ public class LocationFinder : MonoBehaviour
 		// finder.transform.position = new Vector3(finder_xPos, finder_yPos, 0);
 		// finder.transform.localScale = new Vector3(finder_zPos, finder_zPos, finder_zPos);
 		// finder.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, distances.Min() / 100f);
+		
+		closestLocation = distances.IndexOf(distances.Min());
+		Debug.Log(closestLocation);
 
 		// Let's make sure we're not already in a location before we do all this shit
 		if (!GlobalVariables.S.locationEntered)
@@ -148,7 +152,9 @@ public class LocationFinder : MonoBehaviour
 		yStep = initStep;
 		
 		// We're approaching the threshold
-		if (distances[i] < approachingThreshold) {
+		if (distances[i] < approachingThreshold)
+		{
+
 			// Make sure light is off
 			UI_Manager.S.StatusLightOff();
 
@@ -198,6 +204,7 @@ public class LocationFinder : MonoBehaviour
 		
 		Controller.S.Light("off");
 		locations[locationNum].SetActive(true);
+		GlobalVariables.S.enteredLocation = locationNum;
 		LockingDial.S.Fade("out");
 		AlignmentControl.S.Fade("out");
 		LocationControl thisLocation = locations[locationNum].GetComponent<LocationControl>();
@@ -211,6 +218,7 @@ public class LocationFinder : MonoBehaviour
 		thisLocation.Load("out");
 		LockingDial.S.Fade("in");
 		AlignmentControl.S.Fade("in");
+		GlobalVariables.S.enteredLocation = 99;
 		locations[locationNum].SetActive(false);
 		LocationVisualEffects.S.ResetEffects();
 		GlobalVariables.S.locationEntered = false;

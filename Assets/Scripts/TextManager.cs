@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public class TextManager : MonoBehaviour
 {
-    private string screenText = "have you seen zayna\n" +
-                                "she was supposed to meet me here\n " +
-                                "you haven't\n" +
-                                "okay, that's too bad.\n" +
-                                "she's super nice\n" +
-                                "I think you'd like her if you met her";
+    private TextAsset    locationTexts_asset;
+    private List<string> locationTexts = new List<string>();
 
-    private int     currChar;
-    private char[]  textChars;
-    public Text     textDisplay;
+    private string[] screenText;
+
+    private int    currText;
+    private int    currChar;
+    private char[] textChars;
+    public  Text   textDisplay;
 
     private AudioSource textAudio_0, textAudio_1, glitchAudio;
 
@@ -24,6 +25,7 @@ public class TextManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Reset();
         textAudio_0 = GameObject.Find("audioText_0").GetComponent<AudioSource>();
         textAudio_1 = GameObject.Find("audioText_1").GetComponent<AudioSource>();
         glitchAudio = GameObject.Find("audioGlitch").GetComponent<AudioSource>();
@@ -42,6 +44,9 @@ public class TextManager : MonoBehaviour
     {
         StartCoroutine(Glitch());
         
+        // Load the Current Text
+        textChars = screenText[currText].ToCharArray();
+        
         // Start the textAudioPlaying at Random Locations
         // Not that anyone will care, but it will sound unique each time
         float loc_0 = Random.Range(0, textAudio_0.clip.length);
@@ -49,7 +54,7 @@ public class TextManager : MonoBehaviour
         textAudio_0.Play();
         textAudio_1.Play();
         
-        while (currChar < screenText.Length)
+        while (currChar < screenText[currText].Length)
         {
             StartCoroutine(TypeText());
 
@@ -67,13 +72,19 @@ public class TextManager : MonoBehaviour
         yield return new WaitForSeconds (waitTime);
         ClearText();
         StopCoroutine(Glitch());
-        
-        // And maybe show more? Or maybe just the one?
+
+        // And get ready for the next one
+        currText = (currText + 1) % screenText.Length;
+        waitTime = Random.Range(5f, 7f);
+        yield return new WaitForSeconds (waitTime);
+
+        // And do it again!
+        StartCoroutine(TextDisplay());
         yield return null;
     }
     
     IEnumerator TypeText () {
-        if (currChar < screenText.Length)
+        if (currChar < screenText[currText].Length)
         {
             textDisplay.text = textDisplay.text + textChars [currChar];
         } else {
@@ -87,12 +98,16 @@ public class TextManager : MonoBehaviour
     public void ClearText()
     {
         textDisplay.text = "";
-        
+        currChar = 0;
+
     }
 
     public void LoadText()
     {
-        textChars = screenText.ToCharArray();
+        string file = "texts_location" + GlobalVariables.S.enteredLocation;
+        
+        locationTexts_asset = Resources.Load(file) as TextAsset;
+        screenText = locationTexts_asset.text.Split("XXX");
     }
 
     private IEnumerator Glitch()
@@ -100,6 +115,7 @@ public class TextManager : MonoBehaviour
         // play a sound (in this instance we are picking a spot in a glitchy track)
         float loc = Random.Range(0, glitchAudio.clip.length);
         glitchAudio.time = loc;
+        LocationVisualEffects.S.GlobalGlitch(true);
         glitchAudio.Play();
         
         // This is happening all the time, so could we do something weird ot the screen too?
@@ -116,10 +132,17 @@ public class TextManager : MonoBehaviour
         
         // stop the glitch sound
         glitchAudio.Stop();
+        LocationVisualEffects.S.GlobalGlitch(false);
         
         // Wait to Glitch Again
         float unglitchTime = Random.Range(2f, 5f);
         yield return new WaitForSeconds(unglitchTime);
         StartCoroutine(Glitch());
+    }
+
+    private void Reset()
+    {
+        currText = 0;
+        ClearText();
     }
 }

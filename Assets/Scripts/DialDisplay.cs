@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class DialDisplay : MonoBehaviour
 {
+    public Image helper;
+    
     // Method 1
     public GameObject[] parameterVisuals;
     
@@ -25,6 +27,7 @@ public class DialDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        helper.fillAmount = LockingDial.S.dialValues[dialNum]/100f;
     }
 
     public void UpdateDisplay()

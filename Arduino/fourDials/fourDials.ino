@@ -169,7 +169,7 @@ void loop() {
     } 
   }
 
-    delay(100);
+    delay(200);
   }
 
 uint32_t Wheel(byte WheelPos) {
