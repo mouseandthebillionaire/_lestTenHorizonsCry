@@ -10,7 +10,7 @@ public class LocationControl : MonoBehaviour
 	public  AudioMixer           songMixer;
 	public  AudioMixerSnapshot   innactive;
 	public  AudioMixerSnapshot[] songStages;
-	public int                  currStage;
+	public int                   currStage;
 	private int                  progressionDirection;
 	
 	/* This version relies on counting how much the user is "twidling" the dials
@@ -41,6 +41,7 @@ public class LocationControl : MonoBehaviour
 
 		if (GlobalVariables.S.interactionCounter > currThreshold)
 		{
+			currThreshold += songStageThreshold;
 			StartCoroutine(LoadNextStage());
 		}
 	}
@@ -54,55 +55,63 @@ public class LocationControl : MonoBehaviour
 	private IEnumerator LoadIn()
 	{
 		GlobalVariables.S.locationEntered = true;
+		        
+		// Setup the LocVisualEffect
+		LocationVisualEffects.S.SetLocation(this.gameObject);
 		LocationVisualEffects.S.BloomIntensity(20);
 
 		inactiveSynth.TransitionTo(10);
 
 		currStage = 0;
 
-		float transitionValue = 1;
-		float endingValue = 0;
-
 		Transform fade = GetComponent<Transform>().GetChild(0);
 
-		while (transitionValue > endingValue)
-		{
-			transitionValue -= .05f;
-			fade.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, transitionValue);
-			// And Transition to the "Starting Snapshot
-			SetAudioMix(transitionValue, innactive, songStages[currStage]);
-			yield return new WaitForSeconds(.05f);
-		}
+		
+		// float transitionValue = 1;
+		// float endingValue = 0;
+		// while (transitionValue > endingValue)
+		// {
+		// 	transitionValue -= .05f;
+		// 	fade.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, transitionValue);
+		// 	// And Transition to the "Starting Snapshot
+		// 	SetAudioMix(transitionValue, innactive, songStages[currStage]);
+		// 	yield return new WaitForSeconds(.05f);
+		// }
+		
+		songStages[currStage].TransitionTo(2f);
+		yield return null;
 	}
 	
 	private IEnumerator LoadOut()
 	{
+		SongReset();
 		defaultSynth.TransitionTo(1);
-		
-		float transitionValue = 0;
-		float endingValue = 1;
 
 		Transform fade = GetComponent<Transform>().GetChild(0);
 
-		while (transitionValue < endingValue)
-		{
-			transitionValue += .05f;
-			fade.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, transitionValue);
-			// And Transition to the "Starting Snapshot
-			SetAudioMix(transitionValue, songStages[currStage], innactive);
-			yield return new WaitForSeconds(.05f);
-		}
+		
+		// float transitionValue = 0;
+		// float endingValue = 1;// while (transitionValue < endingValue)
+		// {
+		// 	transitionValue += .05f;
+		// 	fade.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, transitionValue);
+		// 	// And Transition to the "Starting Snapshot
+		// 	SetAudioMix(transitionValue, songStages[currStage], innactive);
+		// 	yield return new WaitForSeconds(.05f);
+		// }
+		
+		innactive.TransitionTo(3f);
 
 		LocationVisualEffects.S.ResetEffects();
+		
 		GlobalVariables.S.locationEntered = false;
+		yield return null;
 	}
 
 	private IEnumerator LoadNextStage()
 	{
 		float transitionValue = 0;
 		float endingValue = 1;
-
-		currThreshold += songStageThreshold;
 
 		if (currStage == songStages.Length-1 || currStage == 0){
 			progressionDirection *= -1;
@@ -115,41 +124,50 @@ public class LocationControl : MonoBehaviour
 		if (nextStage == 1) images.SetActive(true);
 		if (nextStage == 2) textManager.GetComponent<TextManager>().DisplayText();
 		
+		songStages[nextStage].TransitionTo(3f);
 		
-		while (transitionValue < endingValue)
-		{
-			transitionValue += .05f;
-			SetAudioMix(transitionValue, songStages[currStage], songStages[nextStage]);
-			yield return new WaitForSeconds(.05f);
-		}
+		// while (transitionValue < endingValue)
+		// {
+		// 	transitionValue += .05f;
+		// 	SetAudioMix(transitionValue, songStages[currStage], songStages[nextStage]);
+		// 	yield return new WaitForSeconds(.05f);
+		// }
 		currStage = nextStage;
+
+		yield return null;
 	}
 
-	private void SetAudioMix(float value, AudioMixerSnapshot ams_0, AudioMixerSnapshot ams_1)
-	{
-		AudioMixerSnapshot[] tmpSnapshots = new AudioMixerSnapshot[2];
-		tmpSnapshots[0] = ams_0;
-		tmpSnapshots[1] = ams_1;
-
-		float[] tmpTransition = new float[2];
-		tmpTransition[0] = value;
-		tmpTransition[1] = 1.0f - value;
-        
-		// Smooth this out over time
-		float smoothingValue = 0.5f;
-		songMixer.TransitionToSnapshots(tmpSnapshots, tmpTransition, smoothingValue);
-	}
+	// NONE OF THIS IS WORKING RIGHT
+	// getting rid of it for now, but I'm sure there was some reason I was doing it this way
+	// private void SetAudioMix(float value, AudioMixerSnapshot ams_0, AudioMixerSnapshot ams_1)
+	// {
+	// 	AudioMixerSnapshot[] tmpSnapshots = new AudioMixerSnapshot[2];
+	// 	tmpSnapshots[0] = ams_0;
+	// 	tmpSnapshots[1] = ams_1;
+	//
+	// 	float[] tmpTransition = new float[2];
+	// 	tmpTransition[0] = value;
+	// 	tmpTransition[1] = 1.0f - value;
+	//        
+	// 	// Smooth this out over time
+	// 	float smoothingValue = 0.5f;
+	// 	songMixer.TransitionToSnapshots(tmpSnapshots, tmpTransition, smoothingValue);
+	//}
 
 	private void SongReset()
 	{
-		innactive.TransitionTo(0);
 		currStage = 0;
+		songStages[0].TransitionTo(0);
 		currThreshold = songStageThreshold;
 		progressionDirection = -1;
-		
+		textManager.GetComponent<TextManager>().Reset();
+		AudioParam[] aps = GetComponentsInChildren<AudioParam>();
+		for (int i = 0; i < aps.Length; i++)
+		{
+			aps[i].UpdateParam(0);
+		}
 		images = this.gameObject.transform.GetChild(4).gameObject;
 		images.SetActive(false);
-
 	}
 	
 	// Should be able to map each dials default 1-100 to any parameter low-high

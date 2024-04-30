@@ -1103,8 +1103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5da87bea565b4fed8547ac9ffbd92d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialNum: 0
-  assigned: 0
+  dialNum: 1
+  assigned: 1
   value: 0
 --- !u!114 &783683982332737869
 MonoBehaviour:
@@ -1118,10 +1118,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaa9860dc85947daba80c78032b59d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paramName: X
-  am: {fileID: 0}
+  paramName: drive
+  am: {fileID: 24100000, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
   effectValueLow: 0
-  effectValueHigh: 0
+  effectValueHigh: 100
 --- !u!1 &1694547659110178250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,8 +1663,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5da87bea565b4fed8547ac9ffbd92d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialNum: 0
-  assigned: 0
+  dialNum: 2
+  assigned: 1
   value: 0
 --- !u!114 &8294267142277917094
 MonoBehaviour:
@@ -1678,10 +1678,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaa9860dc85947daba80c78032b59d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paramName: X
-  am: {fileID: 0}
+  paramName: tremRate
+  am: {fileID: 24100000, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
   effectValueLow: 0
-  effectValueHigh: 0
+  effectValueHigh: 100
 --- !u!1 &1694547659168128683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,8 +2499,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5da87bea565b4fed8547ac9ffbd92d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialNum: 0
-  assigned: 0
+  dialNum: 3
+  assigned: 1
   value: 0
 --- !u!114 &1694547659621815670
 MonoBehaviour:
@@ -2514,10 +2514,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaa9860dc85947daba80c78032b59d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paramName: X
+  paramName: delayFB
   am: {fileID: 24100000, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
   effectValueLow: 0
-  effectValueHigh: 0
+  effectValueHigh: 100
 --- !u!1 &1694547659626774407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,7 +2734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialNum: 0
-  assigned: 0
+  assigned: 1
   value: 0
 --- !u!114 &26622812982631299
 MonoBehaviour:
@@ -2748,10 +2748,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaa9860dc85947daba80c78032b59d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paramName: X
-  am: {fileID: 0}
-  effectValueLow: 0
-  effectValueHigh: 0
+  paramName: master_Q
+  am: {fileID: 24100000, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
+  effectValueLow: 2000
+  effectValueHigh: -1000
 --- !u!1 &1694547659823993529
 GameObject:
   m_ObjectHideFlags: 0
@@ -4356,10 +4356,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1694547658427718976}
-  - {fileID: 1694547659168128682}
   - {fileID: 1694547660189703332}
   - {fileID: 1694547659283389495}
   - {fileID: 1694547658619925832}
+  - {fileID: 1694547659168128682}
   - {fileID: 1694547659823993528}
   - {fileID: 1694547658965092027}
   - {fileID: 1694547659447781471}

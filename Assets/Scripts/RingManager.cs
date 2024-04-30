@@ -25,6 +25,8 @@ public class RingManager : MonoBehaviour
         float a = Random.Range(0.1f, 0.75f);
         this.GetComponent<SpriteRenderer>().color = new Color(c.r, c.g, c.b, a);
         
+        // Give us a little variety in the values
+        value = (Random.Range(-5f, 5f));
         
         if (!assigned)
         {
@@ -35,11 +37,11 @@ public class RingManager : MonoBehaviour
         }
 
         // Get the Audio parameter Script
-        else ap = this.GetComponent<AudioParam>();
-        
-        // Give us a little variety in the values
-        value = (Random.Range(-5f, 5f));
-        ap.UpdateParam(value);
+        else
+        {
+            ap = this.GetComponent<AudioParam>();
+            ap.UpdateParam(value);
+        }
 
     }
 
@@ -94,6 +96,11 @@ public class RingManager : MonoBehaviour
                 break;
         }
         
+    }
+
+    public void ResetAudioEffects()
+    {
+        if(ap) ap.UpdateParam(0);
     }
     
     public float scale(float NewMin, float NewMax, float OldValue)

@@ -47,7 +47,6 @@ public class GlobalVariables : MonoBehaviour
         if (locationEntered)
         {
             interactionCounter++;
-            Debug.Log(interactionCounter);
         }
         
     }

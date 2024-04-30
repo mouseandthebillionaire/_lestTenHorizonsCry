@@ -73,8 +73,6 @@ public class AlignmentControl : MonoBehaviour
             {
                 rings[i].GetComponent<SpriteRenderer>().color = Color.HSVToRGB(ringHue / 255f, ringSat, ringVal);
             }
-            
-            Debug.Log(ringHue);
         }
     }
 

@@ -80,7 +80,6 @@ public class LocationFinder : MonoBehaviour
 		// finder.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, distances.Min() / 100f);
 		
 		closestLocation = distances.IndexOf(distances.Min());
-		Debug.Log(closestLocation);
 
 		// Let's make sure we're not already in a location before we do all this shit
 		if (!GlobalVariables.S.locationEntered)
@@ -218,10 +217,9 @@ public class LocationFinder : MonoBehaviour
 		thisLocation.Load("out");
 		LockingDial.S.Fade("in");
 		AlignmentControl.S.Fade("in");
-		GlobalVariables.S.enteredLocation = 99;
 		locations[locationNum].SetActive(false);
 		LocationVisualEffects.S.ResetEffects();
-		GlobalVariables.S.locationEntered = false;
+		GlobalVariables.S.ResetVariables();
 	}
 
 	public float scale(float OldMin, float OldMax, float NewMin, float NewMax, float OldValue){

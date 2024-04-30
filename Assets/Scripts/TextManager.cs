@@ -140,7 +140,7 @@ public class TextManager : MonoBehaviour
         StartCoroutine(Glitch());
     }
 
-    private void Reset()
+    public void Reset()
     {
         currText = 0;
         ClearText();
