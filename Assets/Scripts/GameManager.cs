@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour
     void Start()
 	{
 		Cursor.visible = false;
+
+		// Device Screen
+		//Display.displays[1].Activate();
+
 	}
 
     // Update is called once per frame

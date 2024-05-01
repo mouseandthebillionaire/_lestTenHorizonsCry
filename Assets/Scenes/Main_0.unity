@@ -258,7 +258,7 @@ MonoBehaviour:
   launchButton: 1
   lightStatus: off
   dialLim: 100
-  dialSpeed: 0.05
+  dialSpeed: 0.5
   dialSpeed_granular: 0
 --- !u!4 &102961637
 Transform:
@@ -2345,7 +2345,7 @@ MonoBehaviour:
   - 0
   - 0
   dialNum: 1
-  mainColor: {r: 0.9716981, g: 0.6554379, b: 0.9110017, a: 0}
+  mainColor: {r: 0.972549, g: 0.654902, b: 0.9098039, a: 0}
 --- !u!1 &601840273
 GameObject:
   m_ObjectHideFlags: 0
@@ -4885,8 +4885,8 @@ MonoBehaviour:
   locationEntered: 0
   lockedLocation: 0
   enteredLocation: 0
-  synthDialFidelity: 0
-  locationDialFidelity: 0.1
+  synthDialFidelity: 1.5
+  locationDialFidelity: 1
   interactionCounter: 0
 --- !u!1 &929564108
 GameObject:
@@ -5985,9 +5985,9 @@ MonoBehaviour:
   parameterNum: 1
   animationType: 0
   active: 0
-  parameter: arp_0_drive
-  paramLowValue: 0
-  paramHighValue: 100
+  parameter: 
+  paramLowValue: 60
+  paramHighValue: 240
   paramValue: 0
   effectAmount: 0
   sprites2swap: []
@@ -6786,8 +6786,8 @@ MonoBehaviour:
   closestLocation: 0
   distances: []
   loc: {x: 0, y: 0, z: 0, w: 0}
-  initStep: 0.05
-  closeStep: 0.01
+  initStep: 0.1
+  closeStep: 0.05
   threshold: 5
   finder: {fileID: 613031697}
 --- !u!1 &1567446881
@@ -7998,13 +7998,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   synth: {fileID: 24100000, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
-  instrumentNum: 1
+  instrumentNum: 0
   parameterNum: 0
   animationType: 0
   active: 0
-  parameter: arp_0_bpm
+  parameter: synthPitch
   paramLowValue: 40
-  paramHighValue: 240
+  paramHighValue: 15
   paramValue: 0
   effectAmount: 0
   sprites2swap: []

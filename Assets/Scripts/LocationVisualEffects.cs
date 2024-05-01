@@ -63,18 +63,16 @@ public class LocationVisualEffects : MonoBehaviour
         location = loc;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     // These are being controlled by the RingManager scripts;
     
 
     public void DistortionIntensity(float amt)
     {
         ld.intensity.Override(amt);
+    }
+
+    public void BloomThreshold(float amt) {
+        b.threshold.Override(amt);
     }
     
     public void BloomIntensity(float amt)
@@ -117,6 +115,7 @@ public class LocationVisualEffects : MonoBehaviour
     {
         ld.intensity.Override(0);
         b.intensity.Override(3);
+        b.threshold.Override(0.8f);
         SpinSpeed(0);
         rotAmount = 0;
         rotSpeed = 0;

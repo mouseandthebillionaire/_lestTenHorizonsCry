@@ -79,6 +79,7 @@ public class LocationControl : MonoBehaviour
 		// }
 		
 		songStages[currStage].TransitionTo(2f);
+		LocationVisualEffects.S.BloomThreshold(0.6f);
 		yield return null;
 	}
 	
@@ -166,7 +167,7 @@ public class LocationControl : MonoBehaviour
 		{
 			aps[i].UpdateParam(0);
 		}
-		images = this.gameObject.transform.GetChild(4).gameObject;
+		images = this.gameObject.transform.GetChild(3).gameObject;
 		images.SetActive(false);
 	}
 	

@@ -257,16 +257,14 @@ public class Controller : MonoBehaviour {
             string[] parsedData = serialData.Split(':');
             // make sure that we're not dealing with a data drop
             // we add one because one is the launch button
-            // if (parsedData.Length == dials.Length + 1)
-                // take away one for testing with old arduino without the button
-                if (parsedData.Length == dials.Length)
+            if (parsedData.Length == dials.Length + 1)
             {
                 for (int i = 0; i < dials.Length; i++)
                 {
                     if (int.TryParse(parsedData[i], out int tmpValue)) dials[i] = tmpValue;
                 }
                 // and get the button
-                // if (int.TryParse(parsedData[4], out int tmpBtnValue)) launchButton = tmpBtnValue;
+                if (int.TryParse(parsedData[4], out int tmpBtnValue)) launchButton = tmpBtnValue;
             }
         }
     }
