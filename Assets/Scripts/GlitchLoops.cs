@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -12,14 +13,21 @@ public class GlitchLoops : MonoBehaviour
     public float      tuningAmt;
     public float[]    tuningLocs;
     public GameObject tuningUI;
-    
+
+    public static GlitchLoops S;
+
+    void Awake()
+    {
+        if (S == null) S = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         glitchTrack = GetComponent<AudioSource>();
-        glitchSpeed = 1;
+        Reset();
+        // only make this happen once?
         StartCoroutine(Glitch());
-
     }
 
     // Update is called once per frame
@@ -46,5 +54,12 @@ public class GlitchLoops : MonoBehaviour
         yield return new WaitForSeconds(glitchSpeed);
         StartCoroutine(Glitch());
 
+    }
+
+    public void Reset()
+    {   
+        glitchSpeed = 1;
+        int currTrack = Random.Range(0, glitchTracks.Length);
+        glitchTrack.clip = glitchTracks[currTrack];
     }
 }

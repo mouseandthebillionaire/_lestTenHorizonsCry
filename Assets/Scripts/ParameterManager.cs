@@ -21,5 +21,8 @@ public class ParameterManager : MonoBehaviour
         {
             activeParameters[i].GetComponent<ParameterControl>().ResetParams();
         }
+        
+        // And also the GlitchLoops
+        GlitchLoops.S.Reset();
     }
 }

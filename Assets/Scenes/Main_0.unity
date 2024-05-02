@@ -3567,9 +3567,9 @@ MonoBehaviour:
   parameterNum: 2
   animationType: 1
   active: 0
-  parameter: 
-  paramLowValue: 40
-  paramHighValue: 15
+  parameter: arp_0_bpm
+  paramLowValue: 30
+  paramHighValue: 120
   paramValue: 0
   effectAmount: 0
   sprites2swap:
@@ -6607,7 +6607,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea8acfff870d47dc985005d3f955ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glitchTracks: []
+  glitchTracks:
+  - {fileID: 8300000, guid: 2a8a5df769968471aab791e232388679, type: 3}
+  - {fileID: 8300000, guid: a95f8ecd832a840bc82e461a0058be4a, type: 3}
   glitchSpeed: 0
   speedUI: {fileID: 356756696}
   tuningAmt: 0
