@@ -22,6 +22,15 @@ public class GameManager : MonoBehaviour
 		{
 			ResetGame();
 		}
+		
+		// Check for Reset
+		if (Controller.S.dials[0] == 3 &&
+			Controller.S.dials[1] == 3 &&
+			Controller.S.dials[2] == 3 &&
+			Controller.S.dials[3] == 3)
+		{
+			ResetGame();
+		}
     }
 
 	private void ResetGame()

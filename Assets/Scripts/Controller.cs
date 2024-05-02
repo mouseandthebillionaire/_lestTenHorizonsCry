@@ -124,6 +124,8 @@ public class Controller : MonoBehaviour {
         {
             UI_Manager.S.CamControl();
         }
+        
+        
     }
 
     private IEnumerator LaunchButton()
