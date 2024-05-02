@@ -3,14 +3,13 @@ using UnityEngine;
 
 public class Arp_1 : MonoBehaviour
 {
-    private AudioSource bassSynth;
-    private int         currNote;
-    public  int         notePattern;
+    private AudioSource arp_1;
+    public  int         currPattern;
     
     public float       arpSpeed;
     public GameObject  speedUI;
     public GameObject  patternUI;
-    public AudioClip[] notes;
+    public AudioClip[] notePatterns;
 
     public int[,] patterns = new int[,]
     {
@@ -24,11 +23,9 @@ public class Arp_1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bassSynth = GetComponent<AudioSource>();
-        currNote = 0;
-        notePattern = 1;
+        arp_1 = GetComponent<AudioSource>();
+        currPattern = 0;
         arpSpeed = 8;
-        StartCoroutine(PlayNote());
     }
 
     // Update is called once per frame
@@ -38,25 +35,33 @@ public class Arp_1 : MonoBehaviour
         arpSpeed = speedUI.GetComponent<ParameterControl>().effectAmount;
         
         // Get the pattern from the saved parameter value
-        float np = patternUI.GetComponent<ParameterControl>().effectAmount / 25f;
-        notePattern = (int) np;
+        float np = patternUI.GetComponent<ParameterControl>().effectAmount / 4f;
+        // we are dividing by 4 because we have made the range 0-64 on the UI for fidelity reasons
+        int newP = (int) np;
+        if (newP != currPattern)
+        {
+            currPattern = newP;
+            arp_1.clip = notePatterns[currPattern];
+            // maybe use PlayScheduled, depending on how this sounds
+            arp_1.Play();
+        }
     }
 
-    private IEnumerator PlayNote()
-    {
-        currNote = (currNote + 1) % notes.Length;
-        int noteToPlay = patterns[notePattern, currNote];
-        bassSynth.clip = notes[noteToPlay];
-        bassSynth.Play();
-        
-        arpSpeed = speedUI.GetComponent<ParameterControl>().effectAmount;
-        // fix that makes it so we don't try and divide by zero
-        if (arpSpeed == 0) arpSpeed = 1;
-        
-        float timeToWait = 1f / arpSpeed;
-        yield return new WaitForSeconds(timeToWait);
-        StartCoroutine(PlayNote());
-    }
+    // private IEnumerator PlayNote()
+    // {
+    //     currNote = (currNote + 1) % notes.Length;
+    //     int noteToPlay = patterns[notePattern, currNote];
+    //     bassSynth.clip = notes[noteToPlay];
+    //     bassSynth.Play();
+    //     
+    //     arpSpeed = speedUI.GetComponent<ParameterControl>().effectAmount;
+    //     // fix that makes it so we don't try and divide by zero
+    //     if (arpSpeed == 0) arpSpeed = 1;
+    //     
+    //     float timeToWait = 1f / arpSpeed;
+    //     yield return new WaitForSeconds(timeToWait);
+    //     StartCoroutine(PlayNote());
+    // }
     
     
 }

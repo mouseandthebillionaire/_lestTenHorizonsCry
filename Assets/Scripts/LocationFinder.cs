@@ -1,11 +1,6 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Audio;
-using UnityEngine.PlayerLoop;
 using Random = UnityEngine.Random;
 
 public class LocationFinder : MonoBehaviour
@@ -21,9 +16,6 @@ public class LocationFinder : MonoBehaviour
 	public int   closestLocation;
 	
 	public List<float>  distances = new List<float>();
-	
-	private float xLoc = 50;
-	private float yLoc = 50;
 
 	public Vector4 loc;
 	

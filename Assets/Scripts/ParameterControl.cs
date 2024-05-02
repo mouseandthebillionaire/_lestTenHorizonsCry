@@ -63,9 +63,9 @@ public class ParameterControl : MonoBehaviour
         if (animationType == 2)
         {
             // is this going to work?
-            //int spriteNum = Mathf.FloorToInt(scale(0, 100, 0, sprites2swap.Length, paramValue));
-            float divisor = paramHighValue / sprites2swap.Length;
-            float scaledSpriteNum = paramValue / divisor;
+            float scaledSpriteNum = scale(0, 100, 0, sprites2swap.Length, paramValue);
+            //float divisor = paramHighValue / sprites2swap.Length;
+            //float scaledSpriteNum = paramValue / divisor;
             int spriteNum = (int) scaledSpriteNum % sprites2swap.Length;
             //int spriteNum = (int)(paramValue % sprites2swap.Length);
             GetComponent<Image>().sprite = sprites2swap[spriteNum];

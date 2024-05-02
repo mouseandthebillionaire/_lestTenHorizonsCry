@@ -1,10 +1,5 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Kino;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using UnityEngine.Rendering;
 using URPGlitch.Runtime.AnalogGlitch;
 
@@ -108,6 +103,6 @@ public class UI_Manager : MonoBehaviour {
         statusLight.color = Color.clear;
 
         // Broadcast the Message to all the Parameter Scripts
-        BroadcastMessage("ResetParams");
+        //BroadcastMessage("ResetParams");
     }
 }
