@@ -1,4 +1,7 @@
+using System.Collections;
+using TMPro.EditorUtilities;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public class DialDisplay : MonoBehaviour
@@ -16,11 +19,13 @@ public class DialDisplay : MonoBehaviour
     public int          dialNum;
 
     public Color        mainColor;
+
+    private bool limited;
     
     // Start is called before the first frame update
     void Start()
     {
-        currParameter = Random.Range(0, parameterVisuals.Length);
+        Reset();
         SwitchParameter();
     }
 
@@ -57,10 +62,10 @@ public class DialDisplay : MonoBehaviour
         {
             // fade out all rings
             ringVisuals[i].GetComponent<Image>().color = new Color(
-                mainColor.r, mainColor.g, mainColor.b, 0.25f);
+                mainColor.r, mainColor.g, mainColor.b, 0.15f);
             // And all child rings
             Image[] childFade = ringVisuals[currParameter].GetComponentsInChildren<Image>();
-            foreach (Image f in childFade) f.color = new Color(mainColor.r, mainColor.g, mainColor.b, .25f);
+            foreach (Image f in childFade) f.color = new Color(mainColor.r, mainColor.g, mainColor.b, .15f);
             
             // And disable any ParameterControl Scripts
             ParameterControl[] dpc = ringVisuals[currParameter].GetComponentsInChildren<ParameterControl>();
@@ -84,6 +89,35 @@ public class DialDisplay : MonoBehaviour
         ParameterControl[] pc = ringVisuals[currParameter].GetComponentsInChildren<ParameterControl>();
         foreach (var v in pc) v.active = true;
 
+    }
+    
+    // Script for if we hit the upper/lower limit
+    public void Limit()
+    {
+        if (!limited)
+        {
+            StartCoroutine(LimitAnimation());
+            Debug.Log("bangerang");
+            limited = true;
+        }
+        
+    }
+
+    private IEnumerator LimitAnimation()
+    {
+        this.transform.localScale = new Vector3(.52f, .52f, .52f);
+        yield return new WaitForSeconds(0.05f);
+        this.transform.localScale = new Vector3(.5f, .5f, .5f);
+        // Wait half a second to reduce possible retriggers
+        yield return new WaitForSeconds(0.5f);
+        limited = false;
+        yield return null;
+    }
+
+    public void Reset()
+    {
+        currParameter = Random.Range(0, parameterVisuals.Length);
+        limited = false;
     }
     
 }

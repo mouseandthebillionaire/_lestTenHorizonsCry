@@ -25,6 +25,7 @@ public class LocationControl : MonoBehaviour
 	public AudioMixerSnapshot defaultSynth, inactiveSynth;
 
 	public int        locationHue;
+	public int        locationLightIntensity;
 	public string     imagesFolder;
 	public GameObject images;
 
@@ -58,7 +59,7 @@ public class LocationControl : MonoBehaviour
 		        
 		// Setup the LocVisualEffect
 		LocationVisualEffects.S.SetLocation(this.gameObject);
-		LocationVisualEffects.S.BloomIntensity(20);
+		LocationVisualEffects.S.BloomIntensity(locationLightIntensity);
 
 		inactiveSynth.TransitionTo(10);
 

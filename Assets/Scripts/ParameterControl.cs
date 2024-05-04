@@ -36,13 +36,14 @@ public class ParameterControl : MonoBehaviour
         if (active)
         {
             // Get the value from the Controller script
-            paramValue = Controller.S.dialVal[instrumentNum, parameterNum];
-            UpdateParam();
+            float newParamValue = Controller.S.dialVal[instrumentNum, parameterNum];
+            if(newParamValue != paramValue) UpdateParam(newParamValue);
         }
     }
 
-    private void UpdateParam()
+    private void UpdateParam(float value)
     {
+        paramValue = value;
         effectAmount = scale(0, 100, paramLowValue, paramHighValue, paramValue);
         synth.SetFloat(parameter, effectAmount);
         Animate();
@@ -66,11 +67,10 @@ public class ParameterControl : MonoBehaviour
             float scaledSpriteNum = scale(0, 100, 0, sprites2swap.Length, paramValue);
             //float divisor = paramHighValue / sprites2swap.Length;
             //float scaledSpriteNum = paramValue / divisor;
-            int spriteNum = (int) scaledSpriteNum % sprites2swap.Length;
+            int spriteNum = (int) scaledSpriteNum;
             //int spriteNum = (int)(paramValue % sprites2swap.Length);
             GetComponent<Image>().sprite = sprites2swap[spriteNum];
         }
-        
     }
     
     // Should be able to map each dials default 1-100 to any parameter low-high
@@ -88,6 +88,6 @@ public class ParameterControl : MonoBehaviour
         // Reset to the values in the Controller script
         paramValue = Controller.S.dialVal[instrumentNum, parameterNum];
         // And Update
-        UpdateParam();
+        UpdateParam(paramValue);
     }
 }

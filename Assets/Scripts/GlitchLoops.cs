@@ -11,6 +11,7 @@ public class GlitchLoops : MonoBehaviour
     public float      glitchSpeed;
     public GameObject speedUI;
     public float      tuningAmt;
+    public float      glitchTopVol, glitchLowVol;
     public float[]    tuningLocs;
     public GameObject tuningUI;
 
@@ -37,7 +38,7 @@ public class GlitchLoops : MonoBehaviour
         
         tuningAmt = tuningUI.GetComponent<ParameterControl>().paramValue / 100f;
         float distance = Mathf.Abs(tuningAmt - .5f);
-        float glitchVol = tuningUI.GetComponent<ParameterControl>().scale(0, 1, -50, 10, (1f - distance));
+        float glitchVol = tuningUI.GetComponent<ParameterControl>().scale(0, 1, glitchLowVol, glitchTopVol, (1f - distance));
 
         tuningUI.GetComponent<ParameterControl>().synth.SetFloat("glitchLoop_vol", glitchVol);
 

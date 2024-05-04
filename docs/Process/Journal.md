@@ -264,3 +264,8 @@ Back at it like a crack addict
 
 ## Location Design 2.0 | 04.23.24
 
+## New Enclosure | 05.01.24
+
+## Image Treatment | 05.02.24
+
+

@@ -47,7 +47,6 @@ public class Controller : MonoBehaviour {
     void Awake()
     {
         // Create Singleton
-        // PS - start doing it this way for all scripts because you're an adult
         if (S == null) S = this;
         else Destroy(this);
     }
@@ -199,8 +198,19 @@ public class Controller : MonoBehaviour {
             newVal = currValue + (dialDir[dialNum] * dialSpeed);
         }
 
-        if (newVal < 0) newVal = 0;
-        if (newVal > 100) newVal = 100;
+        if (newVal < 0)
+        {
+            // Can we test for limits here?
+            instrumentViz[dialNum].GetComponent<DialDisplay>().Limit();
+            newVal = 0;
+        }
+
+        if (newVal > 100)
+        {
+            // Can we test for limits here?
+            instrumentViz[dialNum].GetComponent<DialDisplay>().Limit();
+            newVal = 100;
+        }
         
         // UpdateInstrument
         instruments[dialNum].GetComponent<InstrumentControl>().parameterValues[currParameter] = newVal;

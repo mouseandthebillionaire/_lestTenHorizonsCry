@@ -8,6 +8,8 @@ public class PadScript : MonoBehaviour
     public  AudioClip[] pads;
     private AudioSource padPlayer;
     private int         currPad;
+    public int          currState;
+    public  GameObject  stateUI;
     
     // Start is called before the first frame update
     void Start()
@@ -19,20 +21,25 @@ public class PadScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.T)) SwitchPad();
+        // dividing by 25 since the main dial is 1-100;
+        int newCurrState = Mathf.FloorToInt(stateUI.GetComponent<ParameterControl>().effectAmount/25f);
+        if (newCurrState != currState) SwitchPad(newCurrState);
+        
     }
 
-    public void SwitchPad()
+    public void SwitchPad(int state)
     {
+        Debug.Log(state);
+        currState = state;
+        currPad = state;
         padPlayer.clip = pads[currPad];
         padPlayer.Play();
-        currPad = (currPad + 1) % pads.Length;
     }
 
     private void Reset()
     {
         currPad = 0;
-        SwitchPad();
-        
+        SwitchPad(currPad);
+           
     }
 }
