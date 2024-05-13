@@ -272,7 +272,7 @@ Back at it like a crack addict
 
 Whelp. Over the last week we finally got to showcase this thing as one of the nominated games at [A MAZE./ Berlin](https://2024.amaze-berlin.de/). It was truly a phenomenal time, and so many people spent thoughtful time with the experience and gave us <em>plenty</em> of feedback to mull over.
 
-![[/Media/amaze2.jpeg]]
+![[Media/amaze2.jpeg]]
 ![[Media/amaze0.jpeg]]
 
 Some initial loose thoughts in regards to a) the success/failures of the experience and b) ideas for future steps and/or other projects (with perhaps more to come after we've sat with this for a bit):
