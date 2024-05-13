@@ -264,8 +264,24 @@ Back at it like a crack addict
 
 ## Location Design 2.0 | 04.23.24
 
-## New Enclosure | 05.01.24
+## New Enclosure(s) | 05.01.24
 
 ## Image Treatment | 05.02.24
+
+## A MAZE. Berlin | 05.13.24
+
+Whelp. Over the last week we finally got to showcase this thing as one of the nominated games at [A MAZE./ Berlin](https://2024.amaze-berlin.de/). It was truly a phenomenal time, and so many people spent thoughtful time with the experience and gave us <em>plenty</em> of feedback to mull over.
+
+![[amaze2.jpeg]]
+![[amaze0.jpeg]]
+
+Some initial loose thoughts in regards to a) the success/failures of the experience and b) ideas for future steps and/or other projects (with perhaps more to come after we've sat with this for a bit):
+
+- It is interesting to note how hit or miss a reflective experience can be in a festival setting. We are purposefully sharing a fairly obtuse and exploratory interaction that doesn't always prove successful. Some people would spin a knob for a few seconds, not hear enough change, and immediately walk away. Many people, however, did spend the time to deeply interact with it. Not sure if this would be true for other festivals, or if the A MAZE crowd is more well-suited to the ambiguity.
+- This leads in to a question about reflective experiences in general, and what is the best venue for them. Is a person's home ideal because it is a safe/known space for them? Or is it better for it to be out in public? It makes sense that being slightly out of your comfort zone would be helpful to get into that reflective state. Think museums. Think parks. Think sacred spaces. A survey of architectural theory would probably inform this. But also helping that frame-shifting to happen in a space that you are familiar could be impactful.
+- Extending from that question, what could the possible format of this be based on those locations? Is it better to do something phone/web based so that people are getting new and unexpected experiences on their phones? Is it better to have the thing set up in a gallery-like space? Maybe so if it is off to the side and allows for the length of time needed to fully engage with it
+- What other hinderance/aides are there to allow people to fully engage? The headphones clearly helped, I think, but perhaps standing did not? Would it be better to require sitting? Does being in the middle of the floor hurt it? Too exposed? Not the participants are doing anything too potentially embarrassing, but still.
+- Technologically wise, we definitely see the need for a more robust enclosed system. Firstly, it allows the thing to be turned on and off without us standing there (which I only realized on the last day *could* have been done with a separate user account) But secondly, allows for the computing/hardware aspects to be more secure. It also allows for a thing to be shipped if necessary? Which would then mean it could be at more festivals? But, then again, maybe it's asking too much for an abstract/obtuse sound-game to be running without someone there to give context. Either way, there's some ideas as to how this could happen. Mini PCs. Raspberry Pis running web builds. Exporting from some other engine.
+- Finally, I definitely want to do another project that builds on this. Not this. I think this is done, but something that *nexts* this idea. That keep poking at the question of granular audio control, reflective experiences, and abstract "puzzly" bits.
 
 
