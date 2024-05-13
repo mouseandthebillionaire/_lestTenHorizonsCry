@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class ParameterManager : MonoBehaviour
 {
     public GameObject[] activeParameters;
+    public AudioMixer songMixer;
     
     static public ParameterManager S;
     
@@ -21,6 +23,15 @@ public class ParameterManager : MonoBehaviour
         {
             activeParameters[i].GetComponent<ParameterControl>().ResetParams();
         }
+        
+        songMixer.SetFloat("delayFB", 0);
+        songMixer.SetFloat("tremRate", 0);
+        songMixer.SetFloat("drive", 0);
+        songMixer.SetFloat("masterQ", 2000);
+
+        
+        
+        
         
         // And also the GlitchLoops
         GlitchLoops.S.Reset();

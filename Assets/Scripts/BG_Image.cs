@@ -6,7 +6,11 @@ using Random = UnityEngine.Random;
 public class BG_Image : MonoBehaviour
 {
     public  Sprite         img;
+    public UnityEngine.Object[]        images;
     private SpriteRenderer sr;
+
+    private string         folder;
+    private float          folderLength;
 
     public  float animationSpeed;
     private float startTime;
@@ -20,6 +24,13 @@ public class BG_Image : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        
+        folder    = GetComponentInParent<LocationControl>().imagesFolder;
+        //System.IO.DirectoryInfo dir       = new System.IO.DirectoryInfo("Assets/Resources/" + folder + "/");
+        //float                   dirLength = dir.GetFiles().Length / 2f;
+        images = Resources.LoadAll("Assets/Resources/" + folder + "/", typeof(Sprite));
+        folderLength = images.Length;
+        
         StartCoroutine(PhotoSwap());
         
     }
@@ -68,12 +79,14 @@ public class BG_Image : MonoBehaviour
 
     IEnumerator PhotoSwap()
     {
-        string folder = GetComponentInParent<LocationControl>().imagesFolder;
-        System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo("Assets/Resources/" + folder + "/");
-        float dirLength = dir.GetFiles().Length / 2f;
-        int imageNumber = (int)Random.Range(0, dirLength);
-        string image = imageNumber.ToString();
-        string file = folder + "/" + image + ".png";
+        // string                  folder      = GetComponentInParent<LocationControl>().imagesFolder;
+        // System.IO.DirectoryInfo dir         = new System.IO.DirectoryInfo("Assets/Resources/" + folder + "/");
+        // float                   dirLength   = dir.GetFiles().Length / 2f; 
+        // int                     imageNumber = (int)Random.Range(0, dirLength);
+        int imageNumber = (int) Random.Range(0, folderLength);
+        
+        string                  image       = imageNumber.ToString();
+        string                  file        = folder + "/" + image + ".png";
         
         sr.sprite = Resources.Load<Sprite>(folder + "/" + image);
 

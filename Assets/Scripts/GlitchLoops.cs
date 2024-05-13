@@ -15,6 +15,8 @@ public class GlitchLoops : MonoBehaviour
     public float[]    tuningLocs;
     public GameObject tuningUI;
 
+    private bool switched;
+
     public static GlitchLoops S;
 
     void Awake()
@@ -42,7 +44,8 @@ public class GlitchLoops : MonoBehaviour
 
         tuningUI.GetComponent<ParameterControl>().synth.SetFloat("glitchLoop_vol", glitchVol);
 
-
+        if (tuningAmt < 0.5f) switched = false;
+        if(tuningAmt >= 1 && !switched) SwitchTracks();
 
     }
 
@@ -57,10 +60,15 @@ public class GlitchLoops : MonoBehaviour
 
     }
 
+    public void SwitchTracks() {
+        switched = true;
+        int currTrack = Random.Range(0, glitchTracks.Length);
+        glitchTrack.clip = glitchTracks[currTrack];
+    }
+
     public void Reset()
     {   
         glitchSpeed = 1;
-        int currTrack = Random.Range(0, glitchTracks.Length);
-        glitchTrack.clip = glitchTracks[currTrack];
+        SwitchTracks();
     }
 }

@@ -1,7 +1,5 @@
 using System.Collections;
-using TMPro.EditorUtilities;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public class DialDisplay : MonoBehaviour
@@ -19,6 +17,7 @@ public class DialDisplay : MonoBehaviour
     public int          dialNum;
 
     public Color        mainColor;
+    public AudioSource  error;
 
     private bool limited;
     
@@ -106,6 +105,7 @@ public class DialDisplay : MonoBehaviour
     private IEnumerator LimitAnimation()
     {
         this.transform.localScale = new Vector3(.52f, .52f, .52f);
+        error.Play();
         yield return new WaitForSeconds(0.05f);
         this.transform.localScale = new Vector3(.5f, .5f, .5f);
         // Wait half a second to reduce possible retriggers

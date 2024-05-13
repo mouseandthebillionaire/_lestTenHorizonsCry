@@ -55,12 +55,14 @@ public class RingManager : MonoBehaviour
             if (Controller.S.dials[dialNum] == 2)
             {
                 value += GlobalVariables.S.locationDialFidelity;
+                if (value > 50) value = 50;
                 EffectVisuals();
             }
 
             if (Controller.S.dials[dialNum] == 1)
             {
                 value -= GlobalVariables.S.locationDialFidelity;
+                if (value < -50) value = -50;
                 EffectVisuals();
             }
         }
@@ -92,6 +94,7 @@ public class RingManager : MonoBehaviour
                 break;
             case 3:
                 float limitless17strength = scale(0f, 0.1f, value);
+                
                 LocationVisualEffects.S.Limitless17(limitless17strength);
                 break;
         }

@@ -26,5 +26,10 @@ public class AudioParam : MonoBehaviour
 		
 		am.SetFloat(paramName, output);
 	}
+
+	public void ResetParam() {
+		float output = Mathf.Lerp(effectValueLow, effectValueHigh, 0);
+		am.SetFloat(paramName, output);
+	}
 	
 }
