@@ -252,22 +252,60 @@ Next (and thoughts):
 
 
 ## New Adventures in UI | 01.10.24
-<img src="Media/interface.png" width=75% />
-![Interface Breaking](Media/lthc_6.jpg)
+<img src="Media/interface.png" width="500px" />
+
+Over the weekend a new (old) idea presented itself: the concept of a secret world hidden within an otherwise confusing-yet-seemingly-traditional-interface. If we lean more heavily on the first part of the interaction as "traditional" synthesis manipulation, then the switch to the second part can be more rewarding.
+
+So, with this new UI I am attempting to do this. Each of the quadrants is controlled by one of the four dials. And each of these dial/quadrant combos controls a *specific* aspect of the sound generation (step sequencer, synth voice, found-sound, etc) When the player has dialed into the correct "location" then the screen begins to break and glitch, hinting that there's something more here below the surface.
+
+<img src="Media/lthc_6.jpg" width="500px" />
+
 ## Enclosure | 01.20.24
 
 ![Enclosure Proto](Media/lthc_3.jpg)
 
+Enclosure is done Right now it is running within the Unity engine instead of as a standalone, but this is fine to test the interaction and make sure that it is working as expected.
+
+One note about this prototype: The nature of the Apple ecosystem makes it possible to mirror or extend the computer screen over to an iPad. This is really convenient for testing/prototyping! This whole version is just an iPad duct tapped inside the controller. Arguably, not *that* different from when there's an external monitor running from HMDI, but way cheaper/easier to set up!
 ## New New Adventures in UI | 03.27.24
 
-Back at it like a crack addict
+Back at it like a crack addict (but instead of crack it's UI elements)
+
+The big news is that this project has been accepted as a nominee for [A Maze 2024](https://2024.amaze-berlin.de/) and so it's perfect time to completely rethink everything about it and try to make it better.
+
+After some heavy-duty brainstorming with [DigitalRelic](https://github.com/digitalrelic/) we have mapped out some new functionality for the sonic control. The big thing of note here is that we are now going to utilize the dial-clicks to cycle through multiple parameters per quadrant. 
+
+![[UIartboard_0.png]]
+
+![[UIartboard_1.png]]
+
+![[UIartboard_2.png]]
+
+![[UIartboard_3.png]]
 
 ## Location Design 2.0 | 04.23.24
 
+![[locationInit.gif]]
+
+Some new thoughts about the ways these locations work. Where the "synth" section of the experience should feel deliberate, specific, thoughtful, etc the goal for these sections is performative, loose, emotional, etc. So, the effects are more immediate (both visually and sonically) Twist a dial and the screen warps/distorts/rotates and heavy delay/distortion/filtering is applied.
+
+We are using the [Limitless Glitch Effect](https://assetstore.unity.com/packages/vfx/shaders/fullscreen-camera-effects/limitless-glitch-effects-148376) pack from the Unity Asset store, which works pretty well here. A little finagling to get it to do exactly what we want, but allows for some fun combinations.
+
+Also of note is that this section also has a built in progression. Each location song has 7-8 stages and the player is able to work through them as they turn the dials. All we're looking at as far as input here is dial-turns: every time the dial is turned a counter goes up, and as soon as we've hit a certain threshold we advance. Easy peasy.
 ## New Enclosure(s) | 05.01.24
 
+![[hardwareConstruction.jpeg]]
+
+New enclosure is almost done. We have switched to a vertical layout with the rounded top for some visual interest. For A Maze we will have two specially built versions, one black and one white, just because that seemed fun. I'm slightly curious if it diminished the experience by having more than one of the devices available, but it's probably worth it so that more people can use it at once. We will also have headphone apps so that two players can listen in at the same time.
 ## Image Treatment | 05.02.24
 
+![[images_stage1.png]]
+
+![[images_stage2.png]]
+
+Thinking through the images used in the locations. I want them to be autobiographical, but I also don't really want to use actual personal images. The whole thing should be obfuscated and obscure. So, to accomplish this, I have scanned hundreds of images from my own personal photo albums but then run them through Photoshop's Style Transfer Neural filter. (For the record, the above images are from High School so I fed in some trapper-keeper style collage I found online as an initial image reference, but I can't find it now)
+
+I like this idea of having a machine try to make sense of the images. It fits in thematically that the machine is an actual barrier between the artist and the audience. Also, this idea of the object being some sort of meaning-making device for future audiences to make sense of a reality that has long been forgotten. As it stands now, it's slightly clunky, but there's something here to keep thinking about.
 ## A MAZE. Berlin | 05.13.24
 
 Whelp. Over the last week we finally got to showcase this thing as one of the nominated games at [A MAZE./ Berlin](https://2024.amaze-berlin.de/). It was truly a phenomenal time, and so many people spent thoughtful time with the experience and gave us <em>plenty</em> of feedback to mull over.
