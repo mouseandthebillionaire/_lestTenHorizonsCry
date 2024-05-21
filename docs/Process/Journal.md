@@ -275,17 +275,17 @@ The big news is that this project has been accepted as a nominee for [A Maze 202
 
 After some heavy-duty brainstorming with [DigitalRelic](https://github.com/digitalrelic/) we have mapped out some new functionality for the sonic control. The big thing of note here is that we are now going to utilize the dial-clicks to cycle through multiple parameters per quadrant. 
 
-![[UIartboard_0.png]]
+![[Media/UIartboard_0.png]]
 
-![[UIartboard_1.png]]
+![[Media/UIartboard_1.png]]
 
-![[UIartboard_2.png]]
+![[Media/UIartboard_2.png]]
 
-![[UIartboard_3.png]]
+![[Media/UIartboard_3.png]]
 
 ## Location Design 2.0 | 04.23.24
 
-![[locationInit.gif]]
+![[Media/locationInit.gif]]
 
 Some new thoughts about the ways these locations work. Where the "synth" section of the experience should feel deliberate, specific, thoughtful, etc the goal for these sections is performative, loose, emotional, etc. So, the effects are more immediate (both visually and sonically) Twist a dial and the screen warps/distorts/rotates and heavy delay/distortion/filtering is applied.
 
@@ -294,14 +294,14 @@ We are using the [Limitless Glitch Effect](https://assetstore.unity.com/packages
 Also of note is that this section also has a built in progression. Each location song has 7-8 stages and the player is able to work through them as they turn the dials. All we're looking at as far as input here is dial-turns: every time the dial is turned a counter goes up, and as soon as we've hit a certain threshold we advance. Easy peasy.
 ## New Enclosure(s) | 05.01.24
 
-![[hardwareConstruction.jpeg]]
+![[Media/hardwareConstruction.jpeg]]
 
 New enclosure is almost done. We have switched to a vertical layout with the rounded top for some visual interest. For A Maze we will have two specially built versions, one black and one white, just because that seemed fun. I'm slightly curious if it diminished the experience by having more than one of the devices available, but it's probably worth it so that more people can use it at once. We will also have headphone apps so that two players can listen in at the same time.
 ## Image Treatment | 05.02.24
 
-![[images_stage1.png]]
+![[Media/images_stage1.png]]
 
-![[images_stage2.png]]
+![[Media/images_stage2.png]]
 
 Thinking through the images used in the locations. I want them to be autobiographical, but I also don't really want to use actual personal images. The whole thing should be obfuscated and obscure. So, to accomplish this, I have scanned hundreds of images from my own personal photo albums but then run them through Photoshop's Style Transfer Neural filter. (For the record, the above images are from High School so I fed in some trapper-keeper style collage I found online as an initial image reference, but I can't find it now)
 
