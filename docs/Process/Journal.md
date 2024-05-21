@@ -252,7 +252,7 @@ Next (and thoughts):
 
 
 ## New Adventures in UI | 01.10.24
-![Updated interface](Media/interface.png)
+<img src="Media/interface.png" width=75% />
 ![Interface Breaking](Media/lthc_6.jpg)
 ## Enclosure | 01.20.24
 
