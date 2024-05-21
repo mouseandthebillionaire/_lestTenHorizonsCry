@@ -233,7 +233,7 @@ That's cool. There's also an UNO in this bin that we can use, but it doesn't wor
 
 Okay, new <em>official</em> Arduino UNO R3 ordered. Wait. Shipped. Wait. It's here. Let's go!
 
-Okay, everything seems to be working on the Arduino side. All we need to do is use the Arduino keyboard library to easily communicate with Unity (like we've *always* done for projects like these). 
+Okay, everything seems to be working on the Arduino side. All we need to do is use the Arduino keyboard library to easily communicate with Unity (like we've *always* done for projects like these)...
 
 Wait. The UNO R3 *doesn't* support the keyboard library, but the R4 DOES!?!?
 
