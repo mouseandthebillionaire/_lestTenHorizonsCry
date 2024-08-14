@@ -258,7 +258,7 @@ MonoBehaviour:
   launchButton: 1
   lightStatus: off
   dialLim: 100
-  dialSpeed: 0.5
+  dialSpeed: 1
   dialSpeed_granular: 0
 --- !u!4 &102961637
 Transform:
@@ -2798,6 +2798,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1694547660291063544, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547660291063547, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547660291063547, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1694547660291063547, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2978,6 +2990,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5535215124966720824, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: m_Pitch
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535215124966720824, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bd97527bcb15843588b9b9ce695eb445, type: 3}
+    - target: {fileID: 5535215124966720824, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2636345910751181512, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
     - target: {fileID: 5861033536853811195, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: dialNum
       value: 1
@@ -3939,7 +3963,7 @@ PrefabInstance:
     - target: {fileID: 1694547658402769718, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 27e2ae9f631ce4e62b56628a55dec6a9, type: 3}
+      objectReference: {fileID: 32900000, guid: 05978cdbecdc54ccf8fcfef395c0788a, type: 3}
     - target: {fileID: 1694547658402769718, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: m_DirectAudioMutes.Array.data[0]
       value: 1
@@ -4385,6 +4409,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1694547660291063547, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547660291063547, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547660291063547, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4572,6 +4604,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5535215124966720824, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8954d63be33bd4253baf19247f8f5aeb, type: 3}
+    - target: {fileID: 5535215124966720824, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 1816634522160511527, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
     - target: {fileID: 5861033536853811195, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: dialNum
       value: 0
@@ -8320,7 +8360,23 @@ MonoBehaviour:
   arpSpeed: 0
   speedUI: {fileID: 638667597}
   patternUI: {fileID: 458477193}
-  notePatterns: []
+  notePatterns:
+  - {fileID: 8300000, guid: 8d8bd867a22394ec6981c32b19d09fd2, type: 3}
+  - {fileID: 8300000, guid: 9270580b6250a4ff5ab3e41139b351b1, type: 3}
+  - {fileID: 8300000, guid: 7f0533617423c4681b79389b5032b83c, type: 3}
+  - {fileID: 8300000, guid: 0025eeca638034eb49c88d1df45d8998, type: 3}
+  - {fileID: 8300000, guid: 3ba814a1fb35d41e19c46c3e8c31744d, type: 3}
+  - {fileID: 8300000, guid: 60192e11d6c7d4c02b018f8ae1d9d8fa, type: 3}
+  - {fileID: 8300000, guid: 4428d76c4c18e4cf4b68680d751700cb, type: 3}
+  - {fileID: 8300000, guid: 36fef4af1c8294414b81fbe81a024016, type: 3}
+  - {fileID: 8300000, guid: 21db27240c9bf4aebbe2087444525b90, type: 3}
+  - {fileID: 8300000, guid: 79944c642201e4084b629eebe5179cb1, type: 3}
+  - {fileID: 8300000, guid: 806db690a793b4d8697313a5e00dce1d, type: 3}
+  - {fileID: 8300000, guid: c38f205b4ec5a4d68aee927768bffbb1, type: 3}
+  - {fileID: 8300000, guid: a509ea102c4314ef3be6649d3207b510, type: 3}
+  - {fileID: 8300000, guid: a64399c47398b48d0a5f256063bce9cc, type: 3}
+  - {fileID: 8300000, guid: 662bbc33ea4a747bc933249613979c1d, type: 3}
+  - {fileID: 8300000, guid: 6297b29c5e8a140f383eac7bd0a66060, type: 3}
 --- !u!82 &2074903794
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8899,6 +8955,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1694547658402769718, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 16d4c2b67afba45b5af7f979a20fde22, type: 3}
     - target: {fileID: 1694547658427718977, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -9452,6 +9512,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1694547660291063547, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547660291063547, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694547660291063547, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -9687,6 +9755,18 @@ PrefabInstance:
       propertyPath: effectValueHigh
       value: 8000
       objectReference: {fileID: 0}
+    - target: {fileID: 5535215124966720824, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: m_Pitch
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535215124966720824, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 08daa12071a9141cca5b79f663af65d9, type: 3}
+    - target: {fileID: 5535215124966720824, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2838863286922427376, guid: f99877cdf0cbc4c6499247805872023f, type: 2}
     - target: {fileID: 5861033536853811195, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: dialNum
       value: 1
@@ -9778,6 +9858,10 @@ PrefabInstance:
     - target: {fileID: 8294267142277917094, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: effectValueHigh
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9036917675398593414, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
