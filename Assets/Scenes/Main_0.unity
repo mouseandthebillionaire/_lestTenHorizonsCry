@@ -2180,7 +2180,7 @@ PrefabInstance:
       objectReference: {fileID: -5376391966756267076, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: songStageThreshold
-      value: 1000
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: songStages.Array.size
@@ -3850,7 +3850,7 @@ PrefabInstance:
       objectReference: {fileID: 8423648828851187155, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: songStageThreshold
-      value: 1000
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: songStages.Array.size
@@ -3963,7 +3963,11 @@ PrefabInstance:
     - target: {fileID: 1694547658402769718, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 05978cdbecdc54ccf8fcfef395c0788a, type: 3}
+      objectReference: {fileID: 32900000, guid: 92e4d03aaf29142afb18cdadb2bbbaac, type: 3}
+    - target: {fileID: 1694547658402769718, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
+      propertyPath: m_PlaybackSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1694547658402769718, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: m_DirectAudioMutes.Array.data[0]
       value: 1
@@ -8769,7 +8773,7 @@ PrefabInstance:
       objectReference: {fileID: -5376391966756267076, guid: cdfae24641d4d4e1f90975c3a8ab8838, type: 2}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: songStageThreshold
-      value: 2000
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: -3650964731367853518, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: dialEffect.Array.size
@@ -8958,7 +8962,7 @@ PrefabInstance:
     - target: {fileID: 1694547658402769718, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 16d4c2b67afba45b5af7f979a20fde22, type: 3}
+      objectReference: {fileID: 32900000, guid: 1122d4becc3cc489db38f7e0ed365e84, type: 3}
     - target: {fileID: 1694547658427718977, guid: a9866b7d10c434560a4bb5f2ffdff87a, type: 3}
       propertyPath: m_Layer
       value: 3

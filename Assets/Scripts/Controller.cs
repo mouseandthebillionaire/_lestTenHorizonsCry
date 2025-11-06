@@ -65,6 +65,8 @@ public class Controller : MonoBehaviour {
             if (ports[i].Contains("usbmodem"))  {
                 portName = ports[i];
                 stream = new SerialPort(portName, 115200);
+                print(portName);
+
             }
         }
         
