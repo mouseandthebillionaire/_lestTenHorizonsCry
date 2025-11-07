@@ -1,6 +1,10 @@
-# Analysis Journal
+# Analysis
 
-## 11.06.25 | Setup
+A record of the analysis phase of the [Lest Ten Horizons Cry](./) project for the [Materializing Design](https://www.materializing.design/about) research project and potential future thesis work. Additionally, an exploration in using Obsidian as a platform for the QDA phase.
+
+## Journal
+
+### 11.06.25 | Setup
 
 Attempting to use Obsidian for QDA work on an existing repo. Just a quick note here as to what this setup looks like (though some of this is clear from the file structure)
 
