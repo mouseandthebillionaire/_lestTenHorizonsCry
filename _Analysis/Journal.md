@@ -4,6 +4,12 @@ A record of the analysis phase of the [Lest Ten Horizons Cry](./) project for th
 
 ## Journal
 
+### 11.15.25 | Initial Readthrough
+
+Spent the last few days reading through all of the (hashtag) Data to get a bird's eye view of the material. Already some ideas brewing, but trying to keep it on just a surface level. One note is that it is really interesting how divorced I feel from most of the content. Obviously, it is me, and I recognize the voice, but with the time between, I have less of a stake in the goals/desires/worries etc (even though much of it is stuff that I am still focusing on, which makes it even more interesting)
+
+Another note: It is nice having multiple files to be looking through. Definitely feels like there's going to be different insights gleaned from the different streams of information
+
 ### 11.06.25 | Setup
 
 Attempting to use Obsidian for QDA work on an existing repo. Just a quick note here as to what this setup looks like (though some of this is clear from the file structure)
