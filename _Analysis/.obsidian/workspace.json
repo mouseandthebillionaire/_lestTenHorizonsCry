@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Codes/a peak behind the curtain.md",
+                "file": "Journal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "a peak behind the curtain"
+              "title": "Journal"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Codes/a peak behind the curtain.md",
+                "file": "Journal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for a peak behind the curtain"
+              "title": "Backlinks for Journal"
             }
           },
           {
@@ -186,6 +186,9 @@
   },
   "active": "66225a5fc49006d1",
   "lastOpenFiles": [
+    "Codes/referencing.md",
+    "Journal.md",
+    "Codes/a peak behind the curtain.md",
     "Codes/ambiguity.md",
     "Codes/audio.md",
     "Data/Journal.md",
@@ -209,9 +212,6 @@
     "Codes/problem.md",
     "Codes/development.md",
     "Codes/scripting.md",
-    "Codes/worrying.md",
-    "Codes/hoping.md",
-    "Codes/explaining.md",
     "Extractions",
     "Analysis/progress.json",
     "Analysis",

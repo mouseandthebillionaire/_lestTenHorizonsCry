@@ -4,12 +4,6 @@ A record of the analysis phase of the [Lest Ten Horizons Cry](./) project for th
 
 ## Journal
 
-### 11.15.25 | Initial Readthrough
-
-Spent the last few days reading through all of the (hashtag) Data to get a bird's eye view of the material. Already some ideas brewing, but trying to keep it on just a surface level. One note is that it is really interesting how divorced I feel from most of the content. Obviously, it is me, and I recognize the voice, but with the time between, I have less of a stake in the goals/desires/worries etc (even though much of it is stuff that I am still focusing on, which makes it even more interesting)
-
-Another note: It is nice having multiple files to be looking through. Definitely feels like there's going to be different insights gleaned from the different streams of information
-
 ### 11.06.25 | Setup
 
 Attempting to use Obsidian for QDA work on an existing repo. Just a quick note here as to what this setup looks like (though some of this is clear from the file structure)
@@ -21,5 +15,25 @@ Attempting to use Obsidian for QDA work on an existing repo. Just a quick note h
 - The initial goal here is to transfer over all of the files in the [Process](../docs/Process/) folder (Journal, MeetingNotes, Precedents, etc) for analysis. I will also look to create an export of all the commit messages as one file and analyze that as well (though we all know that I am lousy at the PB-level robust commit, so I don't expect that to be too fruitful, but you never know!)
 - Note: the commit message export was so easy I thought I'd just add a little note for it here: you just need to navigate to the folder in the terminal and run: `git log --format='%B%n---' > commitMessages.txt`
 
-
 On y va!
+
+### 11.15.25 | Initial Readthrough
+
+Spent the last few days reading through all of the (hashtag) Data to get a bird's eye view of the material. Already some ideas brewing, but trying to keep it on just a surface level. One note is that it is really interesting how divorced I feel from most of the content. Obviously, it is me, and I recognize the voice, but with the time between, I have less of a stake in the goals/desires/worries etc (even though much of it is stuff that I am still focusing on, which makes it even more interesting)
+
+Another note: It is nice having multiple files to be looking through. Definitely feels like there's going to be different insights gleaned from the different streams of information
+
+### 11.17.25 | Initial Analysis Pass
+
+Fun! This was surprisingly enjoyable.
+
+You definitely get into a groove while doing these. It is interesting how the thoughts, connections, framework, etc. arise in the actual DOING of this. It's worth knowing that this is the case, especially realizing that subsequent passes are going to reincorporate tags that get established later.
+
+Halfway through I realized that I was tagging VERBS and OBJECTS that could be used in conjunction with each other ([referencing + precedents](Cide/referencing.md), as an example) Possibly not kosher in the classical QDA methodology, but seems to be a fun way to organize this material.
+
+Next steps:
+* Do a pass specifically thinking about [What do Prototypes Prototype](https://hci.stanford.edu/courses/cs247/2012/readings/WhatDoPrototypesPrototype.pdf) calling out which type of prototype is being documented for each stage. I like the idea of choosing a specific designerly lens, and reading through it that way. WDPP is the paper I think about most when doing this (and teaching) but Katherine McElroy's levels of fidelity from [Prototyping for Designers](https://www.oreilly.com/library/view/prototyping-for-designers/9781491954072/) is another fun option.
+* I am curious if it is worth cleaning up some of these tags if there is overlap (or if it is even appropriate)
+* Once both those things are done, do a third (or fourth, depending) pass that applies all the previous knowledge to tagging the entire thing in a more consistent way
+* Once that consistency is established, do an analysis pass of the MeetingNotes, CommitMessages, and Precedents data.
+
