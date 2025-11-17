@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Journal.md",
+                "file": "Codes/a peak behind the curtain.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Journal"
+              "title": "a peak behind the curtain"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Journal.md",
+                "file": "Codes/a peak behind the curtain.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Journal"
+              "title": "Backlinks for a peak behind the curtain"
             }
           },
           {
@@ -155,8 +155,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,18 +186,36 @@
   },
   "active": "66225a5fc49006d1",
   "lastOpenFiles": [
-    "Data/MeetingNotes.md",
-    "Data/CommitMessages.md",
-    "Journal.md",
-    "Data/ReflectionReflection.md",
+    "Codes/ambiguity.md",
+    "Codes/audio.md",
     "Data/Journal.md",
-    "Data/Reflections on Design Reflection.md",
-    "Data/Precedents.md",
-    "Data/Journal 2.md",
-    "Journal 2.md",
-    "Reflections on Design Reflection.md",
-    "Precedents.md",
-    "MeetingNotes.md",
+    "Codes/posture.md",
+    "Codes/difficulty.md",
+    "Codes/autobiography.md",
+    "Codes/showcase.md",
+    "Codes/colleagues.md",
+    "Codes/updates.md",
+    "Codes/prototyping.md",
+    "Codes/showing.md",
+    "Codes/concept.md",
+    "Codes/documentation.md",
+    "Codes/suggesting.md",
+    "Codes/pop-cultre reference.md",
+    "Codes/building.md",
+    "Codes/expanding.md",
+    "Codes/tweaking.md",
+    "Codes/hardware.md",
+    "Codes/evidence.md",
+    "Codes/problem.md",
+    "Codes/development.md",
+    "Codes/scripting.md",
+    "Codes/worrying.md",
+    "Codes/hoping.md",
+    "Codes/explaining.md",
+    "Extractions",
+    "Analysis/progress.json",
+    "Analysis",
+    "Codes",
     "Extractions",
     "Data",
     "Codes",

@@ -1,0 +1,9 @@
+---
+code description: ""
+---
+
+![[Data/Journal#^id-2025-11-17--10-04-51]]
+![[Data/Journal#^id-2025-11-17--10-21-30]]
+![[Data/Journal#^id-2025-11-17--10-43-06]]
+![[Data/Journal#^id-2025-11-17--15-51-59]]
+![[Data/Journal#^id-2025-11-17--15-54-29]]

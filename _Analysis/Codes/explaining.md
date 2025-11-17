@@ -1,0 +1,18 @@
+---
+code description: ""
+---
+
+![[Data/Journal#^id-2025-11-17--15-22-01]]
+![[Data/Journal#^id-2025-11-17--15-26-11]]
+![[Data/Journal#^id-2025-11-17--15-27-46]]
+![[Data/Journal#^id-2025-11-17--15-31-51]]
+![[Data/Journal#^id-2025-11-17--15-42-28]]
+![[Data/Journal#^id-2025-11-17--15-42-36]]
+![[Data/Journal#^id-2025-11-17--15-42-55]]
+![[Data/Journal#^id-2025-11-17--15-44-08]]
+![[Data/Journal#^id-2025-11-17--15-44-44]]
+![[Data/Journal#^id-2025-11-17--15-46-27]]
+![[Data/Journal#^id-2025-11-17--15-47-15]]
+![[Data/Journal#^id-2025-11-17--15-48-18]]
+![[Data/Journal#^id-2025-11-17--15-49-21]]
+![[Data/Journal#^id-2025-11-17--15-51-12]]
