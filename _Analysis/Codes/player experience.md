@@ -23,3 +23,4 @@ code description: ""
 ![[Data/Journal#^id-2025-11-17--15-51-59]]
 ![[Data/Journal#^id-2025-11-17--15-53-12]]
 ![[Data/Journal#^id-2025-11-17--15-54-29]]
+![[Data/MeetingNotes#^id-2025-11-18--17-17-52]]

@@ -9,3 +9,4 @@ code description: ""
 ![[Data/Journal#^id-2025-11-17--15-50-30]]
 ![[Data/Journal#^id-2025-11-17--09-50-43]]
 ![[Data/Journal#^id-2025-11-17--15-29-55]]
+![[Data/MeetingNotes#^id-2025-11-18--17-18-34]]

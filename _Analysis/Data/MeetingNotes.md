@@ -1,58 +1,56 @@
 # Weekly Meeting Notes
 
-Test
-
 ## 09.25.23
 
-- flying faders - fighting against the user
-- fidelity/resolution of the continuous controller
-- [Granulator](https://www.ableton.com/en/packs/granulator-ii/) 
-- Unreal - Metasounds
-- Rafael Lozano-Hemmer: [Sphere Packing: Bach](https://lozano-hemmer.com/sphere_packing_bach.php) 
+- flying faders - fighting against the user [[idea]] ^id-2025-11-18--17-22-26
+- fidelity/resolution of the continuous controller [[problem]] ^id-2025-11-18--17-22-34
+- [Granulator](https://www.ableton.com/en/packs/granulator-ii/) [[Codes/precedents|precedents]] [[audio]] ^id-2025-11-18--17-22-39
+- Unreal - Metasounds [[tools]] [[linking to resource]] ^id-2025-11-18--17-22-47
+- Rafael Lozano-Hemmer: [Sphere Packing: Bach](https://lozano-hemmer.com/sphere_packing_bach.php) [[Codes/precedents|precedents]] [[audio]] ^id-2025-11-18--17-22-54
 ## 09.18.23
 
 Things discussed/referenced in this week's meeting:
-- [Examen psicométrico](https://www.youtube.com/watch?v=Ry_Bu0a17JY&t=25s) also [here](https://aac-testpsycho.fr/images/how-to-test-1.jpg) 
-- [G80](https://aac-testpsycho.fr/images/how-to-test-1.jpg) large scale fader artwork (which reminds me or Tristan Perich's [Mictrotonal Wall](http://tristanperich.com/#Artwork/Microtonal_Wall))
-- Adding vibration motors to each knob for tactile feedback. Need to check to see if I have any in my kit (which I think I might), but [these new tiny ones from Sparkfun](https://www.sparkfun.com/products/8449) seem pretty great
+- [Examen psicométrico](https://www.youtube.com/watch?v=Ry_Bu0a17JY&t=25s) also [here](https://aac-testpsycho.fr/images/how-to-test-1.jpg) [[Codes/precedents|precedents]] [[hardware]] ^id-2025-11-18--17-21-36
+- [G80](https://aac-testpsycho.fr/images/how-to-test-1.jpg) large scale fader artwork (which reminds me or Tristan Perich's [Mictrotonal Wall](http://tristanperich.com/#Artwork/Microtonal_Wall)) [[Codes/precedents|precedents]] [[audio]] ^id-2025-11-18--17-21-45
+- Adding vibration motors to each knob for tactile feedback. Need to check to see if I have any in my kit (which I think I might), but [these new tiny ones from Sparkfun](https://www.sparkfun.com/products/8449) seem pretty great [[tools]] [[linking to resource]] [[hardware]] ^id-2025-11-18--17-21-54
 
 ## 09.11.23
 
 Existing interface products to draw inspiration from:
--  [midi fighter](https://www.midifighter.com/#Twister) specifically the twister. Rotate, push
-- [3D connexion space mouse](https://3dconnexion.com/ca/product/spacemouse-wireless/) Rotate, push, 6 degrees of freedom. I've used this for Max/MSP performances before. Barrier of entry for new users might be too high, but the idea of expressive motion is worth exploring
-- [arcade-style joystick](https://www.sparkfun.com/products/9182) reads "game" while also giving expressive control
-- [touch potentiometer](https://learn.sparkfun.com/tutorials/touch-potentiometer-hookup-guide/all) buchla-inspired touch control
-- [touché](https://www.expressivee.com/1-touche) this thing! Similar to the 3D connexion space mouse, but with a more "musical performance" vibe
+-  [midi fighter](https://www.midifighter.com/#Twister) specifically the twister. Rotate, push  [[Codes/precedents|precedents]] [[hardware]] ^id-2025-11-18--17-19-19
+- [3D connexion space mouse](https://3dconnexion.com/ca/product/spacemouse-wireless/) Rotate, push, 6 degrees of freedom. I've used this for Max/MSP performances before. Barrier of entry for new users might be too high, but the idea of expressive motion is worth exploring [[Codes/precedents|precedents]] [[tools]] [[hardware]] ^id-2025-11-18--17-19-23
+- [arcade-style joystick](https://www.sparkfun.com/products/9182) reads "game" while also giving expressive control [[Codes/precedents|precedents]] [[hardware]] ^id-2025-11-18--17-19-51
+- [touch potentiometer](https://learn.sparkfun.com/tutorials/touch-potentiometer-hookup-guide/all) buchla-inspired touch control [[Codes/precedents|precedents]] [[hardware]] [[tools]] ^id-2025-11-18--17-20-02
+- [touché](https://www.expressivee.com/1-touche) this thing! Similar to the 3D connexion space mouse, but with a more "musical performance" vibe [[Codes/precedents|precedents]] [[hardware]] ^id-2025-11-18--17-20-12
 
 For next time:
-- Mockups for the screen-based visuals
+- Mockups for the screen-based visuals [[planning]] [[visuals]] [[lookFeel]] ^id-2025-11-18--17-21-01
 	
 
 ## 08.28.23
 
 ### GV
 RNBO:  
-- Finally, Max-like patches can now be compiled for platforms like web browsers, VST/AU, C/C++.  
-- it's pretty neat how patch-defined parameters are exposed in HTML without doing much additional coding  
-- However, it's disappointing that dependencies or externals cannot be embedded in the compiled code due to licensing restrictions.  
-- The $300 fee for a cloud-based WebAssembly compiler is rather steep.  
-- MB: my current Max 8 license is from the initial beta testing program which doesn't allor for RNBO (anymore). I would have to upgrade my other academic license and also add RNBO. Combined, this is around $277. Nothing to break the bank, but something to consider as I figure out which technologies are the best fit for this particular project. 
+- Finally, Max-like patches can now be compiled for platforms like web browsers, VST/AU, C/C++. [[tools]] ^id-2025-11-18--17-16-05
+- it's pretty neat how patch-defined parameters are exposed in HTML without doing much additional coding [[options]] ^id-2025-11-18--17-16-27
+- However, it's disappointing that dependencies or externals cannot be embedded in the compiled code due to licensing restrictions. [[problem]] ^id-2025-11-18--17-16-17
+- The $300 fee for a cloud-based WebAssembly compiler is rather steep. [[problem]] [[tools]] ^id-2025-11-18--17-16-34
+- MB: my current Max 8 license is from the initial beta testing program which doesn't allor for RNBO (anymore). I would have to upgrade my other academic license and also add RNBO. Combined, this is around $277. Nothing to break the bank, but something to consider as I figure out which technologies are the best fit for this particular project. [[spelling]] [[tools]] ^id-2025-11-18--17-16-48
   
 GRIT. ([https://www.timohoogland.com/grit/](https://www.timohoogland.com/grit/))  
-- This simple yet nice sounding synth by Timo Hoogland utilizes RNBO.  MB: so nice
+- This simple yet nice sounding synth by Timo Hoogland utilizes RNBO.  MB: so nice [[Codes/precedents|precedents]] [[audio]] ^id-2025-11-18--17-17-20
   
 Sound-Controlled Games  
-- Wolfenstein 3D controlled by sound. Demo video by Støj ([https://vimeo.com/207831279](https://vimeo.com/207831279))  MB: Hilarious
-- Asteroids controlled by sound features using interactive machine learning. Webapp by Louis McCallum. ([https://mimicproject.com/code/ba532449-be46-2d30-70c4-1317839eadcf?embed=true](https://mimicproject.com/code/ba532449-be46-2d30-70c4-1317839eadcf?embed=true))  MB: Couldn't get this one to work on my laptop. Need to find a description of what the inputs should be so I can. [One Hand Clapping](http://www.indiecade.com/2018-games/one-hand-clapping/) comes to mind as well. 
+- Wolfenstein 3D controlled by sound. Demo video by Støj ([https://vimeo.com/207831279](https://vimeo.com/207831279))  MB: Hilarious [[Codes/precedents|precedents]] [[audio]] ^id-2025-11-18--17-17-28
+- Asteroids controlled by sound features using interactive machine learning. Webapp by Louis McCallum. ([https://mimicproject.com/code/ba532449-be46-2d30-70c4-1317839eadcf?embed=true](https://mimicproject.com/code/ba532449-be46-2d30-70c4-1317839eadcf?embed=true))  MB: Couldn't get this one to work on my laptop. Need to find a description of what the inputs should be so I can. [One Hand Clapping](http://www.indiecade.com/2018-games/one-hand-clapping/) comes to mind as well. [[Codes/precedents|precedents]] [[player experience]] ^id-2025-11-18--17-17-52
   
 Libraries for Interactive Machine Learning  
-- InteractML: Unity plugin for interactive machine learning ([https://github.com/Interactml/iml-unity/tree/VRInterface](https://github.com/Interactml/iml-unity/tree/VRInterface))  
+- InteractML: Unity plugin for interactive machine learning ([https://github.com/Interactml/iml-unity/tree/VRInterface](https://github.com/Interactml/iml-unity/tree/VRInterface)) [[tools]] ^id-2025-11-18--17-18-00
 - Rapidlib: JS library for interactive machine learning ([https://mzed.github.io/RapidLib/](https://mzed.github.io/RapidLib/))  
-- MB: Fascinating
+- MB: Fascinating [[tools]] ^id-2025-11-18--17-18-29
   
-For literature review, I recommend starting with Dolphin (2014) ([https://doi.org/10.1093/oxfordhb/9780199797226.013.003](https://doi.org/10.1093/oxfordhb/9780199797226.013.003)) and research by Lobbers and Fazekas ([https://sebastianlobbers.com/research/](https://sebastianlobbers.com/research/))  MB: loved the Dolphin article. Mentioned in the [initial precedent study](Precedents.md) but this is already influencing a lot of overall thought about design goals for this project (musical toy vs musical puzzle vs something in-between). 
+For literature review, I recommend starting with Dolphin (2014) ([https://doi.org/10.1093/oxfordhb/9780199797226.013.003](https://doi.org/10.1093/oxfordhb/9780199797226.013.003)) and research by Lobbers and Fazekas ([https://sebastianlobbers.com/research/](https://sebastianlobbers.com/research/))  MB: loved the Dolphin article. Mentioned in the [initial precedent study](Precedents.md) but this is already influencing a lot of overall thought about design goals for this project (musical toy vs musical puzzle vs something in-between). [[goal]] [[anti-puzzle]] [[concept]] [[questioning]] ^id-2025-11-18--17-18-34
   
-Upsammy's album Zoom (2020) is worth checking out ([https://open.spotify.com/album/6Fgw2NUHzJFbOQ5u4o0Clq?si=8A0vophFTKOoOeFxZ4uUtQ](https://open.spotify.com/album/6Fgw2NUHzJFbOQ5u4o0Clq?si=8A0vophFTKOoOeFxZ4uUtQ)). I think its vibe is suitable for all ages.  MB: really very nice. they're playing with Tim Hecker in November!
+Upsammy's album Zoom (2020) is worth checking out ([https://open.spotify.com/album/6Fgw2NUHzJFbOQ5u4o0Clq?si=8A0vophFTKOoOeFxZ4uUtQ](https://open.spotify.com/album/6Fgw2NUHzJFbOQ5u4o0Clq?si=8A0vophFTKOoOeFxZ4uUtQ)). I think its vibe is suitable for all ages.  MB: really very nice. they're playing with Tim Hecker in November! [[Codes/precedents|precedents]] [[audio]] ^id-2025-11-18--17-19-00
   
-Submit the project to A MAZE Festival Berlin (May 8-11, 2024). When is the submission deadline? MB: if [last year](https://2023.award.amaze-berlin.de/) is any indication (May 10-12, 2023) submissions start on 12/12ish and close 1/31.
+Submit the project to A MAZE Festival Berlin (May 8-11, 2024). When is the submission deadline? MB: if [last year](https://2023.award.amaze-berlin.de/) is any indication (May 10-12, 2023) submissions start on 12/12ish and close 1/31. [[questioning]] [[planning]] ^id-2025-11-18--17-19-05

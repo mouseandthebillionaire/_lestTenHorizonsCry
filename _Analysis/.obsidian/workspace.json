@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data/Journal.md",
+                "file": "Data/MeetingNotes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Journal"
+              "title": "MeetingNotes"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data/Journal.md",
+                "file": "Data/MeetingNotes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Journal"
+              "title": "Backlinks for MeetingNotes"
             }
           },
           {
@@ -186,10 +186,13 @@
   },
   "active": "66225a5fc49006d1",
   "lastOpenFiles": [
+    "Codes/idea.md",
+    "Codes/anti-puzzle.md",
+    "Data/Journal.md",
+    "Codes/lookFeel.md",
     "Codes/implementation.md",
     "Codes/memory.md",
     "Codes/role.md",
-    "Codes/look/feel.md",
     "Codes/look",
     "Codes/player agency.md",
     "Codes/options.md",
@@ -198,7 +201,6 @@
     "Codes/a peak behind the curtain.md",
     "Codes/ambiguity.md",
     "Codes/audio.md",
-    "Data/Journal.md",
     "Codes/posture.md",
     "Codes/difficulty.md",
     "Codes/autobiography.md",
@@ -211,8 +213,6 @@
     "Codes/documentation.md",
     "Codes/suggesting.md",
     "Codes/pop-cultre reference.md",
-    "Codes/building.md",
-    "Codes/expanding.md",
     "Extractions",
     "Analysis/progress.json",
     "Analysis",

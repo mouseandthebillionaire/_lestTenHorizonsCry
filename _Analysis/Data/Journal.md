@@ -55,13 +55,13 @@ Next steps:
 
 ## Screen Interface Mocks
 
-The starting inspiration here is bearwarp's [Glass Codex](https://bearwarp.com/#/glass-codecs/). I like the image-manipulation, post-processing, hand-written material vibe. Not sure if that will fit with the eventual aesthetics that the interface lends itself to (especially the more organic hand-written stuff), but it's a place to start.  [[Codes/precedents|precedents]] [[aesthetics]] [[feel|look/feel]] [[colleagues]] ^id-2025-11-17--10-10-48
+The starting inspiration here is bearwarp's [Glass Codex](https://bearwarp.com/#/glass-codecs/). I like the image-manipulation, post-processing, hand-written material vibe. Not sure if that will fit with the eventual aesthetics that the interface lends itself to (especially the more organic hand-written stuff), but it's a place to start.  [[Codes/precedents|precedents]] [[aesthetics]] [[lookFeel|look/feel]] [[colleagues]] ^id-2025-11-17--10-10-48
 
 ![spacey interface](Media/interfaceMock_0.gif)
-Here is an exploration using the [lunar landscape](https://assetstore.unity.com/packages/3d/environments/landscapes/lunar-landscape-3d-132614) asset from Glitch Squirrel, tweaking the variables beyond recognition of an actual landscape and applying color changes. This isn't quite as "vaporwave" as it could be, but there's something interesting here. More direct control of the "mountain" heights would be fun, but also that is dipping even more directly into the Mu Cartographer vibe, so probably good to take a step away from that. [[exploring]] [[pop-cultre reference]] [[Codes/precedents|precedents]] [[comparing]] [[tools]] [[feel|look/feel]] ^id-2025-11-17--10-11-36
+Here is an exploration using the [lunar landscape](https://assetstore.unity.com/packages/3d/environments/landscapes/lunar-landscape-3d-132614) asset from Glitch Squirrel, tweaking the variables beyond recognition of an actual landscape and applying color changes. This isn't quite as "vaporwave" as it could be, but there's something interesting here. More direct control of the "mountain" heights would be fun, but also that is dipping even more directly into the Mu Cartographer vibe, so probably good to take a step away from that. [[exploring]] [[pop-cultre reference]] [[Codes/precedents|precedents]] [[comparing]] [[tools]] [[lookFeel|look/feel]] ^id-2025-11-17--10-11-36
 
 ![photo manipulation](Media/interfaceMock_1.gif)
-Here's a somewhat successful imagining of what an "align the photos" experience could look like. Probably too on the nose, but it's sort of visually interesting. Want to see more 2D interfacey controls on the screen maybe? (but again, is that too similar to Mu Cartographer? Hoe your own row!) [[exploring]] [[comparing]] [[Codes/precedents|precedents]] [[joking]] [[referencing]] [[feel|look/feel]] ^id-2025-11-17--10-12-32
+Here's a somewhat successful imagining of what an "align the photos" experience could look like. Probably too on the nose, but it's sort of visually interesting. Want to see more 2D interfacey controls on the screen maybe? (but again, is that too similar to Mu Cartographer? Hoe your own row!) [[exploring]] [[comparing]] [[Codes/precedents|precedents]] [[joking]] [[referencing]] [[lookFeel|look/feel]] ^id-2025-11-17--10-12-32
 
 ![dials and text](Media/interfaceMock_0.png)
 Dipping into that organic Glass Codex experience here. I wonder how that handwriting would feel if everything else was even more digital? I think that some kind of text/koan displayed on the screen when a desired state is reached is a good first step in this. [[Codes/precedents|precedents]] [[player experience]] ^id-2025-11-17--10-13-01
@@ -72,7 +72,7 @@ note: listening to Yu Su's [Yellow River Blue](https://yusu.bandcamp.com/album/y
 
 [Experiment #01](https://soundcloud.com/thebillionaire/lthc-01)
 
-This first track is an experiment in doing the synthesis purely with an external synth, specifically here the Make Noise [0-Coast](https://www.makenoisemusic.com/synthesizers/ohcoast) [[audio]] [[exploring]] [[feel|look/feel]] ^id-2025-11-17--10-15-12
+This first track is an experiment in doing the synthesis purely with an external synth, specifically here the Make Noise [0-Coast](https://www.makenoisemusic.com/synthesizers/ohcoast) [[audio]] [[exploring]] [[lookFeel|look/feel]] ^id-2025-11-17--10-15-12
 
 ![0-Coast by Make Noise](https://www.makenoisemusic.com/thumbs/synthesizers/ohcoast/0-coast-sep20-1584x1056-q100.jpg)
 
@@ -82,15 +82,15 @@ Thus with only 4 knobs we can get a huge amount of variety in our sound creation
 
 [Experiment #02](https://soundcloud.com/thebillionaire/lthc-experiment-02)
 
-I recorded this experiment just to prove that it would be terrible to let the user have full range control of large changes, and what do you know. It doesn't sound _that_ bad. I mean, it doesn't sound *great* but also. Kind of weird and cool? [[learning]] [[audio]] [[exploring]] [[feel|look/feel]] ^id-2025-11-17--10-18-30
+I recorded this experiment just to prove that it would be terrible to let the user have full range control of large changes, and what do you know. It doesn't sound _that_ bad. I mean, it doesn't sound *great* but also. Kind of weird and cool? [[learning]] [[audio]] [[exploring]] [[lookFeel|look/feel]] ^id-2025-11-17--10-18-30
 
 [Experiment #03](https://soundcloud.com/thebillionaire/lthc-exploration-03)
 
-Here we have a version with Ableton Live using the MPE Sine Pressure sound. Twiddling some knobs. Trying it out. A few of these other instruments had settings that were either a) too sweeping in their changes or b) not nearly enough. This one seems like a good middle ground. Some of the adjustments work better than others, and obviously it would be in the actual build to decide which knobs affect which parameters. [[exploring]] [[audio]] [[kicking down the road]] [[feel|look/feel]] ^id-2025-11-17--10-18-54
+Here we have a version with Ableton Live using the MPE Sine Pressure sound. Twiddling some knobs. Trying it out. A few of these other instruments had settings that were either a) too sweeping in their changes or b) not nearly enough. This one seems like a good middle ground. Some of the adjustments work better than others, and obviously it would be in the actual build to decide which knobs affect which parameters. [[exploring]] [[audio]] [[kicking down the road]] [[lookFeel|look/feel]] ^id-2025-11-17--10-18-54
 
 ## Knob Study | 09.24.23
 
-A lot of ways to go here. Obviously there is the "basic modular synthesizer knob" (see 0-Coast, above), but there's a little variety even there. You can buy [replacement Make Noise knobs](https://eu.elevatorsound.com/product/make-noise-replacement-eurorack-knobs-large-white-x-5-pack/), so that's an interesting option. Though looking at these, they read sooo vanilla. Like just your basic music-nerd knob. [[deciding]] [[physicality]] [[Codes/precedents|precedents]] [[referencing]] [[joking]] [[feel|look/feel]] ^id-2025-11-17--10-19-39
+A lot of ways to go here. Obviously there is the "basic modular synthesizer knob" (see 0-Coast, above), but there's a little variety even there. You can buy [replacement Make Noise knobs](https://eu.elevatorsound.com/product/make-noise-replacement-eurorack-knobs-large-white-x-5-pack/), so that's an interesting option. Though looking at these, they read sooo vanilla. Like just your basic music-nerd knob. [[deciding]] [[physicality]] [[Codes/precedents|precedents]] [[referencing]] [[joking]] [[lookFeel|look/feel]] ^id-2025-11-17--10-19-39
 
 ![make noise replacement knobs](https://elevatorsound.com/wp-content/uploads/2020/04/make-knob-5-w-larg-2.jpg)
 
@@ -127,11 +127,11 @@ So, as it stands with this idea:
 
 [Song Discover Experience Experiment 01 - Janine](https://soundcloud.com/thebillionaire/lest-ten-horizons-cry-janine)
 
-Over the last few days I have worked up an example of what this audio artifact "uncovering" could sound like. The main synth is manipulated in such a way to get a desired overtone frequency, specific beating LFO rhythm, and ideal pitch. I would assume that this same instrument would connect all of these songs together, and the next test would be to use it on a second song to see if this is possible. The song uncovered here is a tweaked (beat-repeat, ping-pong delay, etc) version of Tricerapop's [Janine](https://tricerapop.bandcamp.com/track/janine). Rock n roll. [[past-work]] [[referencing]] [[playful]] [[exploring]] [[audio]] [[feel|look/feel]] [[role]] ^id-2025-11-17--14-09-32
+Over the last few days I have worked up an example of what this audio artifact "uncovering" could sound like. The main synth is manipulated in such a way to get a desired overtone frequency, specific beating LFO rhythm, and ideal pitch. I would assume that this same instrument would connect all of these songs together, and the next test would be to use it on a second song to see if this is possible. The song uncovered here is a tweaked (beat-repeat, ping-pong delay, etc) version of Tricerapop's [Janine](https://tricerapop.bandcamp.com/track/janine). Rock n roll. [[past-work]] [[referencing]] [[playful]] [[exploring]] [[audio]] [[lookFeel|look/feel]] [[role]] ^id-2025-11-17--14-09-32
 
 ## Illustration Exploration | 10.01.23
 
-Building off of the choice to use Tricerapop, here is a photo from the same time period. I like the use of charcoals in Procreate here to get that "foggy hazy memory" type vibe. In this export were are cycling through 3 different brush types, but I think it would be more effective if the brush was the same for each version of the sketch.  [[referencing]] [[past-work]] [[exploring]] [[visuals]] [[vibes]] [[learning]] [[refining]] [[tools]] [[colleagues]] [[feel|look/feel]] ^id-2025-11-17--14-10-03
+Building off of the choice to use Tricerapop, here is a photo from the same time period. I like the use of charcoals in Procreate here to get that "foggy hazy memory" type vibe. In this export were are cycling through 3 different brush types, but I think it would be more effective if the brush was the same for each version of the sketch.  [[referencing]] [[past-work]] [[exploring]] [[visuals]] [[vibes]] [[learning]] [[refining]] [[tools]] [[colleagues]] [[lookFeel|look/feel]] ^id-2025-11-17--14-10-03
 
 ![Dumas and Anderson](Media/sketchTest.png)
 For following iterations, explore:
@@ -158,7 +158,7 @@ The process of making that first track was so fun that I immediately made anothe
 
 [Song Discovery Experience Experiment 02 - Day's Never Say Die](https://soundcloud.com/thebillionaire/daysneverdie)
 
-This iteration uses The Red West's [Day's Die](https://www.youtube.com/watch?v=4S4qVEqXwsE) (again with a heavy ping-pong delay) and an overlay of tons of sounds. Filtering the sounds helps to reveal that song, but again it remains fairy obfuscated from the various effects. [[exploring]] [[audio]] [[values]] [[feel|look/feel]] ^id-2025-11-17--15-23-47
+This iteration uses The Red West's [Day's Die](https://www.youtube.com/watch?v=4S4qVEqXwsE) (again with a heavy ping-pong delay) and an overlay of tons of sounds. Filtering the sounds helps to reveal that song, but again it remains fairy obfuscated from the various effects. [[exploring]] [[audio]] [[values]] [[lookFeel|look/feel]] ^id-2025-11-17--15-23-47
 
 At this point I should probably stop making tracks (or at least not prioritizing that) and move on to the actual implementation. Next is to get them into Unity with RNBO and start seeing how an effects chain in there might work/sound. [[planning]] [[implementation]] ^id-2025-11-17--15-24-13
 
@@ -183,7 +183,7 @@ Yes! This is the way to go (or at least arises as something that I can wrap my m
 This iteration uses RNBO <em>only</em> to handle the effects chain of each individual track. Then the Unity mixer is responsible for the volume control for each track. This makes a whole lot more sense, and paves the way  to easily swap in/out the songs via code later, which will make the project more extendable. [[explaining]] [[audio]] [[deciding]] [[implementation]] ^id-2025-11-17--15-26-11
 
 Next:
-- Build a visual interface in the screen that shows where the dials are currently set [[planning]] [[visuals]] [[feel|look/feel]] ^id-2025-11-17--15-26-35
+- Build a visual interface in the screen that shows where the dials are currently set [[planning]] [[visuals]] [[lookFeel|look/feel]] ^id-2025-11-17--15-26-35
 - Program a 'dial/knob' script/object [[planning]] [[scripting]] [[implementation]] ^id-2025-11-17--15-26-51
 - Add more effects to the RNBO plugin (notably distortion/bit-crushing which is awful in Unity) [[planning]] [[audio]] [[implementation]] ^id-2025-11-17--15-27-13
 
@@ -247,9 +247,9 @@ Moving on!
 
 Next (and thoughts):
 
-- Also spent a TON of time working on the RNBO patch, and there is a bunch of fun functionality in there right now. The synth sound as implemented feels a little too rambly/funky and so refining that is a priority. [[exploring]] [[audio]] [[refining]] [[planning]] [[feel|look/feel]] [[implementation]] ^id-2025-11-17--15-37-44
+- Also spent a TON of time working on the RNBO patch, and there is a bunch of fun functionality in there right now. The synth sound as implemented feels a little too rambly/funky and so refining that is a priority. [[exploring]] [[audio]] [[refining]] [[planning]] [[lookFeel|look/feel]] [[implementation]] ^id-2025-11-17--15-37-44
 - Once the dials are all working appropriately in the Unity project it will be interesting to see how the 'tuning' aspect feels, but as of now it feels pretty bad? There's no visual feedback (by design) and the audio feedback is too ambiguous? And some part of the project design goals is ambiguity, but maybe this is too much? Something to test with others, as well. One thought (to also address the rambly synth mentioned above) is to add a third voice with fairly one-to-one mapping pitch/bpm/volume/etc [[problem]] [[ambiguity]] [[testing]] [[suggesting]] ^id-2025-11-17--15-38-13
-- Mock up some layout designs for the final form factor (acknowledging that this will probably be a temporary solution) [[planning]] [[hardware]] [[physicality]] [[feel|look/feel]] ^id-2025-11-17--15-39-03
+- Mock up some layout designs for the final form factor (acknowledging that this will probably be a temporary solution) [[planning]] [[hardware]] [[physicality]] [[lookFeel|look/feel]] ^id-2025-11-17--15-39-03
 - Write a process post on using AudioMixer Snapshots in the synth settings, cause that business is 🔥 [[planning]] [[documentation]] [[kicking down the road]] ^id-2025-11-17--15-39-18
 
 
@@ -258,7 +258,7 @@ Next (and thoughts):
 
 Over the weekend a new (old) idea presented itself: the concept of a secret world hidden within an otherwise confusing-yet-seemingly-traditional-interface. If we lean more heavily on the first part of the interaction as "traditional" synthesis manipulation, then the switch to the second part can be more rewarding. [[concept]] [[describing]] [[player experience]] [[deciding]] ^id-2025-11-17--15-39-57
 
-So, with this new UI I am attempting to do this. Each of the quadrants is controlled by one of the four dials. And each of these dial/quadrant combos controls a *specific* aspect of the sound generation (step sequencer, synth voice, found-sound, etc) When the player has dialed into the correct "location" then the screen begins to break and glitch, hinting that there's something more here below the surface. [[describing]] [[physicality]] [[audio]] [[player experience]] [[visuals]] [[feel|look/feel]] ^id-2025-11-17--15-40-43
+So, with this new UI I am attempting to do this. Each of the quadrants is controlled by one of the four dials. And each of these dial/quadrant combos controls a *specific* aspect of the sound generation (step sequencer, synth voice, found-sound, etc) When the player has dialed into the correct "location" then the screen begins to break and glitch, hinting that there's something more here below the surface. [[describing]] [[physicality]] [[audio]] [[player experience]] [[visuals]] [[lookFeel|look/feel]] ^id-2025-11-17--15-40-43
 
 <img src="Media/lthc_6.jpg" width="500px" />
 
@@ -284,7 +284,7 @@ After some heavy-duty brainstorming with [DigitalRelic](https://github.com/digit
 
 ![UI 2](Media/UIartboard_2.png)
 
-==![UI 3](Media/UIartboard_3.png)== [[showing]] [[visuals]] [[feel|look/feel]] ^id-2025-11-17--15-45-47
+==![UI 3](Media/UIartboard_3.png)== [[showing]] [[visuals]] [[lookFeel|look/feel]] ^id-2025-11-17--15-45-47
 
 ## Location Design 2.0 | 04.23.24
 
@@ -308,7 +308,7 @@ New enclosure is almost done. We have switched to a vertical layout with the rou
 
 ![Obscured Image 1](Media/images_stage2.png)
 
-Thinking through the images used in the locations. I want them to be autobiographical, but I also don't really want to use actual personal images. The whole thing should be obfuscated and obscure. So, to accomplish this, I have scanned hundreds of images from my own personal photo albums but then run them through Photoshop's Style Transfer Neural filter. (For the record, the above images are from High School so I fed in some trapper-keeper style collage I found online as an initial image reference, but I can't find it now) [[concept]] [[ambiguity]] [[autobiography]] [[explaining]] [[tools]] [[feel|look/feel]] ^id-2025-11-17--15-49-21
+Thinking through the images used in the locations. I want them to be autobiographical, but I also don't really want to use actual personal images. The whole thing should be obfuscated and obscure. So, to accomplish this, I have scanned hundreds of images from my own personal photo albums but then run them through Photoshop's Style Transfer Neural filter. (For the record, the above images are from High School so I fed in some trapper-keeper style collage I found online as an initial image reference, but I can't find it now) [[concept]] [[ambiguity]] [[autobiography]] [[explaining]] [[tools]] [[lookFeel|look/feel]] ^id-2025-11-17--15-49-21
 
 I like this idea of having a machine try to make sense of the images. It fits in thematically that the machine is an actual barrier between the artist and the audience. Also, this idea of the object being some sort of meaning-making device for future audiences to make sense of a reality that has long been forgotten. As it stands now, it's slightly clunky, but there's something here to keep thinking about. [[concept]] [[player experience]] [[problem]] [[questioning]] [[role]] ^id-2025-11-17--15-50-30
 
