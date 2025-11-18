@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Journal.md",
+                "file": "Data/Journal.md",
                 "mode": "source",
                 "source": false
               },
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Journal.md",
+                "file": "Data/Journal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,8 +186,15 @@
   },
   "active": "66225a5fc49006d1",
   "lastOpenFiles": [
-    "Codes/referencing.md",
+    "Codes/implementation.md",
+    "Codes/memory.md",
+    "Codes/role.md",
+    "Codes/look/feel.md",
+    "Codes/look",
+    "Codes/player agency.md",
+    "Codes/options.md",
     "Journal.md",
+    "Codes/referencing.md",
     "Codes/a peak behind the curtain.md",
     "Codes/ambiguity.md",
     "Codes/audio.md",
@@ -206,12 +213,6 @@
     "Codes/pop-cultre reference.md",
     "Codes/building.md",
     "Codes/expanding.md",
-    "Codes/tweaking.md",
-    "Codes/hardware.md",
-    "Codes/evidence.md",
-    "Codes/problem.md",
-    "Codes/development.md",
-    "Codes/scripting.md",
     "Extractions",
     "Analysis/progress.json",
     "Analysis",
