@@ -31,3 +31,7 @@ code description: ""
 ![[Data/CommitMessages#^id-2025-11-18--18-08-08]]
 ![[Data/CommitMessages#^id-2025-11-18--18-29-42]]
 ![[Data/CommitMessages#^id-2025-11-18--18-33-17]]
+![[PrecedentStudy#^id-2025-11-19--09-08-22]]
+![[PrecedentStudy#^id-2025-11-19--09-09-25]]
+![[PrecedentStudy#^id-2025-11-19--09-10-27]]
+![[PrecedentStudy#^id-2025-11-19--09-13-01]]

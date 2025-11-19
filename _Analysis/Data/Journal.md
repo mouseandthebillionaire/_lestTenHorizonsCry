@@ -10,13 +10,13 @@ The audio-component of this could be either
 
 Either could be a good direction, but currently I am leaning toward a simulated synth because it would have a lower barrier of entry for players (i.e simpler control scheme) and could be designed for a cool physical visual aesthetic (a la [lovehulton](https://www.lovehulten.com/)) As far as the "game" element, interface-only is always a favorite here as is  "environmental"-sim (can we consider a [pizza pie](https://github.com/mouseandthebillionaire/purrrfectPizza) an environment? I think so) but both that and the audio/physical aspects will shake out in the ideation phase. [[Codes/precedents|precedents]] [[referencing]] [[past-work]] ^id-2025-11-17--09-57-11
 
-Obviously this builds on previous work (especially [nY-Station](http://www.mouseandthebillionare.com/nys) and even ends up being a somewhat reverse [Furniture Music](https://github.com/Whaaat-Lab/furnitureMusic), but as I think about this are some strong precedents that are doing a lot of things that I'd like to borrow from. Specific detail on each in the [precedents](precedents.md) section, but calling out here some initial thoughts:  [lovehulton](https://www.lovehulten.com/) for physical interface (as mentioned above), [In Other Waters](https://www.fellowtraveller.games/in-other-waters) for screen-based interface, and both [Elektroplankton](https://www.nintendo.com/consumer/gameslist/manuals/DS_Electroplankton.pdf) and [Mu Cartographer](https://titouanm.com/mucartographer/) as more direct references (I'm leaning on Mu Cartographer a lot here in this early conception) [[Codes/precedents|precedents]] [[referencing]] [[past-work]] ^id-2025-11-17--09-52-17
+Obviously this builds on previous work (especially [nY-Station](http://www.mouseandthebillionare.com/nys) and even ends up being a somewhat reverse [Furniture Music](https://github.com/Whaaat-Lab/furnitureMusic), but as I think about this are some strong precedents that are doing a lot of things that I'd like to borrow from. Specific detail on each in the [PrecedentStudy](PrecedentStudy.md) section, but calling out here some initial thoughts:  [lovehulton](https://www.lovehulten.com/) for physical interface (as mentioned above), [In Other Waters](https://www.fellowtraveller.games/in-other-waters) for screen-based interface, and both [Elektroplankton](https://www.nintendo.com/consumer/gameslist/manuals/DS_Electroplankton.pdf) and [Mu Cartographer](https://titouanm.com/mucartographer/) as more direct references (I'm leaning on Mu Cartographer a lot here in this early conception) [[Codes/precedents|precedents]] [[referencing]] [[past-work]] ^id-2025-11-17--09-52-17
 
 That's where we stand now! [[excitment]] ^id-2025-11-17--09-52-50
 
 Next Steps:
 - Ideation [[planning]] ^id-2025-11-17--10-05-53
-- [Precedent Study!](Precedents.md)
+- [Precedent Study!](PrecedentStudy.md)
 
 PS - *Lest Ten Horizons Cry* - is just anagram of "Synthesizer Controller" [[a peak behind the curtain]] ^id-2025-11-17--09-53-28
 
@@ -37,7 +37,7 @@ So, with that in mind, I went into the ideation phase, thinking through what thi
 
 My second major idea hurdle here is what will the visuals look like. I really want this to be a robust simulation-type thing (as mentioned when discussing the precedent of [Nicky Case's Emoji Simulator(Precedents.md/##Nicky Case's Emoji Simulator)]), but while ideating it becomes clear that there is just too much complexity to deal with here. Also, it somewhat goes against the design value of simplicity, which is important.  [[deciding]] [[Codes/precedents|precedents]] [[subtlety]] ^id-2025-11-17--09-59-07
 
-I think the [Shadowmatic](Precedents.md/##Shadowmatic) reference is informative here. As mentioned in the precedents study, the real takeaway is I want to avoid this idea of "right" and "wrong" states (especially when it comes to audio). The sounds should be pleasing no matter what the user has done, but there should still be some sort of ideal "state." The solution for [Tikatmos](Precedents.md##Tikatmos), where the system randomly chose values that the user is trying to locate, is a good place to start. However, there should be some slight increase in complexity and beauty. "A better implementation of the TIKATMOS tuner minigame" still stands. [[Codes/precedents|precedents]] [[past-work]] [[referencing]] ^id-2025-11-17--10-00-30
+I think the [Shadowmatic](Precedents.md/##Shadowmatic) reference is informative here. As mentioned in the precedents study, the real takeaway is I want to avoid this idea of "right" and "wrong" states (especially when it comes to audio). The sounds should be pleasing no matter what the user has done, but there should still be some sort of ideal "state." The solution for [Tikatmos](PrecedentStudy.md##Tikatmos), where the system randomly chose values that the user is trying to locate, is a good place to start. However, there should be some slight increase in complexity and beauty. "A better implementation of the TIKATMOS tuner minigame" still stands. [[Codes/precedents|precedents]] [[past-work]] [[referencing]] ^id-2025-11-17--10-00-30
 
 
 So, the idea is this at this moment:  
@@ -61,7 +61,7 @@ The starting inspiration here is bearwarp's [Glass Codex](https://bearwarp.com/#
 Here is an exploration using the [lunar landscape](https://assetstore.unity.com/packages/3d/environments/landscapes/lunar-landscape-3d-132614) asset from Glitch Squirrel, tweaking the variables beyond recognition of an actual landscape and applying color changes. This isn't quite as "vaporwave" as it could be, but there's something interesting here. More direct control of the "mountain" heights would be fun, but also that is dipping even more directly into the Mu Cartographer vibe, so probably good to take a step away from that. [[exploring]] [[pop-cultre reference]] [[Codes/precedents|precedents]] [[comparing]] [[tools]] [[lookFeel|look/feel]] ^id-2025-11-17--10-11-36
 
 ![photo manipulation](Media/interfaceMock_1.gif)
-Here's a somewhat successful imagining of what an "align the photos" experience could look like. Probably too on the nose, but it's sort of visually interesting. Want to see more 2D interfacey controls on the screen maybe? (but again, is that too similar to Mu Cartographer? Hoe your own row!) [[exploring]] [[comparing]] [[Codes/precedents|precedents]] [[joking]] [[referencing]] [[lookFeel|look/feel]] ^id-2025-11-17--10-12-32
+Here's a somewhat successful imagining of what an "align the photos" experience could look like. Probably too on the nose, but it's sort of visually interesting. Want to see more 2D interfacey controls on the screen maybe? (but again, is that too similar to Mu Cartographer? Hoe your own row!) [[exploring]] [[comparing]] [[Codes/precedents|precedents]] [[playful]]ing]] [[lookFeel|look/feel]] ^id-2025-11-17--10-12-32
 
 ![dials and text](Media/interfaceMock_0.png)
 Dipping into that organic Glass Codex experience here. I wonder how that handwriting would feel if everything else was even more digital? I think that some kind of text/koan displayed on the screen when a desired state is reached is a good first step in this. [[Codes/precedents|precedents]] [[player experience]] ^id-2025-11-17--10-13-01
@@ -90,11 +90,11 @@ Here we have a version with Ableton Live using the MPE Sine Pressure sound. Twid
 
 ## Knob Study | 09.24.23
 
-A lot of ways to go here. Obviously there is the "basic modular synthesizer knob" (see 0-Coast, above), but there's a little variety even there. You can buy [replacement Make Noise knobs](https://eu.elevatorsound.com/product/make-noise-replacement-eurorack-knobs-large-white-x-5-pack/), so that's an interesting option. Though looking at these, they read sooo vanilla. Like just your basic music-nerd knob. [[deciding]] [[physicality]] [[Codes/precedents|precedents]] [[referencing]] [[joking]] [[lookFeel|look/feel]] ^id-2025-11-17--10-19-39
+A lot of ways to go here. Obviously there is the "basic modular synthesizer knob" (see 0-Coast, above), but there's a little variety even there. You can buy [replacement Make Noise knobs](https://eu.elevatorsound.com/product/make-noise-replacement-eurorack-knobs-large-white-x-5-pack/), so that's an interesting option. Though looking at these, they read sooo vanilla. Like just your basic music-nerd knob. [[deciding]] [[physicality]] [[Codes/precedents|precedents]] [[referencing]] [[lookFeel|[[playful]]] ^id-2025-11-17--10-19-39
 
 ![make noise replacement knobs](https://elevatorsound.com/wp-content/uploads/2020/04/make-knob-5-w-larg-2.jpg)
 
-this reddit user's custom wooden knobs are kinda fun, but also a little too "steampunk wink wink nudge nudge get it" for me. [[Codes/precedents|precedents]] [[joking]] [[physicality]] ^id-2025-11-17--10-20-40
+this reddit user's custom wooden knobs are kinda fun, but also a little too "steampunk wink wink nudge nudge get it" for me. [[Codes/precedents|precedents]] [[physicality]] ^id-20[[playful]]10-20-40
 
 ![wooden knobs from ringolio in r/Luthier](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fexternal-preview.redd.it%2FoqYmOYBvmKmdaOzOUnstJ9EhdGe7hikRRU_8L-zYcZo.jpg%3Fauto%3Dwebp%26s%3D858dc67b47547affd75542de6df44a31b476e6c6&f=1&nofb=1&ipt=2e481f27160f81adadfc481ac791db2f5e1294fe13712c9a91a188bfce394000&ipo=images)
 
@@ -108,9 +108,7 @@ The question then is also, what kind of input are we getting from the knobs? Pro
 
 ## A Narrative Emerges |  09.26.23
 
-Come with me on a journey for a minute. [[joking]] [[playful]] ^id-2025-11-17--10-23-14
-
-So, in thinking about the visuals for this thing, I asked myself "what would [Z](https://github.com/zspacesheikh) do?" and started thinking about using Procreate to work on sketches. Much of this project makes me think of TIKATMOS obviously, and this idea of tuning into some distant culture is compelling. You are searching about for radio waves and get glimpses of what these beings are interested in, snapshots of art, disjointed photographic imagery, snippets of songs, etc. (this also functions similarly to In Other Waters) [[referencing]] [[tools]] [[past-work]] [[player experience]] [[Codes/precedents|precedents]] [[questioning]] [[colleagues]] ^id-2025-11-17--10-43-12
+Come with me on a journey for a minute. [[playful]] ^id-2025-11-17--10-23[[playful]]n thinking about the visuals for this thing, I asked myself "what would [Z](https://github.com/zspacesheikh) do?" and started thinking about using Procreate to work on sketches. Much of this project makes me think of TIKATMOS obviously, and this idea of tuning into some distant culture is compelling. You are searching about for radio waves and get glimpses of what these beings are interested in, snapshots of art, disjointed photographic imagery, snippets of songs, etc. (this also functions similarly to In Other Waters) [[referencing]] [[tools]] [[past-work]] [[player experience]] [[Codes/precedents|precedents]] [[questioning]] [[colleagues]] ^id-2025-11-17--10-43-12
 
 But, I began thinking (especially when considering what audio snippets could be used) that this also functions a lot like memory. We have these flashes of imagery, sounds, etc that tell a hazy story of some nostalgic piece of our lives. And what if the piece could be about that? What if the entire thing is a more ambiguous auto-biographical piece about memory, nostalgia, and shared histories? In this vein I could lean on existing photograph/audio/home-movies and the wealth of recorded music from myself, friends, family, etc. [[theory]] [[questioning]] [[deciding]] [[planning]] [[autobiography]] [[memory]] [[audio]] ^id-2025-11-17--10-44-10
 

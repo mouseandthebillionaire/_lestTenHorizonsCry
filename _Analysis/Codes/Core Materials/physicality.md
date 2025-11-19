@@ -18,3 +18,7 @@ code description: ""
 ![[Data/Journal#^id-2025-11-17--10-01-30]]
 ![[Data/CommitMessages#^id-2025-11-18--18-08-41]]
 ![[Data/CommitMessages#^id-2025-11-18--18-30-45]]
+![[PrecedentStudy#^id-2025-11-19--09-09-25]]
+![[PrecedentStudy#^id-2025-11-19--09-10-09]]
+![[PrecedentStudy#^id-2025-11-19--09-11-46]]
+![[PrecedentStudy#^id-2025-11-19--09-13-01]]

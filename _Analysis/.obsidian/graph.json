@@ -8,10 +8,31 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "Core Materials",
+      "query": "CommitMessages",
       "color": {
         "a": 1,
         "rgb": 14701138
+      }
+    },
+    {
+      "query": "PrecedentStudy",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "MeetingNotes",
+      "color": {
+        "a": 1,
+        "rgb": 4220110
+      }
+    },
+    {
+      "query": "Journal",
+      "color": {
+        "a": 1,
+        "rgb": 15766748
       }
     }
   ],

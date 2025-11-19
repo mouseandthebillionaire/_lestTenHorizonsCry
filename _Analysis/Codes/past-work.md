@@ -11,3 +11,6 @@ code description: ""
 ![[Data/Journal#^id-2025-11-17--09-52-17]]
 ![[Data/Journal#^id-2025-11-17--09-58-22]]
 ![[Data/Journal#^id-2025-11-17--10-00-30]]
+![[PrecedentStudy#^id-2025-11-19--09-11-46]]
+![[PrecedentStudy#^id-2025-11-19--09-12-33]]
+![[PrecedentStudy#^id-2025-11-19--09-13-01]]

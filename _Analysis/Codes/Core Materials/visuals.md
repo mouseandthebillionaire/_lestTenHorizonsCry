@@ -22,3 +22,4 @@ code description: ""
 ![[Data/CommitMessages#^id-2025-11-18--18-08-08]]
 ![[Data/CommitMessages#^id-2025-11-18--18-29-42]]
 ![[Data/CommitMessages#^id-2025-11-18--18-30-01]]
+![[PrecedentStudy#^id-2025-11-19--09-11-17]]

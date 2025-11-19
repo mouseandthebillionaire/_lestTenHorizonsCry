@@ -35,7 +35,7 @@ fix: doc image references [[terse]] ^id-2025-11-18--17-41-58
 ---
 docs: A MAZE Reflection
 
-We came. We A MAZED. We then thought about it a bit and wrote down some of those thoughts. [[playful]] [[joking]] ^id-2025-11-18--17-42-20
+We came. We A MAZED. We then thought about it a bit and wrote down some of those thoughts. [[playful]] [[playful]]1-18--17-42-20
 
 ---
 docs: A MAZE photos [[terse]] ^id-2025-11-18--17-42-08

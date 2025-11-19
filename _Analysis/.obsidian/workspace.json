@@ -11,10 +11,14 @@
             "id": "66225a5fc49006d1",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "AnalysisJournal.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AnalysisJournal"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "AnalysisJournal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for AnalysisJournal"
             }
           },
           {
@@ -150,7 +155,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,6 +187,15 @@
   },
   "active": "66225a5fc49006d1",
   "lastOpenFiles": [
+    "Data/PrecedentStudy.md",
+    "Codes/mapping audio + visuals.md",
+    "Codes/discovery.md",
+    "Codes/secrets.md",
+    "Codes/simulation.md",
+    "Codes/playful.md",
+    "Codes/joking.md",
+    "AnalysisJournal.md",
+    "Data/Journal.md",
     "Data/CommitMessages.md",
     "Codes/technique.md",
     "Codes/organizing.md",
@@ -192,7 +207,6 @@
     "Data/MeetingNotes.md",
     "Codes/idea.md",
     "Codes/anti-puzzle.md",
-    "Data/Journal.md",
     "Codes/lookFeel.md",
     "Codes/implementation.md",
     "Codes/memory.md",
@@ -200,15 +214,7 @@
     "Codes/look",
     "Codes/player agency.md",
     "Codes/options.md",
-    "Journal.md",
     "Codes/referencing.md",
-    "Codes/a peak behind the curtain.md",
-    "Codes/ambiguity.md",
-    "Codes/posture.md",
-    "Codes/difficulty.md",
-    "Codes/autobiography.md",
-    "Codes/showcase.md",
-    "Codes/colleagues.md",
     "Extractions",
     "Analysis/progress.json",
     "Analysis",

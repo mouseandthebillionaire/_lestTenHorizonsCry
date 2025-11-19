@@ -15,3 +15,4 @@ code description: ""
 ![[Data/CommitMessages#^id-2025-11-18--17-47-38]]
 ![[Data/CommitMessages#^id-2025-11-18--17-50-59]]
 ![[Data/CommitMessages#^id-2025-11-18--18-41-57]]
+![[PrecedentStudy#^id-2025-11-19--09-10-27]]

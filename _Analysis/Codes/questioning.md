@@ -25,3 +25,5 @@ code description: ""
 ![[Data/CommitMessages#^id-2025-11-18--18-30-01]]
 ![[Data/CommitMessages#^id-2025-11-18--18-30-45]]
 ![[Data/CommitMessages#^id-2025-11-18--18-39-32]]
+![[PrecedentStudy#^id-2025-11-19--09-10-27]]
+![[PrecedentStudy#^id-2025-11-19--09-11-17]]
