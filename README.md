@@ -3,4 +3,4 @@ Exploration on creating a game-like experience using traditional synthesizer con
 ## Miscellaneous Material
 * [Process Documentation](./docs/Process/Journal.md)
 * [Precedent Study](./docs/Process/Precedents.md)
-* [Analysis](./_Analysis/Journal.md)
+* [Analysis](./_Analysis/AnalysisJournal.md)
