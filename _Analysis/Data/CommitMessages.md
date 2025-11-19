@@ -277,7 +277,7 @@ The week was spent hooking up the dials and building a physical interface protot
 
 Next (and thoughts):
 - there has to be some sort of visual feedback for the discovery synth portions (at least during this phase) They could probably be removed later, but even for me it's too hard to see (hear) when we are close to the desired locations [[planning]] [[visuals|Core Materials/visuals]] [[player experience]] ^id-2025-11-18--18-29-42
-- this visual feedback opens up a lot of fun possibilities (explore these in an ideation session at some point) Right now there's just a little circle that moves along X/Y coordinates, fades, and generally looks kinda bad! An intensive survey of other interface-only games (In Other Waters and Mu Cartographer spring up immediately) is probably warranted [[visuals|Core Materials/visuals]] [[questioning]] [[kicking down the road]] [[Codes/precedents|precedents]] ^id-2025-11-18--18-30-01
+- this visual feedback opens up a lot of fun possibilities (explore these in an ideation session at some point) Right now there's just a little circle that moves along X/Y coordinates, fades, and generally looks kinda bad! An intensive survey of other interface-only games (In Other Waters and Mu Cartographer spring up immediately) is probably warranted [[visuals|Core Materials/visuals]] [[questioning]] [[kicking down the road]] [[precedents|precedents]] ^id-2025-11-18--18-30-01
 - using the hardware also opens up some issues there, namely a) layout, but more importantly b) is 8 dials too any dials? My thinking at this point is yes, but, as above, an ideation session will help to push on this [[questioning]] [[hardware]] [[physicality|Core Materials/physicality]] [[planning]] [[imagining]] ^id-2025-11-18--18-30-45
 - the musical transitions are clunky and need a lot of work [[problem]] [[audio|Core Materials/audio]] ^id-2025-11-18--18-31-12
 
@@ -384,7 +384,7 @@ feat: Unity + RNBO effects [[terse]] ^id-2025-11-18--18-37-56
 ---
 feat: Slider Affecting RNBO Patch
 
-baby stepping to the elevator. This version has a slider that can control the volume of the guitar volume. Everything is in place to start making this thing a bit more interesting. [[pop-cultre reference]] [[playful]] [[hoping]] ^id-2025-11-18--18-38-06
+baby stepping to the elevator. This version has a slider that can control the volume of the guitar volume. Everything is in place to start making this thing a bit more interesting. [[pop-cultre reference]] [[playful]] [[hope]] ^id-2025-11-18--18-38-06
 
 For the next stage, let us do a version with a single instrument (we'll stick with guitar) but at least three ways to manipulate that sound. One of these will be using a normal Unity plugin, and one with the RNBO plugin, to see if they can work in conjunction. My theory is... they can! We shall see! [[planning]] [[playful]] [[audio|Core Materials/audio]] [[role]] ^id-2025-11-18--18-38-21
 
@@ -404,7 +404,7 @@ fix: updated gitignore to remove the Lunar Landscape files [[terse]] [[organizin
 ---
 feat: added RNBO building blocks
 
-it's working finally. Now that RNBO is going, it's time to build out a little version of the JANINE song within Unity and see what this experience could feel like. Very exciting. [[hoping]] [[excitment]] [[audio|Core Materials/audio]] ^id-2025-11-18--18-39-16
+it's working finally. Now that RNBO is going, it's time to build out a little version of the JANINE song within Unity and see what this experience could feel like. Very exciting. [[hope]] [[excitment]] [[audio|Core Materials/audio]] ^id-2025-11-18--18-39-16
 
 ---
 docs: upload the sketchText
@@ -520,7 +520,7 @@ Initial commit - created all of the various folder and files and whatnot. And ca
 
 Next:
 - initial journal entry [[planning]] [[documentation]] ^id-2025-11-18--18-42-55
-- precedents research [[planning]] [[Codes/precedents|precedents]] ^id-2025-11-18--18-42-59
+- precedents research [[planning]] [[precedents|precedents]] ^id-2025-11-18--18-42-59
 - active ideation [[planning]] [[idea]] ^id-2025-11-18--18-43-08
 
 ---
