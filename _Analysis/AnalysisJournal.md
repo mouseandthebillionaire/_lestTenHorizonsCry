@@ -42,3 +42,23 @@ Next steps:
 I didn't document the WDPP pass because it was fairly expected. The various prototypes do slot into those categories. It _is_ interesting however to note that even I have a hard time delineating after the fact between the different prototype types. I wonder if this kind of organization could be helpful on the front end - as in, specifically calling out which type of prototype you are doing in the commit messages? Might be too prescriptive, but could also help to organize the making?
 
 As for the precedent pass. It's neat to see how the ideas are already getting crystalized through this early stage. In hindsight, it seems like a mistake to have done this stage last (since it was actually the first stage in my development process). I could see the QDA of the precedent document being useful to start generating the goals that the project is shooting for (ie ambiguity, discovery, anti-puzzle, etc) As it is, I was able to slot in those ideas when looking back at the precdents, but could be more useful the other way around.
+
+### 10.19.26 | Conceptual Pass Plans
+
+In the most recent LAUTIR analysis pass, I discussed this idea of "[lens passes](https://github.com/mouseandthebillionaire/lautir/blob/main/_Analysis/AnalysisJournal.md#misc-notes)" and, looking through this Analysis Journal I see that this is definitely at work here. This whole analysis has so far been almost entirely about the process rather than the concept. What was initially an exploration concerned with how qualitative analysis might work in Obsidian began focusing on the documentation of the design process. And I suppose that makes sense as I was doing the analysis specifically for discussion at the MDM Analysis Group meeting.
+
+That being said, as I pick this back up for the purpose of working towards a closing statement, I think it is a worthwhile exercise to do an additional robust pass focusing on the conceptual questions that the project raised and whether or not it achieved (at least some of) those goals. Additionally, I have committed to doing some writing every day, and this will provide excellent fodder for that practice. Hopefully the end result of this sprint will be a) a more robust closing statement for the project, and b) a good narrative/overview/description (i.e about) document to use on the project's web site and for contacting labels about the soundtrack recording.
+
+### 10.20.26 | Commit Message Pass
+
+Apparently I didn't do a non-qualitative commit message pass before, so it's nice to be going over this a second time.
+
+In the commit message for the initial precedent study I declare a concept in layman's speak which I feel is valuable.
+
+_"As of now, it is best stated as "creating something with many ambiguous ideal states over one specific ideal state." Mainly this is a pushback on the idea of "oh I get it. Like the music sounds better if you're doing the right thing?" How to make a musical experience in a game where there is no "bad" audio, but rather "many compelling states" of audio?"_
+
+This plants a flag for an experience that isn't a standard "puzzle." I don't want there to be one specific _right_ way to align the various elements. If we are looking at the project as part of the playthings chapter, does this value help promote "enstrangement?" Does a plaything that defies expectation re-awaken perception through friction? Are there other examples of this that we could be thinking of? Romero's _Train_ obviously, but I think that experience is something more than enstrangement. Do the _Buy! Sell!_ phones promote enstrangement!? I think they might.
+
+Alternatively, could we think of the LTHC controller as an allusive playground. It certainly "suggests rather than declares." It is possible that this could be a good fit for this (or at least be mentioned in conjunction with TIKATMOS and Busy Work)
+
+Interestingly, the rest of these commit messages (even the more robust ones) focus entirely on the practical aspects of design" implementing features, solving issues, etc. To me this makes sense from a design-practice point-of-view: commit messages for the what, journal for the why. More of this please.
