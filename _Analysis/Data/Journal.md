@@ -2,7 +2,7 @@
 
 ## Context Statement | 09.01.23
 
-The initial idea here is alt-control audio-based game-like interaction. Specifically, *what would a game controlled with a synthesizer look like?* [[goal]] [[concept]] [[questioning]] ^id-2025-11-17--09-50-43
+The initial idea here is alt-control audio-based game-like interaction. Specifically, *what would a game controlled with a synthesizer look like?*  [[goal]] [[concept]] [[questioning]] [[initial thoughts]] ^id-2025-11-17--09-50-43
 
 The audio-component of this could be either
 - an actual modular synthesizer that is used to control a visual element, or
@@ -80,11 +80,11 @@ Ableton is sending a single C-note every bar randomly switching to a 4-beat G-no
 
 Thus with only 4 knobs we can get a huge amount of variety in our sound creation. The most interesting thing that I want to note here is that I realized how crucial it is to have these knobs affect the sounds slowly (i.e a big turn of the knob would sound bad, and we shouldn't let the user do that) This alone is an argument for not relying on an external synth for sound creation for this project. Or, at the very least, for not letting he user have direct access to the knobs on the external synth. There could be an intermediary controller that is slowly affecting the standalone synth though, which is an interesting idea. Also, as always, it is possible to be letting Max and or Ableton be in charge of the sound-generation. [[player experience]] [[slow]] [[subtlety]] [[spelling]] [[deciding]] ^id-2025-11-17--10-16-53
 
-[Experiment #02](https://soundcloud.com/thebillionaire/lthc-experiment-02)
+[Experiment #02](https://soundcloud.com/thebillionaire/lthc-experiment-02) [[audio|CORE ASPECTS/audio]] ^id-2025-11-19--12-36-37
 
 I recorded this experiment just to prove that it would be terrible to let the user have full range control of large changes, and what do you know. It doesn't sound _that_ bad. I mean, it doesn't sound *great* but also. Kind of weird and cool? [[learning]] [[audio]] [[exploring]] [[lookFeel|look/feel]] ^id-2025-11-17--10-18-30
 
-[Experiment #03](https://soundcloud.com/thebillionaire/lthc-exploration-03)
+[Experiment #03](https://soundcloud.com/thebillionaire/lthc-exploration-03) [[audio|CORE ASPECTS/audio]] ^id-2025-11-19--12-36-44
 
 Here we have a version with Ableton Live using the MPE Sine Pressure sound. Twiddling some knobs. Trying it out. A few of these other instruments had settings that were either a) too sweeping in their changes or b) not nearly enough. This one seems like a good middle ground. Some of the adjustments work better than others, and obviously it would be in the actual build to decide which knobs affect which parameters. [[exploring]] [[audio]] [[kicking down the road]] [[lookFeel|look/feel]] ^id-2025-11-17--10-18-54
 
@@ -237,7 +237,8 @@ Okay, everything seems to be working on the Arduino side. All we need to do is u
 
 Wait. The UNO R3 *doesn't* support the keyboard library, but the R4 DOES!?!? [[frustration]] [[in the weeds]] [[hardware]] [[tools]] ^id-2025-11-17--15-35-48
 
-![Bangs Head on Table](https://i.pinimg.com/originals/e7/e2/2c/e7e22c8498fb2882c9d00bd6a167707a.gif) 
+![Bangs Head on Table](https://i.pinimg.com/originals/e7/e2/2c/e7e22c8498fb2882c9d00bd6a167707a.gif) [[pop-cultre reference|MISC/pop-cultre reference]] ^id-2025-11-19--12-35-14
+
 
 Anyway, we can still use the serial communication so it will be fine, just a little bit more work; what a boring story! But the realization that this part of the process is so prone to being destroyed by these small issues is really interesting. When teaching students, we always recommend at least a month buffer for these kinds of issues, and this just goes to show that it's not for no reason! Even with the large number of technically similar projects that I've made, these issues still arise. There are unexpected failures. The pieces don't always fit. And it seems like this is more the rule than the exception. Something to be aware of: both for future work and when advising other people. [[pop-cultre reference]] [[in the weeds]] [[learning]] ^id-2025-11-17--15-36-25
 

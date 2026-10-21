@@ -41,7 +41,7 @@ Next steps:
 
 I didn't document the WDPP pass because it was fairly expected. The various prototypes do slot into those categories. It _is_ interesting however to note that even I have a hard time delineating after the fact between the different prototype types. I wonder if this kind of organization could be helpful on the front end - as in, specifically calling out which type of prototype you are doing in the commit messages? Might be too prescriptive, but could also help to organize the making?
 
-As for the precedent pass. It's neat to see how the ideas are already getting crystalized through this early stage. In hindsight, it seems like a mistake to have done this stage last (since it was actually the first stage in my development process). I could see the QDA of the precedent document being useful to start generating the goals that the project is shooting for (ie ambiguity, discovery, anti-puzzle, etc) As it is, I was able to slot in those ideas when looking back at the precdents, but could be more useful the other way around.
+As for the precedent pass. It's neat to see how the ideas are already getting crystalized through this early stage. In hindsight, it seems like a mistake to have done this stage last (since it was actually the first stage in my development process). I could see the QDA of the precedent document being useful to start generating the goals that the project is shooting for (ie ambiguity, discovery, anti-puzzle, etc) As it is, I was able to slot in those ideas when looking back at the precedents, but could be more useful the other way around.
 
 ### 10.19.26 | Conceptual Pass Plans
 
@@ -53,7 +53,7 @@ That being said, as I pick this back up for the purpose of working towards a clo
 
 Apparently I didn't do a non-qualitative commit message pass before, so it's nice to be going over this a second time.
 
-In the commit message for the initial precedent study I declare a concept in layman's speak which I feel is valuable.
+In the commit message for the initial precedent study I declare a concept in layman's speak which I feel is valuable. 
 
 _"As of now, it is best stated as "creating something with many ambiguous ideal states over one specific ideal state." Mainly this is a pushback on the idea of "oh I get it. Like the music sounds better if you're doing the right thing?" How to make a musical experience in a game where there is no "bad" audio, but rather "many compelling states" of audio?"_
 
@@ -62,3 +62,5 @@ This plants a flag for an experience that isn't a standard "puzzle." I don't wan
 Alternatively, could we think of the LTHC controller as an allusive playground. It certainly "suggests rather than declares." It is possible that this could be a good fit for this (or at least be mentioned in conjunction with TIKATMOS and Busy Work)
 
 Interestingly, the rest of these commit messages (even the more robust ones) focus entirely on the practical aspects of design" implementing features, solving issues, etc. To me this makes sense from a design-practice point-of-view: commit messages for the what, journal for the why. More of this please.
+
+### 10.21.26 | 

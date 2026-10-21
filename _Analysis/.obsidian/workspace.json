@@ -11,10 +11,14 @@
             "id": "66225a5fc49006d1",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "AnalysisJournal.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AnalysisJournal"
             }
           }
         ]
@@ -37,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -90,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Data/Journal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +106,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Journal"
             }
           },
           {
@@ -180,10 +187,24 @@
       "quadro:Quadro: Mark current Data File as read": false
     }
   },
-  "active": "6421b28a13c21103",
+  "active": "66225a5fc49006d1",
   "lastOpenFiles": [
-    "Data/ReflectionReflection.md",
+    "Journal.md",
+    "Data/Precedents.md",
+    "Data/CommitMessages.md",
+    "AnalysisJournal.md",
+    "Data/Journal.md",
+    "Codes/CORE ASPECTS/audio.md",
+    "Codes/NOUNS/discovery.md",
+    "Codes/MISC/pop-cultre reference.md",
+    "Codes/CORE ASPECTS/player experience.md",
     "Codes/NOUNS/audience.md",
+    "Codes/VERBS/refining.md",
+    "Codes/VERBS/planning.md",
+    "Codes/NOUNS/initial thoughts.md",
+    "Data/ReflectionReflection.md",
+    "Data/PrecedentStudy.md",
+    "Data/MeetingNotes.md",
     "Codes/VERBS/writing.md",
     "Codes/NOUNS/process.md",
     "Codes/NOUNS/distance from the work.md",
@@ -191,29 +212,15 @@
     "Codes/EMOTIONS/hope.md",
     "Codes/PROTOTYPE CATEGORIES",
     "Codes/VERBS/expanding.md",
-    "AnalysisJournal.md",
     "Codes/MISC",
     "Codes/EMOTIONS",
     "Codes/NOUNS",
     "Codes/VERBS",
-    "Data/PrecedentStudy.md",
     "Codes/NOUNS/mapping audio + visuals.md",
-    "Codes/NOUNS/discovery.md",
     "Codes/CORE ASPECTS/secrets.md",
     "Codes/NOUNS/simulation.md",
     "Codes/MISC/playful.md",
-    "Codes/joking.md",
-    "Data/Journal.md",
-    "Data/CommitMessages.md",
-    "Codes/NOUNS/technique.md",
-    "Codes/VERBS/organizing.md",
-    "Codes/PROTOTYPE CATEGORIES/integration.md",
-    "Codes/MISC/repeat.md",
-    "Codes/MISC/terse.md",
-    "Codes/CORE ASPECTS/audio.md",
     "Codes/CORE ASPECTS",
-    "Data/MeetingNotes.md",
-    "Codes/NOUNS/idea.md",
     "Codes/look",
     "Extractions",
     "Analysis/progress.json",

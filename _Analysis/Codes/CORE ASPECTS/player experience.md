@@ -35,3 +35,5 @@ code description: ""
 ![[PrecedentStudy#^id-2025-11-19--09-09-25]]
 ![[PrecedentStudy#^id-2025-11-19--09-10-27]]
 ![[PrecedentStudy#^id-2025-11-19--09-13-01]]
+
+![[Data/ReflectionReflection#^id-2025-11-19--09-41-03]]
