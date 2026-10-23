@@ -63,4 +63,18 @@ Alternatively, could we think of the LTHC controller as an allusive playground. 
 
 Interestingly, the rest of these commit messages (even the more robust ones) focus entirely on the practical aspects of design" implementing features, solving issues, etc. To me this makes sense from a design-practice point-of-view: commit messages for the what, journal for the why. More of this please.
 
-### 10.21.26 | 
+### 10.23.26 | More Thoughts on Enstrangement
+
+Spent some time thinking about enstrangement (ostranenie) in the [Thesis Process Journal](https://github.com/mouseandthebillionaire/planetVelocityMap/blob/main/Process/Journal.md#102126--ostranenie-enstrangement), but I think that it is worthwhile to do some more focused writing about that here before I get to the process journal pass. 
+
+My main question is what kind of enstrangement do I think this project is doing? 
+
+Obviously there's some element of enstrangement in the UI/UX in that the whole thing is obfuscated/hidden, but it isn't enstranged in the way that [Drabenstadt compares the amber-on-black terminals of s.p.l.i.t. to real-world hacking](https://electronicbookreview.com/publications/familiarity-as-estrangement/). In his example (and many others that are informed directly by Shklovsky) the user is brought aware to how the enstranged thing is different from the original (or is that more of how Brecht's _Verfremdungseffekt_ considers it?). LTHC doesn't necessarily have that because a) the synth interface isn't based on standard synth norms, and b) not any people would be aware of those anyway and it's meant for a wider audience anyway? Can we consider it as an enstranged interface if there isn't a direct real-world comparison? Are the invented simulated interfaces of X or Y enstranged in the very act of being novel?
+
+Is the enstrangement a narrative one? For LTHC there is the whole aspect of it being a secret autobiography. Granted these bits and pieces are warped, obfuscated, and presented in such a way as to _remain_ secret even when discovered, but does this count as an enstrangement of "storytelling?" Is it _too_ enstranged? 
+
+The audio is playing a part too, obviously. The design of the UI/UX forces the user into a more exploratory state with the audio. They make slight/tiny changes and hear how those changes affect the audio. For many users this becomes the core of the experience. They never get to the secret hidden "performative" spaces, and only interact with this alien synthesizer, making (hopefully) compelling music. In this way, the project is for some merely an enstranged musical instrument. 
+
+Lastly, and most pertaining to where I want it in the chapter, is the physical _thing_ enstranged? Can this be true of all alt.ctrl projects? They're all a bit weird, novel, and compelling in a way that standard controllers aren't. For the chapter, it could be possible to start with alt.ctrl as a heightened example of the enstranged and the extrapolate out to how we can do similar things within the confines of "normal" play experiences. Is LTHC a bridge for this?
+
+Lastly lastly, it is worth noting that the (supposedly better) translation of Shklovsky's original essay to "Art as Device" works very well for linking to "Playthings."
